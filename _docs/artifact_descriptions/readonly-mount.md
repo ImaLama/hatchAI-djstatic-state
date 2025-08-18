@@ -139,7 +139,7 @@ TASKSPEC_ID="$1"
 READONLY_ROOT="hatchAI-codebase-readonly"
 
 # Extract implementation files from TaskSpec state
-impl_files=$(grep -A 10 "implementation_files:" "_specs/featspecs/*FSTATE*.yaml" | grep "$READONLY_ROOT")
+impl_files=$(grep -A 10 "implementation_files:" "_featstate/*FSTATE*.yaml" | grep "$READONLY_ROOT")
 
 # Validate files exist and check basic metrics
 for file in $impl_files; do

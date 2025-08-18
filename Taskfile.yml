@@ -46,7 +46,7 @@ tasks:
           echo "❌ Usage: task featstate-show FEATSPEC=001-FS-2025-08-18-EXAMPLE"
           exit 1
         fi
-        FSTATE_FILE="_specs/featspecs/{{.FEATSPEC | replace "FS" "FSTATE"}}.yaml"
+        FSTATE_FILE="_featstate/{{.FEATSPEC | replace "FS" "FSTATE"}}.yaml"
         if [ -f "$FSTATE_FILE" ]; then
           echo "=== FeatState: {{.FEATSPEC}} ==="
           cat "$FSTATE_FILE"
