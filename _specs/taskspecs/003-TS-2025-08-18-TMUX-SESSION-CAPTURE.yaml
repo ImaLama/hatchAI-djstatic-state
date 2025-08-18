@@ -1,0 +1,61 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 003-TS-2025-08-18-TMUX-SESSION-CAPTURE
+title: Add full tmux session output capture for debugging            # "Add sharded event dir"
+created: 2025-08-18-20-04                   # creation datetime
+updated: 2025-08-18-20-04                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []  # Independent, can run in parallel with others
+# =============================================================
+---
+
+## 1  Context
+Implementing full tmux session capture for debugging (parent: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS).
+Captures complete Claude Code output as seen on screen, enabling better debugging and audit trails.
+Critical for understanding agent behavior and troubleshooting failures.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST capture full tmux session output | capture | `tmux pipe-pane -t session -o 'cat >> log'` | Show complete session transcript |
+| 2 | MUST include Claude Code responses | content | _logs/TC-001/factory_session.log | Show AI responses in captured output |
+| 3 | MUST preserve ANSI color codes | format | Session logs | Show color codes preserved for readability |
+| 4 | MUST start capture before agent launch | timing | team_orchestrator_v1.sh | Verify capture starts before claude command |
+| 5 | MUST create separate logs per session | organization | _logs/TC-001/ | Show factory_session.log, qa_session.log |
+| 6 | MUST capture from session start to stop | completeness | Session logs | Show full session from launch to exit |
+| 7 | SHOULD include timestamps in capture | enhancement | capture_tmux_session() | Add timestamp markers every N lines |
+
+## 3  Non-Goals / Anti-Goals
+- NOT implementing real-time streaming (batch capture is fine)
+- NOT parsing or processing captured output
+- NOT implementing log rotation or size limits
+- NOT capturing other terminal sessions (only orchestrated agents)
+
+## 4  Design Constraints
+• Use native tmux pipe-pane for capture
+• Store logs in _logs/[TASK_ID]/[SESSION_TYPE]_session.log
+• Preserve all output including ANSI escape sequences
+• Must not interfere with agent execution
+• Capture function must be < 30 lines of bash
+• Can run independently of other TaskSpecs
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

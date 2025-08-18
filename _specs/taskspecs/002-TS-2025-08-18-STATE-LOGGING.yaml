@@ -1,0 +1,61 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 002-TS-2025-08-18-STATE-LOGGING
+title: Implement state transition logging for POC migration            # "Add sharded event dir"
+created: 2025-08-18-20-04                   # creation datetime
+updated: 2025-08-18-20-04                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["001-TS-2025-08-18-TASKSPEC-VALIDATION"]  # Needs validation functions first
+# =============================================================
+---
+
+## 1  Context
+Implementing state transition logging for POC (parent: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS).
+Since the POC uses read-only mount, we need to log state transitions to prepare for Go migration
+where these logs will be parsed and converted to proper state updates.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST log TaskSpec status transitions | logging | `log_state_transition TC-001 draft in-progress` | Show transition logged with timestamp |
+| 2 | MUST create structured log format | format | _logs/state_transitions.log | Show JSON-structured log entries |
+| 3 | MUST track agent assignments | logging | team_orchestrator_v1.sh | Log when TaskSpec assigned to factory/qa |
+| 4 | MUST log worktree creation/removal | logging | team_orchestrator_v1.sh | Track worktree lifecycle events |
+| 5 | MUST record decision tree choices | logging | _logs/decisions.log | Log user decisions at each tree node |
+| 6 | MUST log handover events | logging | team_orchestrator_v1.sh | Record factory->qa handovers |
+| 7 | SHOULD include session correlation IDs | tracking | All log files | Use session ID to correlate events |
+
+## 3  Non-Goals / Anti-Goals
+- NOT updating actual state files (read-only mount)
+- NOT implementing state machine logic (just logging)
+- NOT creating state synchronization with djhatch-state
+- NOT implementing log rotation or archival
+
+## 4  Design Constraints
+• Log format must be parseable by future Go orchestrator
+• Use JSON format for structured logs
+• Include ISO 8601 timestamps
+• Separate log files by concern (state, decisions, validation)
+• Must not exceed 100 LOC of bash functions
+• Depends on 001-TS-2025-08-18-TASKSPEC-VALIDATION completion
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

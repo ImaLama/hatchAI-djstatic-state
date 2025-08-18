@@ -1,0 +1,61 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 001-TS-2025-08-18-TASKSPEC-VALIDATION
+title: Add TaskSpec validation functions to team orchestrator            # "Add sharded event dir"
+created: 2025-08-18-20-04                   # creation datetime
+updated: 2025-08-18-20-04                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Implementing TaskSpec validation as part of POC enhancements (parent: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS).
+This adds minimal validation to ensure TaskSpecs meet atomicity requirements before agent execution,
+preparing for future Go migration where these patterns will be formalized.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST validate TaskSpec file exists | validation | `validate_taskspec_basics TC-001` | Show file exists check and error for missing file |
+| 2 | MUST check loc_cap ≤ 200 for atomicity | validation | team_orchestrator_v1.sh | Show warning when loc_cap > 200 |
+| 3 | MUST validate type field against allowed types | validation | team_orchestrator_v1.sh | Show type validation for feature/test/refactor/fix/docs/integration |
+| 4 | MUST verify parent_featspec exists if specified | validation | team_orchestrator_v1.sh | Check parent FeatSpec file exists in project-state-readonly |
+| 5 | MUST log validation results | logging | _logs/validation.log | Show timestamped validation entries |
+| 6 | SHOULD warn on missing dependencies | validation | team_orchestrator_v1.sh | Warn if dependency TaskSpecs don't exist |
+| 7 | MUST extract and display metadata | display | team_orchestrator_v1.sh | Show ID, title, type, LOC cap in output |
+
+## 3  Non-Goals / Anti-Goals
+- NOT implementing blocking validation (warnings only for POC)
+- NOT modifying TaskSpec files (read-only validation)
+- NOT implementing complex dependency resolution
+- NOT creating separate validation binary (embedded in orchestrator)
+
+## 4  Design Constraints
+• Keep bash functions ≤ 40 lines
+• Use yq for YAML parsing (already available)
+• Validation must complete in < 1 second
+• Non-blocking warnings for POC phase
+• Log format must be parseable by future Go orchestrator
+• Must integrate with team_orchestrator_v1.sh script
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

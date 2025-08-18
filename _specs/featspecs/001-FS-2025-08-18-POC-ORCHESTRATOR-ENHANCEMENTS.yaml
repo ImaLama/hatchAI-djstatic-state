@@ -1,0 +1,89 @@
+---
+id: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS
+title: Add validation, logging and session capture to team orchestrator POC
+created: 2025-08-18-20-03
+updated: 2025-08-18-20-03
+sprint: S4
+---
+
+## 1  DevCards
+
+| DevCard ID | Title | Dependencies | Notes |
+|------------|-------|--------------|-------|
+| 001-TS-2025-08-18-TASKSPEC-VALIDATION | Add TaskSpec validation functions | - | Validates TaskSpecs before agent execution |
+| 002-TS-2025-08-18-STATE-LOGGING | Implement state transition logging | 001-TS-VALIDATION | Logs state changes for Go migration |
+| 003-TS-2025-08-18-TMUX-SESSION-CAPTURE | Add full tmux session output capture | - | Captures complete Claude Code output |
+
+## 2  User Description
+
+### Feature Overview
+
+Enhance the team orchestrator POC with validation, comprehensive logging, and full session capture
+to improve debugging capabilities and prepare for migration to the hybrid Go/Bash architecture.
+
+### User Value  
+
+- **Better Debugging**: Full tmux session capture shows exactly what agents see and do
+- **Early Error Detection**: TaskSpec validation catches issues before expensive agent runs
+- **Migration Readiness**: State logging creates audit trail for future Go state management
+- **Transparency**: Complete visibility into agent behavior and decision making
+
+### User Stories
+
+1. **As a developer**, I want to see complete agent output so that I can debug failures
+2. **As a team lead**, I want TaskSpec validation so that agents don't waste time on invalid specs
+3. **As an architect**, I want state transition logs so that we can migrate to Go orchestrator smoothly
+
+### Acceptance Criteria
+
+- [ ] TaskSpecs are validated before agent execution with clear warnings
+- [ ] All state transitions are logged in parseable format
+- [ ] Complete tmux sessions are captured for debugging
+- [ ] POC remains functional while adding these enhancements
+
+## 3  Planner Breakdown
+
+### Technical Approach
+
+- Add validation functions to team_orchestrator_v1.sh using yq for YAML parsing
+- Implement structured logging with JSON format for future parsing
+- Use tmux pipe-pane for non-intrusive session capture
+- Keep all enhancements lightweight (< 200 LOC total) to maintain POC simplicity
+
+### Architecture Impact
+
+- No breaking changes to existing POC workflow
+- Prepares foundation for Go migration through structured logs
+- Establishes validation patterns that Go orchestrator will formalize
+- Creates debugging infrastructure for production use
+
+### Dependencies
+
+- yq (YAML parser) - already available in environment
+- tmux - required for session management
+- bash 4+ - for associative arrays and modern features
+- Read-only mount at project-state-readonly/
+
+### Risk Assessment  
+
+- **Risk**: Session capture could impact performance
+  - **Mitigation**: Use native tmux pipe-pane, minimal overhead
+- **Risk**: Validation might block valid TaskSpecs
+  - **Mitigation**: Warnings only, non-blocking for POC
+- **Risk**: Log files could grow large
+  - **Mitigation**: Document log rotation needs for production
+
+### Testing Strategy
+
+- Test validation with valid/invalid TaskSpec files
+- Verify state logging captures all transitions
+- Confirm session capture includes Claude Code output
+- End-to-end test with sample TaskSpec through factory→QA flow
+
+### Rollout Plan
+
+1. Implement TaskSpec validation first (independent)
+2. Add state logging (depends on validation)
+3. Implement session capture (independent)
+4. Test integrated POC with all enhancements
+5. Document new capabilities for users
