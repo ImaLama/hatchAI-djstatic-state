@@ -1,0 +1,166 @@
+{
+  "_metadata": {
+    "_comment": "FEATURE STATE TRACKING (Centralized state for NNN-FS-YYYY-MM-DD-DESCRIPTION)",
+    "featspec_id": "NNN-FS-YYYY-MM-DD-DESCRIPTION",
+    "featspec_title": "<feature title>",
+    "status": "draft",
+    "_status_options": ["draft", "planning", "active", "completed", "abandoned"],
+    "updated": "YYYY-MM-DD-HH-MM",
+    "active_sprint": "S4",
+    "created": "YYYY-MM-DD-HH-MM"
+  },
+  "feature_state": {
+    "progress_summary": {
+      "overall_status": "{{status}}",
+      "last_updated": "{{updated}}",
+      "active_sprint": "{{active_sprint}}",
+      "total_taskspecs": 0,
+      "completed_taskspecs": 0,
+      "progress_percent": 0,
+      "progress_ratio": "0/0"
+    },
+    "timeline": {
+      "created": "{{created}}",
+      "planning_start": "YYYY-MM-DD-HH-MM",
+      "development_start": "YYYY-MM-DD-HH-MM",
+      "qa_start": "YYYY-MM-DD-HH-MM",
+      "completed": "YYYY-MM-DD-HH-MM",
+      "deployed": "YYYY-MM-DD-HH-MM"
+    },
+    "milestones": [
+      {
+        "name": "Initial planning complete",
+        "completed": false,
+        "completed_date": null
+      },
+      {
+        "name": "All TaskSpecs defined",
+        "completed": false,
+        "completed_date": null
+      },
+      {
+        "name": "Development started",
+        "completed": false,
+        "completed_date": null
+      },
+      {
+        "name": "Core functionality complete",
+        "completed": false,
+        "completed_date": null
+      },
+      {
+        "name": "Integration testing complete",
+        "completed": false,
+        "completed_date": null
+      },
+      {
+        "name": "QA approved",
+        "completed": false,
+        "completed_date": null
+      },
+      {
+        "name": "Production ready",
+        "completed": false,
+        "completed_date": null
+      }
+    ]
+  },
+  "taskspec_states": {
+    "_comment": "This section is automatically updated when TaskSpecs are created/updated",
+    "active_taskspecs": [],
+    "taskspec_template": {
+      "task_id": "",
+      "task_title": "",
+      "status": "draft",
+      "_status_options": ["draft", "in-progress", "qa", "done"],
+      "owner": "unassigned",
+      "worktree": "",
+      "_worktree_pattern": "worktrees/card-NNN-TS-YYYY-MM-DD-DESCRIPTION",
+      "loc_cap": 200,
+      "coverage_cap": 80,
+      "purpose_hash": "",
+      "_purpose_hash_comment": "factories insert via hashstamp",
+      "merged_date": "",
+      "_merged_date_format": "YYYY-MM-DD-HH-MM",
+      "sprint": "S4",
+      "created": "YYYY-MM-DD-HH-MM",
+      "updated": "YYYY-MM-DD-HH-MM",
+      "implementation_progress": {
+        "implementation_checklist": [
+          {
+            "task": "Add failing tests for each acceptance criterion",
+            "completed": false
+          },
+          {
+            "task": "Implement code until tests pass & linting clean",
+            "completed": false
+          },
+          {
+            "task": "Update parent FeatSpec state tracking",
+            "completed": false
+          },
+          {
+            "task": "Commit with trailer TaskSpec status=qa",
+            "completed": false
+          }
+        ],
+        "qa_checklist": [
+          {
+            "task": "Review test coverage & LoC cap",
+            "completed": false
+          },
+          {
+            "task": "Compare code vs Architecture-Implementation Alignment Matrix",
+            "completed": false
+          },
+          {
+            "task": "Verify integration with parent FeatSpec",
+            "completed": false
+          },
+          {
+            "task": "If pass, commit trailer TaskSpec status=done",
+            "completed": false
+          }
+        ]
+      },
+      "test_results": {
+        "test_coverage": 0,
+        "test_results": "",
+        "lint_status": "",
+        "build_status": ""
+      }
+    }
+  },
+  "dependencies_relationships": {
+    "parent_relationships": {
+      "part_of_feature": "{{featspec_id}}"
+    },
+    "child_relationships": {
+      "taskspecs": [],
+      "_comment": "Automatically populated with TaskSpec IDs"
+    },
+    "external_dependencies": {
+      "blocked_by": [],
+      "blocking": [],
+      "related_features": []
+    }
+  },
+  "notes_history": {
+    "change_log": [
+      {
+        "date": "{{created}}",
+        "description": "Initial FeatState created"
+      },
+      {
+        "date": "{{updated}}",
+        "description": "[Latest change description]"
+      }
+    ],
+    "notes": [
+      "[Development notes]",
+      "[Architecture decisions]",
+      "[Risk assessments]",
+      "[Deployment considerations]"
+    ]
+  }
+}

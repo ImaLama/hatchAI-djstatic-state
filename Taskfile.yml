@@ -1,0 +1,114 @@
+version: '3'
+
+vars:
+  OS: "{{OS}}"
+  ARCH: "{{ARCH}}"
+
+tasks:
+  default:
+    desc: "Show available tasks"
+    cmds:
+      - task --list-all
+
+  # Feature specification creation
+  featspec-new:
+    desc: "Create new featspec with sequential numbering (creates both spec and state files)"
+    # Mirrors: make featcard-new from hatchAI-devcards/Makefile
+    cmds:
+      - ./state-scripts/new_featspec.sh
+  
+  # Task specification creation  
+  taskspec-new:
+    desc: "Create new taskspec with sequential numbering (requires parent featspec, adds entry to parent featstate)"
+    # Mirrors: make devcard-new from hatchAI-devcards/Makefile
+    cmds:
+      - ./state-scripts/new_taskspec.sh
+
+  # List existing specifications
+  featspec-list:
+    desc: "List all featspecs and their status"
+    cmds:
+      - echo "=== FeatSpec Status ==="
+      - find _specs/featspecs -name "*-FS-*.yaml" -type f 2>/dev/null | sort || echo "No featspecs found"
+
+  taskspec-list:
+    desc: "List all taskspecs and their parent features"
+    cmds:
+      - echo "=== TaskSpec Status ==="
+      - find _specs/taskspecs -name "*-TS-*.yaml" -type f 2>/dev/null | sort || echo "No taskspecs found"
+
+  # State management
+  featstate-show:
+    desc: "Show state for specific featspec - Usage: task featstate-show FEATSPEC=001-FS-2025-08-18-EXAMPLE"
+    cmds:
+      - |
+        if [ -z "{{.FEATSPEC}}" ]; then
+          echo "❌ Usage: task featstate-show FEATSPEC=001-FS-2025-08-18-EXAMPLE"
+          exit 1
+        fi
+        FSTATE_FILE="_specs/featspecs/{{.FEATSPEC | replace "FS" "FSTATE"}}.yaml"
+        if [ -f "$FSTATE_FILE" ]; then
+          echo "=== FeatState: {{.FEATSPEC}} ==="
+          cat "$FSTATE_FILE"
+        else
+          echo "❌ FeatState file not found: $FSTATE_FILE"
+          exit 1
+        fi
+
+  # Quality and validation
+  loc-check:
+    desc: "Check lines of code against TaskSpec caps with type-based limits"
+    # Mirrors: make loc-check from hatchAI-devcards/Makefile  
+    cmds:
+      - ./state-scripts/check_loc_caps.sh
+
+  # Setup and initialization
+  setup:
+    desc: "Initialize directory structure and sequence files"
+    cmds:
+      - mkdir -p _specs/featspecs _specs/taskspecs _docs/artifact_descriptions _docs/ADR state-scripts
+      - |
+        if [ ! -f "_specs/.featspec_sequence" ]; then
+          echo "001" > _specs/.featspec_sequence
+          echo "✅ Initialized featspec sequence at 001"
+        fi
+      - |
+        if [ ! -f "_specs/.taskspec_sequence" ]; then
+          echo "001" > _specs/.taskspec_sequence  
+          echo "✅ Initialized taskspec sequence at 001"
+        fi
+      - |
+        if [ ! -f "_docs/ADR/.adr_sequence" ]; then
+          mkdir -p _docs/ADR
+          echo "001" > _docs/ADR/.adr_sequence
+          echo "✅ Initialized ADR sequence at 001"
+        fi
+      - echo "✅ Setup completed"
+
+  # Read-only mount management
+  mount-readonly:
+    desc: "Mount ../djhatch as read-only at hatchAI-codebase-readonly/"
+    cmds:
+      - ./state-scripts/mount_readonly.sh mount
+
+  unmount-readonly:
+    desc: "Unmount the read-only hatchAI-codebase-readonly/"
+    cmds:
+      - ./state-scripts/mount_readonly.sh unmount
+
+  mount-status:
+    desc: "Show read-only mount status"
+    cmds:
+      - ./state-scripts/mount_readonly.sh status
+
+  # Environment info
+  show-env:
+    desc: "Show environment variables" 
+    cmds:
+      - echo "OS={{.OS}}"
+      - echo "ARCH={{.ARCH}}"
+      - pwd
+      - echo "Available specs:"
+      - ls -la _specs/ 2>/dev/null || echo "  (_specs directory not found - run 'task setup')"
+      - echo "Read-only mount:"
+      - ./state-scripts/mount_readonly.sh status | grep -E "(Status:|Source available:)" | sed 's/^/  /'
