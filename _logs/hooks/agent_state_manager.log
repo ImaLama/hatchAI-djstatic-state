@@ -89,3 +89,60 @@
 [2025-08-19 16:20:28] Updating state: unknown -> busy
 [2025-08-19 16:20:28] Successfully updated state: unknown = busy
 [2025-08-19 16:20:28] Pub/sub notification triggered: unknown -> busy
+[2025-08-19 16:22:57] Acquired lock (PID: 85137) for update: unknown -> done
+[2025-08-19 16:22:57] Updating state: unknown -> done
+[2025-08-19 16:22:57] Successfully updated state: unknown = done
+[2025-08-19 16:22:57] Pub/sub notification triggered: unknown -> done
+[2025-08-19 16:23:01] Acquired lock (PID: 85242) for update: unknown -> idle
+[2025-08-19 16:23:01] Updating state: unknown -> idle
+[2025-08-19 16:23:01] Successfully updated state: unknown = idle
+[2025-08-19 16:23:01] Pub/sub notification triggered: unknown -> idle
+[2025-08-19 16:25:14] Acquired lock (PID: 85900) for update: unknown -> busy
+[2025-08-19 16:25:14] Updating state: unknown -> busy
+[2025-08-19 16:25:14] Successfully updated state: unknown = busy
+[2025-08-19 16:25:14] Pub/sub notification triggered: unknown -> busy
+[2025-08-19 16:26:55] Acquired lock (PID: 86529) for update: unknown -> busy
+[2025-08-19 16:26:55] Updating state: unknown -> busy
+[2025-08-19 16:26:55] Successfully updated state: unknown = busy
+[2025-08-19 16:26:55] Pub/sub notification triggered: unknown -> busy
+[2025-08-19 16:29:35] Acquired lock (PID: 88154) for update: unknown -> done
+[2025-08-19 16:29:35] Updating state: unknown -> done
+[2025-08-19 16:29:35] Successfully updated state: unknown = done
+[2025-08-19 16:29:35] Pub/sub notification triggered: unknown -> done
+[2025-08-19 16:29:38] Acquired lock (PID: 88234) for update: unknown -> idle
+[2025-08-19 16:29:38] Updating state: unknown -> idle
+[2025-08-19 16:29:38] Successfully updated state: unknown = idle
+[2025-08-19 16:29:38] Pub/sub notification triggered: unknown -> idle
+[2025-08-19 16:34:58] Acquired lock (PID: 90250) for update: unknown -> busy
+[2025-08-19 16:34:58] Updating state: unknown -> busy
+[2025-08-19 16:34:58] Successfully updated state: unknown = busy
+[2025-08-19 16:35:35] Acquired lock (PID: 90631) for update: unknown -> busy
+[2025-08-19 16:35:35] Updating state: unknown -> busy
+[2025-08-19 16:35:35] Successfully updated state: unknown = busy
+[2025-08-19 16:36:42] Acquired lock (PID: 91368) for update: unknown -> done
+[2025-08-19 16:36:42] Updating state: unknown -> done
+[2025-08-19 16:36:43] Successfully updated state: unknown = done
+[2025-08-19 16:36:46] Acquired lock (PID: 91402) for update: unknown -> idle
+[2025-08-19 16:36:46] Updating state: unknown -> idle
+[2025-08-19 16:36:46] Successfully updated state: unknown = idle
+[2025-08-19 16:39:35] Acquired lock (PID: 91928) for update: unknown -> busy
+[2025-08-19 16:39:35] Updating state: unknown -> busy
+[2025-08-19 16:39:35] Successfully updated state: unknown = busy
+[2025-08-19 16:40:41] Acquired lock (PID: 92408) for update: unknown -> done
+[2025-08-19 16:40:41] Updating state: unknown -> done
+[2025-08-19 16:40:41] Successfully updated state: unknown = done
+[2025-08-19 16:40:44] Acquired lock (PID: 92449) for update: unknown -> idle
+[2025-08-19 16:40:44] Updating state: unknown -> idle
+[2025-08-19 16:40:44] Successfully updated state: unknown = idle
+[2025-08-19 16:42:42] Acquired lock (PID: 92868) for update: unknown -> busy
+[2025-08-19 16:42:42] Updating state: unknown -> busy
+[2025-08-19 16:42:42] Successfully updated state: unknown = busy
+[2025-08-19 16:47:39] Acquired lock (PID: 95012) for update: unknown -> done
+[2025-08-19 16:47:39] Updating state: unknown -> done
+[2025-08-19 16:47:39] Successfully updated state: unknown = done
+[2025-08-19 16:47:42] Acquired lock (PID: 95083) for update: unknown -> idle
+[2025-08-19 16:47:42] Updating state: unknown -> idle
+[2025-08-19 16:47:42] Successfully updated state: unknown = idle
+[2025-08-19 16:47:53] Acquired lock (PID: 95170) for update: unknown -> busy
+[2025-08-19 16:47:53] Updating state: unknown -> busy
+[2025-08-19 16:47:53] Successfully updated state: unknown = busy

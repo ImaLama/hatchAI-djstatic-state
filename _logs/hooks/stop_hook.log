@@ -170,3 +170,98 @@
 [2025-08-19 16:19:24] Background process: Returning to IDLE state for unknown
 [2025-08-19 16:19:24] STATE_CHANGE: unknown: done -> idle
 [2025-08-19 16:19:24] SUCCESS: Returned agent state to IDLE
+[2025-08-19 16:22:57] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-19 16:22:57] Session ID: unknown
+[2025-08-19 16:22:57] Display Name: unknown
+[2025-08-19 16:22:57] Agent Type: PLANNER
+[2025-08-19 16:22:57] Task ID: 
+[2025-08-19 16:22:57] Model: sonnet
+[2025-08-19 16:22:57] STATE_CHANGE: unknown: busy -> done
+[2025-08-19 16:22:57] Prompt completed successfully, Claude ready for next input
+[2025-08-19 16:22:57] Updating agent state via state manager: unknown -> done
+[2025-08-19 16:22:57] SUCCESS: Updated agent state to done via state manager
+[2025-08-19 16:22:57] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-19 16:22:57] Updating agent state to: done
+[2025-08-19 16:22:57] Attempting to update VSCode agent state: unknown -> done
+[2025-08-19 16:22:59] VSCode detected, sending command...
+[2025-08-19 16:23:00] Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:23:00] Created stop file: /home/lama/projects/djhatch-state/_logs/hooks/unknown.stop
+[2025-08-19 16:23:00] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:23:00] Stop hook processing complete
+[2025-08-19 16:23:00] Notifications disabled - would have shown: done for unknown
+[2025-08-19 16:23:00] Background process: Returning to IDLE state for unknown
+[2025-08-19 16:23:01] STATE_CHANGE: unknown: done -> idle
+[2025-08-19 16:23:01] SUCCESS: Returned agent state to IDLE
+[2025-08-19 16:29:35] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-19 16:29:35] Session ID: unknown
+[2025-08-19 16:29:35] Display Name: unknown
+[2025-08-19 16:29:35] Agent Type: PLANNER
+[2025-08-19 16:29:35] Task ID: 
+[2025-08-19 16:29:35] Model: sonnet
+[2025-08-19 16:29:35] STATE_CHANGE: unknown: busy -> done
+[2025-08-19 16:29:35] Prompt completed successfully, Claude ready for next input
+[2025-08-19 16:29:35] Updating agent state via state manager: unknown -> done
+[2025-08-19 16:29:35] SUCCESS: Updated agent state to done via state manager
+[2025-08-19 16:29:35] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-19 16:29:35] Updating agent state to: done
+[2025-08-19 16:29:35] Attempting to update VSCode agent state: unknown -> done
+[2025-08-19 16:29:37] VSCode detected, sending command...
+[2025-08-19 16:29:37] Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:29:37] Created stop file: /home/lama/projects/djhatch-state/_logs/hooks/unknown.stop
+[2025-08-19 16:29:37] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:29:37] Stop hook processing complete
+[2025-08-19 16:29:37] Notifications disabled - would have shown: done for unknown
+[2025-08-19 16:29:38] Background process: Returning to IDLE state for unknown
+[2025-08-19 16:29:38] STATE_CHANGE: unknown: done -> idle
+[2025-08-19 16:29:38] SUCCESS: Returned agent state to IDLE
+[2025-08-19 16:36:42] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-19 16:36:42] Session ID: unknown
+[2025-08-19 16:36:42] Display Name: unknown
+[2025-08-19 16:36:42] Agent Type: PLANNER
+[2025-08-19 16:36:42] Task ID: 
+[2025-08-19 16:36:42] Model: sonnet
+[2025-08-19 16:36:42] STATE_CHANGE: unknown: busy -> done
+[2025-08-19 16:36:42] Prompt completed successfully, Claude ready for next input
+[2025-08-19 16:36:42] Updating agent state via state manager: unknown -> done
+[2025-08-19 16:36:43] SUCCESS: Updated agent state to done via state manager
+[2025-08-19 16:36:43] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-19 16:36:43] State updated to: done via JSON state manager
+[2025-08-19 16:36:43] Stop hook processing complete
+[2025-08-19 16:36:43] Notifications disabled - would have shown: done for unknown
+[2025-08-19 16:36:46] Background process: Returning to IDLE state for unknown
+[2025-08-19 16:36:46] STATE_CHANGE: unknown: done -> idle
+[2025-08-19 16:36:46] SUCCESS: Returned agent state to IDLE
+[2025-08-19 16:40:41] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-19 16:40:41] Session ID: unknown
+[2025-08-19 16:40:41] Display Name: unknown
+[2025-08-19 16:40:41] Agent Type: PLANNER
+[2025-08-19 16:40:41] Task ID: 
+[2025-08-19 16:40:41] Model: sonnet
+[2025-08-19 16:40:41] STATE_CHANGE: unknown: busy -> done
+[2025-08-19 16:40:41] Prompt completed successfully, Claude ready for next input (duration: 66s)
+[2025-08-19 16:40:41] Updating agent state via state manager: unknown -> done
+[2025-08-19 16:40:41] SUCCESS: Updated agent state to done via state manager
+[2025-08-19 16:40:41] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-19 16:40:41] State updated to: done via JSON state manager
+[2025-08-19 16:40:41] Stop hook processing complete
+[2025-08-19 16:40:41] Notifications disabled - would have shown: done for unknown
+[2025-08-19 16:40:44] Background process: Returning to IDLE state for unknown
+[2025-08-19 16:40:44] STATE_CHANGE: unknown: done -> idle
+[2025-08-19 16:40:44] SUCCESS: Returned agent state to IDLE
+[2025-08-19 16:47:39] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-19 16:47:39] Session ID: unknown
+[2025-08-19 16:47:39] Display Name: unknown
+[2025-08-19 16:47:39] Agent Type: PLANNER
+[2025-08-19 16:47:39] Task ID: 
+[2025-08-19 16:47:39] Model: sonnet
+[2025-08-19 16:47:39] STATE_CHANGE: unknown: busy -> done
+[2025-08-19 16:47:39] Prompt completed successfully, Claude ready for next input (duration: 297s)
+[2025-08-19 16:47:39] Updating agent state via state manager: unknown -> done
+[2025-08-19 16:47:39] SUCCESS: Updated agent state to done via state manager
+[2025-08-19 16:47:39] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-19 16:47:39] State updated to: done via JSON state manager
+[2025-08-19 16:47:39] Stop hook processing complete
+[2025-08-19 16:47:39] Notifications disabled - would have shown: done for unknown
+[2025-08-19 16:47:42] Background process: Returning to IDLE state for unknown
+[2025-08-19 16:47:42] STATE_CHANGE: unknown: done -> idle
+[2025-08-19 16:47:42] SUCCESS: Returned agent state to IDLE

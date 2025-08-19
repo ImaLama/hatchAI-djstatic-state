@@ -142,3 +142,90 @@
 [2025-08-19 16:20:30] VSCode detected, sending command...
 [2025-08-19 16:20:30] ERROR: SESSION_ID is unknown, cannot create session trigger file
 [2025-08-19 16:20:30] Start hook processing complete
+[2025-08-19 16:25:14] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:25:14] Session ID: unknown
+[2025-08-19 16:25:14] Display Name: unknown
+[2025-08-19 16:25:14] Agent Type: PLANNER
+[2025-08-19 16:25:14] Task ID: 
+[2025-08-19 16:25:14] Model: sonnet
+[2025-08-19 16:25:14] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:25:14] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:25:14] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:25:14] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:25:14] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 16:25:14] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:25:14] Trigger file content: busy:1755620714
+[2025-08-19 16:25:16] VSCode detected, sending command...
+[2025-08-19 16:25:16] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:25:16] Start hook processing complete
+[2025-08-19 16:26:55] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:26:55] Session ID: unknown
+[2025-08-19 16:26:55] Display Name: unknown
+[2025-08-19 16:26:55] Agent Type: PLANNER
+[2025-08-19 16:26:55] Task ID: 
+[2025-08-19 16:26:55] Model: sonnet
+[2025-08-19 16:26:55] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:26:55] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:26:55] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:26:55] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:26:55] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 16:26:55] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:26:55] Trigger file content: busy:1755620815
+[2025-08-19 16:26:57] VSCode detected, sending command...
+[2025-08-19 16:26:57] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:26:57] Start hook processing complete
+[2025-08-19 16:34:58] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:34:58] Session ID: unknown
+[2025-08-19 16:34:58] Display Name: unknown
+[2025-08-19 16:34:58] Agent Type: PLANNER
+[2025-08-19 16:34:58] Task ID: 
+[2025-08-19 16:34:58] Model: sonnet
+[2025-08-19 16:34:58] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:34:58] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:34:58] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:34:58] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:34:58] Start hook processing complete
+[2025-08-19 16:35:35] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:35:35] Session ID: unknown
+[2025-08-19 16:35:35] Display Name: unknown
+[2025-08-19 16:35:35] Agent Type: PLANNER
+[2025-08-19 16:35:35] Task ID: 
+[2025-08-19 16:35:35] Model: sonnet
+[2025-08-19 16:35:35] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:35:35] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:35:35] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:35:35] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:35:35] Start hook processing complete
+[2025-08-19 16:39:35] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:39:35] Session ID: unknown
+[2025-08-19 16:39:35] Display Name: unknown
+[2025-08-19 16:39:35] Agent Type: PLANNER
+[2025-08-19 16:39:35] Task ID: 
+[2025-08-19 16:39:35] Model: sonnet
+[2025-08-19 16:39:35] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:39:35] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:39:35] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:39:35] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:39:35] Start hook processing complete
+[2025-08-19 16:42:42] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:42:42] Session ID: unknown
+[2025-08-19 16:42:42] Display Name: unknown
+[2025-08-19 16:42:42] Agent Type: PLANNER
+[2025-08-19 16:42:42] Task ID: 
+[2025-08-19 16:42:42] Model: sonnet
+[2025-08-19 16:42:42] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:42:42] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:42:42] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:42:42] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:42:42] Start hook processing complete
+[2025-08-19 16:47:53] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:47:53] Session ID: unknown
+[2025-08-19 16:47:53] Display Name: unknown
+[2025-08-19 16:47:53] Agent Type: PLANNER
+[2025-08-19 16:47:53] Task ID: 
+[2025-08-19 16:47:53] Model: sonnet
+[2025-08-19 16:47:53] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:47:53] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:47:53] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:47:53] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:47:53] Start hook processing complete
