@@ -1,0 +1,5 @@
+
+# State management trigger files (obsolete after cleanup)
+_featstate/pubsub/
+_logs/hooks/state_updates/*.trigger
+_logs/hooks/*.stop
