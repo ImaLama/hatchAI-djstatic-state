@@ -1,0 +1,57 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 012-TS-2025-08-19-HISTORY-LOGGING
+title: Add state history logging system            # "Add sharded event dir"
+created: 2025-08-19-16-12                   # creation datetime
+updated: 2025-08-19-16-12                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 003-FS-2025-08-19-STATE-VALIDATION-HISTORY  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Implements historical state change logging for debugging and audit purposes as part of the State Management Enhancement (003-FS-2025-08-19-STATE-VALIDATION-HISTORY). This provides complete visibility into agent state transitions over time.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST log all state changes with timestamps and context | unit | history_log_test.sh | Show log entries created |
+| 2 | MUST use append-only log file with structured JSON entries | unit | log_format_test.sh | Show JSON structure |
+| 3 | MUST include session_id, old_state, new_state, timestamp, metadata | unit | log_fields_test.sh | Show all fields present |
+| 4 | MUST handle concurrent writes safely with file locking | integration | concurrent_log_test.sh | Show no data corruption |
+| 5 | SHOULD implement log rotation when file exceeds 10MB | unit | rotation_test.sh | Show rotation triggered |
+| 6 | MUST provide query interface for retrieving history by session/time | unit | query_test.sh | Show filtering works |
+
+## 3  Non-Goals / Anti-Goals
+• Will NOT implement complex query language (simple filters only)
+• Will NOT store logs in database (file-based for simplicity)
+• Will NOT implement real-time log streaming (batch queries only)
+• Will NOT modify existing agent_states.json format
+
+## 4  Design Constraints
+• Keep logging logic ≤ 180 LoC total
+• Use append-only file operations for performance
+• JSON Lines format for easy parsing and streaming
+• Maintain compatibility with existing file locking
+• Must integrate cleanly with parent FeatSpec: 003-FS-2025-08-19-STATE-VALIDATION-HISTORY
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

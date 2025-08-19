@@ -51,19 +51,23 @@ Implement a centralized agent state management system that coordinates state upd
 
 ### Technical Approach
 
-**State Hub Pattern**: Central coordinator (`agent_states.json`) with multiple input pipelines and output consumers. Uses file-based queuing with named pipes for inter-process communication and inotify for real-time change detection.
+**Simplified JSON + inotify Pattern**: Central state file (`agent_states.json`) with direct updates from producers and inotify-based monitoring for consumers. Clean architecture without trigger files:
+
+```
+Producers → agent_state_manager.sh → agent_states.json ← inotify watchers → Consumers
+```
 
 ### Architecture Impact
 
-**Major Enhancement**: Transforms existing direct state management into intelligent hub with conflict resolution, source tracking, and scalable producer/consumer model. Maintains backward compatibility with existing `agent_state_manager.sh`.
+**Streamlined Enhancement**: Builds on simplified JSON-only state management with inotify for real-time consumer updates. No trigger files, no named pipes - just clean file monitoring.
 
 ### Dependencies
 
-- Existing `agent_state_manager.sh` (enhanced)
-- File locking mechanisms (flock)
-- inotify utilities for file watching
-- JSON processing (jq or python3)
-- Named pipes for IPC
+- Existing `agent_state_manager.sh` (working)
+- File locking mechanisms (flock) 
+- inotify-tools for file monitoring (inotifywait)
+- JSON processing (jq)
+- Bash 4.0+ for associative arrays
 
 ### Risk Assessment  
 
@@ -76,12 +80,51 @@ Implement a centralized agent state management system that coordinates state upd
 **Low Risk**: File locking contention under high load
 **Mitigation**: Timeout-based locking with fallback strategies
 
-### Testing Strategy
+### Architecture Diagram
 
-- **Unit Tests**: Individual pipeline components with mock state files
-- **Integration Tests**: End-to-end state flow from hooks to tmux display
-- **Load Tests**: Concurrent state updates from multiple sources
-- **Loop Detection**: Verify no circular dependencies in state updates
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     INPUT PRODUCERS                          │
+├──────────────┬──────────────┬──────────────┬───────────────┤
+│ Claude Hooks │ Health Check │ Manual Cmds  │ Other Sources │
+└──────┬───────┴──────┬───────┴──────┬───────┴──────┬────────┘
+       │              │              │              │
+       └──────────────┴──────────────┴──────────────┘
+                            │
+                            ▼
+              ┌──────────────────────────┐
+              │  agent_state_manager.sh  │
+              │    • File locking        │
+              │    • Atomic updates      │
+              │    • Source tracking     │
+              └──────────────────────────┘
+                            │
+                            ▼
+                  ┌──────────────────┐
+                  │ agent_states.json │
+                  │  (Single source   │
+                  │   of truth)       │
+                  └──────────────────┘
+                            │
+                     inotify events
+                            │
+       ┌────────────────────┴────────────────────┐
+       ▼                                         ▼
+┌──────────────┐                        ┌──────────────┐
+│ tmux_monitor │                        │ Other        │
+│  • inotify   │                        │ Consumers    │
+│  • Status bar│                        │              │
+└──────────────┘                        └──────────────┘
+```
+
+### Testing Strategy (TDD-First)
+
+- **TDD Workflow**: RED → GREEN → REFACTOR for all components
+- **Unit Tests**: Test each component in isolation with mocks
+- **Integration Tests**: End-to-end state flow from hooks to tmux
+- **Performance Tests**: Verify < 50ms state updates, < 100ms UI updates
+- **Stress Tests**: Concurrent updates from multiple producers
+- **Safety Tests**: Verify no feedback loops, no state corruption
 
 ### Rollout Plan
 

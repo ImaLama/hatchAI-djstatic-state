@@ -1,0 +1,144 @@
+[2025-08-19 13:02:00] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 13:02:00] Session ID: unknown
+[2025-08-19 13:02:00] Display Name: unknown
+[2025-08-19 13:02:00] Agent Type: ARCHITECT
+[2025-08-19 13:02:00] Task ID: 
+[2025-08-19 13:02:00] Model: sonnet
+[2025-08-19 13:02:00] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 13:02:00] User submitted prompt, updating agent state to: busy
+[2025-08-19 13:02:00] Not in tmux session (TMUX env var empty), skipping terminal title update
+[2025-08-19 13:02:00] Environment check: TMUX='', SESSION_ID='unknown'
+[2025-08-19 13:02:00] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 13:02:00] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 13:02:00] Trigger file content: busy:1755608520
+[2025-08-19 13:02:02] VSCode detected, sending command...
+[2025-08-19 13:02:02] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 13:02:02] Start hook processing complete
+[2025-08-19 13:34:54] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 13:34:54] Session ID: unknown
+[2025-08-19 13:34:54] Display Name: unknown
+[2025-08-19 13:34:54] Agent Type: ARCHITECT
+[2025-08-19 13:34:54] Task ID: 
+[2025-08-19 13:34:54] Model: sonnet
+[2025-08-19 13:34:54] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 13:34:54] User submitted prompt, updating agent state to: busy
+[2025-08-19 13:34:54] Updating agent state via state manager: unknown -> busy
+[2025-08-19 13:34:54] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 13:34:54] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 13:34:54] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 13:34:54] Trigger file content: busy:1755610494
+[2025-08-19 13:34:56] VSCode detected, sending command...
+[2025-08-19 13:34:56] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 13:34:56] Start hook processing complete
+[2025-08-19 13:36:02] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 13:36:02] Session ID: unknown
+[2025-08-19 13:36:02] Display Name: unknown
+[2025-08-19 13:36:02] Agent Type: ARCHITECT
+[2025-08-19 13:36:02] Task ID: 
+[2025-08-19 13:36:02] Model: sonnet
+[2025-08-19 13:36:02] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 13:36:02] User submitted prompt, updating agent state to: busy
+[2025-08-19 13:36:02] Updating agent state via state manager: unknown -> busy
+[2025-08-19 13:36:02] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 13:36:02] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 13:36:02] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 13:36:02] Trigger file content: busy:1755610562
+[2025-08-19 13:36:04] VSCode detected, sending command...
+[2025-08-19 13:36:04] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 13:36:04] Start hook processing complete
+[2025-08-19 13:40:11] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 13:40:11] Session ID: unknown
+[2025-08-19 13:40:11] Display Name: unknown
+[2025-08-19 13:40:11] Agent Type: ARCHITECT
+[2025-08-19 13:40:11] Task ID: 
+[2025-08-19 13:40:11] Model: sonnet
+[2025-08-19 13:40:11] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 13:40:11] User submitted prompt, updating agent state to: busy
+[2025-08-19 13:40:11] Updating agent state via state manager: unknown -> busy
+[2025-08-19 13:40:11] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 13:40:11] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 13:40:11] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 13:40:11] Trigger file content: busy:1755610811
+[2025-08-19 13:40:13] VSCode detected, sending command...
+[2025-08-19 13:40:13] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 13:40:13] Start hook processing complete
+[2025-08-19 13:45:30] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 13:45:30] Session ID: unknown
+[2025-08-19 13:45:30] Display Name: unknown
+[2025-08-19 13:45:30] Agent Type: ARCHITECT
+[2025-08-19 13:45:30] Task ID: 
+[2025-08-19 13:45:30] Model: sonnet
+[2025-08-19 13:45:30] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 13:45:30] User submitted prompt, updating agent state to: busy
+[2025-08-19 13:45:30] Updating agent state via state manager: unknown -> busy
+[2025-08-19 13:45:30] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 13:45:30] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 13:45:30] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 13:45:30] Trigger file content: busy:1755611130
+[2025-08-19 13:45:32] VSCode detected, sending command...
+[2025-08-19 13:45:32] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 13:45:32] Start hook processing complete
+[2025-08-19 16:06:43] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:06:43] Session ID: unknown
+[2025-08-19 16:06:43] Display Name: unknown
+[2025-08-19 16:06:43] Agent Type: PLANNER
+[2025-08-19 16:06:43] Task ID: 
+[2025-08-19 16:06:43] Model: sonnet
+[2025-08-19 16:06:43] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:06:43] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:06:43] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:06:43] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:06:43] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 16:06:43] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:06:43] Trigger file content: busy:1755619603
+[2025-08-19 16:06:45] VSCode detected, sending command...
+[2025-08-19 16:06:45] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:06:45] Start hook processing complete
+[2025-08-19 16:07:35] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:07:35] Session ID: unknown
+[2025-08-19 16:07:35] Display Name: unknown
+[2025-08-19 16:07:35] Agent Type: PLANNER
+[2025-08-19 16:07:35] Task ID: 
+[2025-08-19 16:07:35] Model: sonnet
+[2025-08-19 16:07:35] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:07:35] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:07:35] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:07:36] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:07:36] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 16:07:36] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:07:36] Trigger file content: busy:1755619656
+[2025-08-19 16:07:37] VSCode detected, sending command...
+[2025-08-19 16:07:38] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:07:38] Start hook processing complete
+[2025-08-19 16:19:08] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:19:08] Session ID: unknown
+[2025-08-19 16:19:08] Display Name: unknown
+[2025-08-19 16:19:08] Agent Type: PLANNER
+[2025-08-19 16:19:08] Task ID: 
+[2025-08-19 16:19:08] Model: sonnet
+[2025-08-19 16:19:08] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:19:08] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:19:08] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:19:08] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:19:08] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 16:19:08] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:19:08] Trigger file content: busy:1755620348
+[2025-08-19 16:19:10] VSCode detected, sending command...
+[2025-08-19 16:19:10] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:19:10] Start hook processing complete
+[2025-08-19 16:20:28] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-19 16:20:28] Session ID: unknown
+[2025-08-19 16:20:28] Display Name: unknown
+[2025-08-19 16:20:28] Agent Type: PLANNER
+[2025-08-19 16:20:28] Task ID: 
+[2025-08-19 16:20:28] Model: sonnet
+[2025-08-19 16:20:28] STATE_CHANGE: unknown: idle -> busy
+[2025-08-19 16:20:28] User submitted prompt, updating agent state to: busy
+[2025-08-19 16:20:28] Updating agent state via state manager: unknown -> busy
+[2025-08-19 16:20:28] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-19 16:20:28] Attempting to update VSCode agent state: unknown -> busy
+[2025-08-19 16:20:28] SUCCESS: Created trigger file: /home/lama/projects/djhatch-state/_logs/hooks/state_updates/unknown.trigger
+[2025-08-19 16:20:28] Trigger file content: busy:1755620428
+[2025-08-19 16:20:30] VSCode detected, sending command...
+[2025-08-19 16:20:30] ERROR: SESSION_ID is unknown, cannot create session trigger file
+[2025-08-19 16:20:30] Start hook processing complete

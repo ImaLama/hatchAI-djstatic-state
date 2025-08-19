@@ -1,0 +1,56 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 013-TS-2025-08-19-STATE-ENHANCEMENT-INTEGRATION
+title: Integration tests for enhanced state management            # "Add sharded event dir"
+created: 2025-08-19-16-14                   # creation datetime
+updated: 2025-08-19-16-14                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 003-FS-2025-08-19-STATE-VALIDATION-HISTORY  # Required parent feature
+type: integration                               # fix|feature|test|refactor|docs|integration
+loc_cap: 250                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["011-TS-2025-08-19-STATE-TRANSITION-VALIDATION", "012-TS-2025-08-19-HISTORY-LOGGING"]
+# =============================================================
+---
+
+## 1  Context
+Provides comprehensive integration testing for the enhanced state management system (003-FS-2025-08-19-STATE-VALIDATION-HISTORY). Ensures that state validation and history logging work together seamlessly in real-world scenarios.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST validate state transitions AND log history for each change | e2e | integration_test.sh | Show validation + logging |
+| 2 | MUST handle concurrent state changes with validation and logging | stress | concurrent_integration_test.sh | Show no data loss |
+| 3 | MUST maintain < 10ms total overhead for validation + logging | perf | perf_integration_test.sh | Show timing results |
+| 4 | MUST properly log validation failures with error context | e2e | error_flow_test.sh | Show error logs |
+| 5 | MUST work with all interfaces (bash, Node.js, VSCode) | integration | interface_test.sh | Show all interfaces work |
+| 6 | MUST handle edge cases (rapid transitions, system restart) | stress | edge_case_test.sh | Show robustness |
+
+## 3  Non-Goals / Anti-Goals
+• Will NOT test individual component internals (covered by unit tests)
+• Will NOT implement new functionality (testing only)
+• Will NOT modify production code (test code only)
+• Will NOT test third-party dependencies
+
+## 4  Design Constraints
+• Keep test scenarios realistic and representative
+• Use existing test infrastructure and patterns
+• Cover both happy path and error scenarios
+• Must validate all components from parent FeatSpec: 003-FS-2025-08-19-STATE-VALIDATION-HISTORY
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

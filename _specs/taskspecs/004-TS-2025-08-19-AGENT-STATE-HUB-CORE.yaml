@@ -14,32 +14,48 @@ depends_on: []                              # ["NNN-TS-...", ...]
 ---
 
 ## 1  Context
-Why does this change exist? Reference ADRs, SPECs, parent FeatSpec, Alignment Plan rows.
+Enhances existing agent_state_manager.sh to serve as the central state hub coordinator. Part of Agent State Hub (002-FS-2025-08-19-AGENT-STATE-HUB). Builds on current JSON state management with improved conflict resolution, atomic updates, and source tracking.
 
-## 2  Objectives (acceptance criteria)
+## 2  Objectives (acceptance criteria) - TDD WORKFLOW
 List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
 
 | # | Acceptance Test | Type | File/Command | Execution Evidence Required |
 |---|-----------------|------|--------------|----------------------------|
-| 1 | `go test ./...` passes with ≥ {{coverage_cap}} % | unit | – | Show test output with pass/fail results |
-| 2 | CLI command outputs valid result | e2e | test/integration/test.go | Run command and show output |
-| 3 | Integration with parent feature works | integration | – | Show integration test results |
+| 1 | MUST handle concurrent updates with file locking | unit | test_concurrent_locks.sh | Show no race conditions |
+| 2 | MUST perform atomic JSON updates (all-or-nothing) | unit | test_atomic_updates.sh | Show transaction behavior |
+| 3 | MUST track update source in metadata | unit | test_source_tracking.sh | Show source attribution |
+| 4 | MUST resolve conflicts with last-write-wins + logging | unit | test_conflict_resolution.sh | Show conflict logs |
+| 5 | MUST maintain backward compatibility with existing calls | integration | test_backward_compat.sh | Show old calls work |
+| 6 | MUST complete updates in < 50ms under normal load | perf | test_performance.sh | Show timing metrics |
 
 ## 3  Non-Goals / Anti-Goals
-Explicitly state what will **NOT** be tackled to stop scope creep.
+• Will NOT implement trigger files (removed in cleanup)
+• Will NOT use database or external storage
+• Will NOT implement complex conflict resolution strategies
+• Will NOT modify existing hook interfaces
 
 ## 4  Design Constraints
-• Keep functions ≤ 40 LoC.  
-• All public funcs accept `context.Context`.  
-• No new third-party deps without Planner sign-off.  
-• Follow METHOD-03 (Contract-First).
-• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+• Enhance existing agent_state_manager.sh (don't replace)
+• Use flock for file locking (already working)
+• Keep changes minimal and backward compatible
+• JSON remains the only storage format
+• Must integrate cleanly with parent FeatSpec: 002-FS-2025-08-19-AGENT-STATE-HUB
 
-## 5  Implementation Checklist (Factory)
-- [ ] Add failing tests for each acceptance criterion
-- [ ] Implement code until tests pass & linting clean
+## 5  Implementation Checklist (TDD Factory Workflow)
+- [ ] **RED**: Write test for concurrent file locking
+- [ ] **GREEN**: Verify existing flock implementation works
+- [ ] **REFACTOR**: Improve lock timeout handling
+- [ ] **RED**: Write test for atomic updates
+- [ ] **GREEN**: Implement temp file + rename pattern
+- [ ] **REFACTOR**: Add rollback on failure
+- [ ] **RED**: Write test for source tracking
+- [ ] **GREEN**: Add "updated_by" field to JSON
+- [ ] **REFACTOR**: Structure metadata properly
+- [ ] **RED**: Write test for backward compatibility
+- [ ] **GREEN**: Ensure old calling patterns work
+- [ ] **REFACTOR**: Clean up parameter handling
 - [ ] Update parent FeatSpec state tracking
-- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+- [ ] Commit with trailer `TaskSpec: 004-TS-2025-08-19-AGENT-STATE-HUB-CORE status=qa`
 
 ## 6  QA Checklist
 - [ ] Review test coverage & LoC cap

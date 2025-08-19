@@ -14,32 +14,48 @@ depends_on: []                              # ["NNN-TS-...", ...]
 ---
 
 ## 1  Context
-Why does this change exist? Reference ADRs, SPECs, parent FeatSpec, Alignment Plan rows.
+Implements tmux status bar updates using inotify file monitoring on agent_states.json. Part of the Agent State Hub (002-FS-2025-08-19-AGENT-STATE-HUB) output pipeline architecture. Uses efficient kernel-level file watching to detect state changes and update tmux UI in real-time.
 
-## 2  Objectives (acceptance criteria)
+## 2  Objectives (acceptance criteria) - TDD WORKFLOW
 List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
 
 | # | Acceptance Test | Type | File/Command | Execution Evidence Required |
 |---|-----------------|------|--------------|----------------------------|
-| 1 | `go test ./...` passes with ≥ {{coverage_cap}} % | unit | – | Show test output with pass/fail results |
-| 2 | CLI command outputs valid result | e2e | test/integration/test.go | Run command and show output |
-| 3 | Integration with parent feature works | integration | – | Show integration test results |
+| 1 | MUST detect JSON changes within 100ms using inotify | unit | test_inotify_detection.sh | Show event timing < 100ms |
+| 2 | MUST parse agent states correctly from JSON | unit | test_json_parsing.sh | Show all states extracted |
+| 3 | MUST update tmux status bar with agent states | integration | test_tmux_update.sh | Show tmux status changes |
+| 4 | MUST handle concurrent JSON updates without missing events | stress | test_concurrent_updates.sh | Show no lost updates |
+| 5 | MUST NOT create feedback loops (read-only consumer) | integration | test_no_feedback.sh | Show no writes to JSON |
+| 6 | SHOULD format status bar with color coding (idle=green, busy=yellow, error=red) | unit | test_status_format.sh | Show colored output |
 
 ## 3  Non-Goals / Anti-Goals
-Explicitly state what will **NOT** be tackled to stop scope creep.
+• Will NOT modify agent_states.json (read-only consumer)
+• Will NOT use polling or trigger files (inotify only)
+• Will NOT implement complex tmux layouts (status bar only)
+• Will NOT handle tmux session management
 
 ## 4  Design Constraints
-• Keep functions ≤ 40 LoC.  
-• All public funcs accept `context.Context`.  
-• No new third-party deps without Planner sign-off.  
-• Follow METHOD-03 (Contract-First).
-• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+• Use inotifywait from inotify-tools package
+• Keep monitor script ≤ 100 LoC
+• Must work with existing tmux configurations
+• Zero dependencies beyond bash, jq, inotify-tools
+• Must integrate cleanly with parent FeatSpec: 002-FS-2025-08-19-AGENT-STATE-HUB
 
-## 5  Implementation Checklist (Factory)
-- [ ] Add failing tests for each acceptance criterion
-- [ ] Implement code until tests pass & linting clean
+## 5  Implementation Checklist (TDD Factory Workflow)
+- [ ] **RED**: Write failing test for inotify detection timing
+- [ ] **GREEN**: Implement minimal inotify watcher to pass test
+- [ ] **REFACTOR**: Clean up code structure
+- [ ] **RED**: Write failing test for JSON parsing
+- [ ] **GREEN**: Add JSON state extraction logic
+- [ ] **REFACTOR**: Extract parsing into function
+- [ ] **RED**: Write failing test for tmux status update
+- [ ] **GREEN**: Implement tmux status-right update
+- [ ] **REFACTOR**: Add color coding and formatting
+- [ ] **RED**: Write stress test for concurrent updates
+- [ ] **GREEN**: Ensure no events are missed
+- [ ] **REFACTOR**: Optimize for performance
 - [ ] Update parent FeatSpec state tracking
-- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+- [ ] Commit with trailer `TaskSpec: 008-TS-2025-08-19-OUTPUT-PIPELINE-TMUX status=qa`
 
 ## 6  QA Checklist
 - [ ] Review test coverage & LoC cap
