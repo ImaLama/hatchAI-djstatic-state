@@ -1,0 +1,368 @@
+---
+# ===== FEATURE STATE TRACKING (Centralized state for 002-FS-2025-08-19-AGENT-STATE-HUB) =====
+featspec_id: 002-FS-2025-08-19-AGENT-STATE-HUB
+featspec_title: Implement Agent State Hub with Pipeline Architecture
+status: draft                               # draft → planning → active → completed → abandoned
+updated: 2025-08-19-13-45                   # last state update datetime
+active_sprint: S4                           # current sprint
+created: 2025-08-19-13-45                   # initial creation datetime
+# ==================================================================================
+---
+
+## Feature-Level State
+
+### Progress Summary
+- **Overall Status**: {{status}}
+- **Last Updated**: {{updated}}
+- **Active Sprint**: {{active_sprint}}
+- **Total TaskSpecs**: 0
+- **Completed TaskSpecs**: 0
+- **Progress**: 0% (0/0)
+
+### Timeline
+- **Created**: {{created}}
+- **Planning Start**: 2025-08-19-13-45
+- **Development Start**: 2025-08-19-13-45
+- **QA Start**: 2025-08-19-13-45
+- **Completed**: 2025-08-19-13-45
+- **Deployed**: 2025-08-19-13-45
+
+### Milestones
+- [ ] Initial planning complete
+- [ ] All TaskSpecs defined
+- [ ] Development started
+- [ ] Core functionality complete
+- [ ] Integration testing complete
+- [ ] QA approved
+- [ ] Production ready
+
+## TaskSpec State Tracking
+
+### Active TaskSpecs
+<!-- This section is automatically updated when TaskSpecs are created/updated -->
+
+### TaskSpec: [Will be populated when TaskSpecs are created]
+```yaml
+task_id: ""
+task_title: ""
+status: draft                    # draft → in-progress → qa → done
+owner: unassigned
+worktree: ""                    # worktrees/card-NNN-TS-2025-08-19-DESCRIPTION
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""                # factories insert via hashstamp
+merged_date: ""                 # datetime (2025-08-19-13-45) implementation was merged
+sprint: S4
+created: 2025-08-19-13-45
+updated: 2025-08-19-13-45
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+## Dependencies & Relationships
+
+### Parent Relationships
+- **Part of Feature**: {{featspec_id}}
+
+### Child Relationships
+- **TaskSpecs**: [Automatically populated]
+
+### External Dependencies
+- **Blocked by**: []
+- **Blocking**: []
+- **Related Features**: []
+
+## Notes & History
+
+### Change Log
+- {{created}}: Initial FeatState created
+- {{updated}}: [Latest change description]
+
+### Notes
+- [Development notes]
+- [Architecture decisions]  
+- [Risk assessments]
+- [Deployment considerations]
+### TaskSpec: 004-TS-2025-08-19-AGENT-STATE-HUB-CORE
+```yaml
+task_id: "004-TS-2025-08-19-AGENT-STATE-HUB-CORE"
+task_title: "Implement central state hub coordinator"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-19-13-46
+updated: 2025-08-19-13-46
+parent_featspec: "002-FS-2025-08-19-AGENT-STATE-HUB"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 005-TS-2025-08-19-INPUT-PIPELINE-HOOKS
+```yaml
+task_id: "005-TS-2025-08-19-INPUT-PIPELINE-HOOKS"
+task_title: "Create hook-based state input pipeline"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-19-13-46
+updated: 2025-08-19-13-46
+parent_featspec: "002-FS-2025-08-19-AGENT-STATE-HUB"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 006-TS-2025-08-19-INPUT-PIPELINE-HEALTH
+```yaml
+task_id: "006-TS-2025-08-19-INPUT-PIPELINE-HEALTH"
+task_title: "Implement health monitoring state input"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-19-13-46
+updated: 2025-08-19-13-46
+parent_featspec: "002-FS-2025-08-19-AGENT-STATE-HUB"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 007-TS-2025-08-19-INPUT-PIPELINE-MANUAL
+```yaml
+task_id: "007-TS-2025-08-19-INPUT-PIPELINE-MANUAL"
+task_title: "Create manual state management interface"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-19-13-46
+updated: 2025-08-19-13-46
+parent_featspec: "002-FS-2025-08-19-AGENT-STATE-HUB"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 008-TS-2025-08-19-OUTPUT-PIPELINE-TMUX
+```yaml
+task_id: "008-TS-2025-08-19-OUTPUT-PIPELINE-TMUX"
+task_title: "Implement tmux UI update output pipeline"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-19-13-46
+updated: 2025-08-19-13-46
+parent_featspec: "002-FS-2025-08-19-AGENT-STATE-HUB"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 009-TS-2025-08-19-SHARED-STATE-LIBRARY
+```yaml
+task_id: "009-TS-2025-08-19-SHARED-STATE-LIBRARY"
+task_title: "Create shared state reader library"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-19-13-46
+updated: 2025-08-19-13-46
+parent_featspec: "002-FS-2025-08-19-AGENT-STATE-HUB"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 010-TS-2025-08-19-AGENT-STATE-INTEGRATION
+```yaml
+task_id: "010-TS-2025-08-19-AGENT-STATE-INTEGRATION"
+task_title: "Integration tests for agent state hub system"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 250
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-19-13-46
+updated: 2025-08-19-13-46
+parent_featspec: "002-FS-2025-08-19-AGENT-STATE-HUB"
+type: "integration"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```

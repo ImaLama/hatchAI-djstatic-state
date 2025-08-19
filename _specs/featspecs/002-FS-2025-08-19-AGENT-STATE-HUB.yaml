@@ -1,0 +1,91 @@
+---
+id: 002-FS-2025-08-19-AGENT-STATE-HUB
+title: Implement Agent State Hub with Pipeline Architecture
+created: 2025-08-19-13-45
+updated: 2025-08-19-13-45
+sprint: S4
+---
+
+## 1  DevCards
+
+| DevCard ID | Title | Dependencies | Notes |
+|------------|-------|--------------|-------|
+| 004-TS-2025-08-19-AGENT-STATE-HUB-CORE-001 | Implement central state hub coordinator | - | Core hub with conflict resolution |
+| 005-TS-2025-08-19-INPUT-PIPELINE-HOOKS-002 | Create hook-based state input pipeline | 004-TS-...-001 | Claude Code hook integration |
+| 006-TS-2025-08-19-INPUT-PIPELINE-HEALTH-003 | Implement health monitoring state input | 004-TS-...-001 | Timeout and health checks |
+| 007-TS-2025-08-19-INPUT-PIPELINE-MANUAL-004 | Create manual state management interface | 004-TS-...-001 | Manual intervention capabilities |
+| 008-TS-2025-08-19-OUTPUT-PIPELINE-TMUX-005 | Implement tmux UI update output pipeline | 004-TS-...-001 | Status bar and window title updates |
+| 009-TS-2025-08-19-SHARED-STATE-LIBRARY-006 | Create shared state reader library | 004-TS-...-001 | Common state access functions |
+| 999-TS-2025-08-19-AGENT-STATE-INTEGRATION-999 | Integration tests for agent state hub system | 004-TS-...-001, 005-TS-...-002, 006-TS-...-003, 007-TS-...-004, 008-TS-...-005, 009-TS-...-006 | **Required** - End-to-end state pipeline testing |
+
+## 2  User Description
+
+### Feature Overview
+
+Implement a centralized agent state management system that coordinates state updates from multiple sources (Claude Code hooks, health monitoring, manual interventions) and distributes state changes to consumers (tmux UI, dashboards, notifications) through a pipeline architecture.
+
+### User Value  
+
+- **Real-time visibility**: Tmux status bars show current agent states across all sessions
+- **Reliable state tracking**: Single source of truth prevents state conflicts and inconsistencies  
+- **Scalable monitoring**: Easy to add new state producers and consumers without coupling
+- **Operational control**: Manual state override capabilities for debugging and intervention
+
+### User Stories
+
+1. **As an operator**, I want to see all agent states in my tmux status bar so that I can monitor system activity at a glance
+2. **As a system administrator**, I want automatic health monitoring to detect stuck agents so that issues are identified quickly
+3. **As a developer**, I want to manually override agent states so that I can debug and test state transitions
+4. **As an architect**, I want a single source of truth for agent states so that the system is reliable and maintainable
+
+### Acceptance Criteria
+
+- [ ] Central state hub handles multiple concurrent state updates without conflicts
+- [ ] Tmux status bars update in real-time (< 2 seconds) when agent states change  
+- [ ] Health monitoring automatically detects and reports stuck/timeout agents
+- [ ] Manual state management commands work reliably for all agent types
+- [ ] No feedback loops between state producers and consumers
+- [ ] State changes include full audit trail with source attribution
+
+## 3  Planner Breakdown
+
+### Technical Approach
+
+**State Hub Pattern**: Central coordinator (`agent_states.json`) with multiple input pipelines and output consumers. Uses file-based queuing with named pipes for inter-process communication and inotify for real-time change detection.
+
+### Architecture Impact
+
+**Major Enhancement**: Transforms existing direct state management into intelligent hub with conflict resolution, source tracking, and scalable producer/consumer model. Maintains backward compatibility with existing `agent_state_manager.sh`.
+
+### Dependencies
+
+- Existing `agent_state_manager.sh` (enhanced)
+- File locking mechanisms (flock)
+- inotify utilities for file watching
+- JSON processing (jq or python3)
+- Named pipes for IPC
+
+### Risk Assessment  
+
+**High Risk**: Feedback loops between tmux state detection and UI updates
+**Mitigation**: Strict separation - tmux is read-only consumer, never state producer
+
+**Medium Risk**: Hub becoming performance bottleneck
+**Mitigation**: Asynchronous processing with queuing, separate input/output processes
+
+**Low Risk**: File locking contention under high load
+**Mitigation**: Timeout-based locking with fallback strategies
+
+### Testing Strategy
+
+- **Unit Tests**: Individual pipeline components with mock state files
+- **Integration Tests**: End-to-end state flow from hooks to tmux display
+- **Load Tests**: Concurrent state updates from multiple sources
+- **Loop Detection**: Verify no circular dependencies in state updates
+
+### Rollout Plan
+
+**Phase 1**: Core hub with hook integration (maintain existing functionality)
+**Phase 2**: Add health monitoring and manual override pipelines
+**Phase 3**: Enhanced tmux UI with real-time updates
+**Phase 4**: Additional output consumers (dashboards, notifications)

@@ -1,0 +1,51 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 007-TS-2025-08-19-INPUT-PIPELINE-MANUAL
+title: Create manual state management interface            # "Add sharded event dir"
+created: 2025-08-19-13-46                   # creation datetime
+updated: 2025-08-19-13-46                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 002-FS-2025-08-19-AGENT-STATE-HUB  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Why does this change exist? Reference ADRs, SPECs, parent FeatSpec, Alignment Plan rows.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | `go test ./...` passes with ≥ {{coverage_cap}} % | unit | – | Show test output with pass/fail results |
+| 2 | CLI command outputs valid result | e2e | test/integration/test.go | Run command and show output |
+| 3 | Integration with parent feature works | integration | – | Show integration test results |
+
+## 3  Non-Goals / Anti-Goals
+Explicitly state what will **NOT** be tackled to stop scope creep.
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.
