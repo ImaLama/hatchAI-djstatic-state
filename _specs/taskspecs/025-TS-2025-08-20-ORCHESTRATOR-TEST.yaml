@@ -1,0 +1,51 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 025-TS-2025-08-20-ORCHESTRATOR-TEST
+title: Add orchestrator test documentation            # "Add sharded event dir"
+created: 2025-08-20-17-15                   # creation datetime
+updated: 2025-08-20-17-15                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 005-FS-2025-08-20-ADHOC-SINGLE-TASKS  # Required parent feature
+type: docs                               # fix|feature|test|refactor|docs|integration
+loc_cap: 50                                # net LoC (adds-deletes) - minimal for test
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Simple test TaskSpec to validate the taskspec_orchestrator.sh workflow. This creates a minimal documentation file to test the complete Factory → QA → Merge pipeline without complex implementation requirements.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST create orchestrator-test.md in _docs/ | file creation | ls _docs/orchestrator-test.md | Show file exists |
+| 2 | MUST contain basic orchestrator info | content | cat _docs/orchestrator-test.md | Show file contains test content |
+| 3 | MUST commit changes with proper message | git | git log -1 --oneline | Show commit with TaskSpec ID |
+
+## 3  Non-Goals / Anti-Goals
+- NOT creating complex documentation
+- NOT testing advanced orchestrator features  
+- NOT modifying existing orchestrator code
+
+## 4  Design Constraints
+• File must be ≤ 50 lines total
+• Use simple markdown format
+• Include basic orchestrator test info
+• Must integrate cleanly with parent FeatSpec: 005-FS-2025-08-20-ADHOC-SINGLE-TASKS
+
+## 5  Implementation Checklist (Factory)
+- [ ] Create _docs/orchestrator-test.md file
+- [ ] Add basic content about orchestrator testing  
+- [ ] Commit with trailer `TaskSpec: 025-TS-2025-08-20-ORCHESTRATOR-TEST status=qa`
+
+## 6  QA Checklist
+- [ ] Verify file was created in correct location
+- [ ] Review content is appropriate and clear
+- [ ] Verify proper commit message format
+- [ ] If pass, commit trailer `TaskSpec: 025-TS-2025-08-20-ORCHESTRATOR-TEST status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.
