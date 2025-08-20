@@ -1,28 +1,28 @@
 {
-  "last_updated": "2025-08-20T15:03:24+00:00",
+  "last_updated": "2025-08-20T17:01:17+00:00",
   "sessions": {
     "architect-1755608908": {
       "state": "idle",
       "health": {
         "state": "dead",
         "issues": "session_not_found",
-        "timestamp": "2025-08-20T14:55:47+00:00"
+        "timestamp": "2025-08-20T15:13:24+00:00"
       }
     },
     "architect-1755609014": "idle",
     "unknown": {
-      "state": "idle",
-      "timestamp": "2025-08-20T14:27:07+00:00",
-      "origin": "claude-stop-hook-delay"
+      "state": "busy",
+      "timestamp": "2025-08-20T16:59:27+00:00",
+      "origin": "claude-start-hook"
     },
     "architect-test-123": "busy",
     "architect-1755620153": "busy",
     "test-verification": "idle",
     "test-manual-update": "busy",
     "architect-1755683754": {
-      "state": "idle",
-      "timestamp": "2025-08-20T15:00:55+00:00",
-      "origin": "claude-stop-hook-delay"
+      "state": "busy",
+      "timestamp": "2025-08-20T15:23:16+00:00",
+      "origin": "claude-start-hook"
     },
     "test-absolute-path": "busy",
     "test-enhanced-tracking": {
@@ -42,7 +42,7 @@
     },
     "architect-1755691818": {
       "state": "idle",
-      "timestamp": "2025-08-20T12:10:26+00:00",
+      "timestamp": "2025-08-20T16:51:33+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "architect-1755691837": {
@@ -77,37 +77,37 @@
     },
     "architect-1755692533": {
       "state": "idle",
-      "timestamp": "2025-08-20T15:03:24+00:00",
+      "timestamp": "2025-08-20T15:14:36+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "factory-TC-123": {
       "state": "idle",
-      "timestamp": "2025-08-20T13:33:08+00:00",
+      "timestamp": "2025-08-20T16:13:01+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "planner-1755698364": {
-      "state": "busy",
-      "timestamp": "2025-08-20T15:02:52+00:00",
-      "origin": "claude-start-hook"
+      "state": "idle",
+      "timestamp": "2025-08-20T15:06:05+00:00",
+      "origin": "claude-stop-hook-delay"
     },
     "factory-TC-999": {
       "state": "busy",
       "timestamp": "2025-08-20T14:13:25+00:00",
       "origin": "claude-start-hook",
       "health": {
-        "state": "healthy",
-        "issues": "all systems operational",
-        "timestamp": "2025-08-20T14:55:10+00:00"
+        "state": "interrupted",
+        "issues": "low CPU usage detected, likely ESC-interrupted",
+        "timestamp": "2025-08-20T15:14:41+00:00"
       }
     },
     "architect-TC-888": {
       "state": "idle",
-      "timestamp": "2025-08-20T14:14:12+00:00",
+      "timestamp": "2025-08-20T16:55:33+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "architect-1755700020": {
       "state": "idle",
-      "timestamp": "2025-08-20T14:27:08+00:00",
+      "timestamp": "2025-08-20T16:58:06+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "architect-1755700037": {
@@ -119,6 +119,46 @@
       "state": "idle",
       "timestamp": "2025-08-20T14:45:42+00:00",
       "origin": "claude-stop-hook-delay"
+    },
+    "planner-1755703297": {
+      "state": "busy",
+      "timestamp": "2025-08-20T15:21:39+00:00",
+      "origin": "claude-start-hook"
+    },
+    "architect-1755703328": {
+      "state": "idle",
+      "timestamp": "2025-08-20T15:22:16+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "factory-1755706136": {
+      "state": "idle",
+      "timestamp": "2025-08-20T17:01:17+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "weaver-1755706222": {
+      "state": "idle",
+      "timestamp": "2025-08-20T16:10:30+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-TC-001": {
+      "state": "busy",
+      "timestamp": "2025-08-20T16:25:55+00:00",
+      "origin": "claude-start-hook"
+    },
+    "architect-1755707221": {
+      "state": "idle",
+      "timestamp": "2025-08-20T16:29:45+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-TC-987": {
+      "state": "idle",
+      "timestamp": "2025-08-20T16:48:32+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "weaver-1755709249": {
+      "state": "busy",
+      "timestamp": "2025-08-20T17:00:58+00:00",
+      "origin": "claude-start-hook"
     }
   }
 }
