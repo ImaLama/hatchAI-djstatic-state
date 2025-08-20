@@ -1,0 +1,10 @@
+{
+    "session_id": "architect-TC-888",
+    "display_name": "unknown",
+    "agent_type": "architect",
+    "task_id": "TC-888",
+    "model": "sonnet",
+    "final_state": "done",
+    "completion_time": "2025-08-20T14:14:09+00:00",
+    "session_log": "/home/lama/projects/djhatch-state/_logs/TC-888/architect_session.log"
+}
