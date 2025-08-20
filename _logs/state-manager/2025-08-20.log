@@ -1412,3 +1412,7 @@
 2025-08-20 23:08:26 | STATE_SUCCESS | planner-1755731305 | busy | claude-start-hook
 2025-08-20 23:08:47 | STATE_UPDATE | planner-1755731305 | busy | claude-start-hook | PID:2844460
 2025-08-20 23:08:47 | STATE_SUCCESS | planner-1755731305 | busy | claude-start-hook
+2025-08-20 23:08:51 | STATE_UPDATE | qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook | PID:2844749
+2025-08-20 23:08:51 | STATE_SUCCESS | qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook
+2025-08-20 23:08:54 | STATE_UPDATE | qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay | PID:2845162
+2025-08-20 23:08:54 | STATE_SUCCESS | qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay
