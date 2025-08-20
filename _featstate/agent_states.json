@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-08-20T23:08:26+00:00",
+  "last_updated": "2025-08-20T23:08:54+00:00",
   "sessions": {
     "architect-1755608908": {
       "state": "idle",
@@ -166,13 +166,13 @@
       "origin": "claude-stop-hook-delay"
     },
     "qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME": {
-      "state": "busy",
-      "timestamp": "2025-08-20T23:07:19+00:00",
-      "origin": "claude-start-hook"
+      "state": "idle",
+      "timestamp": "2025-08-20T23:08:54+00:00",
+      "origin": "claude-stop-hook-delay"
     },
     "planner-1755731305": {
       "state": "busy",
-      "timestamp": "2025-08-20T23:08:26+00:00",
+      "timestamp": "2025-08-20T23:08:47+00:00",
       "origin": "claude-start-hook"
     }
   }
