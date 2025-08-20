@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-08-20T17:01:17+00:00",
+  "last_updated": "2025-08-20T21:18:55+00:00",
   "sessions": {
     "architect-1755608908": {
       "state": "idle",
@@ -11,9 +11,9 @@
     },
     "architect-1755609014": "idle",
     "unknown": {
-      "state": "busy",
-      "timestamp": "2025-08-20T16:59:27+00:00",
-      "origin": "claude-start-hook"
+      "state": "idle",
+      "timestamp": "2025-08-20T19:01:22+00:00",
+      "origin": "claude-stop-hook-delay"
     },
     "architect-test-123": "busy",
     "architect-1755620153": "busy",
@@ -42,7 +42,7 @@
     },
     "architect-1755691818": {
       "state": "idle",
-      "timestamp": "2025-08-20T16:51:33+00:00",
+      "timestamp": "2025-08-20T18:20:35+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "architect-1755691837": {
@@ -107,7 +107,7 @@
     },
     "architect-1755700020": {
       "state": "idle",
-      "timestamp": "2025-08-20T16:58:06+00:00",
+      "timestamp": "2025-08-20T21:07:54+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "architect-1755700037": {
@@ -132,7 +132,7 @@
     },
     "factory-1755706136": {
       "state": "idle",
-      "timestamp": "2025-08-20T17:01:17+00:00",
+      "timestamp": "2025-08-20T17:02:30+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "weaver-1755706222": {
@@ -157,8 +157,13 @@
     },
     "weaver-1755709249": {
       "state": "busy",
-      "timestamp": "2025-08-20T17:00:58+00:00",
+      "timestamp": "2025-08-20T21:18:55+00:00",
       "origin": "claude-start-hook"
+    },
+    "factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME": {
+      "state": "idle",
+      "timestamp": "2025-08-20T21:06:51+00:00",
+      "origin": "claude-stop-hook-delay"
     }
   }
 }
