@@ -867,3 +867,25 @@
 [2025-08-20 14:43:35] Updating agent state via state manager: planner-1755701013 -> busy
 [2025-08-20 14:43:35] SUCCESS: Updated agent state to BUSY via state manager
 [2025-08-20 14:43:35] Start hook processing complete
+[2025-08-20 14:44:20] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-20 14:44:20] Session ID: planner-1755698364
+[2025-08-20 14:44:20] Display Name: unknown
+[2025-08-20 14:44:20] Agent Type: planner
+[2025-08-20 14:44:20] Task ID: 
+[2025-08-20 14:44:20] Model: sonnet
+[2025-08-20 14:44:20] STATE_CHANGE: planner-1755698364: idle -> busy
+[2025-08-20 14:44:20] User submitted prompt, updating agent state to: busy
+[2025-08-20 14:44:20] Updating agent state via state manager: planner-1755698364 -> busy
+[2025-08-20 14:44:20] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-20 14:44:20] Start hook processing complete
+[2025-08-20 15:02:52] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-20 15:02:52] Session ID: planner-1755698364
+[2025-08-20 15:02:52] Display Name: unknown
+[2025-08-20 15:02:52] Agent Type: planner
+[2025-08-20 15:02:52] Task ID: 
+[2025-08-20 15:02:52] Model: sonnet
+[2025-08-20 15:02:52] STATE_CHANGE: planner-1755698364: idle -> busy
+[2025-08-20 15:02:52] User submitted prompt, updating agent state to: busy
+[2025-08-20 15:02:52] Updating agent state via state manager: planner-1755698364 -> busy
+[2025-08-20 15:02:52] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-20 15:02:52] Start hook processing complete

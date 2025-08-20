@@ -1134,3 +1134,37 @@
 [2025-08-20 14:27:25] Background process: Returning to IDLE state for architect-1755700037
 [2025-08-20 14:27:26] STATE_CHANGE: architect-1755700037: done -> idle
 [2025-08-20 14:27:26] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:45:01] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:45:01] Session ID: planner-1755698364
+[2025-08-20 14:45:01] Display Name: unknown
+[2025-08-20 14:45:01] Agent Type: planner
+[2025-08-20 14:45:01] Task ID: 
+[2025-08-20 14:45:01] Model: sonnet
+[2025-08-20 14:45:01] STATE_CHANGE: planner-1755698364: busy -> done
+[2025-08-20 14:45:01] Prompt completed successfully, Claude ready for next input (duration: 41s)
+[2025-08-20 14:45:01] Updating agent state via state manager: planner-1755698364 -> done
+[2025-08-20 14:45:02] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:45:02] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:45:02] State updated to: done via JSON state manager
+[2025-08-20 14:45:02] Stop hook processing complete
+[2025-08-20 14:45:02] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:45:05] Background process: Returning to IDLE state for planner-1755698364
+[2025-08-20 14:45:05] STATE_CHANGE: planner-1755698364: done -> idle
+[2025-08-20 14:45:05] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:45:39] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:45:39] Session ID: planner-1755701013
+[2025-08-20 14:45:39] Display Name: unknown
+[2025-08-20 14:45:39] Agent Type: planner
+[2025-08-20 14:45:39] Task ID: 
+[2025-08-20 14:45:39] Model: sonnet
+[2025-08-20 14:45:39] STATE_CHANGE: planner-1755701013: busy -> done
+[2025-08-20 14:45:39] Prompt completed successfully, Claude ready for next input (duration: 124s)
+[2025-08-20 14:45:39] Updating agent state via state manager: planner-1755701013 -> done
+[2025-08-20 14:45:39] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:45:39] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:45:39] State updated to: done via JSON state manager
+[2025-08-20 14:45:39] Stop hook processing complete
+[2025-08-20 14:45:39] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:45:42] Background process: Returning to IDLE state for planner-1755701013
+[2025-08-20 14:45:42] STATE_CHANGE: planner-1755701013: done -> idle
+[2025-08-20 14:45:42] SUCCESS: Returned agent state to IDLE
