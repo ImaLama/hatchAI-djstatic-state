@@ -6,7 +6,7 @@ A FeatSpec (Feature Specification) is an immutable specification document that d
 ## Format
 - **File naming**: `NNN-FS-YYYY-MM-DD-DESCRIPTION.yaml`
 - **Example**: `001-FS-2025-08-18-USER-AUTH.yaml`
-- **Location**: `_specs/featspecs/`
+- **Location**: `_featstate/`
 
 ## Structure
 

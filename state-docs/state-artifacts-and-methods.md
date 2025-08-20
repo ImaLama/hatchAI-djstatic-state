@@ -207,7 +207,7 @@ djhatch-state/
 ```
 
 ### Specification Files Location
-- **FeatSpec files**: `_specs/featspecs/NNN-FS-YYYY-MM-DD-DESCRIPTION.yaml`
+- **FeatSpec files**: `_featstate/NNN-FS-YYYY-MM-DD-DESCRIPTION.yaml`
 - **FeatState files**: `_featstate/NNN-FSTATE-YYYY-MM-DD-DESCRIPTION.yaml`
 - **TaskSpec files**: `_specs/taskspecs/NNN-TS-YYYY-MM-DD-DESCRIPTION.yaml`
 

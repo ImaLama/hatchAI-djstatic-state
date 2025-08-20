@@ -19,9 +19,9 @@ Essential commands for feature planning work:
 ## System Architecture
 
 ### File Types and Relationships
-- **FeatSpec**: Immutable feature specifications (`001-FS-YYYY-MM-DD-DESCRIPTION.yaml`)
-- **TaskSpec**: Immutable task specifications (`001-TS-YYYY-MM-DD-DESCRIPTION.yaml`)
-- **FeatState**: Centralized mutable state tracking (`001-FSTATE-YYYY-MM-DD-DESCRIPTION.yaml`)
+- **FeatSpec**: Immutable feature specifications stored in `_featstate/` (`001-FS-YYYY-MM-DD-DESCRIPTION.yaml`)
+- **TaskSpec**: Immutable task specifications stored in `_specs/taskspecs/` (`001-TS-YYYY-MM-DD-DESCRIPTION.yaml`)
+- **FeatState**: Centralized mutable state tracking in `_featstate/` (`001-FSTATE-YYYY-MM-DD-DESCRIPTION.yaml`)
 
 ### Key Principles
 - **State Separation**: Specifications are immutable, state is mutable and centralized

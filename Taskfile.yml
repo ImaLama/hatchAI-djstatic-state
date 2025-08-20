@@ -29,7 +29,7 @@ tasks:
     desc: "List all featspecs and their status"
     cmds:
       - echo "=== FeatSpec Status ==="
-      - find _specs/featspecs -name "*-FS-*.yaml" -type f 2>/dev/null | sort || echo "No featspecs found"
+      - find _featstate -name "*-FS-*.yaml" -type f 2>/dev/null | sort || echo "No featspecs found"
 
   taskspec-list:
     desc: "List all taskspecs and their parent features"
@@ -66,7 +66,7 @@ tasks:
   setup:
     desc: "Initialize directory structure and sequence files"
     cmds:
-      - mkdir -p _specs/featspecs _specs/taskspecs _docs/artifact_descriptions _docs/ADR state-scripts
+      - mkdir -p _featstate _specs/taskspecs _docs/artifact_descriptions _docs/ADR state-scripts
       - |
         if [ ! -f "_specs/.featspec_sequence" ]; then
           echo "001" > _specs/.featspec_sequence

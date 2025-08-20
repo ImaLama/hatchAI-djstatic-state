@@ -248,5 +248,5 @@ ls djhatch-state/hatchAI-codebase-readonly/src/
 cat djhatch-state/hatchAI-codebase-readonly/README.md
 
 # Verify references work in state files
-grep -r "hatchAI-codebase-readonly" _specs/featspecs/
+grep -r "hatchAI-codebase-readonly" _featstate/
 ```

@@ -1,312 +1,336 @@
 # FeatState Artifact Description
 
 ## Overview
-A FeatState (Feature State) is a centralized state tracking file that contains all mutable state information for a feature and its associated TaskSpecs. It serves as the single source of truth for progress, status, and execution data while keeping specifications immutable.
+A FeatState (Feature State) is a dual-format state management system that separates operational runtime state from rich development context and history. It implements a directory-per-feature architecture with TaskSpec-isolated handover files to prevent agent confusion while preserving learning context.
 
-## Format
-- **File naming**: `NNN-FSTATE-YYYY-MM-DD-DESCRIPTION.yaml`
-- **Example**: `001-FSTATE-2025-08-18-USER-AUTH.yaml`
-- **Location**: `_specs/featspecs/` (co-located with corresponding FeatSpec)
+## Architecture
+The FeatState system uses three file types in a structured directory approach:
 
-## Structure
+### Directory Structure
+```
+_featstate/
+├── runtime_state.json                                    # Global agent runtime state
+├── {FEATURE_ID}/
+│   ├── featstate.json                                   # Feature progression data
+│   ├── {TASKSPEC_ID}/
+│   │   └── handovers.yaml                              # TaskSpec-specific context
+│   └── {TASKSPEC_ID}/
+│       └── handovers.yaml                              # TaskSpec-specific context
+```
 
-### YAML Frontmatter
+## File Types
+
+### 1. runtime_state.json - Global Agent Runtime State
+
+**Purpose**: High-frequency operational state for active agent monitoring and orchestrator coordination.
+
+**Location**: `_featstate/runtime_state.json`
+
+**Update Frequency**: Every 5 seconds during active agent execution
+
+**Key Features**:
+- Real-time agent status tracking
+- System-wide operational state
+- Concurrent orchestrator coordination
+- Timeout detection and recovery support
+
+**Structure**:
+```json
+{
+  "agents": {
+    "factory-001-TS-2025-08-18-TASKSPEC-VALIDATION-1": {
+      "name": "factory-001-TS-2025-08-18-TASKSPEC-VALIDATION-1",
+      "type": "factory",
+      "status": "completed",
+      "start_time": "2025-08-18T14:00:00Z",
+      "end_time": "2025-08-18T16:30:00Z",
+      "taskspec": "001-TS-2025-08-18-TASKSPEC-VALIDATION",
+      "feature_spec": "001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS",
+      "worktree": "_worktrees/factory-001-TS-2025-08-18-TASKSPEC-VALIDATION",
+      "iteration": 1,
+      "tmux_session": "factory-001-TS-2025-08-18-TASKSPEC-VALIDATION-1",
+      "log_path": "_logs/factory-001-TS-2025-08-18-TASKSPEC-VALIDATION-1.log"
+    }
+  },
+  "features": {
+    "001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS": {
+      "id": "001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS",
+      "status": "active",
+      "active_tasks": ["002-TS-2025-08-18-STATE-LOGGING"],
+      "completed_tasks": ["001-TS-2025-08-18-TASKSPEC-VALIDATION"],
+      "current_phase": "factory",
+      "updated_at": "2025-08-20T14:30:00Z"
+    }
+  },
+  "updated_at": "2025-08-20T14:30:00Z"
+}
+```
+
+### 2. featstate.json - Feature Progression Data
+
+**Purpose**: Feature-level progression tracking with TaskSpec completion metrics and cross-TaskSpec pattern intelligence.
+
+**Location**: `_featstate/{FEATURE_ID}/featstate.json`
+
+**Update Frequency**: On TaskSpec state transitions (start, complete, fail)
+
+**Key Features**:
+- Progress tracking and analytics
+- Cross-TaskSpec pattern recognition
+- TaskSpec splitting recommendations
+- Cycle time and success rate metrics
+
+**Structure**:
+```json
+{
+  "feature": {
+    "id": "001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS",
+    "title": "POC Orchestrator Enhancements",
+    "status": "in_progress",
+    "created": "2025-08-18T10:00:00Z",
+    "updated": "2025-08-20T14:30:00Z",
+    "progress": {
+      "total_taskspecs": 3,
+      "completed_taskspecs": 1,
+      "completion_percentage": 33.3
+    },
+    "metrics": {
+      "avg_cycle_time_hours": 3.25,
+      "success_rate": 75.0,
+      "first_pass_success_rate": 50.0
+    }
+  },
+  "taskspecs": {
+    "001-TS-2025-08-18-TASKSPEC-VALIDATION": {
+      "status": "completed",
+      "total_cycle_time_hours": 3.42,
+      "factory_iterations": [
+        {
+          "iteration": 1,
+          "started": "2025-08-18T14:00:00Z",
+          "completed": "2025-08-18T16:30:00Z",
+          "outcome": "completed",
+          "loc_changed": 187,
+          "coverage_achieved": 95.2
+        }
+      ],
+      "qa_iterations": [
+        {
+          "iteration": 1,
+          "outcome": "approved",
+          "issues_found": 0
+        }
+      ]
+    }
+  },
+  "cross_taskspec_patterns": {
+    "common_issues": [
+      "State management tasks consistently struggle with concurrency",
+      "Coverage gaps typically in error handling paths"
+    ],
+    "success_patterns": [
+      "Validation tasks succeed when comprehensive test data provided"
+    ]
+  }
+}
+```
+
+### 3. handovers.yaml - TaskSpec-Specific Development Context
+
+**Purpose**: Rich development context and handover history isolated per TaskSpec to prevent agent confusion while preserving learning context.
+
+**Location**: `_featstate/{FEATURE_ID}/{TASKSPEC_ID}/handovers.yaml`
+
+**Update Frequency**: On agent completion (factory/QA handovers)
+
+**Key Features**:
+- Focused TaskSpec-only context
+- Factory and QA handover preservation
+- Implementation lessons learned
+- TaskSpec splitting context for future decisions
+
+**Structure**:
 ```yaml
-featspec_id: 001-FS-2025-08-18-USER-AUTH
-featspec_title: Implement user authentication system
-status: active
-updated: 2025-08-18
-active_sprint: S4
-created: 2025-08-18
+taskspec_id: 002-TS-2025-08-18-STATE-LOGGING
+feature_id: 001-FS-2025-08-18-POC-ORCHESTRATOR-ENHANCEMENTS
+updated: 2025-08-19T14:30:00Z
+
+factory_handovers:
+  - iteration: 1
+    agent_name: factory-002-TS-2025-08-18-STATE-LOGGING-1
+    timestamp: 2025-08-19T12:30:00Z
+    outcome: completed
+    summary: |
+      **State Logging Implementation - Iteration 1**
+      
+      Implemented JSON-based state persistence but encountered concurrency challenges.
+      
+      **Lessons Learned:**
+      - State management TaskSpecs consistently underestimate concurrency complexity
+      - Explicit concurrency requirements should be added to spec templates
+    
+    technical_details:
+      loc_added: 145
+      coverage: 72.0
+      critical_gaps: ["concurrent_access_testing", "error_path_coverage"]
+
+qa_handovers:
+  - iteration: 1
+    agent_name: qa-002-TS-2025-08-18-STATE-LOGGING-1
+    timestamp: 2025-08-19T14:30:00Z
+    decision: rejected
+    summary: |
+      **QA Rejection - Concurrency and Coverage Issues**
+      
+      Critical issues found:
+      1. Race conditions in state updates - CRITICAL
+      2. Test coverage below requirement (72.0% < 80%) - CRITICAL
+      
+      **Rework Guidance:**
+      - Add mutex/RWLock protection for concurrent state access
+      - Achieve minimum 80% test coverage including error paths
+
+lessons_learned:
+  implementation_patterns:
+    - "State logging requires explicit concurrency design from start"
+    - "Coverage requirements must explicitly include error handling paths"
+  
+  common_mistakes:
+    - "Treating concurrency as implementation detail rather than requirement"
+    - "Focusing on happy path testing, neglecting error scenarios"
+
+splitting_context:
+  complexity_indicators:
+    - "Multiple factory iterations required (2+)"
+    - "Concurrency concerns suggest architectural complexity"
+  
+  potential_splits:
+    - taskspec: "002A-TS-BASIC-STATE-LOGGING"
+      scope: "Single-threaded state logging with basic JSON persistence"
+      estimated_effort: "0.5 week"
 ```
 
-### Content Sections
-1. **Feature-Level State**: Overall progress, timeline, milestones
-2. **TaskSpec State Tracking**: Individual task states, progress, test results
-3. **Dependencies & Relationships**: Parent/child relationships, external dependencies
-4. **Notes & History**: Change log, development notes, decisions
+## Key Architectural Benefits
 
-## Key Characteristics
+### Agent Focus
+- **Clean Context**: Agents receive only relevant TaskSpec-specific context
+- **No Confusion**: Isolated handovers prevent cross-TaskSpec contamination
+- **Focused Learning**: Lessons learned are TaskSpec-specific and actionable
 
-### Mutable Fields
-- `status`: Current feature status (draft → planning → active → completed → abandoned)
-- `updated`: Last modification date
-- `active_sprint`: Current sprint assignment
-- All TaskSpec state entries
+### Operational Efficiency
+- **High-Frequency Queries**: JSON runtime state optimized for 5-second polling
+- **Rich Context**: YAML handovers provide comprehensive development history
+- **Concurrent Safety**: Feature-level isolation enables parallel development
 
-### Centralized State Storage
-All TaskSpecs belonging to this feature store their state here:
-- Task status and ownership
-- Worktree assignments
-- Test coverage and results
-- Implementation progress
-- QA validation status
+### Learning Intelligence
+- **Pattern Recognition**: Cross-TaskSpec patterns identified in featstate.json
+- **Split Recommendations**: Data-driven TaskSpec splitting suggestions
+- **Context Evolution**: Historical handovers inform future implementations
 
-## Relationship to Other Artifacts
+### Scalability
+- **Directory-per-Feature**: Scales infinitely without single file bottlenecks
+- **Atomic Operations**: TaskSpec-level isolation prevents conflicts
+- **Granular Backup**: Feature and TaskSpec level backup/restore capabilities
 
-### Paired FeatSpec
-Each FeatState corresponds to exactly one FeatSpec:
-- **FeatSpec**: `001-FS-2025-08-18-USER-AUTH.yaml` (immutable specification)
-- **FeatState**: `001-FSTATE-2025-08-18-USER-AUTH.yaml` (mutable state)
+## Usage Patterns
 
-### Child TaskSpec States
-Contains state for all child TaskSpecs:
-```yaml
-### TaskSpec: 001-TS-2025-08-18-JWT-MIDDLEWARE
-task_id: "001-TS-2025-08-18-JWT-MIDDLEWARE"
-status: in-progress
-owner: developer-name
-worktree: "worktrees/card-001-TS-2025-08-18-JWT-MIDDLEWARE"
-test_coverage: 85
+### Orchestrator Integration
+```go
+// Load focused TaskSpec context for agents
+handovers := orchestrator.loadTaskSpecHandovers(taskSpecID)
+
+// Monitor agent status via runtime state
+status := orchestrator.checkAgentStatus(agentName)
+
+// Update feature progression metrics
+orchestrator.updateFeatState(featureID, progressUpdate)
 ```
 
-## Feature-Level State Management
-
-### Status Progression
-```
-draft → planning → active → completed → abandoned
-```
-
-### Progress Tracking
-- **Overall Progress**: Calculated from TaskSpec completion
-- **Timeline Milestones**: Key dates and checkpoints  
-- **Sprint Management**: Active sprint and transitions
-
-### Example Feature State
-```yaml
-## Feature-Level State
-
-### Progress Summary
-- **Overall Status**: active
-- **Last Updated**: 2025-08-18
-- **Active Sprint**: S4
-- **Total TaskSpecs**: 3
-- **Completed TaskSpecs**: 1
-- **Progress**: 33% (1/3)
-
-### Timeline
-- **Created**: 2025-08-18
-- **Planning Start**: 2025-08-18
-- **Development Start**: 2025-08-19
-- **QA Start**: 
-- **Completed**: 
-- **Deployed**: 
-
-### Milestones
-- [x] Initial planning complete
-- [x] All TaskSpecs defined
-- [x] Development started
-- [ ] Core functionality complete
-- [ ] Integration testing complete
-- [ ] QA approved
-- [ ] Production ready
-```
-
-## TaskSpec State Management
-
-### Individual Task State
-Each TaskSpec gets a dedicated state section:
-
-```yaml
-### TaskSpec: 001-TS-2025-08-18-JWT-MIDDLEWARE
-task_id: "001-TS-2025-08-18-JWT-MIDDLEWARE"
-task_title: "Add JWT middleware for authentication"
-status: in-progress
-owner: john-developer
-worktree: "worktrees/card-001-TS-2025-08-18-JWT-MIDDLEWARE"
-loc_cap: 200
-coverage_cap: 80
-purpose_hash: "abc123def456"
-merged_date: ""
-sprint: S4
-created: 2025-08-18
-updated: 2025-08-19
-parent_featspec: "001-FS-2025-08-18-USER-AUTH"
-type: "feature"
-
-# Implementation Progress
-implementation_checklist:
-  - [x] Add failing tests for JWT token validation
-  - [x] Add failing tests for user context extraction
-  - [ ] Add failing tests for error handling
-  - [ ] Implement JWT middleware with proper error handling
-  - [ ] Integrate middleware with existing router configuration
-  - [ ] Update parent FeatSpec state tracking
-  - [ ] Commit with trailer TaskSpec status=qa
-
-# QA Progress  
-qa_checklist:
-  - [ ] Review test coverage & LoC cap
-  - [ ] Verify integration with parent FeatSpec
-  - [ ] Security review of JWT validation logic
-  - [ ] Performance test middleware overhead
-  - [ ] If pass, commit trailer TaskSpec status=done
-
-# Test Results
-test_coverage: 85
-test_results: "15/15 tests passing"
-lint_status: "clean"
-build_status: "success"
-```
-
-### State Transitions
-TaskSpec status progression:
-```
-draft → in-progress → qa → done
-```
-
-## Automatic State Management
-
-### TaskSpec Creation
-When a new TaskSpec is created:
-1. New state section added to parent FeatState
-2. Default values populated from TaskSpec metadata
-3. Progress counters updated
-4. Timeline updated
-
-### State Updates
-State updates trigger:
-- Progress percentage recalculation
-- Milestone status updates
-- Timeline adjustments
-- Dependency validation
-
-## Example Complete FeatState
-
-```yaml
----
-featspec_id: 001-FS-2025-08-18-USER-AUTH
-featspec_title: Implement user authentication system
-status: active
-updated: 2025-08-19
-active_sprint: S4
-created: 2025-08-18
----
-
-## Feature-Level State
-
-### Progress Summary
-- **Overall Status**: active
-- **Last Updated**: 2025-08-19
-- **Active Sprint**: S4
-- **Total TaskSpecs**: 3
-- **Completed TaskSpecs**: 1
-- **Progress**: 33% (1/3)
-
-### Timeline
-- **Created**: 2025-08-18
-- **Planning Start**: 2025-08-18
-- **Development Start**: 2025-08-19
-- **QA Start**: 
-- **Completed**: 
-- **Deployed**: 
-
-### Milestones
-- [x] Initial planning complete
-- [x] All TaskSpecs defined
-- [x] Development started
-- [ ] Core functionality complete
-- [ ] Integration testing complete
-- [ ] QA approved
-- [ ] Production ready
-
-## TaskSpec State Tracking
-
-### TaskSpec: 001-TS-2025-08-18-JWT-MIDDLEWARE
-task_id: "001-TS-2025-08-18-JWT-MIDDLEWARE"
-task_title: "Add JWT middleware for authentication"
-status: done
-owner: john-developer
-worktree: ""
-loc_cap: 200
-coverage_cap: 80
-purpose_hash: "abc123def456"
-merged_date: "2025-08-19"
-sprint: S4
-created: 2025-08-18
-updated: 2025-08-19
-
-# Implementation Progress
-implementation_checklist:
-  - [x] Add failing tests for JWT token validation
-  - [x] Add failing tests for user context extraction
-  - [x] Add failing tests for error handling
-  - [x] Implement JWT middleware with proper error handling
-  - [x] Integrate middleware with existing router configuration
-  - [x] Update parent FeatSpec state tracking
-  - [x] Commit with trailer TaskSpec status=qa
-
-# QA Progress  
-qa_checklist:
-  - [x] Review test coverage & LoC cap
-  - [x] Verify integration with parent FeatSpec
-  - [x] Security review of JWT validation logic
-  - [x] Performance test middleware overhead
-  - [x] If pass, commit trailer TaskSpec status=done
-
-# Test Results
-test_coverage: 88
-test_results: "20/20 tests passing"
-lint_status: "clean"
-build_status: "success"
-
-### TaskSpec: 002-TS-2025-08-18-AUTH-ROUTES
-task_id: "002-TS-2025-08-18-AUTH-ROUTES"
-task_title: "Implement authentication API routes"
-status: in-progress
-owner: jane-developer
-worktree: "worktrees/card-002-TS-2025-08-18-AUTH-ROUTES"
-# ... additional state details
-
-## Dependencies & Relationships
-
-### Parent Relationships
-- **Part of Feature**: 001-FS-2025-08-18-USER-AUTH
-
-### Child Relationships
-- **TaskSpecs**: 
-  - 001-TS-2025-08-18-JWT-MIDDLEWARE (done)
-  - 002-TS-2025-08-18-AUTH-ROUTES (in-progress)
-  - 999-TS-2025-08-18-AUTH-INTEGRATION (draft)
-
-### External Dependencies
-- **Blocked by**: []
-- **Blocking**: ["002-FS-2025-08-20-USER-PROFILE"]
-- **Related Features**: []
-
-## Notes & History
-
-### Change Log
-- 2025-08-18: Initial FeatState created
-- 2025-08-19: JWT middleware TaskSpec completed
-- 2025-08-19: Auth routes TaskSpec started
-
-### Notes
-- Security review completed for JWT implementation
-- Performance testing shows acceptable middleware overhead
-- Integration testing framework needs setup before final TaskSpec
-```
-
-## Management Operations
-
-### Viewing State
+### Agent Context Access
 ```bash
-# Show specific feature state
-task featstate-show FEATSPEC=001-FS-2025-08-18-USER-AUTH
+# Agent accesses only current TaskSpec context
+cat _featstate/001-FS-2025-08-18-POC/002-TS-2025-08-18-STATE-LOGGING/handovers.yaml
+
+# Previous iteration lessons for current TaskSpec only
+yq '.lessons_learned.implementation_patterns[]' handovers.yaml
 ```
 
+### Analytics and Monitoring
+```bash
+# Feature completion status
+jq '.feature.progress.completion_percentage' featstate.json
+
+# Cross-TaskSpec pattern analysis
+jq '.cross_taskspec_patterns.common_issues[]' featstate.json
+
+# Active agent monitoring
+jq '.agents | to_entries[] | select(.value.status == "running")' runtime_state.json
+```
+
+## State Management Operations
+
+### Directory Initialization
+New features automatically get:
+1. Feature directory: `_featstate/{FEATURE_ID}/`
+2. Empty featstate.json with basic structure
+3. TaskSpec subdirectories created on-demand
+
 ### State Updates
-State updates typically happen through:
-1. TaskSpec creation (automatic)
-2. Development progress updates (manual/automated)
-3. Status transitions (workflow-driven)
-4. Test result updates (CI integration)
+- **Runtime State**: Atomic JSON updates with temp file + rename pattern
+- **Feature State**: Updated on TaskSpec transitions and completions
+- **Handovers**: Append-only YAML updates per TaskSpec completion
+
+### Concurrent Access Safety
+- Feature-level locking for featstate.json updates
+- Global mutex for runtime_state.json coordination
+- TaskSpec-level isolation prevents handover conflicts
+
+## Migration from Legacy FeatState
+
+### Phase 1: Directory Structure Migration
+```bash
+# Convert existing YAML FeatStates to new directory structure
+for featstate in _featstate/*.yaml; do
+    FEAT_ID=$(basename "$featstate" .yaml)
+    mkdir -p "_featstate/$FEAT_ID"
+    # Convert and migrate content
+done
+```
+
+### Phase 2: Data Format Migration
+- Extract TaskSpec states to individual featstate.json entries
+- Create empty handover files for future development context
+- Initialize runtime_state.json with current active agents
 
 ## Best Practices
 
-1. **Centralized updates**: All TaskSpec state changes update the parent FeatState
-2. **Atomic operations**: State changes should be consistent and complete
-3. **History preservation**: Maintain change log for audit trail
-4. **Progress accuracy**: Keep completion percentages current
-5. **Timeline maintenance**: Update milestones as progress occurs
-6. **Dependency tracking**: Monitor blocking/blocked relationships
+### Agent Context Provision
+- **Default**: Provide only current TaskSpec handovers to prevent confusion
+- **Enhanced**: Orchestrator can selectively add related patterns when beneficial
+- **Focused Learning**: Keep lessons learned specific to current TaskSpec challenges
+
+### State Consistency
+- Use atomic file operations for all updates
+- Validate JSON/YAML format after each update
+- Maintain referential integrity between runtime and feature state
+
+### Performance Optimization
+- Clean up completed agents from runtime_state.json periodically
+- Archive old handover files for long-term storage
+- Use read locks for frequent runtime state queries
+
+## Related Artifacts
+
+### Paired FeatSpec
+Each FeatState directory corresponds to one FeatSpec:
+- **FeatSpec**: `001-FS-2025-08-18-POC.yaml` (immutable specification)
+- **FeatState**: `001-FS-2025-08-18-POC/` (mutable state directory)
+
+### Child TaskSpec Integration
+- TaskSpec handovers stored in isolated subdirectories
+- TaskSpec metrics aggregated in parent featstate.json
+- Cross-TaskSpec patterns identified and preserved
+
+---
+
+*For complete architectural details, see: `_docs/architecture/featspec_and_taskspec_state_filestructure.md`*

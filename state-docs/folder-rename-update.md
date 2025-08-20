@@ -41,10 +41,10 @@ cmds:
 **Updated setup task:**
 ```yaml
 # Before
-- mkdir -p _specs/featspecs _specs/taskspecs _docs/artifact_descriptions _docs/ADR scripts
+- mkdir -p _featstate _specs/taskspecs _docs/artifact_descriptions _docs/ADR scripts
 
 # After
-- mkdir -p _specs/featspecs _specs/taskspecs _docs/artifact_descriptions _docs/ADR state-scripts
+- mkdir -p _featstate _specs/taskspecs _docs/artifact_descriptions _docs/ADR state-scripts
 ```
 
 #### Documentation Updates

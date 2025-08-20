@@ -74,7 +74,7 @@ validate_parent_featspec() {
     fi
     
     # Check if FeatSpec exists
-    local featspec_file="_specs/featspecs/${parent_fs}.yaml"
+    local featspec_file="_featstate/${parent_fs}.yaml"
     if [ ! -f "$featspec_file" ]; then
         echo "❌ Parent FeatSpec not found: $featspec_file"
         return 1
@@ -190,7 +190,7 @@ sed -i "s/coverage_cap: 80/coverage_cap: ${COVERAGE_CAP}/g" "$TASKSPEC_FILE"
 
 # Update parent FeatState file
 PARENT_FEATSTATE=$(echo "$PARENT_FEATSPEC" | sed 's/-FS-/-FSTATE-/')
-FEATSTATE_FILE="_specs/featspecs/${PARENT_FEATSTATE}.yaml"
+FEATSTATE_FILE="_featstate/${PARENT_FEATSTATE}.yaml"
 
 if [ -f "$FEATSTATE_FILE" ]; then
     echo "🔄 Adding TaskSpec entry to parent FeatState..."

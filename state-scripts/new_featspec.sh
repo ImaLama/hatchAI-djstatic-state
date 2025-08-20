@@ -28,7 +28,7 @@ get_next_featspec_sequence() {
     local lock_file="_specs/.featspec_sequence.lock"
     
     # Ensure directories exist
-    mkdir -p _specs/featspecs
+    mkdir -p _featstate
     
     # Create lock file atomically
     while ! (set -C; echo $$ > "$lock_file") 2>/dev/null; do
@@ -133,8 +133,8 @@ echo -e "${GREEN}Creating FeatState: ${FEATSTATE_ID}${NC}"
 echo ""
 
 # Create the FeatSpec file
-FEATSPEC_FILE="_specs/featspecs/${FEATSPEC_ID}.yaml"
-FEATSTATE_FILE="_specs/featspecs/${FEATSTATE_ID}.yaml"
+FEATSPEC_FILE="_featstate/${FEATSPEC_ID}.yaml"
+FEATSTATE_FILE="_featstate/${FEATSTATE_ID}.yaml"
 
 # Check if files already exist
 if [ -f "$FEATSPEC_FILE" ] || [ -f "$FEATSTATE_FILE" ]; then
