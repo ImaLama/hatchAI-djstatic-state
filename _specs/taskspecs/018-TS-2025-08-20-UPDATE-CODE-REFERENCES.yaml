@@ -1,0 +1,56 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 018-TS-2025-08-20-UPDATE-CODE-REFERENCES
+title: Update all code references to relocated scripts            # "Add sharded event dir"
+created: 2025-08-20-10-27                   # creation datetime
+updated: 2025-08-20-10-27                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 004-FS-2025-08-20-SCRIPT-REORG  # Required parent feature
+type: refactor                               # fix|feature|test|refactor|docs|integration
+loc_cap: 150                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["013-TS-2025-08-20-SCRIPT-DISCOVERY", "014-TS-2025-08-20-HOOKS-SCRIPTS-MIGRATION", "015-TS-2025-08-20-SERVICES-MIGRATION", "016-TS-2025-08-20-AGENT-SCRIPTS-MIGRATION", "017-TS-2025-08-20-ORCHESTRATOR-SCRIPTS-MIGRATION"]                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+After reorganizing scripts into subfolders, all code references must be updated. This includes shell scripts calling other scripts, Taskfile.yml, configuration files, and any scripts that source or execute relocated files.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | All script-to-script references MUST be updated | code | `grep -r "_hatch_scripts/" --include="*.sh"` | Shows only new paths |
+| 2 | Taskfile.yml MUST reference new paths | config | `grep "_hatch_scripts" Taskfile.yml` | Shows subfolder paths |
+| 3 | Environment configs MUST use new paths | config | `grep -r "_hatch_scripts" .envrc .env*` | Shows updated paths |
+| 4 | No broken script executions | runtime | `./state-scripts/validate_all_scripts.sh` | All scripts execute |
+| 5 | Git hooks MUST reference new paths | config | `grep -r "_hatch_scripts" .git/hooks/` | Shows subfolder paths |
+| 6 | State scripts MUST reference new paths | code | `grep -r "_hatch_scripts" state-scripts/` | Shows updated paths |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT update documentation (TaskSpec 019)
+- Will NOT rename scripts
+- Will NOT change script functionality
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

@@ -1,0 +1,73 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 022-TS-2025-08-20-MOUNT-DIRS-RENAME
+title: Rename mounted directories to clearer naming convention
+created: 2025-08-20-15-30                   # creation datetime
+updated: 2025-08-20-15-30                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 005-FS-2025-08-20-ADHOC-SINGLE-TASKS  # Required parent feature
+type: refactor                               # fix|feature|test|refactor|docs|integration
+loc_cap: 50                                 # net LoC (adds-deletes) - minimal script changes
+coverage_cap: 60                            # % required by testing - reduced for refactor
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+
+The current mounted directory names are inconsistent and unclear:
+- `/home/lama/projects/djhatch/project-state-readonly` → should be `djhatch-state-readonly-mount`
+- `/home/lama/projects/djhatch-state/hatchAI-codebase-readonly` → should be `djhatch-readonly-mount`
+
+This rename improves clarity about what these directories contain and their role as mount points in the djhatch architecture. The current names create confusion about the separation between state management and readonly codebase access.
+
+**Architectural Rationale**: Clear mount point naming follows the principle of explicit architecture where directory names immediately convey their purpose and access patterns.
+
+## 2  Objectives (acceptance criteria)
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | Mount point `/home/lama/projects/djhatch/djhatch-state-readonly-mount` exists and contains state files | integration | `ls djhatch-state-readonly-mount/_specs/` | Show directory listing with specs |
+| 2 | Mount point `/home/lama/projects/djhatch-state/djhatch-readonly-mount` exists and contains codebase | integration | `ls djhatch-state/djhatch-readonly-mount/` | Show directory listing with codebase files |
+| 3 | All scripts reference new mount point paths correctly | unit | `grep -r "project-state-readonly\|hatchAI-codebase-readonly" _hatch_scripts/` | No matches found |
+| 4 | Mount/unmount scripts work with new directory names | e2e | `task mount:state && task unmount:state` | Successful mount/unmount operations |
+
+## 3  Non-Goals / Anti-Goals
+
+- **NOT changing internal directory structure** - only renaming mount points
+- **NOT modifying state file formats** - only external directory names
+- **NOT breaking existing functionality** - all scripts must continue working
+- **NOT adding new features** - pure refactoring task
+
+## 4  Design Constraints
+
+• Keep existing internal directory structures intact
+• Update all references atomically to prevent inconsistencies  
+• Maintain backward compatibility during transition
+• Follow djhatch naming conventions for mount points
+• Must preserve readonly mount characteristics
+• All existing functionality must continue working seamlessly
+
+## 5  Implementation Checklist (Factory)
+
+- [ ] Backup current mount configurations and scripts
+- [ ] Update mount/unmount scripts in `_hatch_scripts/` to use new names
+- [ ] Update Taskfile.yml mount tasks to reference new directories
+- [ ] Search and replace all script references to old mount names
+- [ ] Update any documentation referencing old mount paths
+- [ ] Test mount/unmount operations with new names
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 022-TS-2025-08-20-MOUNT-DIRS-RENAME status=qa`
+
+## 6  QA Checklist
+
+- [ ] Verify all mount/unmount operations work correctly
+- [ ] Confirm no references to old directory names remain
+- [ ] Test that agents can access mounted content via new paths
+- [ ] Verify scripts continue to function without errors
+- [ ] Validate mount point permissions and readonly status
+- [ ] If pass, commit trailer `TaskSpec: 022-TS-2025-08-20-MOUNT-DIRS-RENAME status=done`
+
+## 7  Post-Merge Tasks
+
+Update parent FeatSpec state, document new mount point convention in architecture docs.

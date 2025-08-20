@@ -1,0 +1,55 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 015-TS-2025-08-20-SERVICES-MIGRATION
+title: Migrate service scripts to services subfolder            # "Add sharded event dir"
+created: 2025-08-20-10-26                   # creation datetime
+updated: 2025-08-20-10-26                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 004-FS-2025-08-20-SCRIPT-REORG  # Required parent feature
+type: refactor                               # fix|feature|test|refactor|docs|integration
+loc_cap: 150                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["013-TS-2025-08-20-SCRIPT-DISCOVERY", "014-TS-2025-08-20-HOOKS-SCRIPTS-MIGRATION"]                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Continue _hatch_scripts reorganization. Service scripts (tmux monitoring services, session monitors, status updater) need dedicated services subfolder. These include: start-tmux-monitoring, stop-tmux-monitoring, status-tmux-monitoring, tmux_session_monitor.sh, tmux_session_end_monitor.sh, tmux_session_capture.sh, tmux_status_updater.sh.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | services subfolder MUST exist | filesystem | `ls -d _hatch_scripts/services/` | Directory exists |
+| 2 | All service scripts MUST be moved | filesystem | `ls _hatch_scripts/services/*tmux*` | Shows 7 tmux-related scripts |
+| 3 | Original scripts MUST NOT exist in root | filesystem | `ls _hatch_scripts/*tmux*` | No files found |
+| 4 | Scripts MUST retain execute permissions | filesystem | `ls -l _hatch_scripts/services/*` | All executable |
+| 5 | Git history MUST be preserved | version | `git log --follow _hatch_scripts/services/tmux_session_monitor.sh` | Shows history |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT modify script contents
+- Will NOT update references (handled by TaskSpec 018)
+- Will NOT change script names
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

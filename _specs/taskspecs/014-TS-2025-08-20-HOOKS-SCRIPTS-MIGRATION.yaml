@@ -1,0 +1,55 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 014-TS-2025-08-20-HOOKS-SCRIPTS-MIGRATION
+title: Migrate hook-related scripts to hooks_scripts subfolder            # "Add sharded event dir"
+created: 2025-08-20-10-26                   # creation datetime
+updated: 2025-08-20-10-26                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 004-FS-2025-08-20-SCRIPT-REORG  # Required parent feature
+type: refactor                               # fix|feature|test|refactor|docs|integration
+loc_cap: 150                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["013-TS-2025-08-20-SCRIPT-DISCOVERY"]                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Reorganize _hatch_scripts directory for better maintainability. Hook-related scripts (claude_start_hook.sh, claude_stop_hook.sh, hook_circuit_breaker.sh, hook_validator.sh, secure_hook_executor.sh, secure_hook_framework.sh) need to be moved to a dedicated hooks_scripts subfolder to improve organization and discoverability.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | hooks_scripts subfolder MUST exist | filesystem | `ls -d _hatch_scripts/hooks_scripts/` | Directory exists |
+| 2 | All hook scripts MUST be moved to hooks_scripts/ | filesystem | `ls _hatch_scripts/hooks_scripts/*.sh` | Shows 6 hook-related scripts |
+| 3 | Original hook scripts MUST NOT exist in root | filesystem | `ls _hatch_scripts/claude_*hook*.sh` | No files found |
+| 4 | All moved scripts MUST retain execute permissions | filesystem | `ls -l _hatch_scripts/hooks_scripts/*.sh` | All show -rwx permissions |
+| 5 | Git history MUST be preserved via git mv | version | `git log --follow _hatch_scripts/hooks_scripts/claude_start_hook.sh` | Shows full history |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT modify script contents
+- Will NOT handle updating references (separate TaskSpec)
+- Will NOT create symlinks for backward compatibility
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

@@ -1,0 +1,184 @@
+---
+# ===== FEATURE STATE TRACKING (Centralized state for 005-FS-2025-08-20-ADHOC-SINGLE-TASKS) =====
+featspec_id: 005-FS-2025-08-20-ADHOC-SINGLE-TASKS
+featspec_title: Adhoc single tasks that don't require a full feature
+status: draft                               # draft → planning → active → completed → abandoned
+updated: 2025-08-20-15-30                   # last state update datetime
+active_sprint: S4                           # current sprint
+created: 2025-08-20-10-54                   # initial creation datetime
+# ==================================================================================
+---
+
+## Feature-Level State
+
+### Progress Summary
+- **Overall Status**: {{status}}
+- **Last Updated**: {{updated}}
+- **Active Sprint**: {{active_sprint}}
+- **Total TaskSpecs**: 2
+- **Completed TaskSpecs**: 0
+- **Progress**: 0% (0/2)
+
+### Timeline
+- **Created**: {{created}}
+- **Planning Start**: 2025-08-20-10-54
+- **Development Start**: 2025-08-20-10-54
+- **QA Start**: 2025-08-20-10-54
+- **Completed**: 2025-08-20-10-54
+- **Deployed**: 2025-08-20-10-54
+
+### Milestones
+- [ ] Initial planning complete
+- [ ] All TaskSpecs defined
+- [ ] Development started
+- [ ] Core functionality complete
+- [ ] Integration testing complete
+- [ ] QA approved
+- [ ] Production ready
+
+## TaskSpec State Tracking
+
+### Active TaskSpecs
+<!-- This section is automatically updated when TaskSpecs are created/updated -->
+
+### TaskSpec: [Will be populated when TaskSpecs are created]
+```yaml
+task_id: ""
+task_title: ""
+status: draft                    # draft → in-progress → qa → done
+owner: unassigned
+worktree: ""                    # worktrees/card-NNN-TS-2025-08-20-DESCRIPTION
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""                # factories insert via hashstamp
+merged_date: ""                 # datetime (2025-08-20-10-54) implementation was merged
+sprint: S4
+created: 2025-08-20-10-54
+updated: 2025-08-20-10-54
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+## Dependencies & Relationships
+
+### Parent Relationships
+- **Part of Feature**: {{featspec_id}}
+
+### Child Relationships
+- **TaskSpecs**: [Automatically populated]
+
+### External Dependencies
+- **Blocked by**: []
+- **Blocking**: []
+- **Related Features**: []
+
+## Notes & History
+
+### Change Log
+- {{created}}: Initial FeatState created
+- {{updated}}: [Latest change description]
+
+### Notes
+- [Development notes]
+- [Architecture decisions]  
+- [Risk assessments]
+- [Deployment considerations]
+### TaskSpec: 021-TS-2025-08-20-PROJECT-STRUCTURE-DOCS
+```yaml
+task_id: "021-TS-2025-08-20-PROJECT-STRUCTURE-DOCS"
+task_title: "Document project structure in agent prompts and filestructure.md"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 400
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-55
+updated: 2025-08-20-10-55
+parent_featspec: "005-FS-2025-08-20-ADHOC-SINGLE-TASKS"
+type: "docs"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 022-TS-2025-08-20-MOUNT-DIRS-RENAME
+```yaml
+task_id: "022-TS-2025-08-20-MOUNT-DIRS-RENAME"
+task_title: "Rename mounted directories to clearer naming convention"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 50
+coverage_cap: 60
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-15-30
+updated: 2025-08-20-15-30
+parent_featspec: "005-FS-2025-08-20-ADHOC-SINGLE-TASKS"
+type: "refactor"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Backup current mount configurations and scripts
+  - [ ] Update mount/unmount scripts in _hatch_scripts/ to use new names
+  - [ ] Update Taskfile.yml mount tasks to reference new directories
+  - [ ] Search and replace all script references to old mount names
+  - [ ] Update any documentation referencing old mount paths
+  - [ ] Test mount/unmount operations with new names
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Verify all mount/unmount operations work correctly
+  - [ ] Confirm no references to old directory names remain
+  - [ ] Test that agents can access mounted content via new paths
+  - [ ] Verify scripts continue to function without errors
+  - [ ] Validate mount point permissions and readonly status
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```

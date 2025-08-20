@@ -1,0 +1,103 @@
+---
+id: 004-FS-2025-08-20-SCRIPT-REORG
+title: Reorganize _hatch_scripts into categorized subfolders
+created: 2025-08-20-10-26
+updated: 2025-08-20-10-26
+sprint: S4
+---
+
+## 1  DevCards
+
+| DevCard ID | Title | Dependencies | Notes |
+|------------|-------|--------------|-------|
+| 013-TS-2025-08-20-SCRIPT-DISCOVERY | Inventory and validate _hatch_scripts for reorganization | - | **Required** - Pre-migration analysis |
+| 014-TS-2025-08-20-HOOKS-SCRIPTS-MIGRATION | Migrate hook-related scripts to hooks_scripts subfolder | 013-TS-... | Move 6 hook scripts |
+| 015-TS-2025-08-20-SERVICES-MIGRATION | Migrate service scripts to services subfolder | 013-TS-..., 014-TS-... | Move 7 tmux service scripts |
+| 016-TS-2025-08-20-AGENT-SCRIPTS-MIGRATION | Migrate agent-related scripts to agent_scripts subfolder | 013-TS-..., 015-TS-... | Move 4 agent scripts |
+| 017-TS-2025-08-20-ORCHESTRATOR-SCRIPTS-MIGRATION | Migrate orchestrator scripts to orchestrator_scripts subfolder | 013-TS-..., 016-TS-... | Move 6 orchestrator scripts |
+| 018-TS-2025-08-20-UPDATE-CODE-REFERENCES | Update all code references to relocated scripts | 013-TS-..., 014-017-TS-... | Update paths in all code |
+| 019-TS-2025-08-20-UPDATE-DOC-REFERENCES | Update documentation and report references to relocated scripts | 018-TS-... | Update paths in docs |
+| 020-TS-2025-08-20-SCRIPT-REORG-INTEGRATION | Integration testing for reorganized script structure | All above | **Required** - End-to-end testing with performance validation |
+
+## 2  User Description
+
+### Feature Overview
+
+Reorganize the _hatch_scripts directory into categorized subfolders to improve maintainability, discoverability, and organization. Scripts will be grouped by function: hooks_scripts, services, agent_scripts, and orchestrator_scripts.
+
+### User Value  
+
+- **Improved Navigation**: Developers can quickly find scripts by category
+- **Better Organization**: Clear separation of concerns between different script types
+- **Maintainability**: Easier to manage and update related scripts
+- **Scalability**: Room to grow each category without cluttering root directory
+
+### User Stories
+
+1. **As a developer**, I want hook scripts in one place so that I can quickly find and modify hook behavior
+2. **As an AI agent**, I want agent scripts organized so that I can reliably access state management tools
+3. **As a system admin**, I want service scripts grouped so that I can manage all services together
+4. **As a maintainer**, I want orchestrator scripts separated so that I can understand workflow coordination
+
+### Acceptance Criteria
+
+- [ ] All hook-related scripts moved to hooks_scripts/
+- [ ] All service scripts moved to services/
+- [ ] All agent scripts moved to agent_scripts/
+- [ ] All orchestrator scripts moved to orchestrator_scripts/
+- [ ] All code references updated to new paths
+- [ ] All documentation references updated
+- [ ] System continues to function without disruption
+
+## 3  Planner Breakdown
+
+### Technical Approach
+
+1. Create subfolder structure within _hatch_scripts
+2. Use git mv to preserve history while moving scripts
+3. Update all references using grep and sed automation
+4. Validate all scripts still execute correctly
+5. Update documentation to reflect new structure
+
+### Architecture Impact
+
+- File system reorganization only - no functional changes
+- All existing interfaces remain the same
+- Scripts retain same names and parameters
+- Backward compatibility through updated references
+
+### Dependencies
+
+- Git for version control and history preservation
+- Shell scripting for reference updates
+- Taskfile.yml for task definitions
+- All existing script dependencies remain unchanged
+
+### Risk Assessment  
+
+**Risks:**
+- Broken references if not all paths updated
+- Lost git history if not using git mv
+- Disrupted workflows during migration
+
+**Mitigation:**
+- Comprehensive grep search for all references
+- Use git mv exclusively for moves
+- Test each script after migration
+- Perform migration in dependency order
+
+### Testing Strategy
+
+1. Unit testing: Each script executes from new location
+2. Integration testing: All task commands work
+3. Reference testing: No broken paths remain
+4. Documentation testing: All docs accurate
+5. End-to-end testing: Full system workflow validation
+
+### Rollout Plan
+
+1. Execute TaskSpecs in dependency order (014→020)
+2. Test after each TaskSpec completion
+3. Update references incrementally
+4. Final integration test before merge
+5. Document new structure in README

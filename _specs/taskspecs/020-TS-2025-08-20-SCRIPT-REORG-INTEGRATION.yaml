@@ -1,0 +1,60 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 020-TS-2025-08-20-SCRIPT-REORG-INTEGRATION
+title: Integration testing for reorganized script structure            # "Add sharded event dir"
+created: 2025-08-20-10-28                   # creation datetime
+updated: 2025-08-20-10-28                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 004-FS-2025-08-20-SCRIPT-REORG  # Required parent feature
+type: integration                               # fix|feature|test|refactor|docs|integration
+loc_cap: 250                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["013-TS-2025-08-20-SCRIPT-DISCOVERY", "014-TS-2025-08-20-HOOKS-SCRIPTS-MIGRATION", "015-TS-2025-08-20-SERVICES-MIGRATION", "016-TS-2025-08-20-AGENT-SCRIPTS-MIGRATION", "017-TS-2025-08-20-ORCHESTRATOR-SCRIPTS-MIGRATION", "018-TS-2025-08-20-UPDATE-CODE-REFERENCES", "019-TS-2025-08-20-UPDATE-DOC-REFERENCES"]                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Final integration testing ensures the reorganized script structure works end-to-end. All scripts must be accessible from their new locations, all references must work, and the system must function without disruption.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | All hook scripts MUST execute | integration | `_hatch_scripts/hooks_scripts/claude_start_hook.sh test` | Successful execution |
+| 2 | Services MUST start/stop correctly | integration | `_hatch_scripts/services/start-tmux-monitoring` | Service starts |
+| 3 | Agent scripts MUST be callable | integration | `_hatch_scripts/agent_scripts/agent_state_manager.sh status` | Returns status |
+| 4 | Orchestrator scripts MUST work | integration | `_hatch_scripts/orchestrator_scripts/init-task.sh --help` | Shows help |
+| 5 | Task commands MUST function | integration | `task --list` | All tasks listed |
+| 6 | No broken symlinks or references | filesystem | `find . -xtype l 2>/dev/null` | No broken links |
+| 7 | Git operations MUST work | version | `git status && git diff` | Clean working tree |
+| 8 | Scripts in root MUST still work | integration | `ls _hatch_scripts/*.sh 2>/dev/null` | Only non-categorized scripts |
+| 9 | Performance regression MUST NOT occur | performance | `time ./test_all_scripts.sh` | Within 5% of baseline |
+| 10 | Forward compatibility MUST be maintained | integration | `validate_script_interfaces.sh` | All APIs unchanged |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT add new functionality
+- Will NOT optimize script performance
+- Will NOT change script interfaces
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

@@ -1,0 +1,79 @@
+---
+id: 005-FS-2025-08-20-ADHOC-SINGLE-TASKS
+title: Adhoc single tasks that don't require a full feature
+created: 2025-08-20-10-54
+updated: 2025-08-20-10-54
+sprint: S4
+---
+
+## 1  DevCards
+
+| DevCard ID | Title | Dependencies | Notes |
+|------------|-------|--------------|-------|
+| 021-TS-2025-08-20-PROJECT-STRUCTURE-DOCS | Document project structure in agent prompts and filestructure.md | - | Documentation task |
+| 022-TS-2025-08-20-MOUNT-DIRS-RENAME | Rename mounted directories to clearer naming convention | - | Refactoring task |
+
+**Note**: This FeatSpec serves as a container for single, standalone TaskSpecs that don't warrant a full feature specification. Each TaskSpec is independent and self-contained.
+
+## 2  User Description
+
+### Feature Overview
+
+This is a placeholder FeatSpec for adhoc single tasks that are important but don't require a full feature treatment. These tasks are typically:
+- Documentation updates
+- Configuration changes
+- Small improvements
+- One-off utilities
+- Minor refactoring tasks
+
+### User Value  
+
+- **Flexibility**: Allows quick task creation without feature overhead
+- **Efficiency**: Reduces bureaucracy for simple tasks
+- **Tracking**: Maintains visibility of small but important work
+- **Organization**: Keeps adhoc tasks organized and findable
+
+### User Stories
+
+1. **As a developer**, I want to quickly create small tasks so that I can track minor improvements
+2. **As a team lead**, I want visibility into adhoc work so that I can understand resource allocation
+3. **As an agent**, I want a simple way to document small changes so that work is properly tracked
+
+### Acceptance Criteria
+
+- [ ] Each TaskSpec is self-contained and independent
+- [ ] TaskSpecs complete their specific objectives
+- [ ] Documentation is updated where required
+- [ ] No breaking changes to existing functionality
+
+## 3  Planner Breakdown
+
+### Technical Approach
+
+Each TaskSpec under this FeatSpec follows its own technical approach as defined in the individual TaskSpec. No overarching technical strategy is required.
+
+### Architecture Impact
+
+Minimal to none - adhoc tasks should not significantly impact system architecture. Any task requiring architectural changes should have its own FeatSpec.
+
+### Dependencies
+
+Individual TaskSpecs may have their own dependencies, but there are no FeatSpec-level dependencies.
+
+### Risk Assessment  
+
+**Risks:**
+- Scope creep (tasks growing beyond single-task scope)
+- Lack of coordination between related tasks
+
+**Mitigation:**
+- Enforce single-task scope during planning
+- Move related tasks to proper FeatSpec if patterns emerge
+
+### Testing Strategy
+
+Each TaskSpec defines its own testing requirements. Generally minimal testing for documentation and configuration tasks.
+
+### Rollout Plan
+
+Individual TaskSpecs can be deployed independently as they complete. No coordinated rollout required.

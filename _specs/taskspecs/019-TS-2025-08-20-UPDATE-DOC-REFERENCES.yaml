@@ -1,0 +1,56 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 019-TS-2025-08-20-UPDATE-DOC-REFERENCES
+title: Update documentation and report references to relocated scripts            # "Add sharded event dir"
+created: 2025-08-20-10-27                   # creation datetime
+updated: 2025-08-20-10-27                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 004-FS-2025-08-20-SCRIPT-REORG  # Required parent feature
+type: docs                               # fix|feature|test|refactor|docs|integration
+loc_cap: 400                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["018-TS-2025-08-20-UPDATE-CODE-REFERENCES"]                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Documentation and reports must be updated to reflect new script organization. This includes README files, state docs, reports, architectural documentation, and any markdown files referencing script locations.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | README.md MUST reference new paths | docs | `grep -i "_hatch_scripts" README.md` | Shows subfolder paths |
+| 2 | State docs MUST be updated | docs | `grep -r "_hatch_scripts" _state_docs/ state-docs/` | Shows new paths |
+| 3 | Reports MUST reference new structure | docs | `grep -r "_hatch_scripts" _state_reports/` | Shows updated paths |
+| 4 | Architecture docs MUST be current | docs | `grep -r "_hatch_scripts" _docs/` | Shows subfolder structure |
+| 5 | Script usage docs MUST be accurate | docs | `find . -name "*.md" -exec grep -l "_hatch_scripts" {} \;` | All show new paths |
+| 6 | Directory structure diagram MUST be updated | docs | `cat _docs/directory_structure.md` | Shows new organization |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT modify script code
+- Will NOT create new documentation
+- Will NOT update inline code comments
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

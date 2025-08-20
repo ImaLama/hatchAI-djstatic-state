@@ -1,0 +1,94 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 021-TS-2025-08-20-PROJECT-STRUCTURE-DOCS
+title: Document project structure in agent prompts and filestructure.md            # "Add sharded event dir"
+created: 2025-08-20-10-55                   # creation datetime
+updated: 2025-08-20-10-55                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 005-FS-2025-08-20-ADHOC-SINGLE-TASKS  # Required parent feature
+type: docs                               # fix|feature|test|refactor|docs|integration
+loc_cap: 400                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Agents need clear understanding of the project's dual-folder structure. The separation between implementation (djhatch) and state management (djhatch-state) must be documented in all agent prompts and a central filestructure.md document. This includes updating agent prompts in BOTH djhatch-state/_state_agents/ AND djhatch/_agents/ directories.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | filestructure.md MUST exist in both locations | filesystem | `ls _docs/filestructure.md ../djhatch/_docs/filestructure.md` | Both files exist |
+| 2 | djhatch-state agent prompts MUST be updated | docs | `grep -l "dual-folder architecture" _state_agents/*_prompt.md` | All prompt files match |
+| 3 | djhatch agent prompts MUST be updated | docs | `grep -l "dual-folder architecture" ../djhatch/_agents/*_prompt.md` | All prompt files match |
+| 4 | Structure info MUST specify implementation folder | docs | `grep "projects/djhatch" _docs/filestructure.md` | Shows implementation path |
+| 5 | Structure info MUST specify state folder | docs | `grep "projects/djhatch-state" _docs/filestructure.md` | Shows state path |
+| 6 | Read-only mount paths MUST be documented | docs | `grep "project-state-readonly" _docs/filestructure.md` | Shows mount path |
+| 7 | Agent access patterns MUST be clear | docs | `grep "hatchAI-codebase-readonly" _docs/filestructure.md` | Shows readonly access |
+| 8 | Both project's agent scripts MUST be consistent | docs | `diff _docs/filestructure.md ../djhatch/_docs/filestructure.md` | Files are identical |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT change actual folder structure
+- Will NOT modify mount scripts
+- Will NOT change agent permissions
+
+## 4  Design Constraints
+• Documentation must be clear and consistent across all files
+• Use bullet points for clarity in documentation
+• Follow existing prompt format conventions
+• Must integrate cleanly with parent FeatSpec: 005-FS-2025-08-20-ADHOC-SINGLE-TASKS
+
+## 4.1  Content to Add
+
+The following content should be added to agent prompts and filestructure.md:
+
+```markdown
+## Project Structure
+
+This project uses a dual-folder architecture:
+
+### Implementation Folder: ./projects/djhatch
+- Contains the full application codebase
+- This is where all implementation takes place
+- Implementation agents work in this directory
+- Has read-only access to state via: /home/lama/projects/djhatch/project-state-readonly
+
+### State Management Folder: ./projects/djhatch-state  
+- Contains feature specifications (FeatSpecs)
+- Contains task specifications (TaskSpecs)
+- Stores all types of state:
+  - Agent states
+  - FeatSpec/TaskSpec states
+  - System configuration states
+- Planning and state management agents work in this directory
+- Has read-only access to codebase via: /home/lama/projects/djhatch-state/hatchAI-codebase-readonly
+
+### Agent Access Patterns
+- **Implementation Agents**: 
+  - Working directory: ./djhatch
+  - Read-only state access: ./project-state-readonly
+- **Planning Agents**:
+  - Working directory: ./djhatch-state
+  - Read-only code access: ./hatchAI-codebase-readonly
+```
+
+## 5  Implementation Checklist (Factory)
+- [ ] Create _docs/filestructure.md in djhatch-state
+- [ ] Create _docs/filestructure.md in djhatch (identical copy)
+- [ ] Update all agent prompts in djhatch-state/_state_agents/
+- [ ] Update all agent prompts in djhatch/_agents/
+- [ ] Verify consistency across both projects
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 021-TS-2025-08-20-PROJECT-STRUCTURE-DOCS status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

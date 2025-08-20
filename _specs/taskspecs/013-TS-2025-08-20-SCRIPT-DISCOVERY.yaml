@@ -1,0 +1,56 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 013-TS-2025-08-20-SCRIPT-DISCOVERY
+title: Inventory and validate _hatch_scripts for reorganization            # "Add sharded event dir"
+created: 2025-08-20-11-00                   # creation datetime
+updated: 2025-08-20-11-00                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 004-FS-2025-08-20-SCRIPT-REORG  # Required parent feature
+type: test                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Pre-migration analysis for _hatch_scripts reorganization. Must inventory all existing scripts, validate the proposed categorization strategy, and generate a comprehensive migration manifest before any file moves occur. This prevents missing scripts and ensures proper categorization.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | _hatch_scripts directory MUST exist or be documented as missing | filesystem | `ls -la _hatch_scripts/ \|\| echo "Directory not found"` | Directory status confirmed |
+| 2 | Complete script inventory MUST be generated | output | `find _hatch_scripts/ -name "*.sh" -type f > script_inventory.txt` | All .sh files listed |
+| 3 | Scripts MUST be categorized by function | analysis | `categorize_scripts.sh` | Each script assigned to category |
+| 4 | Migration manifest MUST be created | output | `cat migration_manifest.json` | JSON with old->new path mappings |
+| 5 | Categorization conflicts MUST be identified | validation | `validate_categories.sh` | Reports any uncategorized scripts |
+| 6 | Reference discovery MUST find all script usages | analysis | `grep -r "_hatch_scripts" . --exclude-dir=.git` | All references cataloged |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT move any scripts (that's for migration TaskSpecs)
+- Will NOT modify script contents
+- Will NOT create the subfolder structure yet
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

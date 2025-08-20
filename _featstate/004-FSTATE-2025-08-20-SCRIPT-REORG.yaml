@@ -1,0 +1,368 @@
+---
+# ===== FEATURE STATE TRACKING (Centralized state for 004-FS-2025-08-20-SCRIPT-REORG) =====
+featspec_id: 004-FS-2025-08-20-SCRIPT-REORG
+featspec_title: Reorganize _hatch_scripts into categorized subfolders
+status: draft                               # draft → planning → active → completed → abandoned
+updated: 2025-08-20-10-26                   # last state update datetime
+active_sprint: S4                           # current sprint
+created: 2025-08-20-10-26                   # initial creation datetime
+# ==================================================================================
+---
+
+## Feature-Level State
+
+### Progress Summary
+- **Overall Status**: {{status}}
+- **Last Updated**: {{updated}}
+- **Active Sprint**: {{active_sprint}}
+- **Total TaskSpecs**: 0
+- **Completed TaskSpecs**: 0
+- **Progress**: 0% (0/0)
+
+### Timeline
+- **Created**: {{created}}
+- **Planning Start**: 2025-08-20-10-26
+- **Development Start**: 2025-08-20-10-26
+- **QA Start**: 2025-08-20-10-26
+- **Completed**: 2025-08-20-10-26
+- **Deployed**: 2025-08-20-10-26
+
+### Milestones
+- [ ] Initial planning complete
+- [ ] All TaskSpecs defined
+- [ ] Development started
+- [ ] Core functionality complete
+- [ ] Integration testing complete
+- [ ] QA approved
+- [ ] Production ready
+
+## TaskSpec State Tracking
+
+### Active TaskSpecs
+<!-- This section is automatically updated when TaskSpecs are created/updated -->
+
+### TaskSpec: [Will be populated when TaskSpecs are created]
+```yaml
+task_id: ""
+task_title: ""
+status: draft                    # draft → in-progress → qa → done
+owner: unassigned
+worktree: ""                    # worktrees/card-NNN-TS-2025-08-20-DESCRIPTION
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""                # factories insert via hashstamp
+merged_date: ""                 # datetime (2025-08-20-10-26) implementation was merged
+sprint: S4
+created: 2025-08-20-10-26
+updated: 2025-08-20-10-26
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+## Dependencies & Relationships
+
+### Parent Relationships
+- **Part of Feature**: {{featspec_id}}
+
+### Child Relationships
+- **TaskSpecs**: [Automatically populated]
+
+### External Dependencies
+- **Blocked by**: []
+- **Blocking**: []
+- **Related Features**: []
+
+## Notes & History
+
+### Change Log
+- {{created}}: Initial FeatState created
+- {{updated}}: [Latest change description]
+
+### Notes
+- [Development notes]
+- [Architecture decisions]  
+- [Risk assessments]
+- [Deployment considerations]
+### TaskSpec: 014-TS-2025-08-20-HOOKS-SCRIPTS-MIGRATION
+```yaml
+task_id: "014-TS-2025-08-20-HOOKS-SCRIPTS-MIGRATION"
+task_title: "Migrate hook-related scripts to hooks_scripts subfolder"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 150
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-26
+updated: 2025-08-20-10-26
+parent_featspec: "004-FS-2025-08-20-SCRIPT-REORG"
+type: "refactor"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 015-TS-2025-08-20-SERVICES-MIGRATION
+```yaml
+task_id: "015-TS-2025-08-20-SERVICES-MIGRATION"
+task_title: "Migrate service scripts to services subfolder"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 150
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-26
+updated: 2025-08-20-10-26
+parent_featspec: "004-FS-2025-08-20-SCRIPT-REORG"
+type: "refactor"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 016-TS-2025-08-20-AGENT-SCRIPTS-MIGRATION
+```yaml
+task_id: "016-TS-2025-08-20-AGENT-SCRIPTS-MIGRATION"
+task_title: "Migrate agent-related scripts to agent_scripts subfolder"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 150
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-26
+updated: 2025-08-20-10-26
+parent_featspec: "004-FS-2025-08-20-SCRIPT-REORG"
+type: "refactor"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 017-TS-2025-08-20-ORCHESTRATOR-SCRIPTS-MIGRATION
+```yaml
+task_id: "017-TS-2025-08-20-ORCHESTRATOR-SCRIPTS-MIGRATION"
+task_title: "Migrate orchestrator scripts to orchestrator_scripts subfolder"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 150
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-27
+updated: 2025-08-20-10-27
+parent_featspec: "004-FS-2025-08-20-SCRIPT-REORG"
+type: "refactor"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 018-TS-2025-08-20-UPDATE-CODE-REFERENCES
+```yaml
+task_id: "018-TS-2025-08-20-UPDATE-CODE-REFERENCES"
+task_title: "Update all code references to relocated scripts"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 150
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-27
+updated: 2025-08-20-10-27
+parent_featspec: "004-FS-2025-08-20-SCRIPT-REORG"
+type: "refactor"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 019-TS-2025-08-20-UPDATE-DOC-REFERENCES
+```yaml
+task_id: "019-TS-2025-08-20-UPDATE-DOC-REFERENCES"
+task_title: "Update documentation and report references to relocated scripts"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 400
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-27
+updated: 2025-08-20-10-27
+parent_featspec: "004-FS-2025-08-20-SCRIPT-REORG"
+type: "docs"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 020-TS-2025-08-20-SCRIPT-REORG-INTEGRATION
+```yaml
+task_id: "020-TS-2025-08-20-SCRIPT-REORG-INTEGRATION"
+task_title: "Integration testing for reorganized script structure"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 250
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-20-10-28
+updated: 2025-08-20-10-28
+parent_featspec: "004-FS-2025-08-20-SCRIPT-REORG"
+type: "integration"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```

@@ -1,0 +1,56 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 016-TS-2025-08-20-AGENT-SCRIPTS-MIGRATION
+title: Migrate agent-related scripts to agent_scripts subfolder            # "Add sharded event dir"
+created: 2025-08-20-10-26                   # creation datetime
+updated: 2025-08-20-10-26                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 004-FS-2025-08-20-SCRIPT-REORG  # Required parent feature
+type: refactor                               # fix|feature|test|refactor|docs|integration
+loc_cap: 150                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: ["013-TS-2025-08-20-SCRIPT-DISCOVERY", "015-TS-2025-08-20-SERVICES-MIGRATION"]                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Agent-related scripts need dedicated folder for AI agent usage. Scripts include: agent_pubsub_framework.sh, agent_state_manager.sh, get_agent_sessions_statusbar.sh, pubsub_trigger_processor.sh. These scripts provide functionality for AI agents to manage state and communication.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | agent_scripts subfolder MUST exist | filesystem | `ls -d _hatch_scripts/agent_scripts/` | Directory exists |
+| 2 | All agent scripts MUST be moved | filesystem | `ls _hatch_scripts/agent_scripts/agent_*.sh` | Shows 4 agent scripts |
+| 3 | pubsub_trigger_processor.sh MUST be moved | filesystem | `ls _hatch_scripts/agent_scripts/pubsub_trigger_processor.sh` | File exists |
+| 4 | Original scripts MUST NOT exist in root | filesystem | `ls _hatch_scripts/agent_*.sh` | No files found |
+| 5 | Execute permissions MUST be retained | filesystem | `ls -l _hatch_scripts/agent_scripts/*.sh` | All show -rwx |
+| 6 | Git history MUST be preserved | version | `git log --follow _hatch_scripts/agent_scripts/agent_state_manager.sh` | Shows history |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT modify script functionality
+- Will NOT update script references (TaskSpec 018)
+- Will NOT rename scripts
+
+## 4  Design Constraints
+• Keep functions ≤ 40 LoC.  
+• All public funcs accept `context.Context`.  
+• No new third-party deps without Planner sign-off.  
+• Follow METHOD-03 (Contract-First).
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.
