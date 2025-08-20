@@ -950,3 +950,263 @@
 2025-08-20 17:01:14 | STATE_SUCCESS | factory-1755706136 | done | claude-stop-hook
 2025-08-20 17:01:17 | STATE_UPDATE | factory-1755706136 | idle | claude-stop-hook-delay | PID:1290881
 2025-08-20 17:01:18 | STATE_SUCCESS | factory-1755706136 | idle | claude-stop-hook-delay
+2025-08-20 17:01:56 | STATE_UPDATE | weaver-1755709249 | done | claude-stop-hook | PID:1293959
+2025-08-20 17:01:56 | STATE_SUCCESS | weaver-1755709249 | done | claude-stop-hook
+2025-08-20 17:01:59 | STATE_UPDATE | weaver-1755709249 | idle | claude-stop-hook-delay | PID:1294207
+2025-08-20 17:01:59 | STATE_SUCCESS | weaver-1755709249 | idle | claude-stop-hook-delay
+2025-08-20 17:02:07 | STATE_UPDATE | weaver-1755709249 | busy | claude-start-hook | PID:1294896
+2025-08-20 17:02:08 | STATE_SUCCESS | weaver-1755709249 | busy | claude-start-hook
+2025-08-20 17:02:20 | STATE_UPDATE | factory-1755706136 | busy | claude-start-hook | PID:1295789
+2025-08-20 17:02:20 | STATE_SUCCESS | factory-1755706136 | busy | claude-start-hook
+2025-08-20 17:02:22 | STATE_UPDATE | weaver-1755709249 | done | claude-stop-hook | PID:1296107
+2025-08-20 17:02:23 | STATE_SUCCESS | weaver-1755709249 | done | claude-stop-hook
+2025-08-20 17:02:26 | STATE_UPDATE | weaver-1755709249 | idle | claude-stop-hook-delay | PID:1296395
+2025-08-20 17:02:26 | STATE_SUCCESS | weaver-1755709249 | idle | claude-stop-hook-delay
+2025-08-20 17:02:27 | STATE_UPDATE | factory-1755706136 | done | claude-stop-hook | PID:1296532
+2025-08-20 17:02:27 | STATE_SUCCESS | factory-1755706136 | done | claude-stop-hook
+2025-08-20 17:02:30 | STATE_UPDATE | factory-1755706136 | idle | claude-stop-hook-delay | PID:1296738
+2025-08-20 17:02:30 | STATE_SUCCESS | factory-1755706136 | idle | claude-stop-hook-delay
+2025-08-20 17:04:06 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:1304112
+2025-08-20 17:04:06 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-20 17:04:09 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:1304272
+2025-08-20 17:04:09 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-20 17:06:51 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1316092
+2025-08-20 17:06:51 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 17:08:14 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1322244
+2025-08-20 17:08:14 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 17:08:17 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1322545
+2025-08-20 17:08:17 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 17:09:00 | STATE_UPDATE | architect-1755691818 | busy | claude-start-hook | PID:1325674
+2025-08-20 17:09:00 | STATE_SUCCESS | architect-1755691818 | busy | claude-start-hook
+2025-08-20 17:12:18 | STATE_UPDATE | architect-1755691818 | done | claude-stop-hook | PID:1340385
+2025-08-20 17:12:18 | STATE_SUCCESS | architect-1755691818 | done | claude-stop-hook
+2025-08-20 17:12:21 | STATE_UPDATE | architect-1755691818 | idle | claude-stop-hook-delay | PID:1340654
+2025-08-20 17:12:21 | STATE_SUCCESS | architect-1755691818 | idle | claude-stop-hook-delay
+2025-08-20 17:14:29 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:1350282
+2025-08-20 17:14:29 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-20 17:15:54 | STATE_UPDATE | architect-1755691818 | busy | claude-start-hook | PID:1356661
+2025-08-20 17:15:54 | STATE_SUCCESS | architect-1755691818 | busy | claude-start-hook
+2025-08-20 17:19:42 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:1374372
+2025-08-20 17:19:42 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-20 17:19:43 | STATE_UPDATE | architect-1755691818 | done | claude-stop-hook | PID:1374430
+2025-08-20 17:19:43 | STATE_SUCCESS | architect-1755691818 | done | claude-stop-hook
+2025-08-20 17:19:45 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:1374624
+2025-08-20 17:19:45 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-20 17:19:46 | STATE_UPDATE | architect-1755691818 | idle | claude-stop-hook-delay | PID:1374704
+2025-08-20 17:19:46 | STATE_SUCCESS | architect-1755691818 | idle | claude-stop-hook-delay
+2025-08-20 17:21:21 | STATE_UPDATE | architect-1755691818 | busy | claude-start-hook | PID:1381705
+2025-08-20 17:21:21 | STATE_SUCCESS | architect-1755691818 | busy | claude-start-hook
+2025-08-20 17:21:33 | STATE_UPDATE | architect-1755691818 | done | claude-stop-hook | PID:1382599
+2025-08-20 17:21:33 | STATE_SUCCESS | architect-1755691818 | done | claude-stop-hook
+2025-08-20 17:21:36 | STATE_UPDATE | architect-1755691818 | idle | claude-stop-hook-delay | PID:1382844
+2025-08-20 17:21:36 | STATE_SUCCESS | architect-1755691818 | idle | claude-stop-hook-delay
+2025-08-20 18:18:40 | STATE_UPDATE | architect-1755691818 | busy | claude-start-hook | PID:1581237
+2025-08-20 18:18:40 | STATE_SUCCESS | architect-1755691818 | busy | claude-start-hook
+2025-08-20 18:19:52 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1586586
+2025-08-20 18:19:52 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 18:20:14 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1588288
+2025-08-20 18:20:14 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 18:20:17 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1588654
+2025-08-20 18:20:17 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 18:20:32 | STATE_UPDATE | architect-1755691818 | done | claude-stop-hook | PID:1589818
+2025-08-20 18:20:32 | STATE_SUCCESS | architect-1755691818 | done | claude-stop-hook
+2025-08-20 18:20:35 | STATE_UPDATE | architect-1755691818 | idle | claude-stop-hook-delay | PID:1590030
+2025-08-20 18:20:35 | STATE_SUCCESS | architect-1755691818 | idle | claude-stop-hook-delay
+2025-08-20 18:21:30 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1594146
+2025-08-20 18:21:30 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 18:22:12 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1597344
+2025-08-20 18:22:12 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 18:23:20 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1602351
+2025-08-20 18:23:20 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 18:23:23 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1602731
+2025-08-20 18:23:23 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 18:24:10 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:1606462
+2025-08-20 18:24:10 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-20 18:25:45 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:1613715
+2025-08-20 18:25:45 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-20 18:25:48 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:1614053
+2025-08-20 18:25:48 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-20 18:35:33 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:1656696
+2025-08-20 18:35:33 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-20 18:36:26 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:1660799
+2025-08-20 18:36:26 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-20 18:36:29 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:1661010
+2025-08-20 18:36:29 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-20 18:39:47 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1675583
+2025-08-20 18:39:47 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 18:40:40 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1679550
+2025-08-20 18:40:40 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 18:40:43 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1679852
+2025-08-20 18:40:43 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 18:41:47 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:1684790
+2025-08-20 18:41:47 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-20 18:42:07 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:1686660
+2025-08-20 18:42:07 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-20 18:42:44 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:1689570
+2025-08-20 18:42:44 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-20 18:42:47 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:1689899
+2025-08-20 18:42:47 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-20 18:45:42 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1703214
+2025-08-20 18:45:42 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 18:48:42 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1716580
+2025-08-20 18:48:42 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 18:49:57 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1722201
+2025-08-20 18:49:57 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 18:50:51 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1726057
+2025-08-20 18:50:51 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 18:50:54 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1726397
+2025-08-20 18:50:54 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 18:59:59 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:1766727
+2025-08-20 18:59:59 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-20 19:01:19 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:1773030
+2025-08-20 19:01:19 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-20 19:01:22 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:1773202
+2025-08-20 19:01:22 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-20 19:04:27 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1787692
+2025-08-20 19:04:27 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 19:04:36 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1788515
+2025-08-20 19:04:36 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 19:04:39 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1788652
+2025-08-20 19:04:39 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 19:07:59 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1804265
+2025-08-20 19:07:59 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 19:08:30 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1806746
+2025-08-20 19:08:30 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 19:08:33 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1807118
+2025-08-20 19:08:33 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 19:18:37 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1853317
+2025-08-20 19:18:37 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 19:19:00 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1854989
+2025-08-20 19:19:00 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 19:19:03 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1855313
+2025-08-20 19:19:03 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 19:32:17 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1916202
+2025-08-20 19:32:17 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 19:33:25 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1921518
+2025-08-20 19:33:25 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 19:33:28 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1921762
+2025-08-20 19:33:28 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 19:33:49 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1923448
+2025-08-20 19:33:49 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 19:35:11 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1930004
+2025-08-20 19:35:11 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 19:35:14 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1930334
+2025-08-20 19:35:14 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 19:35:27 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1931332
+2025-08-20 19:35:27 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 19:35:45 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1932827
+2025-08-20 19:35:45 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 19:35:48 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1933165
+2025-08-20 19:35:49 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 19:37:09 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:1939522
+2025-08-20 19:37:09 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 19:38:46 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:1946872
+2025-08-20 19:38:46 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 19:38:49 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:1947158
+2025-08-20 19:38:49 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:06:32 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2074839
+2025-08-20 20:06:32 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:07:37 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2079882
+2025-08-20 20:07:37 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:07:40 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2080103
+2025-08-20 20:07:40 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:17:17 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2124333
+2025-08-20 20:17:17 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:17:39 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2126075
+2025-08-20 20:17:39 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:17:42 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2126301
+2025-08-20 20:17:42 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:20:04 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2137295
+2025-08-20 20:20:04 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:20:25 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2138958
+2025-08-20 20:20:25 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:20:28 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2139306
+2025-08-20 20:20:28 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:21:24 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2143659
+2025-08-20 20:21:24 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:22:47 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2150110
+2025-08-20 20:22:47 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:22:50 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2150332
+2025-08-20 20:22:50 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:32:03 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2192948
+2025-08-20 20:32:03 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:33:59 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2202068
+2025-08-20 20:33:59 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:34:02 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2202358
+2025-08-20 20:34:02 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:35:44 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2210311
+2025-08-20 20:35:44 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:37:11 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2217065
+2025-08-20 20:37:11 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:37:14 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2217395
+2025-08-20 20:37:14 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:43:29 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2246260
+2025-08-20 20:43:29 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:43:36 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2246936
+2025-08-20 20:43:36 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:43:39 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2247167
+2025-08-20 20:43:39 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:48:34 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | busy | claude-start-hook | PID:2268627
+2025-08-20 20:48:34 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | busy | claude-start-hook
+2025-08-20 20:49:24 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2272498
+2025-08-20 20:49:24 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:49:46 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2274324
+2025-08-20 20:49:46 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:49:50 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2274631
+2025-08-20 20:49:50 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:49:53 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2274938
+2025-08-20 20:49:53 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:50:37 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook | PID:2278499
+2025-08-20 20:50:37 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook
+2025-08-20 20:50:40 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay | PID:2278731
+2025-08-20 20:50:40 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay
+2025-08-20 20:52:09 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2285334
+2025-08-20 20:52:09 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:52:18 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2286102
+2025-08-20 20:52:18 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:52:21 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2286361
+2025-08-20 20:52:21 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:54:29 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2295775
+2025-08-20 20:54:29 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 20:55:31 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2300076
+2025-08-20 20:55:31 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 20:55:34 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2300394
+2025-08-20 20:55:34 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 20:59:10 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | busy | claude-start-hook | PID:2315586
+2025-08-20 20:59:10 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | busy | claude-start-hook
+2025-08-20 21:00:11 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2320314
+2025-08-20 21:00:11 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 21:00:20 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2321125
+2025-08-20 21:00:20 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 21:00:23 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2321416
+2025-08-20 21:00:23 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 21:01:37 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook | PID:2327471
+2025-08-20 21:01:37 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook
+2025-08-20 21:01:40 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay | PID:2327690
+2025-08-20 21:01:40 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay
+2025-08-20 21:02:14 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2330244
+2025-08-20 21:02:14 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 21:02:24 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2330956
+2025-08-20 21:02:24 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 21:02:27 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2331266
+2025-08-20 21:02:27 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 21:03:27 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2335766
+2025-08-20 21:03:27 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 21:04:09 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2338925
+2025-08-20 21:04:09 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 21:04:12 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2339149
+2025-08-20 21:04:13 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 21:04:44 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | busy | claude-start-hook | PID:2341743
+2025-08-20 21:04:44 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | busy | claude-start-hook
+2025-08-20 21:06:48 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook | PID:2351320
+2025-08-20 21:06:48 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | done | claude-stop-hook
+2025-08-20 21:06:51 | STATE_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay | PID:2351487
+2025-08-20 21:06:51 | STATE_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | idle | claude-stop-hook-delay
+2025-08-20 21:07:30 | STATE_UPDATE | architect-1755700020 | busy | claude-start-hook | PID:2354436
+2025-08-20 21:07:30 | STATE_SUCCESS | architect-1755700020 | busy | claude-start-hook
+2025-08-20 21:07:51 | STATE_UPDATE | architect-1755700020 | done | claude-stop-hook | PID:2356044
+2025-08-20 21:07:51 | STATE_SUCCESS | architect-1755700020 | done | claude-stop-hook
+2025-08-20 21:07:54 | STATE_UPDATE | architect-1755700020 | idle | claude-stop-hook-delay | PID:2356309
+2025-08-20 21:07:54 | STATE_SUCCESS | architect-1755700020 | idle | claude-stop-hook-delay
+2025-08-20 21:18:55 | STATE_UPDATE | weaver-1755709249 | busy | claude-start-hook | PID:2401756
+2025-08-20 21:18:55 | STATE_SUCCESS | weaver-1755709249 | busy | claude-start-hook

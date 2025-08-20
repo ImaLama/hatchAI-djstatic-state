@@ -1361,3 +1361,37 @@
 [2025-08-20 17:00:56] Background process: Returning to IDLE state for weaver-1755709249
 [2025-08-20 17:00:56] STATE_CHANGE: weaver-1755709249: done -> idle
 [2025-08-20 17:00:56] SUCCESS: Returned agent state to IDLE
+[2025-08-20 17:01:56] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 17:01:56] Session ID: weaver-1755709249
+[2025-08-20 17:01:56] Display Name: unknown
+[2025-08-20 17:01:56] Agent Type: weaver
+[2025-08-20 17:01:56] Task ID: 
+[2025-08-20 17:01:56] Model: sonnet
+[2025-08-20 17:01:56] STATE_CHANGE: weaver-1755709249: busy -> done
+[2025-08-20 17:01:56] Prompt completed successfully, Claude ready for next input (duration: 58s)
+[2025-08-20 17:01:56] Updating agent state via state manager: weaver-1755709249 -> done
+[2025-08-20 17:01:56] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 17:01:56] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 17:01:56] State updated to: done via JSON state manager
+[2025-08-20 17:01:56] Stop hook processing complete
+[2025-08-20 17:01:56] Notifications disabled - would have shown: done for unknown
+[2025-08-20 17:01:59] Background process: Returning to IDLE state for weaver-1755709249
+[2025-08-20 17:01:59] STATE_CHANGE: weaver-1755709249: done -> idle
+[2025-08-20 17:01:59] SUCCESS: Returned agent state to IDLE
+[2025-08-20 17:02:22] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 17:02:22] Session ID: weaver-1755709249
+[2025-08-20 17:02:22] Display Name: unknown
+[2025-08-20 17:02:22] Agent Type: weaver
+[2025-08-20 17:02:22] Task ID: 
+[2025-08-20 17:02:22] Model: sonnet
+[2025-08-20 17:02:22] STATE_CHANGE: weaver-1755709249: busy -> done
+[2025-08-20 17:02:22] Prompt completed successfully, Claude ready for next input (duration: 15s)
+[2025-08-20 17:02:22] Updating agent state via state manager: weaver-1755709249 -> done
+[2025-08-20 17:02:23] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 17:02:23] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 17:02:23] State updated to: done via JSON state manager
+[2025-08-20 17:02:23] Stop hook processing complete
+[2025-08-20 17:02:23] Notifications disabled - would have shown: done for unknown
+[2025-08-20 17:02:26] Background process: Returning to IDLE state for weaver-1755709249
+[2025-08-20 17:02:26] STATE_CHANGE: weaver-1755709249: done -> idle
+[2025-08-20 17:02:26] SUCCESS: Returned agent state to IDLE

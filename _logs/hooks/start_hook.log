@@ -1010,3 +1010,25 @@
 [2025-08-20 17:00:58] Updating agent state via state manager: weaver-1755709249 -> busy
 [2025-08-20 17:00:58] SUCCESS: Updated agent state to BUSY via state manager
 [2025-08-20 17:00:58] Start hook processing complete
+[2025-08-20 17:02:07] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-20 17:02:07] Session ID: weaver-1755709249
+[2025-08-20 17:02:07] Display Name: unknown
+[2025-08-20 17:02:07] Agent Type: weaver
+[2025-08-20 17:02:07] Task ID: 
+[2025-08-20 17:02:07] Model: sonnet
+[2025-08-20 17:02:07] STATE_CHANGE: weaver-1755709249: idle -> busy
+[2025-08-20 17:02:07] User submitted prompt, updating agent state to: busy
+[2025-08-20 17:02:07] Updating agent state via state manager: weaver-1755709249 -> busy
+[2025-08-20 17:02:08] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-20 17:02:08] Start hook processing complete
+[2025-08-20 21:18:55] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-20 21:18:55] Session ID: weaver-1755709249
+[2025-08-20 21:18:55] Display Name: unknown
+[2025-08-20 21:18:55] Agent Type: weaver
+[2025-08-20 21:18:55] Task ID: 
+[2025-08-20 21:18:55] Model: sonnet
+[2025-08-20 21:18:55] STATE_CHANGE: weaver-1755709249: idle -> busy
+[2025-08-20 21:18:55] User submitted prompt, updating agent state to: busy
+[2025-08-20 21:18:55] Updating agent state via state manager: weaver-1755709249 -> busy
+[2025-08-20 21:18:55] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-20 21:18:55] Start hook processing complete
