@@ -1290,3 +1290,8 @@
 [2025-08-20 14:43:35] Acquired lock (PID: 710049) for update: planner-1755701013 -> busy (origin: claude-start-hook)
 [2025-08-20 14:43:35] Updating state: planner-1755701013 -> busy (origin: claude-start-hook)
 [2025-08-20 14:43:35] Successfully updated state: planner-1755701013 = busy (origin: claude-start-hook)
+[2025-08-20 14:44:04] Starting session cleanup...
+[2025-08-20 14:44:04] Cleanup completed: no terminated sessions found
+[2025-08-20 14:44:20] Acquired lock (PID: 714377) for update: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 14:44:20] Updating state: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 14:44:20] Successfully updated state: planner-1755698364 = busy (origin: claude-start-hook)

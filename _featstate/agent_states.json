@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-08-20T14:43:20+00:00",
+  "last_updated": "2025-08-20T14:44:20+00:00",
   "sessions": {
     "architect-1755608908": "idle",
     "architect-1755609014": "idle",
@@ -69,9 +69,9 @@
       "origin": "claude-stop-hook-delay"
     },
     "architect-1755692533": {
-      "state": "busy",
-      "timestamp": "2025-08-20T14:42:03+00:00",
-      "origin": "claude-start-hook"
+      "state": "idle",
+      "timestamp": "2025-08-20T14:43:46+00:00",
+      "origin": "claude-stop-hook-delay"
     },
     "factory-TC-123": {
       "state": "idle",
@@ -80,7 +80,7 @@
     },
     "planner-1755698364": {
       "state": "busy",
-      "timestamp": "2025-08-20T14:43:20+00:00",
+      "timestamp": "2025-08-20T14:44:20+00:00",
       "origin": "claude-start-hook"
     },
     "factory-TC-999": {
@@ -102,6 +102,11 @@
       "state": "idle",
       "timestamp": "2025-08-20T14:27:25+00:00",
       "origin": "claude-stop-hook-delay"
+    },
+    "planner-1755701013": {
+      "state": "busy",
+      "timestamp": "2025-08-20T14:43:35+00:00",
+      "origin": "claude-start-hook"
     }
   }
 }
