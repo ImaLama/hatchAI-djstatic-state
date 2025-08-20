@@ -1395,3 +1395,20 @@
 [2025-08-20 17:02:26] Background process: Returning to IDLE state for weaver-1755709249
 [2025-08-20 17:02:26] STATE_CHANGE: weaver-1755709249: done -> idle
 [2025-08-20 17:02:26] SUCCESS: Returned agent state to IDLE
+[2025-08-20 21:19:54] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 21:19:54] Session ID: weaver-1755709249
+[2025-08-20 21:19:54] Display Name: unknown
+[2025-08-20 21:19:54] Agent Type: weaver
+[2025-08-20 21:19:54] Task ID: 
+[2025-08-20 21:19:54] Model: sonnet
+[2025-08-20 21:19:54] STATE_CHANGE: weaver-1755709249: busy -> done
+[2025-08-20 21:19:54] Prompt completed successfully, Claude ready for next input (duration: 59s)
+[2025-08-20 21:19:54] Updating agent state via state manager: weaver-1755709249 -> done
+[2025-08-20 21:19:54] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 21:19:54] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 21:19:54] State updated to: done via JSON state manager
+[2025-08-20 21:19:54] Stop hook processing complete
+[2025-08-20 21:19:54] Notifications disabled - would have shown: done for unknown
+[2025-08-20 21:19:57] Background process: Returning to IDLE state for weaver-1755709249
+[2025-08-20 21:19:57] STATE_CHANGE: weaver-1755709249: done -> idle
+[2025-08-20 21:19:57] SUCCESS: Returned agent state to IDLE
