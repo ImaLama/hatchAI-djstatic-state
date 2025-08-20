@@ -1,0 +1,55 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 022-TS-2025-08-20-CODE-REVIEW
+title: Perform code review for pull request            # "Add sharded event dir"
+created: 2025-08-20-14-44                   # creation datetime
+updated: 2025-08-20-14-44                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 007-FS-2025-08-20-GENERAL-DEVCARD-TEMPLATES  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+This TaskSpec template provides a standardized approach for performing code reviews on pull requests. It ensures consistent quality checks, security validation, and adherence to project standards across all code reviews in the development process.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | Code quality review completed with checklist | review | PR review interface | Show completed review checklist |
+| 2 | Security scan passes with no critical issues | security | security scanner output | Show scan results with pass status |
+| 3 | Code follows established patterns and conventions | quality | linting/formatting tools | Show clean lint/format output |
+| 4 | Tests are adequate and pass for changed code | testing | test runner output | Show test coverage and pass results |
+
+## 3  Non-Goals / Anti-Goals
+• Will NOT implement new features during review process
+• Will NOT refactor unrelated code unless specifically requested
+• Will NOT merge without all review criteria being met
+• Will NOT approve changes that introduce breaking changes without proper documentation
+
+## 4  Design Constraints
+• Review must be completed within 24 hours of PR submission
+• All security and quality checks must pass before approval
+• Documentation must be updated if public APIs are changed
+• Breaking changes require additional approval from team lead
+• Must validate against project coding standards and conventions
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement code until tests pass & linting clean
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.
