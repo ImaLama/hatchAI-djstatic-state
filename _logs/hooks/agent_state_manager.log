@@ -146,3 +146,926 @@
 [2025-08-19 16:47:53] Acquired lock (PID: 95170) for update: unknown -> busy
 [2025-08-19 16:47:53] Updating state: unknown -> busy
 [2025-08-19 16:47:53] Successfully updated state: unknown = busy
+[2025-08-19 16:49:25] Acquired lock (PID: 96148) for update: unknown -> done
+[2025-08-19 16:49:25] Updating state: unknown -> done
+[2025-08-19 16:49:25] Successfully updated state: unknown = done
+[2025-08-19 16:49:28] Acquired lock (PID: 96189) for update: unknown -> idle
+[2025-08-19 16:49:28] Updating state: unknown -> idle
+[2025-08-19 16:49:29] Successfully updated state: unknown = idle
+[2025-08-19 16:49:29] Acquired lock (PID: 96229) for update: unknown -> busy
+[2025-08-19 16:49:29] Updating state: unknown -> busy
+[2025-08-19 16:49:29] Successfully updated state: unknown = busy
+[2025-08-19 16:50:08] Acquired lock (PID: 96578) for update: unknown -> done
+[2025-08-19 16:50:08] Updating state: unknown -> done
+[2025-08-19 16:50:08] Successfully updated state: unknown = done
+[2025-08-19 16:50:11] Acquired lock (PID: 96633) for update: unknown -> idle
+[2025-08-19 16:50:11] Updating state: unknown -> idle
+[2025-08-19 16:50:11] Successfully updated state: unknown = idle
+[2025-08-19 16:50:49] Acquired lock (PID: 96867) for update: unknown -> busy
+[2025-08-19 16:50:49] Updating state: unknown -> busy
+[2025-08-19 16:50:49] Successfully updated state: unknown = busy
+[2025-08-19 16:51:35] Acquired lock (PID: 97301) for update: unknown -> done
+[2025-08-19 16:51:35] Updating state: unknown -> done
+[2025-08-19 16:51:35] Successfully updated state: unknown = done
+[2025-08-19 16:51:38] Acquired lock (PID: 97324) for update: unknown -> idle
+[2025-08-19 16:51:38] Updating state: unknown -> idle
+[2025-08-19 16:51:38] Successfully updated state: unknown = idle
+[2025-08-19 16:52:00] Acquired lock (PID: 97560) for update: unknown -> busy
+[2025-08-19 16:52:00] Updating state: unknown -> busy
+[2025-08-19 16:52:00] Successfully updated state: unknown = busy
+[2025-08-19 16:53:18] Acquired lock (PID: 98281) for update: unknown -> done
+[2025-08-19 16:53:18] Updating state: unknown -> done
+[2025-08-19 16:53:18] Successfully updated state: unknown = done
+[2025-08-19 16:53:21] Acquired lock (PID: 98322) for update: unknown -> idle
+[2025-08-19 16:53:21] Updating state: unknown -> idle
+[2025-08-19 16:53:21] Successfully updated state: unknown = idle
+[2025-08-19 16:53:24] Acquired lock (PID: 98368) for update: unknown -> busy
+[2025-08-19 16:53:24] Updating state: unknown -> busy
+[2025-08-19 16:53:24] Successfully updated state: unknown = busy
+[2025-08-19 16:54:26] Acquired lock (PID: 99007) for update: unknown -> done
+[2025-08-19 16:54:26] Updating state: unknown -> done
+[2025-08-19 16:54:26] Successfully updated state: unknown = done
+[2025-08-19 16:54:29] Acquired lock (PID: 99042) for update: unknown -> idle
+[2025-08-19 16:54:29] Updating state: unknown -> idle
+[2025-08-19 16:54:29] Successfully updated state: unknown = idle
+[2025-08-19 16:54:32] Acquired lock (PID: 99082) for update: unknown -> busy
+[2025-08-19 16:54:32] Updating state: unknown -> busy
+[2025-08-19 16:54:32] Successfully updated state: unknown = busy
+[2025-08-19 16:54:57] Acquired lock (PID: 99358) for update: unknown -> done
+[2025-08-19 16:54:57] Updating state: unknown -> done
+[2025-08-19 16:54:57] Successfully updated state: unknown = done
+[2025-08-19 16:55:00] Acquired lock (PID: 99399) for update: unknown -> idle
+[2025-08-19 16:55:00] Updating state: unknown -> idle
+[2025-08-19 16:55:01] Successfully updated state: unknown = idle
+[2025-08-19 16:57:31] Acquired lock (PID: 100114) for update: unknown -> busy
+[2025-08-19 16:57:31] Updating state: unknown -> busy
+[2025-08-19 16:57:31] Successfully updated state: unknown = busy
+[2025-08-19 17:01:41] Acquired lock (PID: 101460) for update: unknown -> busy
+[2025-08-19 17:01:41] Updating state: unknown -> busy
+[2025-08-19 17:01:41] Successfully updated state: unknown = busy
+[2025-08-19 17:09:36] Acquired lock (PID: 106439) for update: unknown -> done
+[2025-08-19 17:09:36] Updating state: unknown -> done
+[2025-08-19 17:09:36] Successfully updated state: unknown = done
+[2025-08-19 17:09:39] Acquired lock (PID: 106521) for update: unknown -> idle
+[2025-08-19 17:09:39] Updating state: unknown -> idle
+[2025-08-19 17:09:39] Successfully updated state: unknown = idle
+[2025-08-19 17:14:17] Acquired lock (PID: 109225) for update: unknown -> busy
+[2025-08-19 17:14:17] Updating state: unknown -> busy
+[2025-08-19 17:14:17] Successfully updated state: unknown = busy
+[2025-08-19 17:15:16] Acquired lock (PID: 109893) for update: unknown -> busy
+[2025-08-19 17:15:16] Updating state: unknown -> busy
+[2025-08-19 17:15:16] Successfully updated state: unknown = busy
+[2025-08-19 17:15:34] Acquired lock (PID: 110085) for update: unknown -> done
+[2025-08-19 17:15:34] Updating state: unknown -> done
+[2025-08-19 17:15:34] Successfully updated state: unknown = done
+[2025-08-19 17:15:37] Acquired lock (PID: 110128) for update: unknown -> idle
+[2025-08-19 17:15:37] Updating state: unknown -> idle
+[2025-08-19 17:15:37] Successfully updated state: unknown = idle
+[2025-08-19 17:16:06] Acquired lock (PID: 110322) for update: unknown -> busy
+[2025-08-19 17:16:06] Updating state: unknown -> busy
+[2025-08-19 17:16:06] Successfully updated state: unknown = busy
+[2025-08-19 17:16:22] Acquired lock (PID: 110492) for update: unknown -> done
+[2025-08-19 17:16:22] Updating state: unknown -> done
+[2025-08-19 17:16:22] Successfully updated state: unknown = done
+[2025-08-19 17:16:25] Acquired lock (PID: 110518) for update: unknown -> idle
+[2025-08-19 17:16:25] Updating state: unknown -> idle
+[2025-08-19 17:16:25] Successfully updated state: unknown = idle
+[2025-08-19 17:16:28] Acquired lock (PID: 110627) for update: unknown -> busy
+[2025-08-19 17:16:28] Updating state: unknown -> busy
+[2025-08-19 17:16:28] Successfully updated state: unknown = busy
+[2025-08-19 17:16:55] Acquired lock (PID: 110822) for update: unknown -> done
+[2025-08-19 17:16:55] Updating state: unknown -> done
+[2025-08-19 17:16:55] Successfully updated state: unknown = done
+[2025-08-19 17:16:58] Acquired lock (PID: 110881) for update: unknown -> idle
+[2025-08-19 17:16:58] Updating state: unknown -> idle
+[2025-08-19 17:16:58] Successfully updated state: unknown = idle
+[2025-08-19 17:17:08] Acquired lock (PID: 110932) for update: unknown -> busy
+[2025-08-19 17:17:08] Updating state: unknown -> busy
+[2025-08-19 17:17:08] Successfully updated state: unknown = busy
+[2025-08-19 17:19:58] Acquired lock (PID: 112519) for update: unknown -> done
+[2025-08-19 17:19:58] Updating state: unknown -> done
+[2025-08-19 17:19:58] Successfully updated state: unknown = done
+[2025-08-19 17:20:01] Acquired lock (PID: 112542) for update: unknown -> idle
+[2025-08-19 17:20:01] Updating state: unknown -> idle
+[2025-08-19 17:20:01] Successfully updated state: unknown = idle
+[2025-08-20 10:18:18] Acquired lock (PID: 207811) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:18:18] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:18:18] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 10:18:32] Acquired lock (PID: 208013) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:18:32] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:18:32] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 10:18:35] Acquired lock (PID: 208078) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:18:35] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:18:35] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:24:39] Acquired lock (PID: 211062) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:24:39] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:24:39] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 10:25:23] Acquired lock (PID: 211485) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:25:23] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:25:23] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 10:32:15] Acquired lock (PID: 216026) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:32:15] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:32:15] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 10:32:18] Acquired lock (PID: 216076) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:32:18] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:32:18] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:40:12] Acquired lock (PID: 219289) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:40:12] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:40:12] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 10:40:26] Acquired lock (PID: 219632) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:40:26] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:40:26] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 10:40:29] Acquired lock (PID: 219717) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:40:29] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:40:29] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:40:39] Acquired lock (PID: 219822) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:40:39] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:40:39] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 10:41:55] Acquired lock (PID: 220799) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:41:55] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:41:55] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 10:41:58] Acquired lock (PID: 220841) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:41:58] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:41:58] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:45:56] Acquired lock (PID: 222590) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:45:56] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:45:56] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 10:48:46] Acquired lock (PID: 224643) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:48:46] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:48:46] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 10:48:49] Acquired lock (PID: 224714) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:48:49] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:48:49] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:54:35] Acquired lock (PID: 227057) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:54:35] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 10:54:35] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 10:57:41] Acquired lock (PID: 228820) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:57:41] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 10:57:41] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 10:57:44] Acquired lock (PID: 228895) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:57:44] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 10:57:44] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:01:05] Acquired lock (PID: 230845) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:01:05] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:01:05] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 11:02:48] Acquired lock (PID: 231761) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:02:48] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:02:48] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 11:02:51] Acquired lock (PID: 231798) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:02:51] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:02:51] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:05:21] Acquired lock (PID: 232702) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:05:21] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:05:22] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 11:06:11] Acquired lock (PID: 233287) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:06:11] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:06:11] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 11:06:14] Acquired lock (PID: 233347) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:06:14] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:06:14] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:09:21] Acquired lock (PID: 234203) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:09:21] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:09:21] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 11:09:50] Acquired lock (PID: 234449) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:09:50] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:09:50] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 11:09:53] Acquired lock (PID: 234495) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:09:53] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:09:53] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:25:34] Acquired lock (PID: 240576) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:25:34] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:25:34] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 11:25:49] Acquired lock (PID: 240740) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:25:49] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:25:49] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 11:25:52] Acquired lock (PID: 240786) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:25:52] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:25:52] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:28:46] Acquired lock (PID: 241797) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:28:46] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:28:46] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 11:29:34] Acquired lock (PID: 242350) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:29:34] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:29:34] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 11:29:37] Acquired lock (PID: 242421) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:29:37] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:29:37] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:48:02] Acquired lock (PID: 248395) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:48:02] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:48:02] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 11:50:54] Starting session cleanup...
+[2025-08-20 11:50:54] Cleanup completed: no terminated sessions found
+[2025-08-20 11:51:07] Starting session cleanup...
+[2025-08-20 11:51:07] Cleanup completed: no terminated sessions found
+[2025-08-20 11:51:17] Starting session cleanup...
+[2025-08-20 11:51:17] Cleanup completed: no terminated sessions found
+[2025-08-20 11:51:27] Starting session cleanup...
+[2025-08-20 11:51:27] Cleanup completed: no terminated sessions found
+[2025-08-20 11:51:37] Starting session cleanup...
+[2025-08-20 11:51:37] Cleanup completed: no terminated sessions found
+[2025-08-20 11:51:47] Starting session cleanup...
+[2025-08-20 11:51:48] Cleanup completed: no terminated sessions found
+[2025-08-20 11:51:58] Starting session cleanup...
+[2025-08-20 11:51:58] Cleanup completed: no terminated sessions found
+[2025-08-20 11:52:08] Starting session cleanup...
+[2025-08-20 11:52:08] Cleanup completed: no terminated sessions found
+[2025-08-20 11:52:18] Starting session cleanup...
+[2025-08-20 11:52:18] Cleanup completed: no terminated sessions found
+[2025-08-20 11:52:28] Starting session cleanup...
+[2025-08-20 11:52:28] Cleanup completed: no terminated sessions found
+[2025-08-20 11:52:38] Starting session cleanup...
+[2025-08-20 11:52:38] Cleanup completed: no terminated sessions found
+[2025-08-20 11:52:48] Starting session cleanup...
+[2025-08-20 11:52:48] Cleanup completed: no terminated sessions found
+[2025-08-20 11:52:58] Starting session cleanup...
+[2025-08-20 11:52:58] Cleanup completed: no terminated sessions found
+[2025-08-20 11:53:08] Starting session cleanup...
+[2025-08-20 11:53:08] Cleanup completed: no terminated sessions found
+[2025-08-20 11:53:38] Acquired lock (PID: 254687) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:53:38] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 11:53:38] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 11:53:41] Acquired lock (PID: 254796) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:53:41] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:53:41] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 11:58:34] Acquired lock (PID: 260777) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:58:34] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 11:58:34] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 11:59:39] Starting session cleanup...
+[2025-08-20 11:59:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:00:09] Starting session cleanup...
+[2025-08-20 12:00:09] Cleanup completed: no terminated sessions found
+[2025-08-20 12:00:39] Starting session cleanup...
+[2025-08-20 12:00:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:01:09] Starting session cleanup...
+[2025-08-20 12:01:09] Cleanup completed: no terminated sessions found
+[2025-08-20 12:01:39] Starting session cleanup...
+[2025-08-20 12:01:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:02:03] Starting session cleanup...
+[2025-08-20 12:02:03] Cleanup completed: no terminated sessions found
+[2025-08-20 12:02:29] Acquired lock (PID: 270061) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:02:29] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:02:29] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:02:33] Acquired lock (PID: 270240) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:02:33] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:02:33] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:03:14] Acquired lock (PID: 272175) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:03:14] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:03:14] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:03:32] Acquired lock (PID: 273129) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:03:32] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:03:32] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:03:36] Acquired lock (PID: 273279) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:03:36] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:03:36] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:03:59] Acquired lock (PID: 274414) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:03:59] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:03:59] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:04:21] Acquired lock (PID: 275600) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:04:21] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:04:21] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:04:24] Acquired lock (PID: 275820) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:04:24] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:04:24] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:05:15] Acquired lock (PID: 278166) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:05:15] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:05:16] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:06:19] Acquired lock (PID: 282176) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:06:19] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:06:19] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:06:32] Starting session cleanup...
+[2025-08-20 12:06:32] Cleanup completed: no terminated sessions found
+[2025-08-20 12:07:32] Starting session cleanup...
+[2025-08-20 12:07:32] Cleanup completed: no terminated sessions found
+[2025-08-20 12:07:44] Acquired lock (PID: 286868) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:07:44] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:07:44] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:08:31] Starting session cleanup...
+[2025-08-20 12:08:31] Cleanup completed: no terminated sessions found
+[2025-08-20 12:08:55] Acquired lock (PID: 290205) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:08:55] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:08:55] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:08:58] Acquired lock (PID: 290313) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:08:59] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:08:59] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:09:01] Starting session cleanup...
+[2025-08-20 12:09:01] Cleanup completed: no terminated sessions found
+[2025-08-20 12:09:23] Acquired lock (PID: 290907) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:09:23] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:09:23] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:09:31] Starting session cleanup...
+[2025-08-20 12:09:31] Cleanup completed: no terminated sessions found
+[2025-08-20 12:09:41] Acquired lock (PID: 291428) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:09:41] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:09:41] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:09:44] Acquired lock (PID: 291544) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:09:44] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:09:44] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:10:01] Starting session cleanup...
+[2025-08-20 12:10:01] Cleanup completed: no terminated sessions found
+[2025-08-20 12:10:31] Starting session cleanup...
+[2025-08-20 12:10:31] Cleanup completed: no terminated sessions found
+[2025-08-20 12:10:50] Acquired lock (PID: 294699) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:10:50] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:10:50] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:11:02] Starting session cleanup...
+[2025-08-20 12:11:02] Cleanup completed: no terminated sessions found
+[2025-08-20 12:11:14] Acquired lock (PID: 295603) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:11:14] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:11:14] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:11:17] Acquired lock (PID: 295682) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:11:17] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:11:17] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:11:32] Starting session cleanup...
+[2025-08-20 12:11:32] Cleanup completed: no terminated sessions found
+[2025-08-20 12:12:02] Starting session cleanup...
+[2025-08-20 12:12:02] Cleanup completed: no terminated sessions found
+[2025-08-20 12:12:32] Starting session cleanup...
+[2025-08-20 12:12:32] Cleanup completed: no terminated sessions found
+[2025-08-20 12:12:56] Acquired lock (PID: 298908) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:12:56] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:12:56] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:13:02] Starting session cleanup...
+[2025-08-20 12:13:02] Cleanup completed: no terminated sessions found
+[2025-08-20 12:13:30] Acquired lock (PID: 300243) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:13:30] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:13:30] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:13:32] Starting session cleanup...
+[2025-08-20 12:13:32] Cleanup completed: no terminated sessions found
+[2025-08-20 12:13:33] Acquired lock (PID: 300395) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:13:33] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:13:33] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:14:02] Starting session cleanup...
+[2025-08-20 12:14:02] Cleanup completed: no terminated sessions found
+[2025-08-20 12:14:32] Starting session cleanup...
+[2025-08-20 12:14:32] Cleanup completed: no terminated sessions found
+[2025-08-20 12:15:02] Starting session cleanup...
+[2025-08-20 12:15:02] Cleanup completed: no terminated sessions found
+[2025-08-20 12:15:20] Acquired lock (PID: 304841) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:15:20] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:15:20] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:15:33] Starting session cleanup...
+[2025-08-20 12:15:33] Cleanup completed: no terminated sessions found
+[2025-08-20 12:15:51] Acquired lock (PID: 306054) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:15:51] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:15:51] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:15:54] Acquired lock (PID: 306174) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:15:54] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:15:54] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:15:58] Acquired lock (PID: 306364) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:15:58] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:15:58] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:16:03] Starting session cleanup...
+[2025-08-20 12:16:03] Cleanup completed: no terminated sessions found
+[2025-08-20 12:16:08] Acquired lock (PID: 306806) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:16:08] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:16:08] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:16:11] Acquired lock (PID: 306923) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:16:11] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:16:11] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:16:33] Starting session cleanup...
+[2025-08-20 12:16:33] Cleanup completed: no terminated sessions found
+[2025-08-20 12:17:03] Starting session cleanup...
+[2025-08-20 12:17:03] Cleanup completed: no terminated sessions found
+[2025-08-20 12:17:33] Starting session cleanup...
+[2025-08-20 12:17:33] Cleanup completed: no terminated sessions found
+[2025-08-20 12:17:44] Acquired lock (PID: 309925) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:17:44] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:17:44] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:18:03] Starting session cleanup...
+[2025-08-20 12:18:03] Cleanup completed: no terminated sessions found
+[2025-08-20 12:18:04] Acquired lock (PID: 310712) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:18:04] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:18:04] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:18:07] Acquired lock (PID: 310820) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:18:07] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:18:07] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:18:33] Starting session cleanup...
+[2025-08-20 12:18:33] Cleanup completed: no terminated sessions found
+[2025-08-20 12:19:03] Starting session cleanup...
+[2025-08-20 12:19:03] Cleanup completed: no terminated sessions found
+[2025-08-20 12:19:20] Acquired lock (PID: 313140) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:19:20] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:19:20] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:19:33] Starting session cleanup...
+[2025-08-20 12:19:33] Cleanup completed: no terminated sessions found
+[2025-08-20 12:20:03] Starting session cleanup...
+[2025-08-20 12:20:03] Cleanup completed: no terminated sessions found
+[2025-08-20 12:20:34] Starting session cleanup...
+[2025-08-20 12:20:34] Cleanup completed: no terminated sessions found
+[2025-08-20 12:20:34] Acquired lock (PID: 317198) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:20:34] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:20:34] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:20:37] Acquired lock (PID: 317304) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:20:37] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:20:37] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:21:04] Starting session cleanup...
+[2025-08-20 12:21:04] Cleanup completed: no terminated sessions found
+[2025-08-20 12:21:34] Starting session cleanup...
+[2025-08-20 12:21:34] Cleanup completed: no terminated sessions found
+[2025-08-20 12:22:04] Starting session cleanup...
+[2025-08-20 12:22:04] Cleanup completed: no terminated sessions found
+[2025-08-20 12:22:34] Starting session cleanup...
+[2025-08-20 12:22:34] Cleanup completed: no terminated sessions found
+[2025-08-20 12:23:04] Starting session cleanup...
+[2025-08-20 12:23:04] Cleanup completed: no terminated sessions found
+[2025-08-20 12:23:34] Starting session cleanup...
+[2025-08-20 12:23:34] Cleanup completed: no terminated sessions found
+[2025-08-20 12:24:04] Starting session cleanup...
+[2025-08-20 12:24:04] Cleanup completed: no terminated sessions found
+[2025-08-20 12:24:34] Starting session cleanup...
+[2025-08-20 12:24:34] Cleanup completed: no terminated sessions found
+[2025-08-20 12:25:04] Starting session cleanup...
+[2025-08-20 12:25:04] Cleanup completed: no terminated sessions found
+[2025-08-20 12:25:33] Acquired lock (PID: 329782) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:25:33] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:25:33] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:25:35] Starting session cleanup...
+[2025-08-20 12:25:35] Cleanup completed: no terminated sessions found
+[2025-08-20 12:26:05] Starting session cleanup...
+[2025-08-20 12:26:05] Cleanup completed: no terminated sessions found
+[2025-08-20 12:26:35] Starting session cleanup...
+[2025-08-20 12:26:35] Cleanup completed: no terminated sessions found
+[2025-08-20 12:27:05] Starting session cleanup...
+[2025-08-20 12:27:05] Cleanup completed: no terminated sessions found
+[2025-08-20 12:27:35] Starting session cleanup...
+[2025-08-20 12:27:35] Cleanup completed: no terminated sessions found
+[2025-08-20 12:28:05] Starting session cleanup...
+[2025-08-20 12:28:05] Cleanup completed: no terminated sessions found
+[2025-08-20 12:28:35] Starting session cleanup...
+[2025-08-20 12:28:35] Cleanup completed: no terminated sessions found
+[2025-08-20 12:28:57] Acquired lock (PID: 359193) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:28:57] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:28:57] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:29:00] Acquired lock (PID: 359341) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:29:00] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:29:00] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:29:05] Starting session cleanup...
+[2025-08-20 12:29:05] Cleanup completed: no terminated sessions found
+[2025-08-20 12:29:35] Starting session cleanup...
+[2025-08-20 12:29:35] Cleanup completed: no terminated sessions found
+[2025-08-20 12:30:05] Starting session cleanup...
+[2025-08-20 12:30:05] Cleanup completed: no terminated sessions found
+[2025-08-20 12:30:36] Starting session cleanup...
+[2025-08-20 12:30:36] Cleanup completed: no terminated sessions found
+[2025-08-20 12:31:06] Starting session cleanup...
+[2025-08-20 12:31:06] Cleanup completed: no terminated sessions found
+[2025-08-20 12:31:36] Starting session cleanup...
+[2025-08-20 12:31:36] Cleanup completed: no terminated sessions found
+[2025-08-20 12:32:00] Acquired lock (PID: 365946) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:32:00] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:32:00] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:32:06] Starting session cleanup...
+[2025-08-20 12:32:06] Cleanup completed: no terminated sessions found
+[2025-08-20 12:32:13] Acquired lock (PID: 366571) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:32:13] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:32:13] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:32:16] Acquired lock (PID: 366660) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:32:16] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:32:16] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:32:36] Starting session cleanup...
+[2025-08-20 12:32:36] Cleanup completed: no terminated sessions found
+[2025-08-20 12:33:06] Starting session cleanup...
+[2025-08-20 12:33:06] Cleanup completed: no terminated sessions found
+[2025-08-20 12:33:08] Acquired lock (PID: 368794) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:33:08] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 12:33:08] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 12:33:29] Acquired lock (PID: 369709) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:33:29] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 12:33:29] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 12:33:32] Acquired lock (PID: 369770) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:33:32] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:33:32] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 12:33:36] Starting session cleanup...
+[2025-08-20 12:33:36] Cleanup completed: no terminated sessions found
+[2025-08-20 12:34:06] Starting session cleanup...
+[2025-08-20 12:34:06] Cleanup completed: no terminated sessions found
+[2025-08-20 12:34:36] Starting session cleanup...
+[2025-08-20 12:34:36] Cleanup completed: no terminated sessions found
+[2025-08-20 12:35:07] Starting session cleanup...
+[2025-08-20 12:35:07] Cleanup completed: no terminated sessions found
+[2025-08-20 12:35:37] Starting session cleanup...
+[2025-08-20 12:35:37] Cleanup completed: no terminated sessions found
+[2025-08-20 12:36:07] Starting session cleanup...
+[2025-08-20 12:36:07] Cleanup completed: no terminated sessions found
+[2025-08-20 12:36:37] Starting session cleanup...
+[2025-08-20 12:36:37] Cleanup completed: no terminated sessions found
+[2025-08-20 12:37:07] Starting session cleanup...
+[2025-08-20 12:37:07] Cleanup completed: no terminated sessions found
+[2025-08-20 12:37:37] Starting session cleanup...
+[2025-08-20 12:37:37] Cleanup completed: no terminated sessions found
+[2025-08-20 12:38:07] Starting session cleanup...
+[2025-08-20 12:38:07] Cleanup completed: no terminated sessions found
+[2025-08-20 12:38:37] Starting session cleanup...
+[2025-08-20 12:38:37] Cleanup completed: no terminated sessions found
+[2025-08-20 12:39:07] Starting session cleanup...
+[2025-08-20 12:39:07] Cleanup completed: no terminated sessions found
+[2025-08-20 12:39:37] Starting session cleanup...
+[2025-08-20 12:39:38] Cleanup completed: no terminated sessions found
+[2025-08-20 12:40:08] Starting session cleanup...
+[2025-08-20 12:40:08] Cleanup completed: no terminated sessions found
+[2025-08-20 12:40:38] Starting session cleanup...
+[2025-08-20 12:40:38] Cleanup completed: no terminated sessions found
+[2025-08-20 12:41:08] Starting session cleanup...
+[2025-08-20 12:41:08] Cleanup completed: no terminated sessions found
+[2025-08-20 12:41:38] Starting session cleanup...
+[2025-08-20 12:41:38] Cleanup completed: no terminated sessions found
+[2025-08-20 12:42:08] Starting session cleanup...
+[2025-08-20 12:42:08] Cleanup completed: no terminated sessions found
+[2025-08-20 12:42:38] Starting session cleanup...
+[2025-08-20 12:42:38] Cleanup completed: no terminated sessions found
+[2025-08-20 12:43:08] Starting session cleanup...
+[2025-08-20 12:43:08] Cleanup completed: no terminated sessions found
+[2025-08-20 12:43:38] Starting session cleanup...
+[2025-08-20 12:43:38] Cleanup completed: no terminated sessions found
+[2025-08-20 12:44:08] Starting session cleanup...
+[2025-08-20 12:44:08] Cleanup completed: no terminated sessions found
+[2025-08-20 12:44:39] Starting session cleanup...
+[2025-08-20 12:44:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:45:09] Starting session cleanup...
+[2025-08-20 12:45:09] Cleanup completed: no terminated sessions found
+[2025-08-20 12:45:39] Starting session cleanup...
+[2025-08-20 12:45:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:46:09] Starting session cleanup...
+[2025-08-20 12:46:09] Cleanup completed: no terminated sessions found
+[2025-08-20 12:46:39] Starting session cleanup...
+[2025-08-20 12:46:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:47:09] Starting session cleanup...
+[2025-08-20 12:47:09] Cleanup completed: no terminated sessions found
+[2025-08-20 12:47:39] Starting session cleanup...
+[2025-08-20 12:47:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:48:09] Starting session cleanup...
+[2025-08-20 12:48:09] Cleanup completed: no terminated sessions found
+[2025-08-20 12:48:39] Starting session cleanup...
+[2025-08-20 12:48:39] Cleanup completed: no terminated sessions found
+[2025-08-20 12:49:09] Starting session cleanup...
+[2025-08-20 12:49:09] Cleanup completed: no terminated sessions found
+[2025-08-20 12:49:40] Starting session cleanup...
+[2025-08-20 12:49:40] Cleanup completed: no terminated sessions found
+[2025-08-20 12:50:10] Starting session cleanup...
+[2025-08-20 12:50:10] Cleanup completed: no terminated sessions found
+[2025-08-20 12:50:40] Starting session cleanup...
+[2025-08-20 12:50:40] Cleanup completed: no terminated sessions found
+[2025-08-20 12:51:10] Starting session cleanup...
+[2025-08-20 12:51:10] Cleanup completed: no terminated sessions found
+[2025-08-20 12:51:40] Starting session cleanup...
+[2025-08-20 12:51:40] Cleanup completed: no terminated sessions found
+[2025-08-20 12:52:10] Starting session cleanup...
+[2025-08-20 12:52:10] Cleanup completed: no terminated sessions found
+[2025-08-20 12:52:40] Starting session cleanup...
+[2025-08-20 12:52:40] Cleanup completed: no terminated sessions found
+[2025-08-20 12:53:10] Starting session cleanup...
+[2025-08-20 12:53:10] Cleanup completed: no terminated sessions found
+[2025-08-20 12:53:40] Starting session cleanup...
+[2025-08-20 12:53:40] Cleanup completed: no terminated sessions found
+[2025-08-20 12:54:11] Starting session cleanup...
+[2025-08-20 12:54:11] Cleanup completed: no terminated sessions found
+[2025-08-20 12:54:41] Starting session cleanup...
+[2025-08-20 12:54:41] Cleanup completed: no terminated sessions found
+[2025-08-20 12:55:11] Starting session cleanup...
+[2025-08-20 12:55:11] Cleanup completed: no terminated sessions found
+[2025-08-20 12:55:41] Starting session cleanup...
+[2025-08-20 12:55:41] Cleanup completed: no terminated sessions found
+[2025-08-20 12:56:11] Starting session cleanup...
+[2025-08-20 12:56:11] Cleanup completed: no terminated sessions found
+[2025-08-20 12:56:41] Starting session cleanup...
+[2025-08-20 12:56:41] Cleanup completed: no terminated sessions found
+[2025-08-20 12:57:11] Starting session cleanup...
+[2025-08-20 12:57:11] Cleanup completed: no terminated sessions found
+[2025-08-20 12:57:41] Starting session cleanup...
+[2025-08-20 12:57:41] Cleanup completed: no terminated sessions found
+[2025-08-20 12:58:11] Starting session cleanup...
+[2025-08-20 12:58:11] Cleanup completed: no terminated sessions found
+[2025-08-20 12:58:41] Starting session cleanup...
+[2025-08-20 12:58:41] Cleanup completed: no terminated sessions found
+[2025-08-20 12:59:12] Starting session cleanup...
+[2025-08-20 12:59:12] Cleanup completed: no terminated sessions found
+[2025-08-20 12:59:42] Starting session cleanup...
+[2025-08-20 12:59:42] Cleanup completed: no terminated sessions found
+[2025-08-20 13:00:12] Starting session cleanup...
+[2025-08-20 13:00:12] Cleanup completed: no terminated sessions found
+[2025-08-20 13:00:42] Starting session cleanup...
+[2025-08-20 13:00:42] Cleanup completed: no terminated sessions found
+[2025-08-20 13:01:12] Starting session cleanup...
+[2025-08-20 13:01:12] Cleanup completed: no terminated sessions found
+[2025-08-20 13:01:42] Starting session cleanup...
+[2025-08-20 13:01:42] Cleanup completed: no terminated sessions found
+[2025-08-20 13:02:12] Starting session cleanup...
+[2025-08-20 13:02:12] Cleanup completed: no terminated sessions found
+[2025-08-20 13:02:42] Starting session cleanup...
+[2025-08-20 13:02:42] Cleanup completed: no terminated sessions found
+[2025-08-20 13:03:12] Starting session cleanup...
+[2025-08-20 13:03:12] Cleanup completed: no terminated sessions found
+[2025-08-20 13:03:42] Starting session cleanup...
+[2025-08-20 13:03:43] Cleanup completed: no terminated sessions found
+[2025-08-20 13:04:13] Starting session cleanup...
+[2025-08-20 13:04:13] Cleanup completed: no terminated sessions found
+[2025-08-20 13:04:43] Starting session cleanup...
+[2025-08-20 13:04:43] Cleanup completed: no terminated sessions found
+[2025-08-20 13:05:13] Starting session cleanup...
+[2025-08-20 13:05:13] Cleanup completed: no terminated sessions found
+[2025-08-20 13:05:43] Starting session cleanup...
+[2025-08-20 13:05:43] Cleanup completed: no terminated sessions found
+[2025-08-20 13:06:13] Starting session cleanup...
+[2025-08-20 13:06:13] Cleanup completed: no terminated sessions found
+[2025-08-20 13:06:43] Starting session cleanup...
+[2025-08-20 13:06:43] Cleanup completed: no terminated sessions found
+[2025-08-20 13:07:13] Starting session cleanup...
+[2025-08-20 13:07:13] Cleanup completed: no terminated sessions found
+[2025-08-20 13:07:43] Starting session cleanup...
+[2025-08-20 13:07:43] Cleanup completed: no terminated sessions found
+[2025-08-20 13:08:13] Starting session cleanup...
+[2025-08-20 13:08:13] Cleanup completed: no terminated sessions found
+[2025-08-20 13:08:44] Starting session cleanup...
+[2025-08-20 13:08:44] Cleanup completed: no terminated sessions found
+[2025-08-20 13:09:14] Starting session cleanup...
+[2025-08-20 13:09:14] Cleanup completed: no terminated sessions found
+[2025-08-20 13:09:44] Starting session cleanup...
+[2025-08-20 13:09:44] Cleanup completed: no terminated sessions found
+[2025-08-20 13:10:14] Starting session cleanup...
+[2025-08-20 13:10:14] Cleanup completed: no terminated sessions found
+[2025-08-20 13:10:44] Starting session cleanup...
+[2025-08-20 13:10:44] Cleanup completed: no terminated sessions found
+[2025-08-20 13:11:14] Starting session cleanup...
+[2025-08-20 13:11:14] Cleanup completed: no terminated sessions found
+[2025-08-20 13:11:44] Starting session cleanup...
+[2025-08-20 13:11:44] Cleanup completed: no terminated sessions found
+[2025-08-20 13:12:14] Starting session cleanup...
+[2025-08-20 13:12:14] Cleanup completed: no terminated sessions found
+[2025-08-20 13:12:44] Starting session cleanup...
+[2025-08-20 13:12:44] Cleanup completed: no terminated sessions found
+[2025-08-20 13:13:14] Starting session cleanup...
+[2025-08-20 13:13:14] Cleanup completed: no terminated sessions found
+[2025-08-20 13:13:45] Starting session cleanup...
+[2025-08-20 13:13:45] Cleanup completed: no terminated sessions found
+[2025-08-20 13:14:15] Starting session cleanup...
+[2025-08-20 13:14:15] Cleanup completed: no terminated sessions found
+[2025-08-20 13:14:45] Starting session cleanup...
+[2025-08-20 13:14:45] Cleanup completed: no terminated sessions found
+[2025-08-20 13:15:15] Starting session cleanup...
+[2025-08-20 13:15:15] Cleanup completed: no terminated sessions found
+[2025-08-20 13:15:45] Starting session cleanup...
+[2025-08-20 13:15:45] Cleanup completed: no terminated sessions found
+[2025-08-20 13:16:15] Starting session cleanup...
+[2025-08-20 13:16:15] Cleanup completed: no terminated sessions found
+[2025-08-20 13:16:45] Starting session cleanup...
+[2025-08-20 13:16:45] Cleanup completed: no terminated sessions found
+[2025-08-20 13:17:15] Starting session cleanup...
+[2025-08-20 13:17:15] Cleanup completed: no terminated sessions found
+[2025-08-20 13:17:33] Acquired lock (PID: 443114) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:17:33] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:17:33] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 13:17:45] Starting session cleanup...
+[2025-08-20 13:17:45] Cleanup completed: no terminated sessions found
+[2025-08-20 13:17:52] Acquired lock (PID: 443926) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:17:52] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:17:52] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 13:17:55] Acquired lock (PID: 444085) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:17:55] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:17:55] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:18:16] Starting session cleanup...
+[2025-08-20 13:18:16] Cleanup completed: no terminated sessions found
+[2025-08-20 13:18:46] Starting session cleanup...
+[2025-08-20 13:18:46] Cleanup completed: no terminated sessions found
+[2025-08-20 13:19:16] Starting session cleanup...
+[2025-08-20 13:19:16] Cleanup completed: no terminated sessions found
+[2025-08-20 13:19:46] Starting session cleanup...
+[2025-08-20 13:19:46] Cleanup completed: no terminated sessions found
+[2025-08-20 13:20:16] Starting session cleanup...
+[2025-08-20 13:20:16] Cleanup completed: no terminated sessions found
+[2025-08-20 13:20:46] Starting session cleanup...
+[2025-08-20 13:20:46] Cleanup completed: no terminated sessions found
+[2025-08-20 13:21:16] Starting session cleanup...
+[2025-08-20 13:21:16] Cleanup completed: no terminated sessions found
+[2025-08-20 13:21:46] Starting session cleanup...
+[2025-08-20 13:21:46] Cleanup completed: no terminated sessions found
+[2025-08-20 13:22:16] Starting session cleanup...
+[2025-08-20 13:22:16] Cleanup completed: no terminated sessions found
+[2025-08-20 13:22:46] Starting session cleanup...
+[2025-08-20 13:22:46] Cleanup completed: no terminated sessions found
+[2025-08-20 13:23:17] Starting session cleanup...
+[2025-08-20 13:23:17] Cleanup completed: no terminated sessions found
+[2025-08-20 13:23:47] Starting session cleanup...
+[2025-08-20 13:23:47] Cleanup completed: no terminated sessions found
+[2025-08-20 13:24:17] Starting session cleanup...
+[2025-08-20 13:24:17] Cleanup completed: no terminated sessions found
+[2025-08-20 13:24:47] Starting session cleanup...
+[2025-08-20 13:24:47] Cleanup completed: no terminated sessions found
+[2025-08-20 13:25:17] Starting session cleanup...
+[2025-08-20 13:25:17] Cleanup completed: no terminated sessions found
+[2025-08-20 13:25:47] Starting session cleanup...
+[2025-08-20 13:25:47] Cleanup completed: no terminated sessions found
+[2025-08-20 13:26:17] Starting session cleanup...
+[2025-08-20 13:26:17] Cleanup completed: no terminated sessions found
+[2025-08-20 13:26:47] Starting session cleanup...
+[2025-08-20 13:26:47] Cleanup completed: no terminated sessions found
+[2025-08-20 13:27:17] Starting session cleanup...
+[2025-08-20 13:27:17] Cleanup completed: no terminated sessions found
+[2025-08-20 13:27:47] Starting session cleanup...
+[2025-08-20 13:27:47] Cleanup completed: no terminated sessions found
+[2025-08-20 13:28:10] Acquired lock (PID: 466411) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:28:10] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:28:10] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 13:28:18] Starting session cleanup...
+[2025-08-20 13:28:18] Cleanup completed: no terminated sessions found
+[2025-08-20 13:28:35] Acquired lock (PID: 467522) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:28:35] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:28:35] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 13:28:38] Acquired lock (PID: 467631) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:28:38] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:28:38] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:28:48] Starting session cleanup...
+[2025-08-20 13:28:48] Cleanup completed: no terminated sessions found
+[2025-08-20 13:29:18] Starting session cleanup...
+[2025-08-20 13:29:18] Cleanup completed: no terminated sessions found
+[2025-08-20 13:29:35] Acquired lock (PID: 469807) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:29:35] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:29:36] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 13:29:48] Starting session cleanup...
+[2025-08-20 13:29:48] Cleanup completed: no terminated sessions found
+[2025-08-20 13:30:11] Acquired lock (PID: 471369) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:30:11] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:30:11] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 13:30:14] Acquired lock (PID: 471521) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:30:14] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:30:14] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:30:18] Starting session cleanup...
+[2025-08-20 13:30:18] Cleanup completed: no terminated sessions found
+[2025-08-20 13:30:48] Starting session cleanup...
+[2025-08-20 13:30:48] Cleanup completed: no terminated sessions found
+[2025-08-20 13:31:18] Starting session cleanup...
+[2025-08-20 13:31:18] Cleanup completed: no terminated sessions found
+[2025-08-20 13:31:30] Acquired lock (PID: 474709) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:31:30] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:31:30] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 13:31:48] Starting session cleanup...
+[2025-08-20 13:31:48] Cleanup completed: no terminated sessions found
+[2025-08-20 13:32:18] Starting session cleanup...
+[2025-08-20 13:32:18] Cleanup completed: no terminated sessions found
+[2025-08-20 13:32:22] Acquired lock (PID: 477276) for update: factory-TC-123 -> busy (origin: claude-start-hook)
+[2025-08-20 13:32:22] Updating state: factory-TC-123 -> busy (origin: claude-start-hook)
+[2025-08-20 13:32:22] Successfully updated state: factory-TC-123 = busy (origin: claude-start-hook)
+[2025-08-20 13:32:49] Starting session cleanup...
+[2025-08-20 13:32:49] Cleanup completed: no terminated sessions found
+[2025-08-20 13:33:04] Acquired lock (PID: 479083) for update: factory-TC-123 -> done (origin: claude-stop-hook)
+[2025-08-20 13:33:04] Updating state: factory-TC-123 -> done (origin: claude-stop-hook)
+[2025-08-20 13:33:05] Successfully updated state: factory-TC-123 = done (origin: claude-stop-hook)
+[2025-08-20 13:33:08] Acquired lock (PID: 479222) for update: factory-TC-123 -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:33:08] Updating state: factory-TC-123 -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:33:08] Successfully updated state: factory-TC-123 = idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:33:08] Acquired lock (PID: 479264) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:33:08] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 13:33:08] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 13:33:11] Acquired lock (PID: 479446) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:33:11] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:33:11] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 13:33:19] Starting session cleanup...
+[2025-08-20 13:33:19] Cleanup completed: no terminated sessions found
+[2025-08-20 13:33:49] Starting session cleanup...
+[2025-08-20 13:33:49] Cleanup completed: no terminated sessions found
+[2025-08-20 13:34:19] Starting session cleanup...
+[2025-08-20 13:34:19] Cleanup completed: no terminated sessions found
+[2025-08-20 13:34:49] Starting session cleanup...
+[2025-08-20 13:34:49] Cleanup completed: no terminated sessions found
+[2025-08-20 13:35:19] Starting session cleanup...
+[2025-08-20 13:35:19] Cleanup completed: no terminated sessions found
+[2025-08-20 13:35:49] Starting session cleanup...
+[2025-08-20 13:35:49] Cleanup completed: no terminated sessions found
+[2025-08-20 13:36:19] Starting session cleanup...
+[2025-08-20 13:36:19] Cleanup completed: no terminated sessions found
+[2025-08-20 13:36:49] Starting session cleanup...
+[2025-08-20 13:36:49] Cleanup completed: no terminated sessions found
+[2025-08-20 13:37:19] Starting session cleanup...
+[2025-08-20 13:37:20] Cleanup completed: no terminated sessions found
+[2025-08-20 13:37:50] Starting session cleanup...
+[2025-08-20 13:37:50] Cleanup completed: no terminated sessions found
+[2025-08-20 13:38:20] Starting session cleanup...
+[2025-08-20 13:38:20] Cleanup completed: no terminated sessions found
+[2025-08-20 13:38:50] Starting session cleanup...
+[2025-08-20 13:38:50] Cleanup completed: no terminated sessions found
+[2025-08-20 13:39:20] Starting session cleanup...
+[2025-08-20 13:39:20] Cleanup completed: no terminated sessions found
+[2025-08-20 13:39:50] Starting session cleanup...
+[2025-08-20 13:39:50] Cleanup completed: no terminated sessions found
+[2025-08-20 13:40:20] Starting session cleanup...
+[2025-08-20 13:40:20] Cleanup completed: no terminated sessions found
+[2025-08-20 13:40:50] Starting session cleanup...
+[2025-08-20 13:40:50] Cleanup completed: no terminated sessions found
+[2025-08-20 13:41:20] Starting session cleanup...
+[2025-08-20 13:41:20] Cleanup completed: no terminated sessions found
+[2025-08-20 13:41:50] Starting session cleanup...
+[2025-08-20 13:41:50] Cleanup completed: no terminated sessions found
+[2025-08-20 13:42:21] Starting session cleanup...
+[2025-08-20 13:42:21] Cleanup completed: no terminated sessions found
+[2025-08-20 13:42:51] Starting session cleanup...
+[2025-08-20 13:42:51] Cleanup completed: no terminated sessions found
+[2025-08-20 13:43:21] Starting session cleanup...
+[2025-08-20 13:43:21] Cleanup completed: no terminated sessions found
+[2025-08-20 13:43:51] Starting session cleanup...
+[2025-08-20 13:43:51] Cleanup completed: no terminated sessions found
+[2025-08-20 13:44:21] Starting session cleanup...
+[2025-08-20 13:44:21] Cleanup completed: no terminated sessions found
+[2025-08-20 13:44:51] Starting session cleanup...
+[2025-08-20 13:44:51] Cleanup completed: no terminated sessions found
+[2025-08-20 13:45:21] Starting session cleanup...
+[2025-08-20 13:45:21] Cleanup completed: no terminated sessions found
+[2025-08-20 13:45:51] Starting session cleanup...
+[2025-08-20 13:45:51] Cleanup completed: no terminated sessions found
+[2025-08-20 13:46:21] Starting session cleanup...
+[2025-08-20 13:46:21] Cleanup completed: no terminated sessions found
+[2025-08-20 13:46:51] Starting session cleanup...
+[2025-08-20 13:46:51] Cleanup completed: no terminated sessions found
+[2025-08-20 13:47:22] Starting session cleanup...
+[2025-08-20 13:47:22] Cleanup completed: no terminated sessions found
+[2025-08-20 13:47:52] Starting session cleanup...
+[2025-08-20 13:47:52] Cleanup completed: no terminated sessions found
+[2025-08-20 13:48:22] Starting session cleanup...
+[2025-08-20 13:48:22] Cleanup completed: no terminated sessions found
+[2025-08-20 13:48:52] Starting session cleanup...
+[2025-08-20 13:48:52] Cleanup completed: no terminated sessions found
+[2025-08-20 13:49:22] Starting session cleanup...
+[2025-08-20 13:49:22] Cleanup completed: no terminated sessions found
+[2025-08-20 13:49:52] Starting session cleanup...
+[2025-08-20 13:49:52] Cleanup completed: no terminated sessions found
+[2025-08-20 13:50:22] Starting session cleanup...
+[2025-08-20 13:50:22] Cleanup completed: no terminated sessions found
+[2025-08-20 13:50:52] Starting session cleanup...
+[2025-08-20 13:50:52] Cleanup completed: no terminated sessions found
+[2025-08-20 13:51:22] Starting session cleanup...
+[2025-08-20 13:51:22] Cleanup completed: no terminated sessions found
+[2025-08-20 13:51:53] Starting session cleanup...
+[2025-08-20 13:51:53] Cleanup completed: no terminated sessions found
+[2025-08-20 13:52:23] Starting session cleanup...
+[2025-08-20 13:52:23] Cleanup completed: no terminated sessions found
+[2025-08-20 13:52:53] Starting session cleanup...
+[2025-08-20 13:52:53] Cleanup completed: no terminated sessions found
+[2025-08-20 13:53:23] Starting session cleanup...
+[2025-08-20 13:53:23] Cleanup completed: no terminated sessions found
+[2025-08-20 13:53:53] Starting session cleanup...
+[2025-08-20 13:53:53] Cleanup completed: no terminated sessions found
+[2025-08-20 13:54:23] Starting session cleanup...
+[2025-08-20 13:54:23] Cleanup completed: no terminated sessions found
+[2025-08-20 13:54:53] Starting session cleanup...
+[2025-08-20 13:54:53] Cleanup completed: no terminated sessions found
+[2025-08-20 13:55:23] Starting session cleanup...
+[2025-08-20 13:55:23] Cleanup completed: no terminated sessions found
+[2025-08-20 13:55:53] Starting session cleanup...
+[2025-08-20 13:55:53] Cleanup completed: no terminated sessions found
+[2025-08-20 13:56:23] Starting session cleanup...
+[2025-08-20 13:56:23] Cleanup completed: no terminated sessions found
+[2025-08-20 13:56:54] Starting session cleanup...
+[2025-08-20 13:56:54] Cleanup completed: no terminated sessions found
+[2025-08-20 13:57:24] Starting session cleanup...
+[2025-08-20 13:57:24] Cleanup completed: no terminated sessions found
+[2025-08-20 13:57:54] Starting session cleanup...
+[2025-08-20 13:57:54] Cleanup completed: no terminated sessions found
+[2025-08-20 13:58:24] Starting session cleanup...
+[2025-08-20 13:58:24] Cleanup completed: no terminated sessions found
+[2025-08-20 13:58:47] Acquired lock (PID: 527825) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:58:47] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 13:58:47] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 13:58:54] Starting session cleanup...
+[2025-08-20 13:58:54] Cleanup completed: no terminated sessions found
+[2025-08-20 13:59:24] Starting session cleanup...
+[2025-08-20 13:59:24] Cleanup completed: no terminated sessions found
+[2025-08-20 13:59:26] Acquired lock (PID: 529938) for update: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 13:59:26] Updating state: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 13:59:26] Successfully updated state: planner-1755698364 = busy (origin: claude-start-hook)
+[2025-08-20 13:59:54] Starting session cleanup...
+[2025-08-20 13:59:54] Cleanup completed: no terminated sessions found
+[2025-08-20 14:00:13] Acquired lock (PID: 532339) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 14:00:13] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 14:00:13] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 14:00:16] Acquired lock (PID: 532523) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:00:16] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:00:16] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:00:17] Acquired lock (PID: 532664) for update: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 14:00:17] Updating state: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 14:00:18] Successfully updated state: planner-1755698364 = busy (origin: claude-start-hook)
+[2025-08-20 14:00:24] Starting session cleanup...
+[2025-08-20 14:00:24] Cleanup completed: no terminated sessions found
+[2025-08-20 14:00:25] Acquired lock (PID: 533060) for update: planner-1755698364 -> done (origin: claude-stop-hook)
+[2025-08-20 14:00:25] Updating state: planner-1755698364 -> done (origin: claude-stop-hook)
+[2025-08-20 14:00:25] Successfully updated state: planner-1755698364 = done (origin: claude-stop-hook)
+[2025-08-20 14:00:28] Acquired lock (PID: 533201) for update: planner-1755698364 -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:00:28] Updating state: planner-1755698364 -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:00:28] Successfully updated state: planner-1755698364 = idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:00:54] Starting session cleanup...
+[2025-08-20 14:00:54] Cleanup completed: no terminated sessions found
+[2025-08-20 14:01:22] Acquired lock (PID: 535772) for update: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 14:01:22] Updating state: planner-1755698364 -> busy (origin: claude-start-hook)
+[2025-08-20 14:01:22] Successfully updated state: planner-1755698364 = busy (origin: claude-start-hook)
+[2025-08-20 14:01:24] Starting session cleanup...
+[2025-08-20 14:01:25] Cleanup completed: no terminated sessions found
+[2025-08-20 14:01:55] Starting session cleanup...
+[2025-08-20 14:01:55] Cleanup completed: no terminated sessions found
+[2025-08-20 14:02:20] Acquired lock (PID: 538599) for update: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 14:02:20] Updating state: unknown -> busy (origin: claude-start-hook)
+[2025-08-20 14:02:20] Successfully updated state: unknown = busy (origin: claude-start-hook)
+[2025-08-20 14:02:25] Starting session cleanup...
+[2025-08-20 14:02:25] Cleanup completed: no terminated sessions found
+[2025-08-20 14:02:48] Acquired lock (PID: 540049) for update: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 14:02:48] Updating state: unknown -> done (origin: claude-stop-hook)
+[2025-08-20 14:02:48] Successfully updated state: unknown = done (origin: claude-stop-hook)
+[2025-08-20 14:02:51] Acquired lock (PID: 540203) for update: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:02:51] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:02:51] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)

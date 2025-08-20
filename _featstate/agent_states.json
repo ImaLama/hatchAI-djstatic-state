@@ -1,10 +1,87 @@
 {
-  "last_updated": "2025-08-19T16:47:53+00:00",
+  "last_updated": "2025-08-20T14:02:51+00:00",
   "sessions": {
-    "unknown": "busy",
     "architect-1755608908": "idle",
-    "architect-1755609014": "busy",
-    "architect-1755613140": "idle",
-    "architect-1755620153": "idle"
+    "architect-1755609014": "idle",
+    "unknown": {
+      "state": "idle",
+      "timestamp": "2025-08-20T14:02:51+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-test-123": "busy",
+    "architect-1755620153": "busy",
+    "test-verification": "idle",
+    "test-manual-update": "busy",
+    "architect-1755683754": {
+      "state": "idle",
+      "timestamp": "2025-08-20T12:12:16+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "test-absolute-path": "busy",
+    "test-enhanced-tracking": {
+      "state": "busy",
+      "timestamp": "2025-08-20T10:14:34+00:00",
+      "origin": "manual-test-lama"
+    },
+    "test-corrected-paths": {
+      "state": "busy",
+      "timestamp": "2025-08-20T10:41:38+00:00",
+      "origin": "migration-test"
+    },
+    "test-system-functionality": {
+      "state": "busy",
+      "timestamp": "2025-08-20T10:42:58+00:00",
+      "origin": "functional-test"
+    },
+    "architect-1755691818": {
+      "state": "idle",
+      "timestamp": "2025-08-20T12:10:26+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-1755691837": {
+      "state": "idle",
+      "timestamp": "2025-08-20T12:11:51+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-1755692027": {
+      "state": "busy",
+      "timestamp": "2025-08-20T12:14:47+00:00",
+      "origin": "claude-start-hook"
+    },
+    "architect-1755692093": {
+      "state": "idle",
+      "timestamp": "2025-08-20T12:16:30+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-1755692380": {
+      "state": "idle",
+      "timestamp": "2025-08-20T12:19:48+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-1755692402": {
+      "state": "idle",
+      "timestamp": "2025-08-20T12:20:27+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "factory-1755692493": {
+      "state": "idle",
+      "timestamp": "2025-08-20T12:22:09+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "architect-1755692533": {
+      "state": "idle",
+      "timestamp": "2025-08-20T14:01:38+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "factory-TC-123": {
+      "state": "idle",
+      "timestamp": "2025-08-20T13:33:08+00:00",
+      "origin": "claude-stop-hook-delay"
+    },
+    "planner-1755698364": {
+      "state": "busy",
+      "timestamp": "2025-08-20T14:01:22+00:00",
+      "origin": "claude-start-hook"
+    }
   }
 }
