@@ -1,7 +1,14 @@
 {
-  "last_updated": "2025-08-20T14:44:20+00:00",
+  "last_updated": "2025-08-20T15:03:24+00:00",
   "sessions": {
-    "architect-1755608908": "idle",
+    "architect-1755608908": {
+      "state": "idle",
+      "health": {
+        "state": "dead",
+        "issues": "session_not_found",
+        "timestamp": "2025-08-20T14:55:47+00:00"
+      }
+    },
     "architect-1755609014": "idle",
     "unknown": {
       "state": "idle",
@@ -14,7 +21,7 @@
     "test-manual-update": "busy",
     "architect-1755683754": {
       "state": "idle",
-      "timestamp": "2025-08-20T12:12:16+00:00",
+      "timestamp": "2025-08-20T15:00:55+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "test-absolute-path": "busy",
@@ -70,7 +77,7 @@
     },
     "architect-1755692533": {
       "state": "idle",
-      "timestamp": "2025-08-20T14:43:46+00:00",
+      "timestamp": "2025-08-20T15:03:24+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "factory-TC-123": {
@@ -80,13 +87,18 @@
     },
     "planner-1755698364": {
       "state": "busy",
-      "timestamp": "2025-08-20T14:44:20+00:00",
+      "timestamp": "2025-08-20T15:02:52+00:00",
       "origin": "claude-start-hook"
     },
     "factory-TC-999": {
       "state": "busy",
       "timestamp": "2025-08-20T14:13:25+00:00",
-      "origin": "claude-start-hook"
+      "origin": "claude-start-hook",
+      "health": {
+        "state": "healthy",
+        "issues": "all systems operational",
+        "timestamp": "2025-08-20T14:55:10+00:00"
+      }
     },
     "architect-TC-888": {
       "state": "idle",
@@ -104,9 +116,9 @@
       "origin": "claude-stop-hook-delay"
     },
     "planner-1755701013": {
-      "state": "busy",
-      "timestamp": "2025-08-20T14:43:35+00:00",
-      "origin": "claude-start-hook"
+      "state": "idle",
+      "timestamp": "2025-08-20T14:45:42+00:00",
+      "origin": "claude-stop-hook-delay"
     }
   }
 }
