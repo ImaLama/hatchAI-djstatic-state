@@ -1069,3 +1069,5 @@
 [2025-08-20 14:02:51] Acquired lock (PID: 540203) for update: unknown -> idle (origin: claude-stop-hook-delay)
 [2025-08-20 14:02:51] Updating state: unknown -> idle (origin: claude-stop-hook-delay)
 [2025-08-20 14:02:51] Successfully updated state: unknown = idle (origin: claude-stop-hook-delay)
+[2025-08-20 14:02:55] Starting session cleanup...
+[2025-08-20 14:02:55] Cleanup completed: no terminated sessions found

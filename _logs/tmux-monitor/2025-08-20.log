@@ -9954,3 +9954,26 @@
 2025-08-20 14:02:51 | STATUSBAR_UPDATE | Updating tmux statusbar
 2025-08-20 14:02:51 | STATUSBAR_CONTENT | 🏗️⚪AR-1755683754 🏗️⚪AR-1755691818 🏭⚪FA-1755692493 🏗️⚪AR-1755692533 🏭⚪FA-S-TC-123 📋🔵PL-1755698364
 2025-08-20 14:02:51 | STATUSBAR_SUCCESS | Updated tmux statusbar successfully
+2025-08-20 14:02:54 | STATUSBAR_UPDATE | Updating tmux statusbar
+2025-08-20 14:02:55 | CLEANUP_START | Starting tmux session cleanup
+2025-08-20 14:02:55 | ACTIVE_TMUX | Found sessions: 7
+2025-08-20 14:02:55 | STATE_SESSIONS | Found sessions: 22
+2025-08-20 14:02:55 | ORPHANED_SESSION | architect-1755608908 | Removing from state
+2025-08-20 14:02:55 | STATUSBAR_CONTENT | 🏗️⚪AR-1755683754 🏗️⚪AR-1755691818 🏭⚪FA-1755692493 🏗️⚪AR-1755692533 🏭⚪FA-S-TC-123 📋🔵PL-1755698364
+2025-08-20 14:02:55 | CLEANUP_SUCCESS | architect-1755608908 | Removed via state manager cleanup
+2025-08-20 14:02:55 | STATUSBAR_SUCCESS | Updated tmux statusbar successfully
+2025-08-20 14:02:58 | STATUSBAR_UPDATE | Updating tmux statusbar
+2025-08-20 14:02:58 | STATUSBAR_CONTENT | 🏗️⚪AR-1755683754 🏗️⚪AR-1755691818 🏭⚪FA-1755692493 🏗️⚪AR-1755692533 🏭⚪FA-S-TC-123 📋🔵PL-1755698364
+2025-08-20 14:02:58 | STATUSBAR_SUCCESS | Updated tmux statusbar successfully
+2025-08-20 14:03:01 | STATUSBAR_UPDATE | Updating tmux statusbar
+2025-08-20 14:03:02 | STATUSBAR_CONTENT | 🏗️⚪AR-1755683754 🏗️⚪AR-1755691818 🏭⚪FA-1755692493 🏗️⚪AR-1755692533 🏭⚪FA-S-TC-123 📋🔵PL-1755698364
+2025-08-20 14:03:02 | STATUSBAR_SUCCESS | Updated tmux statusbar successfully
+2025-08-20 14:03:05 | STATUSBAR_UPDATE | Updating tmux statusbar
+2025-08-20 14:03:05 | STATUSBAR_CONTENT | 🏗️⚪AR-1755683754 🏗️⚪AR-1755691818 🏭⚪FA-1755692493 🏗️⚪AR-1755692533 🏭⚪FA-S-TC-123 📋🔵PL-1755698364
+2025-08-20 14:03:05 | STATUSBAR_SUCCESS | Updated tmux statusbar successfully
+2025-08-20 14:03:08 | STATUSBAR_UPDATE | Updating tmux statusbar
+2025-08-20 14:03:08 | STATUSBAR_CONTENT | 🏗️⚪AR-1755683754 🏗️⚪AR-1755691818 🏭⚪FA-1755692493 🏗️⚪AR-1755692533 🏭⚪FA-S-TC-123 📋🔵PL-1755698364
+2025-08-20 14:03:09 | STATUSBAR_SUCCESS | Updated tmux statusbar successfully
+2025-08-20 14:03:12 | STATUSBAR_UPDATE | Updating tmux statusbar
+2025-08-20 14:03:12 | STATUSBAR_CONTENT | 🏗️⚪AR-1755683754 🏗️⚪AR-1755691818 🏭⚪FA-1755692493 🏗️⚪AR-1755692533 🏭⚪FA-S-TC-123 📋🔵PL-1755698364
+2025-08-20 14:03:12 | STATUSBAR_SUCCESS | Updated tmux statusbar successfully
