@@ -1168,3 +1168,196 @@
 [2025-08-20 14:45:42] Background process: Returning to IDLE state for planner-1755701013
 [2025-08-20 14:45:42] STATE_CHANGE: planner-1755701013: done -> idle
 [2025-08-20 14:45:42] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:04:04] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:04:04] Session ID: planner-1755698364
+[2025-08-20 15:04:04] Display Name: unknown
+[2025-08-20 15:04:04] Agent Type: planner
+[2025-08-20 15:04:04] Task ID: 
+[2025-08-20 15:04:04] Model: sonnet
+[2025-08-20 15:04:04] STATE_CHANGE: planner-1755698364: busy -> done
+[2025-08-20 15:04:04] Prompt completed successfully, Claude ready for next input (duration: 72s)
+[2025-08-20 15:04:04] Updating agent state via state manager: planner-1755698364 -> done
+[2025-08-20 15:04:04] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:04:04] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:04:04] State updated to: done via JSON state manager
+[2025-08-20 15:04:04] Stop hook processing complete
+[2025-08-20 15:04:04] Notifications disabled - would have shown: done for unknown
+[2025-08-20 15:04:07] Background process: Returning to IDLE state for planner-1755698364
+[2025-08-20 15:04:07] STATE_CHANGE: planner-1755698364: done -> idle
+[2025-08-20 15:04:07] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:06:02] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:06:02] Session ID: planner-1755698364
+[2025-08-20 15:06:02] Display Name: unknown
+[2025-08-20 15:06:02] Agent Type: planner
+[2025-08-20 15:06:02] Task ID: 
+[2025-08-20 15:06:02] Model: sonnet
+[2025-08-20 15:06:02] STATE_CHANGE: planner-1755698364: busy -> done
+[2025-08-20 15:06:02] Prompt completed successfully, Claude ready for next input (duration: 19s)
+[2025-08-20 15:06:02] Updating agent state via state manager: planner-1755698364 -> done
+[2025-08-20 15:06:02] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:06:02] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:06:02] State updated to: done via JSON state manager
+[2025-08-20 15:06:02] Stop hook processing complete
+[2025-08-20 15:06:02] Notifications disabled - would have shown: done for unknown
+[2025-08-20 15:06:05] Background process: Returning to IDLE state for planner-1755698364
+[2025-08-20 15:06:05] STATE_CHANGE: planner-1755698364: done -> idle
+[2025-08-20 15:06:05] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:15:47] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:15:47] Session ID: factory-TC-123
+[2025-08-20 15:15:47] Display Name: --TC-123
+[2025-08-20 15:15:47] Agent Type: factory
+[2025-08-20 15:15:47] Task ID: TC-123
+[2025-08-20 15:15:47] Model: sonnet
+[2025-08-20 15:15:47] STATE_CHANGE: factory-TC-123: busy -> done
+[2025-08-20 15:15:47] Prompt completed successfully, Claude ready for next input (duration: 6s)
+[2025-08-20 15:15:47] Updating agent state via state manager: factory-TC-123 -> done
+[2025-08-20 15:15:47] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:15:47] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:15:47] State updated to: done via JSON state manager
+[2025-08-20 15:15:47] Created handover file: /home/lama/projects/djhatch-state/_logs/TC-123/factory_handover.json
+[2025-08-20 15:15:47] Stop hook processing complete
+[2025-08-20 15:15:47] Notifications disabled - would have shown: done for --TC-123
+[2025-08-20 15:15:50] Background process: Returning to IDLE state for factory-TC-123
+[2025-08-20 15:15:50] STATE_CHANGE: factory-TC-123: done -> idle
+[2025-08-20 15:15:50] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:16:02] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:16:02] Session ID: factory-TC-123
+[2025-08-20 15:16:02] Display Name: --TC-123
+[2025-08-20 15:16:02] Agent Type: factory
+[2025-08-20 15:16:02] Task ID: TC-123
+[2025-08-20 15:16:02] Model: sonnet
+[2025-08-20 15:16:02] STATE_CHANGE: factory-TC-123: busy -> done
+[2025-08-20 15:16:02] Prompt completed successfully, Claude ready for next input (duration: 7s)
+[2025-08-20 15:16:02] Updating agent state via state manager: factory-TC-123 -> done
+[2025-08-20 15:16:02] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:16:02] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:16:02] State updated to: done via JSON state manager
+[2025-08-20 15:16:02] Created handover file: /home/lama/projects/djhatch-state/_logs/TC-123/factory_handover.json
+[2025-08-20 15:16:02] Stop hook processing complete
+[2025-08-20 15:16:02] Notifications disabled - would have shown: done for --TC-123
+[2025-08-20 15:16:05] Background process: Returning to IDLE state for factory-TC-123
+[2025-08-20 15:16:05] STATE_CHANGE: factory-TC-123: done -> idle
+[2025-08-20 15:16:05] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:18:37] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:18:37] Session ID: factory-TC-123
+[2025-08-20 15:18:37] Display Name: --TC-123
+[2025-08-20 15:18:37] Agent Type: factory
+[2025-08-20 15:18:37] Task ID: TC-123
+[2025-08-20 15:18:37] Model: sonnet
+[2025-08-20 15:18:37] STATE_CHANGE: factory-TC-123: busy -> done
+[2025-08-20 15:18:37] Prompt completed successfully, Claude ready for next input (duration: 7s)
+[2025-08-20 15:18:37] Updating agent state via state manager: factory-TC-123 -> done
+[2025-08-20 15:18:37] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:18:37] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:18:37] State updated to: done via JSON state manager
+[2025-08-20 15:18:37] Created handover file: /home/lama/projects/djhatch-state/_logs/TC-123/factory_handover.json
+[2025-08-20 15:18:37] Stop hook processing complete
+[2025-08-20 15:18:37] Notifications disabled - would have shown: done for --TC-123
+[2025-08-20 15:18:40] Background process: Returning to IDLE state for factory-TC-123
+[2025-08-20 15:18:40] STATE_CHANGE: factory-TC-123: done -> idle
+[2025-08-20 15:18:40] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:19:07] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:19:07] Session ID: factory-TC-123
+[2025-08-20 15:19:07] Display Name: --TC-123
+[2025-08-20 15:19:07] Agent Type: factory
+[2025-08-20 15:19:07] Task ID: TC-123
+[2025-08-20 15:19:07] Model: sonnet
+[2025-08-20 15:19:07] STATE_CHANGE: factory-TC-123: busy -> done
+[2025-08-20 15:19:07] Prompt completed successfully, Claude ready for next input (duration: 5s)
+[2025-08-20 15:19:07] Updating agent state via state manager: factory-TC-123 -> done
+[2025-08-20 15:19:08] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:19:08] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:19:08] State updated to: done via JSON state manager
+[2025-08-20 15:19:08] Created handover file: /home/lama/projects/djhatch-state/_logs/TC-123/factory_handover.json
+[2025-08-20 15:19:08] Stop hook processing complete
+[2025-08-20 15:19:08] Notifications disabled - would have shown: done for --TC-123
+[2025-08-20 15:19:11] Background process: Returning to IDLE state for factory-TC-123
+[2025-08-20 15:19:11] STATE_CHANGE: factory-TC-123: done -> idle
+[2025-08-20 15:19:11] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:19:23] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:19:23] Session ID: factory-TC-123
+[2025-08-20 15:19:23] Display Name: --TC-123
+[2025-08-20 15:19:23] Agent Type: factory
+[2025-08-20 15:19:23] Task ID: TC-123
+[2025-08-20 15:19:23] Model: sonnet
+[2025-08-20 15:19:23] STATE_CHANGE: factory-TC-123: busy -> done
+[2025-08-20 15:19:23] Prompt completed successfully, Claude ready for next input (duration: 6s)
+[2025-08-20 15:19:23] Updating agent state via state manager: factory-TC-123 -> done
+[2025-08-20 15:19:23] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:19:23] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:19:23] State updated to: done via JSON state manager
+[2025-08-20 15:19:23] Created handover file: /home/lama/projects/djhatch-state/_logs/TC-123/factory_handover.json
+[2025-08-20 15:19:23] Stop hook processing complete
+[2025-08-20 15:19:23] Notifications disabled - would have shown: done for --TC-123
+[2025-08-20 15:19:26] Background process: Returning to IDLE state for factory-TC-123
+[2025-08-20 15:19:27] STATE_CHANGE: factory-TC-123: done -> idle
+[2025-08-20 15:19:27] SUCCESS: Returned agent state to IDLE
+[2025-08-20 15:22:13] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 15:22:13] Session ID: architect-1755703328
+[2025-08-20 15:22:13] Display Name: unknown
+[2025-08-20 15:22:13] Agent Type: architect
+[2025-08-20 15:22:13] Task ID: 
+[2025-08-20 15:22:13] Model: sonnet
+[2025-08-20 15:22:13] STATE_CHANGE: architect-1755703328: busy -> done
+[2025-08-20 15:22:13] Prompt completed successfully, Claude ready for next input (duration: 3s)
+[2025-08-20 15:22:13] Updating agent state via state manager: architect-1755703328 -> done
+[2025-08-20 15:22:13] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 15:22:13] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 15:22:13] State updated to: done via JSON state manager
+[2025-08-20 15:22:13] Stop hook processing complete
+[2025-08-20 15:22:13] Notifications disabled - would have shown: done for unknown
+[2025-08-20 15:22:16] Background process: Returning to IDLE state for architect-1755703328
+[2025-08-20 15:22:16] STATE_CHANGE: architect-1755703328: done -> idle
+[2025-08-20 15:22:16] SUCCESS: Returned agent state to IDLE
+[2025-08-20 16:10:27] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 16:10:27] Session ID: weaver-1755706222
+[2025-08-20 16:10:27] Display Name: unknown
+[2025-08-20 16:10:27] Agent Type: weaver
+[2025-08-20 16:10:27] Task ID: 
+[2025-08-20 16:10:27] Model: sonnet
+[2025-08-20 16:10:27] STATE_CHANGE: weaver-1755706222: busy -> done
+[2025-08-20 16:10:27] Prompt completed successfully, Claude ready for next input (duration: 3s)
+[2025-08-20 16:10:27] Updating agent state via state manager: weaver-1755706222 -> done
+[2025-08-20 16:10:27] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 16:10:27] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 16:10:27] State updated to: done via JSON state manager
+[2025-08-20 16:10:27] Stop hook processing complete
+[2025-08-20 16:10:27] Notifications disabled - would have shown: done for unknown
+[2025-08-20 16:10:30] Background process: Returning to IDLE state for weaver-1755706222
+[2025-08-20 16:10:30] STATE_CHANGE: weaver-1755706222: done -> idle
+[2025-08-20 16:10:30] SUCCESS: Returned agent state to IDLE
+[2025-08-20 16:12:58] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 16:12:58] Session ID: factory-TC-123
+[2025-08-20 16:12:58] Display Name: --TC-123
+[2025-08-20 16:12:58] Agent Type: factory
+[2025-08-20 16:12:58] Task ID: TC-123
+[2025-08-20 16:12:58] Model: sonnet
+[2025-08-20 16:12:58] STATE_CHANGE: factory-TC-123: busy -> done
+[2025-08-20 16:12:58] Prompt completed successfully, Claude ready for next input (duration: 6s)
+[2025-08-20 16:12:58] Updating agent state via state manager: factory-TC-123 -> done
+[2025-08-20 16:12:58] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 16:12:58] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 16:12:58] State updated to: done via JSON state manager
+[2025-08-20 16:12:58] Created handover file: /home/lama/projects/djhatch-state/_logs/TC-123/factory_handover.json
+[2025-08-20 16:12:58] Stop hook processing complete
+[2025-08-20 16:12:58] Notifications disabled - would have shown: done for --TC-123
+[2025-08-20 16:13:01] Background process: Returning to IDLE state for factory-TC-123
+[2025-08-20 16:13:01] STATE_CHANGE: factory-TC-123: done -> idle
+[2025-08-20 16:13:01] SUCCESS: Returned agent state to IDLE
+[2025-08-20 17:00:53] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 17:00:53] Session ID: weaver-1755709249
+[2025-08-20 17:00:53] Display Name: unknown
+[2025-08-20 17:00:53] Agent Type: weaver
+[2025-08-20 17:00:53] Task ID: 
+[2025-08-20 17:00:53] Model: sonnet
+[2025-08-20 17:00:53] STATE_CHANGE: weaver-1755709249: busy -> done
+[2025-08-20 17:00:53] Prompt completed successfully, Claude ready for next input (duration: 2s)
+[2025-08-20 17:00:53] Updating agent state via state manager: weaver-1755709249 -> done
+[2025-08-20 17:00:53] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 17:00:53] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 17:00:53] State updated to: done via JSON state manager
+[2025-08-20 17:00:53] Stop hook processing complete
+[2025-08-20 17:00:53] Notifications disabled - would have shown: done for unknown
+[2025-08-20 17:00:56] Background process: Returning to IDLE state for weaver-1755709249
+[2025-08-20 17:00:56] STATE_CHANGE: weaver-1755709249: done -> idle
+[2025-08-20 17:00:56] SUCCESS: Returned agent state to IDLE
