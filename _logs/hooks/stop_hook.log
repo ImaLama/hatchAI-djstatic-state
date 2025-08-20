@@ -1031,3 +1031,106 @@
 [2025-08-20 14:02:51] Background process: Returning to IDLE state for unknown
 [2025-08-20 14:02:51] STATE_CHANGE: unknown: done -> idle
 [2025-08-20 14:02:51] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:03:37] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:03:37] Session ID: planner-1755698364
+[2025-08-20 14:03:37] Display Name: unknown
+[2025-08-20 14:03:37] Agent Type: planner
+[2025-08-20 14:03:37] Task ID: 
+[2025-08-20 14:03:37] Model: sonnet
+[2025-08-20 14:03:37] STATE_CHANGE: planner-1755698364: busy -> done
+[2025-08-20 14:03:37] Prompt completed successfully, Claude ready for next input (duration: 135s)
+[2025-08-20 14:03:37] Updating agent state via state manager: planner-1755698364 -> done
+[2025-08-20 14:03:37] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:03:37] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:03:37] State updated to: done via JSON state manager
+[2025-08-20 14:03:37] Stop hook processing complete
+[2025-08-20 14:03:37] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:03:40] Background process: Returning to IDLE state for planner-1755698364
+[2025-08-20 14:03:40] STATE_CHANGE: planner-1755698364: done -> idle
+[2025-08-20 14:03:40] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:06:41] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:06:41] Session ID: planner-1755698364
+[2025-08-20 14:06:41] Display Name: unknown
+[2025-08-20 14:06:41] Agent Type: planner
+[2025-08-20 14:06:41] Task ID: 
+[2025-08-20 14:06:41] Model: sonnet
+[2025-08-20 14:06:42] STATE_CHANGE: planner-1755698364: busy -> done
+[2025-08-20 14:06:42] Prompt completed successfully, Claude ready for next input (duration: 18s)
+[2025-08-20 14:06:42] Updating agent state via state manager: planner-1755698364 -> done
+[2025-08-20 14:06:42] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:06:42] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:06:42] State updated to: done via JSON state manager
+[2025-08-20 14:06:42] Stop hook processing complete
+[2025-08-20 14:06:42] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:06:45] Background process: Returning to IDLE state for planner-1755698364
+[2025-08-20 14:06:45] STATE_CHANGE: planner-1755698364: done -> idle
+[2025-08-20 14:06:45] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:06:50] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:06:50] Session ID: unknown
+[2025-08-20 14:06:50] Display Name: unknown
+[2025-08-20 14:06:50] Agent Type: ARCHITECT
+[2025-08-20 14:06:50] Task ID: 
+[2025-08-20 14:06:50] Model: sonnet
+[2025-08-20 14:06:50] STATE_CHANGE: unknown: busy -> done
+[2025-08-20 14:06:50] Prompt completed successfully, Claude ready for next input (duration: 36s)
+[2025-08-20 14:06:50] Updating agent state via state manager: unknown -> done
+[2025-08-20 14:06:50] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:06:50] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:06:50] State updated to: done via JSON state manager
+[2025-08-20 14:06:50] Stop hook processing complete
+[2025-08-20 14:06:50] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:06:53] Background process: Returning to IDLE state for unknown
+[2025-08-20 14:06:53] STATE_CHANGE: unknown: done -> idle
+[2025-08-20 14:06:53] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:14:09] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:14:09] Session ID: architect-TC-888
+[2025-08-20 14:14:09] Display Name: unknown
+[2025-08-20 14:14:09] Agent Type: architect
+[2025-08-20 14:14:09] Task ID: TC-888
+[2025-08-20 14:14:09] Model: sonnet
+[2025-08-20 14:14:09] STATE_CHANGE: architect-TC-888: busy -> done
+[2025-08-20 14:14:09] Prompt completed successfully, Claude ready for next input (duration: 68s)
+[2025-08-20 14:14:09] Updating agent state via state manager: architect-TC-888 -> done
+[2025-08-20 14:14:09] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:14:09] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:14:09] State updated to: done via JSON state manager
+[2025-08-20 14:14:09] Created handover file: /home/lama/projects/djhatch-state/_logs/TC-888/architect_handover.json
+[2025-08-20 14:14:09] Stop hook processing complete
+[2025-08-20 14:14:09] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:14:12] Background process: Returning to IDLE state for architect-TC-888
+[2025-08-20 14:14:12] STATE_CHANGE: architect-TC-888: done -> idle
+[2025-08-20 14:14:12] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:27:03] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:27:03] Session ID: unknown
+[2025-08-20 14:27:03] Display Name: unknown
+[2025-08-20 14:27:03] Agent Type: ARCHITECT
+[2025-08-20 14:27:03] Task ID: 
+[2025-08-20 14:27:03] Model: sonnet
+[2025-08-20 14:27:03] STATE_CHANGE: unknown: busy -> done
+[2025-08-20 14:27:03] Prompt completed successfully, Claude ready for next input (duration: 183s)
+[2025-08-20 14:27:03] Updating agent state via state manager: unknown -> done
+[2025-08-20 14:27:03] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:27:03] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:27:03] State updated to: done via JSON state manager
+[2025-08-20 14:27:03] Stop hook processing complete
+[2025-08-20 14:27:03] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:27:06] Background process: Returning to IDLE state for unknown
+[2025-08-20 14:27:07] STATE_CHANGE: unknown: done -> idle
+[2025-08-20 14:27:07] SUCCESS: Returned agent state to IDLE
+[2025-08-20 14:27:22] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-20 14:27:22] Session ID: architect-1755700037
+[2025-08-20 14:27:22] Display Name: unknown
+[2025-08-20 14:27:22] Agent Type: architect
+[2025-08-20 14:27:22] Task ID: 
+[2025-08-20 14:27:22] Model: sonnet
+[2025-08-20 14:27:22] STATE_CHANGE: architect-1755700037: busy -> done
+[2025-08-20 14:27:22] Prompt completed successfully, Claude ready for next input (duration: 3s)
+[2025-08-20 14:27:22] Updating agent state via state manager: architect-1755700037 -> done
+[2025-08-20 14:27:22] SUCCESS: Updated agent state to done via state manager
+[2025-08-20 14:27:22] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-20 14:27:22] State updated to: done via JSON state manager
+[2025-08-20 14:27:22] Stop hook processing complete
+[2025-08-20 14:27:22] Notifications disabled - would have shown: done for unknown
+[2025-08-20 14:27:25] Background process: Returning to IDLE state for architect-1755700037
+[2025-08-20 14:27:26] STATE_CHANGE: architect-1755700037: done -> idle
+[2025-08-20 14:27:26] SUCCESS: Returned agent state to IDLE
