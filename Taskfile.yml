@@ -87,12 +87,12 @@ tasks:
 
   # Read-only mount management
   mount-readonly:
-    desc: "Mount ../djhatch as read-only at hatchAI-codebase-readonly/"
+    desc: "Mount ../djhatch as read-only at djhatch-readonly-mount/"
     cmds:
       - ./state-scripts/mount_readonly.sh mount
 
   unmount-readonly:
-    desc: "Unmount the read-only hatchAI-codebase-readonly/"
+    desc: "Unmount the read-only djhatch-readonly-mount/"
     cmds:
       - ./state-scripts/mount_readonly.sh unmount
 
@@ -100,6 +100,25 @@ tasks:
     desc: "Show read-only mount status"
     cmds:
       - ./state-scripts/mount_readonly.sh status
+
+  mount-permanent:
+    desc: "Add permanent mount entry to /etc/fstab (requires sudo)"
+    prompt: "This will modify /etc/fstab. Continue?"
+    cmds:
+      - |
+        MOUNT_POINT="$(pwd)/djhatch-readonly-mount"
+        SOURCE_DIR="$(pwd)/../djhatch"
+        if grep -q "$MOUNT_POINT" /etc/fstab; then
+          echo "⚠️  Entry already exists in /etc/fstab"
+        else
+          echo "$SOURCE_DIR $MOUNT_POINT none bind,ro 0 0" | sudo tee -a /etc/fstab
+          echo "✅ Added to /etc/fstab. Mount will persist across reboots."
+        fi
+
+  mount-fstab-check:
+    desc: "Check if permanent mount entry exists in /etc/fstab"
+    cmds:
+      - ./state-scripts/mount_readonly.sh fstab-check
 
   # Environment info
   show-env:
