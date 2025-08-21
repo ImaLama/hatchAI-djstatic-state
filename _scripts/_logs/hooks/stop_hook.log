@@ -1,0 +1,34 @@
+[2025-08-21 11:14:01] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-21 11:14:01] Session ID: FP-S-beta
+[2025-08-21 11:14:01] Display Name: FP-S-beta
+[2025-08-21 11:14:01] Agent Type: featplanner
+[2025-08-21 11:14:01] Task ID: 
+[2025-08-21 11:14:01] Model: sonnet
+[2025-08-21 11:14:01] STATE_CHANGE: FP-S-beta: busy -> done
+[2025-08-21 11:14:01] Prompt completed successfully, Claude ready for next input (duration: 5s)
+[2025-08-21 11:14:01] Updating agent state via state manager: FP-S-beta -> done
+[2025-08-21 11:14:01] SUCCESS: Updated agent state to done via state manager
+[2025-08-21 11:14:01] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-21 11:14:01] State updated to: done via JSON state manager
+[2025-08-21 11:14:01] Stop hook processing complete
+[2025-08-21 11:14:01] Notifications disabled - would have shown: done for FP-S-beta
+[2025-08-21 11:14:04] Background process: Returning to IDLE state for FP-S-beta
+[2025-08-21 11:14:04] STATE_CHANGE: FP-S-beta: done -> idle
+[2025-08-21 11:14:04] SUCCESS: Returned agent state to IDLE
+[2025-08-21 11:23:59] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-21 11:23:59] Session ID: FP-S-Plato
+[2025-08-21 11:23:59] Display Name: FP-S-Plato
+[2025-08-21 11:23:59] Agent Type: featplanner
+[2025-08-21 11:23:59] Task ID: 
+[2025-08-21 11:23:59] Model: sonnet
+[2025-08-21 11:23:59] STATE_CHANGE: FP-S-Plato: busy -> done
+[2025-08-21 11:23:59] Prompt completed successfully, Claude ready for next input (duration: 52s)
+[2025-08-21 11:23:59] Updating agent state via state manager: FP-S-Plato -> done
+[2025-08-21 11:23:59] SUCCESS: Updated agent state to done via state manager
+[2025-08-21 11:23:59] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-21 11:23:59] State updated to: done via JSON state manager
+[2025-08-21 11:23:59] Stop hook processing complete
+[2025-08-21 11:23:59] Notifications disabled - would have shown: done for FP-S-Plato
+[2025-08-21 11:24:02] Background process: Returning to IDLE state for FP-S-Plato
+[2025-08-21 11:24:02] STATE_CHANGE: FP-S-Plato: done -> idle
+[2025-08-21 11:24:02] SUCCESS: Returned agent state to IDLE

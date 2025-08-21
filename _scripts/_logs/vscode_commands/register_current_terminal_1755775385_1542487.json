@@ -1,0 +1,9 @@
+{
+    "command": "register_current_terminal",
+    "name": "📝 ⚪ FP-S-Plato",
+    "agentType": "featplanner",
+    "sessionName": "FP-S-Plato",
+    "displayName": "FP-S-Plato",
+    "taskId": "",
+    "model": "sonnet"
+}

@@ -1,0 +1,9 @@
+{
+    "command": "register_current_terminal",
+    "name": "📝 ⚪ FP-S-beta",
+    "agentType": "featplanner",
+    "sessionName": "FP-S-beta",
+    "displayName": "FP-S-beta",
+    "taskId": "",
+    "model": "sonnet"
+}
