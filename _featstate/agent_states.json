@@ -1,94 +1,206 @@
 {
-  "last_updated": "2025-08-21T09:32:29+00:00",
+  "last_updated": "2025-08-21T10:41:11+00:00",
   "sessions": {
     "architect-1755608908": {
       "state": "idle",
       "health": {
         "state": "dead",
         "issues": "session_not_found",
-        "timestamp": "2025-08-20T15:13:24+00:00"
+        "timestamp": "2025-08-21T10:11:59+00:00"
       }
     },
-    "architect-1755609014": "idle",
-    "unknown": {
-      "state": "busy",
-      "timestamp": "2025-08-21T09:29:38+00:00",
-      "origin": "claude-start-hook"
+    "architect-1755609014": {
+      "state": "idle",
+      "health": {
+        "state": "healthy",
+        "issues": "test_update",
+        "timestamp": "2025-08-21T10:08:09+00:00"
+      }
     },
-    "architect-test-123": "busy",
-    "architect-1755620153": "busy",
-    "test-verification": "idle",
-    "test-manual-update": "busy",
+    "unknown": {
+      "state": "idle",
+      "timestamp": "2025-08-21T10:34:26+00:00",
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
+    },
+    "architect-test-123": {
+      "state": "busy",
+      "health": {
+        "state": "dead",
+        "issues": "test_debug",
+        "timestamp": "2025-08-21T10:09:45+00:00"
+      }
+    },
+    "architect-1755620153": {
+      "state": "busy",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
+    },
+    "test-verification": {
+      "state": "idle",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
+    },
+    "test-manual-update": {
+      "state": "busy",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
+    },
     "architect-1755683754": {
       "state": "busy",
-      "timestamp": "2025-08-20T15:23:16+00:00",
+      "timestamp": "2025-08-21T10:41:01+00:00",
       "origin": "claude-start-hook"
     },
-    "test-absolute-path": "busy",
+    "test-absolute-path": {
+      "state": "busy",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
+    },
     "test-enhanced-tracking": {
       "state": "busy",
       "timestamp": "2025-08-20T10:14:34+00:00",
-      "origin": "manual-test-lama"
+      "origin": "manual-test-lama",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "test-corrected-paths": {
       "state": "busy",
       "timestamp": "2025-08-20T10:41:38+00:00",
-      "origin": "migration-test"
+      "origin": "migration-test",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "test-system-functionality": {
       "state": "busy",
       "timestamp": "2025-08-20T10:42:58+00:00",
-      "origin": "functional-test"
+      "origin": "functional-test",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "architect-1755691818": {
       "state": "idle",
       "timestamp": "2025-08-20T23:19:38+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "architect-1755691837": {
       "state": "idle",
       "timestamp": "2025-08-20T12:11:51+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "architect-1755692027": {
       "state": "busy",
       "timestamp": "2025-08-20T12:14:47+00:00",
-      "origin": "claude-start-hook"
+      "origin": "claude-start-hook",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "architect-1755692093": {
       "state": "idle",
       "timestamp": "2025-08-20T12:16:30+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "architect-1755692380": {
       "state": "idle",
       "timestamp": "2025-08-20T12:19:48+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:43+00:00"
+      }
     },
     "architect-1755692402": {
       "state": "idle",
       "timestamp": "2025-08-20T12:20:27+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "factory-1755692493": {
       "state": "idle",
       "timestamp": "2025-08-20T12:22:09+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "architect-1755692533": {
       "state": "idle",
       "timestamp": "2025-08-20T15:14:36+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "factory-TC-123": {
       "state": "idle",
       "timestamp": "2025-08-20T16:13:01+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "planner-1755698364": {
       "state": "idle",
       "timestamp": "2025-08-20T15:06:05+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "factory-TC-999": {
       "state": "busy",
@@ -103,102 +215,197 @@
     "architect-TC-888": {
       "state": "idle",
       "timestamp": "2025-08-20T16:55:33+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "architect-1755700020": {
       "state": "idle",
       "timestamp": "2025-08-20T23:04:04+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "healthy",
+        "issues": "tmux_session_active",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "architect-1755700037": {
       "state": "idle",
       "timestamp": "2025-08-20T14:27:25+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "planner-1755701013": {
       "state": "idle",
       "timestamp": "2025-08-20T23:09:50+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "healthy",
+        "issues": "tmux_session_active",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "planner-1755703297": {
       "state": "busy",
       "timestamp": "2025-08-20T15:21:39+00:00",
-      "origin": "claude-start-hook"
+      "origin": "claude-start-hook",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "architect-1755703328": {
       "state": "idle",
       "timestamp": "2025-08-20T15:22:16+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "factory-1755706136": {
       "state": "idle",
       "timestamp": "2025-08-20T17:02:30+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "weaver-1755706222": {
       "state": "idle",
       "timestamp": "2025-08-20T16:10:30+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:44+00:00"
+      }
     },
     "architect-TC-001": {
       "state": "busy",
       "timestamp": "2025-08-20T16:25:55+00:00",
-      "origin": "claude-start-hook"
+      "origin": "claude-start-hook",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "architect-1755707221": {
       "state": "idle",
       "timestamp": "2025-08-20T16:29:45+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "architect-TC-987": {
       "state": "idle",
       "timestamp": "2025-08-20T16:48:32+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "weaver-1755709249": {
       "state": "busy",
       "timestamp": "2025-08-20T22:16:20+00:00",
-      "origin": "claude-start-hook"
+      "origin": "claude-start-hook",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME": {
       "state": "idle",
       "timestamp": "2025-08-20T22:59:32+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME": {
       "state": "idle",
       "timestamp": "2025-08-20T23:08:54+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "healthy",
+        "issues": "tmux_session_active",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "planner-1755731305": {
-      "state": "idle",
-      "timestamp": "2025-08-20T23:09:22+00:00",
-      "origin": "claude-stop-hook-delay"
+      "state": "busy",
+      "timestamp": "2025-08-21T10:41:11+00:00",
+      "origin": "claude-start-hook"
     },
     "architect-1755731694": {
       "state": "idle",
       "timestamp": "2025-08-20T23:15:48+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "healthy",
+        "issues": "tmux_session_active",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "architect-1755764135": {
       "state": "idle",
       "timestamp": "2025-08-21T08:29:06+00:00",
-      "origin": "claude-stop-hook-delay"
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "dead",
+        "issues": "no_tmux_session",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "planner-1755765065": {
       "state": "busy",
       "timestamp": "2025-08-21T08:31:07+00:00",
-      "origin": "claude-start-hook"
+      "origin": "claude-start-hook",
+      "health": {
+        "state": "healthy",
+        "issues": "tmux_session_active",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "planner-1755765326": {
       "state": "busy",
       "timestamp": "2025-08-21T09:02:10+00:00",
-      "origin": "claude-start-hook"
+      "origin": "claude-start-hook",
+      "health": {
+        "state": "healthy",
+        "issues": "tmux_session_active",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     },
     "architect-1755767122": {
-      "state": "busy",
-      "timestamp": "2025-08-21T09:32:29+00:00",
-      "origin": "claude-start-hook"
+      "state": "idle",
+      "timestamp": "2025-08-21T10:30:27+00:00",
+      "origin": "claude-stop-hook-delay",
+      "health": {
+        "state": "healthy",
+        "issues": "tmux_session_active",
+        "timestamp": "2025-08-21T10:39:45+00:00"
+      }
     }
   }
 }
