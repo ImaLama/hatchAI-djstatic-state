@@ -2,7 +2,7 @@
   "name": "claude-agents",
   "displayName": "Claude Agents",
   "description": "Tmux session integration for Claude Code agents",
-  "version": "0.8.8",
+  "version": "0.9.3",
   "publisher": "djhatch",
   "repository": {
     "type": "git",

@@ -26,7 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
-    console.log('Claude Agents Extension v0.8.8 activated - minimal terminal discovery');
+    console.log('Claude Agents Extension v0.9.3 activated - enhanced naming with model indicators');
     // Cache imports to avoid repeated dynamic loading
     let execAsync = null;
     let fs = null;
@@ -48,7 +48,7 @@ function activate(context) {
     const agents = new Map();
     // Agent type configuration in preferred order
     const agentTypes = ['architect', 'featplanner', 'planner', 'factory', 'qa', 'weaver', 'security', 'darkwingduck'];
-    const agentShortForms = ['AR', 'FE', 'PL', 'FA', 'QA', 'WE', 'SE', 'DA'];
+    const agentShortForms = ['AR', 'FP', 'PL', 'FA', 'QA', 'WE', 'SE', 'DD'];
     // Agent emoji mapping
     const agentEmojis = {
         'architect': '🏗️',
@@ -71,6 +71,13 @@ function activate(context) {
         'security': 'shield',
         'darkwingduck': 'flame'
     };
+    // Model indicators for enhanced terminal names  
+    const modelEmojis = {
+        'S': '',
+        'O': ' 👑',
+        'H': ' ⚡',
+        'default': '' // Fallback for unknown models
+    };
     // Helper function to get agent emoji
     function getAgentEmoji(agentType) {
         return agentEmojis[agentType] || '🤖';
@@ -79,16 +86,41 @@ function activate(context) {
     function getAgentIcon(agentType) {
         return new vscode.ThemeIcon(agentIcons[agentType] || 'robot');
     }
+    // Helper function to extract model from session name
+    function extractModelFromSession(sessionName) {
+        // Check logical naming format: AR-S-alpha, FP-O-beta, etc.
+        const logicalMatch = sessionName.match(/^[A-Z]{2}-([SOH])-/);
+        if (logicalMatch) {
+            return logicalMatch[1];
+        }
+        // Fallback for unknown formats
+        return 'default';
+    }
+    // Helper function to get model emoji for terminal names
+    function getModelEmoji(sessionName) {
+        const modelIndicator = extractModelFromSession(sessionName);
+        return modelEmojis[modelIndicator] || modelEmojis['default'];
+    }
     // Helper function to detect agent type from session name (full name or short form)
     function detectAgentType(sessionName) {
-        // Check full names first (architect, planner, etc.)
+        // Check logical naming format first: AR-S-alpha, FP-O-beta, etc.
+        const logicalMatch = sessionName.match(/^([A-Z]{2})-[SOH]-/);
+        if (logicalMatch) {
+            const shortForm = logicalMatch[1];
+            for (let i = 0; i < agentShortForms.length; i++) {
+                if (agentShortForms[i] === shortForm) {
+                    return { agentType: agentTypes[i], priority: i };
+                }
+            }
+        }
+        // Check full names (architect, planner, etc.)
         for (let i = 0; i < agentTypes.length; i++) {
             const agentType = agentTypes[i];
             if (sessionName.toLowerCase().startsWith(agentType.toLowerCase())) {
                 return { agentType, priority: i };
             }
         }
-        // Check short forms (AR, PL, FA, etc.)
+        // Check short forms (AR, PL, FA, etc.) for backward compatibility
         for (let i = 0; i < agentShortForms.length; i++) {
             const shortForm = agentShortForms[i];
             if (sessionName.toUpperCase().startsWith(shortForm)) {
@@ -160,9 +192,10 @@ function activate(context) {
         let terminalName;
         let iconPath;
         if (agentType) {
-            // Agent session - use emoji and icon
+            // Agent session - use emoji, session name, and model indicator
             const agentEmoji = getAgentEmoji(agentType);
-            terminalName = `${agentEmoji} ${sessionId}`;
+            const modelEmoji = getModelEmoji(sessionId);
+            terminalName = `${agentEmoji} ${sessionId}${modelEmoji}`;
             iconPath = getAgentIcon(agentType);
             // Store agent info
             const agentTerminal = {
@@ -180,7 +213,7 @@ function activate(context) {
         // Get the actual working directory for this session
         const sessionCwd = await getSessionWorkingDirectory(sessionId);
         console.log(`Session ${sessionId} working directory: ${sessionCwd}`);
-        // Create terminal
+        // Create terminal with enhanced naming (model indicators in name)
         const terminal = vscode.window.createTerminal({
             name: terminalName,
             iconPath: iconPath,
@@ -202,7 +235,8 @@ function activate(context) {
             const existingTerminals = vscode.window.terminals;
             const terminalsToDispose = [];
             for (const terminal of existingTerminals) {
-                const isAgentTerminal = agentTypes.some(type => terminal.name.toLowerCase().includes(type)) || terminal.name.includes('🏗️') || terminal.name.includes('✨') ||
+                // Check if terminal name matches any agent pattern or emoji
+                const isAgentTerminal = agentTypes.some(type => terminal.name.toLowerCase().includes(type)) || agentShortForms.some(short => terminal.name.match(new RegExp(`^[🏗️✨📋🏭🔍🕸️🛡️🦆🤖📟]\\s+${short}-[SOH]-`))) || terminal.name.includes('🏗️') || terminal.name.includes('✨') ||
                     terminal.name.includes('📋') || terminal.name.includes('🏭') ||
                     terminal.name.includes('🔍') || terminal.name.includes('🕸️') ||
                     terminal.name.includes('🛡️') || terminal.name.includes('🦆') ||
