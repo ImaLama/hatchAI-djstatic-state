@@ -2969,3 +2969,37 @@
 [2025-08-21 11:47:53] Background process: Returning to IDLE state for FP-O-alpha
 [2025-08-21 11:47:53] STATE_CHANGE: FP-O-alpha: done -> idle
 [2025-08-21 11:47:53] SUCCESS: Returned agent state to IDLE
+[2025-08-21 11:52:28] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-21 11:52:28] Session ID: AR-O-beta
+[2025-08-21 11:52:28] Display Name: AR-O-beta
+[2025-08-21 11:52:28] Agent Type: ARCHITECT
+[2025-08-21 11:52:28] Task ID: 
+[2025-08-21 11:52:28] Model: opus
+[2025-08-21 11:52:28] STATE_CHANGE: AR-O-beta: busy -> done
+[2025-08-21 11:52:28] Prompt completed successfully, Claude ready for next input (duration: 174s)
+[2025-08-21 11:52:28] Updating agent state via state manager: AR-O-beta -> done
+[2025-08-21 11:52:28] SUCCESS: Updated agent state to done via state manager
+[2025-08-21 11:52:28] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-21 11:52:28] State updated to: done via JSON state manager
+[2025-08-21 11:52:28] Stop hook processing complete
+[2025-08-21 11:52:28] Notifications disabled - would have shown: done for AR-O-beta
+[2025-08-21 11:52:31] Background process: Returning to IDLE state for AR-O-beta
+[2025-08-21 11:52:31] STATE_CHANGE: AR-O-beta: done -> idle
+[2025-08-21 11:52:31] SUCCESS: Returned agent state to IDLE
+[2025-08-21 11:56:15] === Claude Code Stop Hook Triggered (Prompt Completed) ===
+[2025-08-21 11:56:15] Session ID: AR-O-beta
+[2025-08-21 11:56:15] Display Name: AR-O-beta
+[2025-08-21 11:56:15] Agent Type: ARCHITECT
+[2025-08-21 11:56:15] Task ID: 
+[2025-08-21 11:56:15] Model: opus
+[2025-08-21 11:56:15] STATE_CHANGE: AR-O-beta: busy -> done
+[2025-08-21 11:56:15] Prompt completed successfully, Claude ready for next input (duration: 72s)
+[2025-08-21 11:56:15] Updating agent state via state manager: AR-O-beta -> done
+[2025-08-21 11:56:15] SUCCESS: Updated agent state to done via state manager
+[2025-08-21 11:56:15] Scheduling return to IDLE state after 3 seconds (done -> idle)
+[2025-08-21 11:56:15] State updated to: done via JSON state manager
+[2025-08-21 11:56:15] Stop hook processing complete
+[2025-08-21 11:56:15] Notifications disabled - would have shown: done for AR-O-beta
+[2025-08-21 11:56:18] Background process: Returning to IDLE state for AR-O-beta
+[2025-08-21 11:56:18] STATE_CHANGE: AR-O-beta: done -> idle
+[2025-08-21 11:56:18] SUCCESS: Returned agent state to IDLE
