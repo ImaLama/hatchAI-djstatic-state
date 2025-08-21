@@ -202,7 +202,7 @@ djhatch-state/
 ├── state-scripts/                  # State management automation scripts
 │   ├── new_featspec.sh
 │   └── new_taskspec.sh
-└── hatchAI-codebase-readonly/      # Read-only mount (to be created)
+└── djhatch-readonly-mount/      # Read-only mount (to be created)
     └── [djhatch implementation]
 ```
 
@@ -220,7 +220,7 @@ djhatch-state/
 
 ### Read-Only Mount
 - **Source**: `../djhatch` (implementation codebase)
-- **Target**: `./hatchAI-codebase-readonly`
+- **Target**: `./djhatch-readonly-mount`
 - **Purpose**: Safe reference to implementation files for state tracking and validation
 
 ### Workflow Integration
@@ -297,8 +297,8 @@ owner: developer-name
 worktree: "worktrees/card-001-TS-2025-08-18-JWT-MIDDLEWARE"
 test_coverage: 85
 implementation_files:
-  - "hatchAI-codebase-readonly/src/middleware/jwt.go"
-  - "hatchAI-codebase-readonly/test/middleware/jwt_test.go"
+  - "djhatch-readonly-mount/src/middleware/jwt.go"
+  - "djhatch-readonly-mount/test/middleware/jwt_test.go"
 ```
 
 ## Maintenance and Operations

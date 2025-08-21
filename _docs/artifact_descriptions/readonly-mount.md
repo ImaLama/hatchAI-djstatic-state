@@ -7,7 +7,7 @@ The djhatch-state system requires read-only access to the implementation codebas
 
 ### Source and Target
 - **Source**: `./djhatch` (implementation codebase)
-- **Target**: `./djhatch-state/hatchAI-codebase-readonly`
+- **Target**: `./djhatch-state/djhatch-readonly-mount`
 - **Type**: Read-only mount
 
 ### Directory Structure
@@ -15,7 +15,7 @@ The djhatch-state system requires read-only access to the implementation codebas
 djhatch-state/
 ├── _specs/                    # State management files
 ├── _templates/               # Templates and documentation  
-├── hatchAI-codebase-readonly/ # READ-ONLY mount of ../djhatch
+├── djhatch-readonly-mount/ # READ-ONLY mount of ../djhatch
 │   └── [complete djhatch implementation]
 ```
 
@@ -24,17 +24,17 @@ djhatch-state/
 ### Option 1: Bind Mount (Linux/macOS)
 ```bash
 # Create mount point
-mkdir -p djhatch-state/hatchAI-codebase-readonly
+mkdir -p djhatch-state/djhatch-readonly-mount
 
 # Bind mount with read-only flag
-sudo mount --bind ../djhatch djhatch-state/hatchAI-codebase-readonly
-sudo mount -o remount,ro djhatch-state/hatchAI-codebase-readonly
+sudo mount --bind ../djhatch djhatch-state/djhatch-readonly-mount
+sudo mount -o remount,ro djhatch-state/djhatch-readonly-mount
 ```
 
 ### Option 2: Symbolic Link (Development)
 ```bash
 # Create read-only symbolic link
-ln -s ../djhatch djhatch-state/hatchAI-codebase-readonly
+ln -s ../djhatch djhatch-state/djhatch-readonly-mount
 
 # Note: This provides access but not true read-only enforcement
 ```
@@ -43,16 +43,16 @@ ln -s ../djhatch djhatch-state/hatchAI-codebase-readonly
 ```dockerfile
 # In docker-compose.yml or Dockerfile
 volumes:
-  - ../djhatch:/app/hatchAI-codebase-readonly:ro
+  - ../djhatch:/app/djhatch-readonly-mount:ro
 ```
 
 ### Option 4: Git Worktree (Git-based)
 ```bash
 # Create read-only git worktree
-git worktree add djhatch-state/hatchAI-codebase-readonly main
+git worktree add djhatch-state/djhatch-readonly-mount main
 
 # Configure as read-only reference
-cd djhatch-state/hatchAI-codebase-readonly
+cd djhatch-state/djhatch-readonly-mount
 git config core.filemode false
 ```
 
@@ -64,13 +64,13 @@ FeatState and TaskSpec state files can reference implementation files:
 ```yaml
 # In FeatState file
 implementation_files:
-  - "hatchAI-codebase-readonly/src/auth/middleware.go"
-  - "hatchAI-codebase-readonly/src/auth/handlers.go"
-  - "hatchAI-codebase-readonly/test/auth_test.go"
+  - "djhatch-readonly-mount/src/auth/middleware.go"
+  - "djhatch-readonly-mount/src/auth/handlers.go"
+  - "djhatch-readonly-mount/test/auth_test.go"
 
 # Validation references
 validation_results:
-  - file: "hatchAI-codebase-readonly/src/auth/middleware.go"
+  - file: "djhatch-readonly-mount/src/auth/middleware.go"
     line_count: 150
     test_coverage: 88%
     lint_status: "clean"
@@ -81,12 +81,12 @@ State management tools can safely analyze the codebase:
 
 ```bash
 # Safe analysis operations
-wc -l hatchAI-codebase-readonly/src/auth/*.go
-grep -r "func " hatchAI-codebase-readonly/src/
-find hatchAI-codebase-readonly -name "*.test" -type f
+wc -l djhatch-readonly-mount/src/auth/*.go
+grep -r "func " djhatch-readonly-mount/src/
+find djhatch-readonly-mount -name "*.test" -type f
 
 # Validation scripts can read implementation
-./state-scripts/validate_implementation.sh hatchAI-codebase-readonly/
+./state-scripts/validate_implementation.sh djhatch-readonly-mount/
 ```
 
 ## Benefits
@@ -115,16 +115,16 @@ find hatchAI-codebase-readonly -name "*.test" -type f
 ```yaml
 # In TaskSpec state section
 implementation_files:
-  - "hatchAI-codebase-readonly/src/middleware/jwt.go"
-  - "hatchAI-codebase-readonly/test/middleware/jwt_test.go"
+  - "djhatch-readonly-mount/src/middleware/jwt.go"
+  - "djhatch-readonly-mount/test/middleware/jwt_test.go"
 
 implementation_evidence:
-  - file: "hatchAI-codebase-readonly/src/middleware/jwt.go"
+  - file: "djhatch-readonly-mount/src/middleware/jwt.go"
     status: "implemented"
     loc_count: 145
     functions: ["ValidateJWT", "ExtractUser", "RequireAuth"]
   
-  - file: "hatchAI-codebase-readonly/test/middleware/jwt_test.go"  
+  - file: "djhatch-readonly-mount/test/middleware/jwt_test.go"  
     status: "complete"
     test_count: 15
     coverage: 92%
@@ -136,7 +136,7 @@ implementation_evidence:
 # state-scripts/validate_taskspec_implementation.sh
 
 TASKSPEC_ID="$1"
-READONLY_ROOT="hatchAI-codebase-readonly"
+READONLY_ROOT="djhatch-readonly-mount"
 
 # Extract implementation files from TaskSpec state
 impl_files=$(grep -A 10 "implementation_files:" "_featstate/*FSTATE*.yaml" | grep "$READONLY_ROOT")
@@ -159,7 +159,7 @@ done
 # state-scripts/analyze_feature_completion.sh
 
 FEATSPEC_ID="$1"
-READONLY_ROOT="hatchAI-codebase-readonly"
+READONLY_ROOT="djhatch-readonly-mount"
 
 echo "=== Feature Implementation Analysis ==="
 echo "Feature: $FEATSPEC_ID"
@@ -190,7 +190,7 @@ done
 ### Initial Setup
 1. **Create mount point directory**:
    ```bash
-   mkdir -p djhatch-state/hatchAI-codebase-readonly
+   mkdir -p djhatch-state/djhatch-readonly-mount
    ```
 
 2. **Choose mounting strategy** based on your environment:
@@ -201,16 +201,16 @@ done
 3. **Configure access permissions**:
    ```bash
    # Ensure state management can read but not write
-   chmod -R a-w djhatch-state/hatchAI-codebase-readonly
+   chmod -R a-w djhatch-state/djhatch-readonly-mount
    ```
 
 4. **Validate setup**:
    ```bash
    # Test read access
-   ls -la djhatch-state/hatchAI-codebase-readonly/
+   ls -la djhatch-state/djhatch-readonly-mount/
    
    # Verify write protection
-   echo "test" > djhatch-state/hatchAI-codebase-readonly/test.txt 2>&1 || echo "✅ Write protection working"
+   echo "test" > djhatch-state/djhatch-readonly-mount/test.txt 2>&1 || echo "✅ Write protection working"
    ```
 
 ### Maintenance
@@ -224,29 +224,29 @@ done
 ### Mount Issues
 ```bash
 # Check mount status
-mount | grep hatchAI-codebase-readonly
+mount | grep djhatch-readonly-mount
 
 # Remount if needed
-sudo umount djhatch-state/hatchAI-codebase-readonly
-sudo mount --bind ../djhatch djhatch-state/hatchAI-codebase-readonly
-sudo mount -o remount,ro djhatch-state/hatchAI-codebase-readonly
+sudo umount djhatch-state/djhatch-readonly-mount
+sudo mount --bind ../djhatch djhatch-state/djhatch-readonly-mount
+sudo mount -o remount,ro djhatch-state/djhatch-readonly-mount
 ```
 
 ### Permission Problems
 ```bash
 # Fix permissions after mount
-chmod -R a-w djhatch-state/hatchAI-codebase-readonly
+chmod -R a-w djhatch-state/djhatch-readonly-mount
 
 # Verify no write access
-touch djhatch-state/hatchAI-codebase-readonly/test 2>&1 || echo "Read-only OK"
+touch djhatch-state/djhatch-readonly-mount/test 2>&1 || echo "Read-only OK"
 ```
 
 ### Access Validation
 ```bash
 # Test state management can access files
-ls djhatch-state/hatchAI-codebase-readonly/src/
-cat djhatch-state/hatchAI-codebase-readonly/README.md
+ls djhatch-state/djhatch-readonly-mount/src/
+cat djhatch-state/djhatch-readonly-mount/README.md
 
 # Verify references work in state files
-grep -r "hatchAI-codebase-readonly" _featstate/
+grep -r "djhatch-readonly-mount" _featstate/
 ```

@@ -61,7 +61,7 @@ djhatch-state/
 ├── scripts/
 │   ├── new_featspec.sh        # Mirror new_featcard.sh logic
 │   └── new_taskspec.sh        # Mirror new_devcard.sh logic
-└── hatchAI-codebase-readonly/ # Read-only mount of ../djhatch
+└── djhatch-readonly-mount/ # Read-only mount of ../djhatch
     └── [mounted djhatch content]
 ```
 
@@ -90,7 +90,7 @@ djhatch-state/
 ### 4. Infrastructure Requirements
 
 **Read-Only Codebase Access:**
-- **Requirement**: Create read-only mount of `./djhatch` accessible at `./djhatch-state/hatchAI-codebase-readonly`
+- **Requirement**: Create read-only mount of `./djhatch` accessible at `./djhatch-state/djhatch-readonly-mount`
 - **Purpose**: Provides state management system with read-only access to implementation codebase
 - **Architecture**: Separation between mutable state management and immutable codebase reference
 
@@ -210,7 +210,7 @@ The read-only mount requirement strengthens the architectural separation and pro
 3. **featstate.yaml** - Centralized state per feature
 4. **Taskfile.yml** - Automation with `featspec-new` and `taskspec-new` methods
 5. **Sequential numbering** - Thread-safe, mirrors existing system with prefix format
-6. **Read-only mount** - `./djhatch` → `./djhatch-state/hatchAI-codebase-readonly`
+6. **Read-only mount** - `./djhatch` → `./djhatch-state/djhatch-readonly-mount`
 7. **Templates and documentation** - Complete artifact descriptions and ADR
 
 ### Implementation Tasks:
@@ -221,7 +221,7 @@ The read-only mount requirement strengthens the architectural separation and pro
 5. Copy ADR template from hatchAI-devcards/_templates/adr.md to _templates/
 6. Document artifact descriptions in _docs/artifact_descriptions with examples
 7. Create ADR documenting the state separation architecture decision
-8. Document read-only mount requirement: ./djhatch accessible at ./djhatch-state/hatchAI-codebase-readonly
+8. Document read-only mount requirement: ./djhatch accessible at ./djhatch-state/djhatch-readonly-mount
 
 ## Conclusion
 
