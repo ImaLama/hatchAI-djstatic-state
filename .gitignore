@@ -7,3 +7,7 @@ djhatch-readonly-mount/
 _logs/sessions/architect-1755767122.log
 _logs/sessions/
 _scripts/_logs/sessions/
+_logs/tmux-monitor/
+_logs/hooks/agent_state_manager.log
+_logs/hooks/start_hook.log
+_logs/hooks/stop_hook.log
