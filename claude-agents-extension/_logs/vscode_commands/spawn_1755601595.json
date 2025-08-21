@@ -1,0 +1,6 @@
+{
+  "command": "spawn",
+  "agentType": "factory",
+  "taskId": "TEST-001",
+  "model": "sonnet"
+}

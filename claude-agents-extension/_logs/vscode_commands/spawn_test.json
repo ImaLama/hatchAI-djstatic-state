@@ -1,0 +1,7 @@
+{
+  "command": "spawn_agent",
+  "agentType": "factory",
+  "taskId": "TEST-001",
+  "model": "sonnet",
+  "timestamp": 1755601600
+}

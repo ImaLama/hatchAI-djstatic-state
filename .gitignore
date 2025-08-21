@@ -3,3 +3,4 @@
 _featstate/pubsub/
 _logs/hooks/state_updates/*.trigger
 _logs/hooks/*.stop
+djhatch-readonly-mount/
