@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-08-21T11:56:18+00:00",
+  "last_updated": "2025-08-21T12:07:34+00:00",
   "sessions": {
     "architect-1755608908": {
       "state": "idle",
@@ -404,7 +404,7 @@
     },
     "AR-O-beta": {
       "state": "busy",
-      "timestamp": "2025-08-21T11:56:18+00:00",
+      "timestamp": "2025-08-21T12:07:33+00:00",
       "origin": "claude-start-hook"
     },
     "AR-S-alpha": {
@@ -439,7 +439,7 @@
     },
     "WE-S-Weave": {
       "state": "idle",
-      "timestamp": "2025-08-21T11:55:52+00:00",
+      "timestamp": "2025-08-21T12:07:34+00:00",
       "origin": "claude-stop-hook-delay"
     }
   }
