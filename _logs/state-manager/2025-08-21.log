@@ -750,3 +750,11 @@
 2025-08-21 11:50:15 | STATE_SUCCESS | WE-S-Willow | done | claude-stop-hook
 2025-08-21 11:50:18 | STATE_UPDATE | WE-S-Willow | idle | claude-stop-hook-delay | PID:1864325
 2025-08-21 11:50:18 | STATE_SUCCESS | WE-S-Willow | idle | claude-stop-hook-delay
+2025-08-21 11:50:30 | STATE_UPDATE | WE-S-Weave | busy | claude-start-hook | PID:1866512
+2025-08-21 11:50:30 | STATE_SUCCESS | WE-S-Weave | busy | claude-start-hook
+2025-08-21 11:50:33 | STATE_UPDATE | WE-S-Weave | done | claude-stop-hook | PID:1867115
+2025-08-21 11:50:33 | STATE_SUCCESS | WE-S-Weave | done | claude-stop-hook
+2025-08-21 11:50:36 | STATE_UPDATE | WE-S-Weave | idle | claude-stop-hook-delay | PID:1868373
+2025-08-21 11:50:37 | STATE_SUCCESS | WE-S-Weave | idle | claude-stop-hook-delay
+2025-08-21 11:50:43 | STATE_UPDATE | WE-S-Weave | busy | claude-start-hook | PID:1869620
+2025-08-21 11:50:43 | STATE_SUCCESS | WE-S-Weave | busy | claude-start-hook
