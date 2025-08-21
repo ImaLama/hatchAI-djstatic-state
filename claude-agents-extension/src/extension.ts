@@ -8,7 +8,6 @@ interface AgentTerminal {
     model: string;
     state: 'idle' | 'busy' | 'done' | 'error' | 'unknown' | 'terminated' | 'stopped';
     sessionName: string;
-    statusBarItem?: vscode.StatusBarItem;
     phoneticName?: string;
     displayName?: string;
 }
@@ -893,28 +892,7 @@ export function activate(context: vscode.ExtensionContext) {
     // Export agentManager globally for external access
     (global as any).claudeAgentManager = agentManager;
     
-    // Helper function to check if tmux session exists
-    async function checkTmuxSessionExists(sessionName: string): Promise<boolean> {
-        try {
-            const { exec } = await import('child_process');
-            const { promisify } = await import('util');
-            const execAsync = promisify(exec);
-            
-            // Sanitize session name to prevent command injection
-            const sanitizedName = sessionName.replace(/[^a-zA-Z0-9\-_.]/g, '');
-            if (sanitizedName !== sessionName) {
-                console.warn(`Session name contains unsafe characters: ${sessionName}`);
-                return false;
-            }
-            
-            await execAsync(`tmux has-session -t "${sanitizedName}"`);
-            return true;  // Command succeeded = session exists
-        } catch (error) {
-            return false; // Command failed = session doesn't exist
-        }
-    }
-    
-    // Helper function to create terminal for a session from state data
+    // Helper function to create terminal for a session (no status bar - keeps it simple)
     async function createTerminalForSession(sessionId: string, sessionData: any): Promise<void> {
         const agentType = agentManager.extractAgentTypeFromSessionId(sessionId);
         if (!agentType) {
@@ -927,7 +905,7 @@ export function activate(context: vscode.ExtensionContext) {
         
         const agentEmoji = agentManager.getAgentEmoji(agentType);
         const state = typeof sessionData === 'object' ? (sessionData.state || 'idle') : sessionData;
-        const stateIcon = '⚪'; // Default idle state icon
+        const stateIcon = state === 'busy' ? '🔄' : '⚪';
         const terminalName = `${agentEmoji} ${stateIcon} ${displayNameInfo.displayName}`;
         
         // Create terminal and attach to session
@@ -938,28 +916,7 @@ export function activate(context: vscode.ExtensionContext) {
             cwd: vscode.workspace.rootPath
         });
         
-        // Create status bar item
-        const priority = 200 - agentManager.getAgentCount();
-        const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, priority);
-        const displaySuffix = displayNameInfo.displayName.split('-').pop() || displayNameInfo.displayName;
-        statusBarItem.text = `${agentEmoji}${displaySuffix}`;
-        statusBarItem.tooltip = `Agent: ${agentType}\nSession: ${sessionId}\nState: ${state}`;
-        statusBarItem.command = 'claude-agents.listAgents';
-        
-        // Set background color based on state
-        switch (state) {
-            case 'idle':
-                statusBarItem.backgroundColor = new vscode.ThemeColor('statusBarItem.warningBackground');
-                break;
-            case 'busy':
-                statusBarItem.backgroundColor = new vscode.ThemeColor('statusBarItem.prominentBackground');
-                break;
-            default:
-                statusBarItem.backgroundColor = new vscode.ThemeColor('statusBarItem.errorBackground');
-        }
-        statusBarItem.show();
-        
-        // Store agent info
+        // Store agent info (no status bar item)
         const agentTerminal: AgentTerminal = {
             terminal,
             agentType,
@@ -967,7 +924,6 @@ export function activate(context: vscode.ExtensionContext) {
             model: 'sonnet', // Default
             state: state as any,
             sessionName: sessionId,
-            statusBarItem,
             displayName: displayNameInfo.displayName
         };
         
@@ -980,9 +936,6 @@ export function activate(context: vscode.ExtensionContext) {
         } else {
             console.error(`Unsafe session ID detected: ${sessionId}`);
         }
-        
-        // Start monitoring
-        agentManager.monitorAgent(sessionId);
         
         console.log(`Created terminal for session: ${sessionId} (${displayNameInfo.displayName})`);
     }
@@ -1146,8 +1099,8 @@ export function activate(context: vscode.ExtensionContext) {
         }
     }
     
-    // Discover existing sessions using agent_states.json as source of truth
-    async function discoverExistingSessionsFromState() {
+    // Discover existing sessions directly from tmux (simple and reliable)
+    async function discoverExistingSessionsFromTmux() {
         try {
             // Clean up old agent terminals first to prevent duplicates
             const existingTerminals = vscode.window.terminals;
@@ -1177,67 +1130,53 @@ export function activate(context: vscode.ExtensionContext) {
             
             // Clear the agent manager's registry to start fresh
             const agents = (agentManager as any).agents as Map<string, AgentTerminal>;
-            const agentsToClean = Array.from(agents.entries());
+            agents.clear();
             
-            for (const [sessionName, agent] of agentsToClean) {
-                if (agent.statusBarItem) {
-                    agent.statusBarItem.dispose();
-                }
-                agents.delete(sessionName);
-            }
+            // Get tmux sessions directly - single source of truth
+            const { exec } = await import('child_process');
+            const { promisify } = await import('util');
+            const execAsync = promisify(exec);
             
-            // Read agent_states.json for session list (use workspace-relative path)
-            const workspaceRoot = vscode.workspace.rootPath || '';
-            const globalStateFile = path.join(workspaceRoot, '_featstate', 'agent_states.json');
-            const stateData = await vscode.workspace.fs.readFile(vscode.Uri.file(globalStateFile));
-            const stateJson = JSON.parse(Buffer.from(stateData).toString('utf8'));
+            const { stdout } = await execAsync('tmux list-sessions -F "#{session_name}" 2>/dev/null || echo ""');
             
-            if (!stateJson.sessions) {
-                console.log('No sessions found in agent_states.json');
+            if (!stdout.trim()) {
+                console.log('No tmux sessions found');
                 return;
             }
             
+            const sessions = stdout.trim().split('\n');
             let discoveredCount = 0;
             
-            // Create terminals for sessions that exist in state file AND tmux
-            for (const [sessionId, sessionData] of Object.entries(stateJson.sessions)) {
-                // Skip sessions marked as dead/not_found
-                if (typeof sessionData === 'object' && sessionData !== null && 
-                    (sessionData as any).health?.state === 'dead') {
-                    console.log(`Skipping dead session: ${sessionId}`);
-                    continue;
-                }
+            // Create terminals for all agent sessions found in tmux
+            for (const sessionId of sessions) {
+                // Check if this is an agent session (starts with agent type)
+                const agentType = agentTypes.find(type => sessionId.startsWith(type));
                 
-                // Check if tmux session actually exists
-                const sessionExists = await checkTmuxSessionExists(sessionId);
-                
-                if (sessionExists) {
+                if (agentType) {
                     try {
-                        await createTerminalForSession(sessionId, sessionData);
+                        await createTerminalForSession(sessionId, 'idle'); // Default to idle state
                         discoveredCount++;
                     } catch (terminalError) {
                         console.error(`Failed to create terminal for ${sessionId}:`, terminalError);
                         // Continue with other sessions
                     }
-                } else {
-                    console.log(`Skipping stale session: ${sessionId} (not in tmux)`);
                 }
             }
             
             if (discoveredCount > 0) {
                 vscode.window.showInformationMessage(
-                    `🔗 Discovered ${discoveredCount} active agent session(s)`
+                    `🔗 Discovered ${discoveredCount} agent session(s) from tmux`
                 );
             } else {
-                console.log('No active tmux sessions found matching agent_states.json');
+                console.log('No agent sessions found in tmux');
             }
         } catch (error) {
-            console.error('Failed to discover sessions from state:', error);
+            console.error('Failed to discover sessions from tmux:', error);
         }
     }
     
-    // Enable hybrid session discovery using agent_states.json with tmux validation
-    setTimeout(discoverExistingSessionsFromState, 1000);
+    // Enable direct tmux session discovery - simple and reliable
+    setTimeout(discoverExistingSessionsFromTmux, 1000);
     
     // Set up file-based command system for external communication
     const workspaceRoot = vscode.workspace.rootPath || '';
@@ -1781,14 +1720,7 @@ export function activate(context: vscode.ExtensionContext) {
     
     context.subscriptions.push(spawnCommand, listCommand, killCommand, updateStateCommand, spawnProgrammaticCommand, killProgrammaticCommand, syncTmuxSessionsCommand, convertTerminalCommand);
     
-    // Add status bar item
-    const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
-    statusBarItem.text = "$(robot) Claude Agents";
-    statusBarItem.command = 'claude-agents.spawnAgent';
-    statusBarItem.tooltip = 'Spawn Claude Agent (Ctrl+Alt+A)';
-    statusBarItem.show();
-    
-    context.subscriptions.push(statusBarItem);
+    // No status bar items - keeping it simple and focused on terminal discovery
 }
 
 export function deactivate() {}

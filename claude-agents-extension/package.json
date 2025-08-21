@@ -2,7 +2,7 @@
   "name": "claude-agents",
   "displayName": "Claude Agents",
   "description": "Tmux session integration for Claude Code agents",
-  "version": "0.7.2",
+  "version": "0.8.8",
   "publisher": "djhatch",
   "repository": {
     "type": "git",
@@ -13,16 +13,12 @@
   },
   "categories": ["Other"],
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "*"
   ],
-  "main": "./out/extension_clean.js",
+  "main": "./out/extension_minimal.js",
   "contributes": {
     "commands": [
-      {
-        "command": "claude-agents.showSessions",
-        "title": "Connect to Tmux Session",
-        "category": "Claude Agents"
-      },
       {
         "command": "claude-agents.refresh",
         "title": "Refresh Tmux Sessions",
@@ -31,13 +27,12 @@
     ],
     "keybindings": [
       {
-        "command": "claude-agents.showSessions",
+        "command": "claude-agents.refresh",
         "key": "ctrl+alt+a"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./"
   },
