@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-08-21T09:30:47+00:00",
+  "last_updated": "2025-08-21T09:32:29+00:00",
   "sessions": {
     "architect-1755608908": {
       "state": "idle",
@@ -196,9 +196,9 @@
       "origin": "claude-start-hook"
     },
     "architect-1755767122": {
-      "state": "done",
-      "timestamp": "2025-08-21T09:30:47+00:00",
-      "origin": "claude-stop-hook"
+      "state": "busy",
+      "timestamp": "2025-08-21T09:32:29+00:00",
+      "origin": "claude-start-hook"
     }
   }
 }

@@ -1531,3 +1531,14 @@
 [2025-08-21 09:29:38] Updating agent state via state manager: unknown -> busy
 [2025-08-21 09:29:38] SUCCESS: Updated agent state to BUSY via state manager
 [2025-08-21 09:29:38] Start hook processing complete
+[2025-08-21 09:32:29] === Claude Code Start Hook Triggered (User Submitted Prompt) ===
+[2025-08-21 09:32:29] Session ID: architect-1755767122
+[2025-08-21 09:32:29] Display Name: unknown
+[2025-08-21 09:32:29] Agent Type: architect
+[2025-08-21 09:32:29] Task ID: 
+[2025-08-21 09:32:29] Model: sonnet
+[2025-08-21 09:32:29] STATE_CHANGE: architect-1755767122: idle -> busy
+[2025-08-21 09:32:29] User submitted prompt, updating agent state to: busy
+[2025-08-21 09:32:29] Updating agent state via state manager: architect-1755767122 -> busy
+[2025-08-21 09:32:29] SUCCESS: Updated agent state to BUSY via state manager
+[2025-08-21 09:32:29] Start hook processing complete
