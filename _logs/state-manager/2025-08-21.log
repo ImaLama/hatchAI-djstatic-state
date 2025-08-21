@@ -214,3 +214,319 @@
 2025-08-21 09:30:50 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
 2025-08-21 09:32:29 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:562187
 2025-08-21 09:32:29 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:33:23 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:566264
+2025-08-21 09:33:23 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:33:26 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:566431
+2025-08-21 09:33:26 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:33:42 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:567359
+2025-08-21 09:33:42 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:34:01 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:568993
+2025-08-21 09:34:01 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:34:04 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:569197
+2025-08-21 09:34:04 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:34:10 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:569466
+2025-08-21 09:34:10 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:34:13 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:569696
+2025-08-21 09:34:13 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:35:42 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:575606
+2025-08-21 09:35:42 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:37:03 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:581483
+2025-08-21 09:37:03 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:37:06 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:581711
+2025-08-21 09:37:06 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:38:11 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:585834
+2025-08-21 09:38:11 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:38:29 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:586722
+2025-08-21 09:38:29 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:38:32 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:586879
+2025-08-21 09:38:32 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:38:50 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:588341
+2025-08-21 09:38:50 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:41:34 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:599519
+2025-08-21 09:41:34 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:41:37 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:599735
+2025-08-21 09:41:37 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:43:00 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:605661
+2025-08-21 09:43:00 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:44:31 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:611870
+2025-08-21 09:44:31 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:44:34 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:612069
+2025-08-21 09:44:34 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:44:40 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:612361
+2025-08-21 09:44:41 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:45:20 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:615052
+2025-08-21 09:45:20 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:45:23 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:615289
+2025-08-21 09:45:23 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:47:29 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:630245
+2025-08-21 09:47:29 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:47:35 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:630786
+2025-08-21 09:47:35 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:47:38 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:631434
+2025-08-21 09:47:38 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:47:42 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:631874
+2025-08-21 09:47:42 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:47:47 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:632380
+2025-08-21 09:47:47 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:47:50 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:632729
+2025-08-21 09:47:50 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:48:36 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:636983
+2025-08-21 09:48:36 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:52:05 | STATE_UPDATE | architect-1755683754 | busy | claude-start-hook | PID:658369
+2025-08-21 09:52:05 | STATE_SUCCESS | architect-1755683754 | busy | claude-start-hook
+2025-08-21 09:53:53 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:669278
+2025-08-21 09:53:53 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 09:54:22 | STATE_UPDATE | architect-1755683754 | done | claude-stop-hook | PID:672484
+2025-08-21 09:54:22 | STATE_SUCCESS | architect-1755683754 | done | claude-stop-hook
+2025-08-21 09:54:25 | STATE_UPDATE | architect-1755683754 | idle | claude-stop-hook-delay | PID:672795
+2025-08-21 09:54:25 | STATE_SUCCESS | architect-1755683754 | idle | claude-stop-hook-delay
+2025-08-21 09:55:09 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:677847
+2025-08-21 09:55:09 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:55:12 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:677929
+2025-08-21 09:55:12 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:58:16 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:696274
+2025-08-21 09:58:16 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:01:02 | STATE_UPDATE | architect-1755683754 | busy | claude-start-hook | PID:713478
+2025-08-21 10:01:02 | STATE_SUCCESS | architect-1755683754 | busy | claude-start-hook
+2025-08-21 10:01:17 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:714858
+2025-08-21 10:01:17 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:02:09 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:720301
+2025-08-21 10:02:09 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:02:46 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:724961
+2025-08-21 10:02:46 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:02:49 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:725337
+2025-08-21 10:02:49 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:04:11 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:734787
+2025-08-21 10:04:11 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:05:26 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:744133
+2025-08-21 10:05:26 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:06:16 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:749917
+2025-08-21 10:06:16 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:06:30 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:752180
+2025-08-21 10:06:30 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:06:33 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:752513
+2025-08-21 10:06:33 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:07:20 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:758205
+2025-08-21 10:07:20 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:07:45 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:760881
+2025-08-21 10:07:45 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:08:09 | HEALTH_UPDATE | architect-1755609014 | healthy | test_update | PID:762561
+2025-08-21 10:08:09 | HEALTH_SUCCESS | architect-1755609014 | healthy | test_update
+2025-08-21 10:08:27 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:766394
+2025-08-21 10:08:27 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 10:08:42 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:767617
+2025-08-21 10:08:42 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:08:45 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:767916
+2025-08-21 10:08:45 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:08:45 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:767958
+2025-08-21 10:08:45 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:08:46 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:768242
+2025-08-21 10:08:46 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:08:47 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:768303
+2025-08-21 10:08:47 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:08:48 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:768337
+2025-08-21 10:08:48 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:08:49 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:768452
+2025-08-21 10:08:49 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:08:50 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:768551
+2025-08-21 10:08:51 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:08:56 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:768948
+2025-08-21 10:08:56 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:09:45 | HEALTH_UPDATE | architect-test-123 | dead | test_debug | PID:772372
+2025-08-21 10:09:45 | HEALTH_SUCCESS | architect-test-123 | dead | test_debug
+2025-08-21 10:10:37 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:776465
+2025-08-21 10:10:37 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:11:09 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:778792
+2025-08-21 10:11:09 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:11:52 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:781998
+2025-08-21 10:11:52 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:11:55 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:782231
+2025-08-21 10:11:55 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:11:59 | HEALTH_UPDATE | architect-1755608908 | dead | session_not_found | PID:782613
+2025-08-21 10:11:59 | HEALTH_SUCCESS | architect-1755608908 | dead | session_not_found
+2025-08-21 10:12:03 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:783692
+2025-08-21 10:12:04 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:13:34 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:794215
+2025-08-21 10:13:34 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:14:57 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:804972
+2025-08-21 10:14:57 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:15:00 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:805399
+2025-08-21 10:15:00 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:15:13 | HEALTH_UPDATE | unknown | dead | manual_test | PID:807368
+2025-08-21 10:15:13 | HEALTH_SUCCESS | unknown | dead | manual_test
+2025-08-21 10:15:25 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:811011
+2025-08-21 10:15:25 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 10:15:40 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:812617
+2025-08-21 10:15:40 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:15:42 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:812899
+2025-08-21 10:15:42 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:15:43 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:813039
+2025-08-21 10:15:43 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:15:43 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:813159
+2025-08-21 10:15:43 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:15:45 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:813925
+2025-08-21 10:15:45 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:15:46 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:814017
+2025-08-21 10:15:46 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:16:00 | STATE_UPDATE | architect-1755683754 | done | claude-stop-hook | PID:820427
+2025-08-21 10:16:00 | STATE_SUCCESS | architect-1755683754 | done | claude-stop-hook
+2025-08-21 10:16:03 | STATE_UPDATE | architect-1755683754 | idle | claude-stop-hook-delay | PID:820934
+2025-08-21 10:16:03 | STATE_SUCCESS | architect-1755683754 | idle | claude-stop-hook-delay
+2025-08-21 10:17:22 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:839333
+2025-08-21 10:17:22 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 10:17:39 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:842078
+2025-08-21 10:17:39 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:17:40 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:842316
+2025-08-21 10:17:40 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:17:42 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:842592
+2025-08-21 10:17:42 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:17:42 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:842629
+2025-08-21 10:17:42 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:17:43 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:842728
+2025-08-21 10:17:43 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:17:43 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:842787
+2025-08-21 10:17:43 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:17:45 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:843106
+2025-08-21 10:17:45 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:17:46 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:843292
+2025-08-21 10:17:46 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:18:07 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:846724
+2025-08-21 10:18:07 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:21:45 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:880173
+2025-08-21 10:21:45 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:21:48 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:880721
+2025-08-21 10:21:48 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:22:49 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:890025
+2025-08-21 10:22:49 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:23:52 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:899957
+2025-08-21 10:23:52 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:23:55 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:900365
+2025-08-21 10:23:55 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:24:51 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:909229
+2025-08-21 10:24:52 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:25:34 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:915560
+2025-08-21 10:25:35 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:25:55 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:919103
+2025-08-21 10:25:56 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:25:59 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:919486
+2025-08-21 10:25:59 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:28:26 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:941780
+2025-08-21 10:28:26 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 10:30:24 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:960275
+2025-08-21 10:30:24 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 10:30:27 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:960717
+2025-08-21 10:30:27 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 10:31:07 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:969250
+2025-08-21 10:31:07 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 10:31:23 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:977617
+2025-08-21 10:31:23 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:31:25 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:977860
+2025-08-21 10:31:25 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:31:26 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:978027
+2025-08-21 10:31:26 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:31:27 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:978382
+2025-08-21 10:31:27 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:31:28 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:978674
+2025-08-21 10:31:28 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:31:30 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:978984
+2025-08-21 10:31:30 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:32:25 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:989295
+2025-08-21 10:32:25 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 10:32:55 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:995199
+2025-08-21 10:32:55 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:32:58 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:995560
+2025-08-21 10:32:58 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:34:02 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:1007437
+2025-08-21 10:34:02 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 10:34:23 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:1011151
+2025-08-21 10:34:23 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 10:34:27 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:1012070
+2025-08-21 10:34:27 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 10:39:24 | STATE_UPDATE | architect-1755683754 | busy | claude-start-hook | PID:1075135
+2025-08-21 10:39:24 | STATE_SUCCESS | architect-1755683754 | busy | claude-start-hook
+2025-08-21 10:39:43 | HEALTH_UPDATE | unknown | dead | no_tmux_session | PID:1077756
+2025-08-21 10:39:43 | HEALTH_SUCCESS | unknown | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | architect-1755620153 | dead | no_tmux_session | PID:1077806
+2025-08-21 10:39:43 | HEALTH_SUCCESS | architect-1755620153 | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | test-verification | dead | no_tmux_session | PID:1077883
+2025-08-21 10:39:43 | HEALTH_SUCCESS | test-verification | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | test-manual-update | dead | no_tmux_session | PID:1077967
+2025-08-21 10:39:43 | HEALTH_SUCCESS | test-manual-update | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | architect-1755683754 | healthy | tmux_session_active | PID:1078070
+2025-08-21 10:39:43 | HEALTH_SUCCESS | architect-1755683754 | healthy | tmux_session_active
+2025-08-21 10:39:43 | HEALTH_UPDATE | test-absolute-path | dead | no_tmux_session | PID:1078100
+2025-08-21 10:39:43 | HEALTH_SUCCESS | test-absolute-path | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | test-enhanced-tracking | dead | no_tmux_session | PID:1078132
+2025-08-21 10:39:43 | HEALTH_SUCCESS | test-enhanced-tracking | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | test-corrected-paths | dead | no_tmux_session | PID:1078157
+2025-08-21 10:39:43 | HEALTH_SUCCESS | test-corrected-paths | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | test-system-functionality | dead | no_tmux_session | PID:1078187
+2025-08-21 10:39:43 | HEALTH_SUCCESS | test-system-functionality | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | architect-1755691818 | dead | no_tmux_session | PID:1078210
+2025-08-21 10:39:43 | HEALTH_SUCCESS | architect-1755691818 | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | architect-1755691837 | dead | no_tmux_session | PID:1078244
+2025-08-21 10:39:43 | HEALTH_SUCCESS | architect-1755691837 | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | architect-1755692027 | dead | no_tmux_session | PID:1078288
+2025-08-21 10:39:43 | HEALTH_SUCCESS | architect-1755692027 | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | architect-1755692093 | dead | no_tmux_session | PID:1078309
+2025-08-21 10:39:43 | HEALTH_SUCCESS | architect-1755692093 | dead | no_tmux_session
+2025-08-21 10:39:43 | HEALTH_UPDATE | architect-1755692380 | dead | no_tmux_session | PID:1078335
+2025-08-21 10:39:44 | HEALTH_SUCCESS | architect-1755692380 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | architect-1755692402 | dead | no_tmux_session | PID:1078379
+2025-08-21 10:39:44 | HEALTH_SUCCESS | architect-1755692402 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | factory-1755692493 | dead | no_tmux_session | PID:1078394
+2025-08-21 10:39:44 | HEALTH_SUCCESS | factory-1755692493 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | architect-1755692533 | dead | no_tmux_session | PID:1078409
+2025-08-21 10:39:44 | HEALTH_SUCCESS | architect-1755692533 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | factory-TC-123 | dead | no_tmux_session | PID:1078439
+2025-08-21 10:39:44 | HEALTH_SUCCESS | factory-TC-123 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | planner-1755698364 | dead | no_tmux_session | PID:1078474
+2025-08-21 10:39:44 | HEALTH_SUCCESS | planner-1755698364 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | architect-TC-888 | dead | no_tmux_session | PID:1078543
+2025-08-21 10:39:44 | HEALTH_SUCCESS | architect-TC-888 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | architect-1755700020 | healthy | tmux_session_active | PID:1078569
+2025-08-21 10:39:44 | HEALTH_SUCCESS | architect-1755700020 | healthy | tmux_session_active
+2025-08-21 10:39:44 | HEALTH_UPDATE | architect-1755700037 | dead | no_tmux_session | PID:1078584
+2025-08-21 10:39:44 | HEALTH_SUCCESS | architect-1755700037 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | planner-1755701013 | healthy | tmux_session_active | PID:1078599
+2025-08-21 10:39:44 | HEALTH_SUCCESS | planner-1755701013 | healthy | tmux_session_active
+2025-08-21 10:39:44 | HEALTH_UPDATE | planner-1755703297 | dead | no_tmux_session | PID:1078614
+2025-08-21 10:39:44 | HEALTH_SUCCESS | planner-1755703297 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | architect-1755703328 | dead | no_tmux_session | PID:1078629
+2025-08-21 10:39:44 | HEALTH_SUCCESS | architect-1755703328 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | factory-1755706136 | dead | no_tmux_session | PID:1078644
+2025-08-21 10:39:44 | HEALTH_SUCCESS | factory-1755706136 | dead | no_tmux_session
+2025-08-21 10:39:44 | HEALTH_UPDATE | weaver-1755706222 | dead | no_tmux_session | PID:1078659
+2025-08-21 10:39:45 | HEALTH_SUCCESS | weaver-1755706222 | dead | no_tmux_session
+2025-08-21 10:39:45 | HEALTH_UPDATE | architect-TC-001 | dead | no_tmux_session | PID:1078674
+2025-08-21 10:39:45 | HEALTH_SUCCESS | architect-TC-001 | dead | no_tmux_session
+2025-08-21 10:39:45 | HEALTH_UPDATE | architect-1755707221 | dead | no_tmux_session | PID:1078689
+2025-08-21 10:39:45 | HEALTH_SUCCESS | architect-1755707221 | dead | no_tmux_session
+2025-08-21 10:39:45 | HEALTH_UPDATE | architect-TC-987 | dead | no_tmux_session | PID:1078718
+2025-08-21 10:39:45 | HEALTH_SUCCESS | architect-TC-987 | dead | no_tmux_session
+2025-08-21 10:39:45 | HEALTH_UPDATE | weaver-1755709249 | dead | no_tmux_session | PID:1078751
+2025-08-21 10:39:45 | HEALTH_SUCCESS | weaver-1755709249 | dead | no_tmux_session
+2025-08-21 10:39:45 | HEALTH_UPDATE | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | dead | no_tmux_session | PID:1078785
+2025-08-21 10:39:45 | HEALTH_SUCCESS | factory-022-TS-2025-08-20-MOUNT-DIRS-RENAME | dead | no_tmux_session
+2025-08-21 10:39:45 | HEALTH_UPDATE | qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME | healthy | tmux_session_active | PID:1078814
+2025-08-21 10:39:45 | HEALTH_SUCCESS | qa-022-TS-2025-08-20-MOUNT-DIRS-RENAME | healthy | tmux_session_active
+2025-08-21 10:39:45 | HEALTH_UPDATE | planner-1755731305 | healthy | tmux_session_active | PID:1078854
+2025-08-21 10:39:45 | HEALTH_SUCCESS | planner-1755731305 | healthy | tmux_session_active
+2025-08-21 10:39:45 | HEALTH_UPDATE | architect-1755731694 | healthy | tmux_session_active | PID:1078889
+2025-08-21 10:39:45 | HEALTH_SUCCESS | architect-1755731694 | healthy | tmux_session_active
+2025-08-21 10:39:45 | HEALTH_UPDATE | architect-1755764135 | dead | no_tmux_session | PID:1078912
+2025-08-21 10:39:45 | HEALTH_SUCCESS | architect-1755764135 | dead | no_tmux_session
+2025-08-21 10:39:45 | HEALTH_UPDATE | planner-1755765065 | healthy | tmux_session_active | PID:1078946
+2025-08-21 10:39:45 | HEALTH_SUCCESS | planner-1755765065 | healthy | tmux_session_active
+2025-08-21 10:39:45 | HEALTH_UPDATE | planner-1755765326 | healthy | tmux_session_active | PID:1078982
+2025-08-21 10:39:45 | HEALTH_SUCCESS | planner-1755765326 | healthy | tmux_session_active
+2025-08-21 10:39:45 | HEALTH_UPDATE | architect-1755767122 | healthy | tmux_session_active | PID:1079017
+2025-08-21 10:39:45 | HEALTH_SUCCESS | architect-1755767122 | healthy | tmux_session_active
+2025-08-21 10:40:24 | STATE_UPDATE | architect-1755683754 | done | claude-stop-hook | PID:1086383
+2025-08-21 10:40:24 | STATE_SUCCESS | architect-1755683754 | done | claude-stop-hook
+2025-08-21 10:40:27 | STATE_UPDATE | architect-1755683754 | idle | claude-stop-hook-delay | PID:1086474
+2025-08-21 10:40:27 | STATE_SUCCESS | architect-1755683754 | idle | claude-stop-hook-delay
+2025-08-21 10:41:01 | STATE_UPDATE | architect-1755683754 | busy | claude-start-hook | PID:1092632
+2025-08-21 10:41:01 | STATE_SUCCESS | architect-1755683754 | busy | claude-start-hook
+2025-08-21 10:41:11 | STATE_UPDATE | planner-1755731305 | busy | claude-start-hook | PID:1093990
+2025-08-21 10:41:11 | STATE_SUCCESS | planner-1755731305 | busy | claude-start-hook
