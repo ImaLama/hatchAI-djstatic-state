@@ -1,0 +1,214 @@
+2025-08-21 08:15:37 | STATE_UPDATE | architect-1755764135 | busy | claude-start-hook | PID:254312
+2025-08-21 08:15:37 | STATE_SUCCESS | architect-1755764135 | busy | claude-start-hook
+2025-08-21 08:15:42 | STATE_UPDATE | architect-1755764135 | done | claude-stop-hook | PID:254584
+2025-08-21 08:15:42 | STATE_SUCCESS | architect-1755764135 | done | claude-stop-hook
+2025-08-21 08:15:45 | STATE_UPDATE | architect-1755764135 | idle | claude-stop-hook-delay | PID:254722
+2025-08-21 08:15:45 | STATE_SUCCESS | architect-1755764135 | idle | claude-stop-hook-delay
+2025-08-21 08:17:21 | STATE_UPDATE | architect-1755764135 | busy | claude-start-hook | PID:259811
+2025-08-21 08:17:21 | STATE_SUCCESS | architect-1755764135 | busy | claude-start-hook
+2025-08-21 08:17:36 | STATE_UPDATE | architect-1755764135 | done | claude-stop-hook | PID:260484
+2025-08-21 08:17:36 | STATE_SUCCESS | architect-1755764135 | done | claude-stop-hook
+2025-08-21 08:17:39 | STATE_UPDATE | architect-1755764135 | idle | claude-stop-hook-delay | PID:260809
+2025-08-21 08:17:39 | STATE_SUCCESS | architect-1755764135 | idle | claude-stop-hook-delay
+2025-08-21 08:18:06 | STATE_UPDATE | architect-1755764135 | busy | claude-start-hook | PID:262157
+2025-08-21 08:18:06 | STATE_SUCCESS | architect-1755764135 | busy | claude-start-hook
+2025-08-21 08:18:15 | STATE_UPDATE | architect-1755764135 | done | claude-stop-hook | PID:263013
+2025-08-21 08:18:15 | STATE_SUCCESS | architect-1755764135 | done | claude-stop-hook
+2025-08-21 08:18:18 | STATE_UPDATE | architect-1755764135 | idle | claude-stop-hook-delay | PID:263190
+2025-08-21 08:18:18 | STATE_SUCCESS | architect-1755764135 | idle | claude-stop-hook-delay
+2025-08-21 08:20:08 | STATE_UPDATE | architect-1755764135 | busy | claude-start-hook | PID:268859
+2025-08-21 08:20:08 | STATE_SUCCESS | architect-1755764135 | busy | claude-start-hook
+2025-08-21 08:22:05 | STATE_UPDATE | architect-1755764135 | done | claude-stop-hook | PID:275459
+2025-08-21 08:22:05 | STATE_SUCCESS | architect-1755764135 | done | claude-stop-hook
+2025-08-21 08:22:08 | STATE_UPDATE | architect-1755764135 | idle | claude-stop-hook-delay | PID:275627
+2025-08-21 08:22:09 | STATE_SUCCESS | architect-1755764135 | idle | claude-stop-hook-delay
+2025-08-21 08:24:11 | STATE_UPDATE | architect-1755764135 | busy | claude-start-hook | PID:282328
+2025-08-21 08:24:11 | STATE_SUCCESS | architect-1755764135 | busy | claude-start-hook
+2025-08-21 08:26:22 | STATE_UPDATE | architect-1755764135 | done | claude-stop-hook | PID:289332
+2025-08-21 08:26:22 | STATE_SUCCESS | architect-1755764135 | done | claude-stop-hook
+2025-08-21 08:26:25 | STATE_UPDATE | architect-1755764135 | idle | claude-stop-hook-delay | PID:289463
+2025-08-21 08:26:25 | STATE_SUCCESS | architect-1755764135 | idle | claude-stop-hook-delay
+2025-08-21 08:27:38 | STATE_UPDATE | architect-1755764135 | busy | claude-start-hook | PID:293340
+2025-08-21 08:27:38 | STATE_SUCCESS | architect-1755764135 | busy | claude-start-hook
+2025-08-21 08:27:57 | STATE_UPDATE | architect-1755764135 | done | claude-stop-hook | PID:294608
+2025-08-21 08:27:57 | STATE_SUCCESS | architect-1755764135 | done | claude-stop-hook
+2025-08-21 08:28:00 | STATE_UPDATE | architect-1755764135 | idle | claude-stop-hook-delay | PID:294780
+2025-08-21 08:28:00 | STATE_SUCCESS | architect-1755764135 | idle | claude-stop-hook-delay
+2025-08-21 08:28:26 | STATE_UPDATE | architect-1755764135 | busy | claude-start-hook | PID:296227
+2025-08-21 08:28:26 | STATE_SUCCESS | architect-1755764135 | busy | claude-start-hook
+2025-08-21 08:29:03 | STATE_UPDATE | architect-1755764135 | done | claude-stop-hook | PID:298309
+2025-08-21 08:29:03 | STATE_SUCCESS | architect-1755764135 | done | claude-stop-hook
+2025-08-21 08:29:06 | STATE_UPDATE | architect-1755764135 | idle | claude-stop-hook-delay | PID:298486
+2025-08-21 08:29:06 | STATE_SUCCESS | architect-1755764135 | idle | claude-stop-hook-delay
+2025-08-21 08:31:07 | STATE_UPDATE | planner-1755765065 | busy | claude-start-hook | PID:306462
+2025-08-21 08:31:07 | STATE_SUCCESS | planner-1755765065 | busy | claude-start-hook
+2025-08-21 08:35:28 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:323348
+2025-08-21 08:35:28 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 08:36:38 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:327816
+2025-08-21 08:36:38 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 08:36:42 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:327981
+2025-08-21 08:36:42 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 08:36:42 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:328033
+2025-08-21 08:36:42 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 08:39:41 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:339901
+2025-08-21 08:39:41 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 08:39:44 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:340008
+2025-08-21 08:39:44 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 08:40:09 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:341840
+2025-08-21 08:40:09 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 08:41:32 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:347071
+2025-08-21 08:41:32 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 08:41:35 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:347277
+2025-08-21 08:41:35 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 08:42:46 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:352599
+2025-08-21 08:42:46 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 08:43:34 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:355616
+2025-08-21 08:43:34 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 08:43:37 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:355729
+2025-08-21 08:43:37 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 08:44:24 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:359301
+2025-08-21 08:44:24 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 08:44:34 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:359884
+2025-08-21 08:44:34 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 08:44:37 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:360056
+2025-08-21 08:44:37 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 08:44:55 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:361524
+2025-08-21 08:44:55 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 08:45:01 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:361841
+2025-08-21 08:45:01 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 08:45:04 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:362038
+2025-08-21 08:45:04 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 08:57:57 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:413347
+2025-08-21 08:57:57 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 08:59:38 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:419795
+2025-08-21 08:59:38 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 08:59:41 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:419946
+2025-08-21 08:59:41 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 09:00:34 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:423618
+2025-08-21 09:00:34 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 09:01:40 | STATE_UPDATE | planner-1755765326 | done | claude-stop-hook | PID:427843
+2025-08-21 09:01:40 | STATE_SUCCESS | planner-1755765326 | done | claude-stop-hook
+2025-08-21 09:01:44 | STATE_UPDATE | planner-1755765326 | idle | claude-stop-hook-delay | PID:428036
+2025-08-21 09:01:44 | STATE_SUCCESS | planner-1755765326 | idle | claude-stop-hook-delay
+2025-08-21 09:02:10 | STATE_UPDATE | planner-1755765326 | busy | claude-start-hook | PID:429918
+2025-08-21 09:02:10 | STATE_SUCCESS | planner-1755765326 | busy | claude-start-hook
+2025-08-21 09:02:36 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:433992
+2025-08-21 09:02:36 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:02:46 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:434700
+2025-08-21 09:02:46 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:02:47 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:434772
+2025-08-21 09:02:47 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:02:49 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:434842
+2025-08-21 09:02:49 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:02:50 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:435014
+2025-08-21 09:02:50 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:02:52 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:435082
+2025-08-21 09:02:52 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:02:55 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:435732
+2025-08-21 09:02:55 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:03:25 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:439747
+2025-08-21 09:03:25 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:03:37 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:440913
+2025-08-21 09:03:37 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:03:38 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:440956
+2025-08-21 09:03:38 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:03:40 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:441026
+2025-08-21 09:03:40 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:03:40 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:441088
+2025-08-21 09:03:40 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:03:41 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:441181
+2025-08-21 09:03:41 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:03:43 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:441230
+2025-08-21 09:03:43 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:03:53 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:441906
+2025-08-21 09:03:53 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:03:55 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:442048
+2025-08-21 09:03:55 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:03:56 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:442076
+2025-08-21 09:03:56 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:03:58 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:442403
+2025-08-21 09:03:58 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:04:08 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:445431
+2025-08-21 09:04:08 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:04:18 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:445969
+2025-08-21 09:04:18 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:04:21 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:446157
+2025-08-21 09:04:21 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:04:23 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:448280
+2025-08-21 09:04:23 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:04:34 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:449543
+2025-08-21 09:04:34 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:04:37 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:451902
+2025-08-21 09:04:37 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:04:48 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:452585
+2025-08-21 09:04:48 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:04:50 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:453334
+2025-08-21 09:04:50 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:04:51 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:453683
+2025-08-21 09:04:51 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:04:51 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:453828
+2025-08-21 09:04:51 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:04:52 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:453918
+2025-08-21 09:04:52 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:04:53 | STATE_UPDATE | unknown | done | claude-stop-hook | PID:454031
+2025-08-21 09:04:53 | STATE_SUCCESS | unknown | done | claude-stop-hook
+2025-08-21 09:04:53 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:454076
+2025-08-21 09:04:53 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:04:54 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:454135
+2025-08-21 09:04:54 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:04:55 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:454156
+2025-08-21 09:04:55 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:04:56 | STATE_UPDATE | unknown | idle | claude-stop-hook-delay | PID:454175
+2025-08-21 09:04:56 | STATE_SUCCESS | unknown | idle | claude-stop-hook-delay
+2025-08-21 09:05:24 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:456319
+2025-08-21 09:05:24 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:05:28 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:456557
+2025-08-21 09:05:28 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:05:31 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:456640
+2025-08-21 09:05:31 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:06:43 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:461185
+2025-08-21 09:06:43 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:07:46 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:465089
+2025-08-21 09:07:46 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:07:49 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:465161
+2025-08-21 09:07:49 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:12:49 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:483771
+2025-08-21 09:12:49 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:13:06 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:485112
+2025-08-21 09:13:06 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:13:09 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:485259
+2025-08-21 09:13:09 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:14:09 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:489035
+2025-08-21 09:14:09 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:14:21 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:489672
+2025-08-21 09:14:21 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:14:24 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:489814
+2025-08-21 09:14:24 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:14:54 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:491590
+2025-08-21 09:14:54 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:17:11 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:500679
+2025-08-21 09:17:11 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:17:14 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:500888
+2025-08-21 09:17:14 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:18:13 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:504896
+2025-08-21 09:18:13 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:18:24 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:506088
+2025-08-21 09:18:24 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:18:27 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:506183
+2025-08-21 09:18:27 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:18:33 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:506558
+2025-08-21 09:18:33 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:19:57 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:512091
+2025-08-21 09:19:57 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:23:54 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:527873
+2025-08-21 09:23:54 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:23:57 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:528010
+2025-08-21 09:23:57 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
+2025-08-21 09:29:09 | STATE_UPDATE | architect-1755767122 | busy | claude-start-hook | PID:548368
+2025-08-21 09:29:09 | STATE_SUCCESS | architect-1755767122 | busy | claude-start-hook
+2025-08-21 09:29:38 | STATE_UPDATE | unknown | busy | claude-start-hook | PID:550405
+2025-08-21 09:29:38 | STATE_SUCCESS | unknown | busy | claude-start-hook
+2025-08-21 09:30:47 | STATE_UPDATE | architect-1755767122 | done | claude-stop-hook | PID:555260
+2025-08-21 09:30:47 | STATE_SUCCESS | architect-1755767122 | done | claude-stop-hook
+2025-08-21 09:30:50 | STATE_UPDATE | architect-1755767122 | idle | claude-stop-hook-delay | PID:555495
+2025-08-21 09:30:50 | STATE_SUCCESS | architect-1755767122 | idle | claude-stop-hook-delay
