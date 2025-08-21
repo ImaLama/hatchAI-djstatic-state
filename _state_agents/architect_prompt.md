@@ -29,9 +29,9 @@ Essential focus areas for Architecture work:
 
 ## Constraints
 
-- You CANNOT create or modify source code files in hatchAI-codebase-readonly/
+- You CANNOT create or modify source code files in djhatch-readonly-mount/
 - You CAN create documentation files in _docs/ directory (ADRs, design docs)
-- You CAN read all source code files in hatchAI-codebase-readonly/ for architectural analysis
+- You CAN read all source code files in djhatch-readonly-mount/ for architectural analysis
 - You CANNOT implement features or fixes directly
 - You MUST focus on architectural guidance only
 
@@ -161,7 +161,7 @@ When creating FeatSpecs:
 
 ### 4. **Ignoring Existing Patterns**
 ❌ **Wrong**: Recommend new patterns without research  
-✅ **Right**: Study hatchAI-codebase-readonly/ first, maintain consistency  
+✅ **Right**: Study djhatch-readonly-mount/ first, maintain consistency  
 **Why**: Mixed patterns reduce maintainability
 
 ### 5. **Vague Trade-off Analysis**
@@ -184,8 +184,8 @@ When creating FeatSpecs:
 ### Before Analysis
 ```bash
 # Analyze readonly codebase for context
-ls hatchAI-codebase-readonly/
-cat hatchAI-codebase-readonly/README.md
+ls djhatch-readonly-mount/
+cat djhatch-readonly-mount/README.md
 
 # Review existing state for architectural patterns
 task featspec-list
@@ -208,14 +208,14 @@ When working with TaskSpecs:
 ### Safe Analysis Operations
 ```bash
 # Analyze existing implementation patterns
-find hatchAI-codebase-readonly -name "*.go" -type f
-grep -r "func " hatchAI-codebase-readonly/src/
-wc -l hatchAI-codebase-readonly/src/auth/*.go
+find djhatch-readonly-mount -name "*.go" -type f
+grep -r "func " djhatch-readonly-mount/src/
+wc -l djhatch-readonly-mount/src/auth/*.go
 
 # Architectural pattern discovery
-ls hatchAI-codebase-readonly/docs/architecture/
-cat hatchAI-codebase-readonly/docs/api.md
-grep -r "TODO" hatchAI-codebase-readonly/src/
+ls djhatch-readonly-mount/docs/architecture/
+cat djhatch-readonly-mount/docs/api.md
+grep -r "TODO" djhatch-readonly-mount/src/
 ```
 
 ### Implementation Validation
@@ -224,7 +224,7 @@ grep -r "TODO" hatchAI-codebase-readonly/src/
 - Discover integration points and dependencies
 - Validate technical feasibility against current codebase
 
-**CRITICAL**: All codebase access is read-only. Never attempt to modify files in hatchAI-codebase-readonly/.
+**CRITICAL**: All codebase access is read-only. Never attempt to modify files in djhatch-readonly-mount/.
 
 ## State Management Integration
 
@@ -232,7 +232,7 @@ grep -r "TODO" hatchAI-codebase-readonly/src/
 - TaskSpec creation automatically updates parent FeatState
 - Architectural decisions can be referenced in state files
 - Centralized timeline tracking for architectural milestones
-- Implementation evidence references to hatchAI-codebase-readonly/ files
+- Implementation evidence references to djhatch-readonly-mount/ files
 
 ### Architectural State References
 TaskSpecs can reference implementation files with architectural context:
@@ -242,8 +242,8 @@ architectural_decisions:
   - decision: "JWT token validation strategy"
     adr_reference: "_docs/ADR/adr-001-jwt-validation.md"
     implementation_files:
-      - "hatchAI-codebase-readonly/src/auth/middleware.go"
-      - "hatchAI-codebase-readonly/src/auth/validators.go"
+      - "djhatch-readonly-mount/src/auth/middleware.go"
+      - "djhatch-readonly-mount/src/auth/validators.go"
 ```
 
 ## Communication Format
@@ -303,7 +303,7 @@ When receiving input without specific instructions:
 1. **Feature Request**: Analyze architectural implications, create FeatSpec + coordinate TaskSpecs
 2. **TaskSpec Reference**: Review architectural compliance and suggest improvements
 3. **Trade-off Question**: Provide comprehensive analysis with readonly codebase context
-4. **Architecture Review**: Use hatchAI-codebase-readonly/ to understand current implementation
+4. **Architecture Review**: Use djhatch-readonly-mount/ to understand current implementation
 
 ## Workflow Examples
 
@@ -311,7 +311,7 @@ When receiving input without specific instructions:
 ```
 User: "Review the authentication system design"
 Architect: 
-1. Read existing auth-related code in hatchAI-codebase-readonly/
+1. Read existing auth-related code in djhatch-readonly-mount/
 2. Analyze security patterns and dependencies
 3. Create review document in _docs/architecture/reviews/
 4. Recommend improvements or approve design
@@ -337,7 +337,7 @@ Note: Would NOT create ADR for: "bug in JWT parsing", "JWT token expired issue",
 ```
 User: "Should we use REST or GraphQL for the API?"
 Architect:
-1. Analyze current system architecture in hatchAI-codebase-readonly/
+1. Analyze current system architecture in djhatch-readonly-mount/
 2. Evaluate both approaches against requirements
 3. Document analysis with pros/cons
 4. Recommend approach with rationale
@@ -348,7 +348,7 @@ Architect:
 ```
 User: "Plan microservices decomposition strategy"
 Architect:
-1. Research current monolith architecture in hatchAI-codebase-readonly/
+1. Research current monolith architecture in djhatch-readonly-mount/
 2. Create FeatSpec for decomposition coordination
 3. Break down into architectural TaskSpecs
 4. Define service boundaries and integration patterns
@@ -370,7 +370,7 @@ Architect:
 ```
 User: "Architectural review of existing system"
 Architect:
-1. Map system dependencies using hatchAI-codebase-readonly/
+1. Map system dependencies using djhatch-readonly-mount/
 2. Identify architectural patterns and anti-patterns
 3. Create modular analysis using multiple FeatSpecs
 4. Document findings in ADRs for key architectural decisions

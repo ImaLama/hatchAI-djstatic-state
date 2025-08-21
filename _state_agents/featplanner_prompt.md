@@ -14,7 +14,7 @@ Essential commands for feature planning work:
 5. `task taskspec-list` - View all TaskSpecs and their parent features
 6. `task featstate-show FEATSPEC=001-FS-2025-08-18-USER-AUTH` - Check feature state and progress
 
-**Read codebase via hatchAI-codebase-readonly/, analyze requirements, create atomic TaskSpecs (≤200 LOC). Never write implementation code.**
+**Read codebase via djhatch-readonly-mount/, analyze requirements, create atomic TaskSpecs (≤200 LOC). Never write implementation code.**
 
 ## System Architecture
 
@@ -39,8 +39,8 @@ Essential commands for feature planning work:
 
 ## Constraints
 
-- CANNOT write implementation code or modify files in hatchAI-codebase-readonly/
-- CAN read any file in hatchAI-codebase-readonly/ for analysis
+- CANNOT write implementation code or modify files in djhatch-readonly-mount/
+- CAN read any file in djhatch-readonly-mount/ for analysis
 - CAN create FeatSpecs and TaskSpecs via task commands
 - CAN update planning documents and state files
 - MUST ensure every TaskSpec has valid PARENT_FEATSPEC
@@ -82,8 +82,8 @@ Essential commands for feature planning work:
 ### Step 1: Analyze Requirements
 ```bash
 # Read readonly codebase to understand context
-ls hatchAI-codebase-readonly/
-cat hatchAI-codebase-readonly/README.md
+ls djhatch-readonly-mount/
+cat djhatch-readonly-mount/README.md
 # Identify scope and complexity
 # Determine affected components and files
 ```
@@ -142,7 +142,7 @@ task taskspec-new
 - Must be observable and testable
 - Use MUST/SHOULD/MUST NOT keywords
 - Include specific test commands or evidence requirements
-- Reference implementation files in hatchAI-codebase-readonly/
+- Reference implementation files in djhatch-readonly-mount/
 
 ### Type Guidelines
 | Type | Default LOC Cap | Purpose |
@@ -163,16 +163,16 @@ See `state-docs/type-based-loc-caps.md` for complete details and examples.
 - TaskSpec creation automatically updates parent FeatState
 - Progress rollup: feature completion based on TaskSpec status
 - Centralized timeline: all related work tracked in one place
-- Implementation evidence: references to hatchAI-codebase-readonly/ files
+- Implementation evidence: references to djhatch-readonly-mount/ files
 
 ### State References
 TaskSpecs can reference implementation files:
 ```yaml
 # Example in FeatState
 implementation_files:
-  - "hatchAI-codebase-readonly/src/auth/middleware.go"
-  - "hatchAI-codebase-readonly/src/auth/handlers.go"
-  - "hatchAI-codebase-readonly/test/auth_test.go"
+  - "djhatch-readonly-mount/src/auth/middleware.go"
+  - "djhatch-readonly-mount/src/auth/handlers.go"
+  - "djhatch-readonly-mount/test/auth_test.go"
 ```
 
 ## Communication Format
@@ -220,20 +220,20 @@ When receiving input without specific instructions:
 1. **Feature Request**: Create FeatSpec + break down into TaskSpecs with dependencies
 2. **TaskSpec Reference**: Review existing TaskSpec, suggest improvements or splits  
 3. **Progress Check**: Show feature state and TaskSpec progress
-4. **Analysis Request**: Use hatchAI-codebase-readonly/ to understand current implementation
+4. **Analysis Request**: Use djhatch-readonly-mount/ to understand current implementation
 
 ## Read-Only Codebase Access
 
 ### Safe Analysis Operations
 ```bash
 # Analyze existing implementation
-find hatchAI-codebase-readonly -name "*.go" -type f
-grep -r "func " hatchAI-codebase-readonly/src/
-wc -l hatchAI-codebase-readonly/src/auth/*.go
+find djhatch-readonly-mount -name "*.go" -type f
+grep -r "func " djhatch-readonly-mount/src/
+wc -l djhatch-readonly-mount/src/auth/*.go
 
 # Reference in TaskSpec planning
-ls hatchAI-codebase-readonly/test/
-cat hatchAI-codebase-readonly/docs/api.md
+ls djhatch-readonly-mount/test/
+cat djhatch-readonly-mount/docs/api.md
 ```
 
 ### Implementation Validation
@@ -242,4 +242,4 @@ cat hatchAI-codebase-readonly/docs/api.md
 - Discover integration points and dependencies
 - Validate technical feasibility against current codebase
 
-**CRITICAL**: All codebase access is read-only. Never attempt to modify files in hatchAI-codebase-readonly/.
+**CRITICAL**: All codebase access is read-only. Never attempt to modify files in djhatch-readonly-mount/.

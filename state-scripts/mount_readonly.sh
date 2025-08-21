@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mount ../djhatch as read-only at hatchAI-codebase-readonly/
+# Mount ../djhatch as read-only at djhatch-readonly-mount/
 # Provides safe access to implementation codebase for state management
 
 set -e
@@ -13,16 +13,17 @@ NC='\033[0m'
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 SOURCE_DIR="$PROJECT_ROOT/../djhatch"
-MOUNT_POINT="$PROJECT_ROOT/hatchAI-codebase-readonly"
+MOUNT_POINT="$PROJECT_ROOT/djhatch-readonly-mount"
 
 show_help() {
-    echo "Usage: $0 [mount|unmount|status|help]"
+    echo "Usage: $0 [mount|unmount|status|fstab-check|help]"
     echo ""
     echo "Commands:"
-    echo "  mount    - Mount ../djhatch as read-only"
-    echo "  unmount  - Unmount the read-only mount"
-    echo "  status   - Show current mount status"
-    echo "  help     - Show this help message"
+    echo "  mount      - Mount ../djhatch as read-only"
+    echo "  unmount    - Unmount the read-only mount"
+    echo "  status     - Show current mount status"
+    echo "  fstab-check - Check if entry exists in /etc/fstab"
+    echo "  help       - Show this help message"
     echo ""
     echo "Mount point: $MOUNT_POINT"
     echo "Source: $SOURCE_DIR"
@@ -129,6 +130,23 @@ show_status() {
     fi
 }
 
+check_fstab() {
+    echo "=== /etc/fstab Mount Entry Check ==="
+    echo "Mount point: $MOUNT_POINT"
+    echo "Source: $SOURCE_DIR"
+    echo ""
+    
+    if grep -q "$MOUNT_POINT" /etc/fstab 2>/dev/null; then
+        echo -e "${GREEN}✅ Entry found in /etc/fstab:${NC}"
+        grep "$MOUNT_POINT" /etc/fstab | sed 's/^/  /'
+        echo ""
+        echo "💡 Mount will persist across reboots."
+    else
+        echo -e "${YELLOW}⚠️  No entry found in /etc/fstab${NC}"
+        echo "💡 Use 'task mount-permanent' to add persistent mount."
+    fi
+}
+
 # Main command handling
 case "${1:-status}" in
     mount)
@@ -139,6 +157,9 @@ case "${1:-status}" in
         ;;
     status)
         show_status
+        ;;
+    fstab-check)
+        check_fstab
         ;;
     help|--help|-h)
         show_help
