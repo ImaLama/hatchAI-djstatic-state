@@ -1,0 +1,140 @@
+---
+# ===== FEATURE STATE TRACKING (Centralized state for 008-FS-2025-08-21-EXAMPLE-DEMO) =====
+featspec_id: 008-FS-2025-08-21-EXAMPLE-DEMO
+featspec_title: Example feature demonstration
+status: draft                               # draft → planning → active → completed → abandoned
+updated: 2025-08-21-11-23                   # last state update datetime
+active_sprint: S4                           # current sprint
+created: 2025-08-21-11-23                   # initial creation datetime
+# ==================================================================================
+---
+
+## Feature-Level State
+
+### Progress Summary
+- **Overall Status**: {{status}}
+- **Last Updated**: {{updated}}
+- **Active Sprint**: {{active_sprint}}
+- **Total TaskSpecs**: 0
+- **Completed TaskSpecs**: 0
+- **Progress**: 0% (0/0)
+
+### Timeline
+- **Created**: {{created}}
+- **Planning Start**: 2025-08-21-11-23
+- **Development Start**: 2025-08-21-11-23
+- **QA Start**: 2025-08-21-11-23
+- **Completed**: 2025-08-21-11-23
+- **Deployed**: 2025-08-21-11-23
+
+### Milestones
+- [ ] Initial planning complete
+- [ ] All TaskSpecs defined
+- [ ] Development started
+- [ ] Core functionality complete
+- [ ] Integration testing complete
+- [ ] QA approved
+- [ ] Production ready
+
+## TaskSpec State Tracking
+
+### Active TaskSpecs
+<!-- This section is automatically updated when TaskSpecs are created/updated -->
+
+### TaskSpec: [Will be populated when TaskSpecs are created]
+```yaml
+task_id: ""
+task_title: ""
+status: draft                    # draft → in-progress → qa → done
+owner: unassigned
+worktree: ""                    # worktrees/card-NNN-TS-2025-08-21-DESCRIPTION
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""                # factories insert via hashstamp
+merged_date: ""                 # datetime (2025-08-21-11-23) implementation was merged
+sprint: S4
+created: 2025-08-21-11-23
+updated: 2025-08-21-11-23
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+## Dependencies & Relationships
+
+### Parent Relationships
+- **Part of Feature**: {{featspec_id}}
+
+### Child Relationships
+- **TaskSpecs**: [Automatically populated]
+
+### External Dependencies
+- **Blocked by**: []
+- **Blocking**: []
+- **Related Features**: []
+
+## Notes & History
+
+### Change Log
+- {{created}}: Initial FeatState created
+- {{updated}}: [Latest change description]
+
+### Notes
+- [Development notes]
+- [Architecture decisions]  
+- [Risk assessments]
+- [Deployment considerations]
+### TaskSpec: 025-TS-2025-08-21-DEMO-TASK
+```yaml
+task_id: "025-TS-2025-08-21-DEMO-TASK"
+task_title: "Example task for demo feature"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-21-11-23
+updated: 2025-08-21-11-23
+parent_featspec: "008-FS-2025-08-21-EXAMPLE-DEMO"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```

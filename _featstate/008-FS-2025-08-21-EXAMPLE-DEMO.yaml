@@ -1,0 +1,59 @@
+---
+id: 008-FS-2025-08-21-EXAMPLE-DEMO
+title: Example feature demonstration
+created: 2025-08-21-11-23
+updated: 2025-08-21-11-23
+sprint: S4
+---
+
+## 1  DevCards
+
+| DevCard ID | Title | Dependencies | Notes |
+|------------|-------|--------------|-------|
+| NNN-TS-2025-08-21-DESCRIPTION-001 | <TaskSpec title> | - | <brief status note> |
+| NNN-TS-2025-08-21-DESCRIPTION-002 | <TaskSpec title> | NNN-TS-...-001 | <brief status note> |
+| NNN-TS-2025-08-21-DESCRIPTION-INTEGRATION-999 | Integration tests for <feature name> | NNN-TS-...-001, NNN-TS-...-002 | **Required** - End-to-end integration testing |
+
+## 2  User Description
+
+### Feature Overview
+
+<Brief description of the feature from user perspective>
+
+### User Value  
+
+<What value does this feature provide to users>
+
+### User Stories
+
+1. **As a <user type>**, I want <functionality> so that <benefit>
+
+### Acceptance Criteria
+
+- [ ] <High-level acceptance criterion>
+
+## 3  Planner Breakdown
+
+### Technical Approach
+
+<High-level technical strategy>
+
+### Architecture Impact
+
+<How this affects system architecture>
+
+### Dependencies
+
+<External dependencies or constraints>
+
+### Risk Assessment  
+
+<Potential risks and mitigation strategies>
+
+### Testing Strategy
+
+<Overall testing approach across TaskSpecs>
+
+### Rollout Plan
+
+<How the feature will be deployed/released>
