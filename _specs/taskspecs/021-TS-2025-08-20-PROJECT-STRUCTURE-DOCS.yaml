@@ -27,7 +27,7 @@ List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
 | 4 | Structure info MUST specify implementation folder | docs | `grep "projects/djhatch" _docs/filestructure.md` | Shows implementation path |
 | 5 | Structure info MUST specify state folder | docs | `grep "projects/djhatch-state" _docs/filestructure.md` | Shows state path |
 | 6 | Read-only mount paths MUST be documented | docs | `grep "project-state-readonly" _docs/filestructure.md` | Shows mount path |
-| 7 | Agent access patterns MUST be clear | docs | `grep "hatchAI-codebase-readonly" _docs/filestructure.md` | Shows readonly access |
+| 7 | Agent access patterns MUST be clear | docs | `grep "djhatch-readonly-mount" _docs/filestructure.md` | Shows readonly access |
 | 8 | Both project's agent scripts MUST be consistent | docs | `diff _docs/filestructure.md ../djhatch/_docs/filestructure.md` | Files are identical |
 
 ## 3  Non-Goals / Anti-Goals
@@ -64,7 +64,7 @@ This project uses a dual-folder architecture:
   - FeatSpec/TaskSpec states
   - System configuration states
 - Planning and state management agents work in this directory
-- Has read-only access to codebase via: /home/lama/projects/djhatch-state/hatchAI-codebase-readonly
+- Has read-only access to codebase via: /home/lama/projects/djhatch-state/djhatch-readonly-mount
 
 ### Agent Access Patterns
 - **Implementation Agents**: 
@@ -72,7 +72,7 @@ This project uses a dual-folder architecture:
   - Read-only state access: ./project-state-readonly
 - **Planning Agents**:
   - Working directory: ./djhatch-state
-  - Read-only code access: ./hatchAI-codebase-readonly
+  - Read-only code access: ./djhatch-readonly-mount
 ```
 
 ## 5  Implementation Checklist (Factory)

@@ -17,7 +17,7 @@ depends_on: []                              # ["NNN-TS-...", ...]
 
 The current mounted directory names are inconsistent and unclear:
 - `/home/lama/projects/djhatch/project-state-readonly` → should be `djhatch-state-readonly-mount`
-- `/home/lama/projects/djhatch-state/hatchAI-codebase-readonly` → should be `djhatch-readonly-mount`
+- `/home/lama/projects/djhatch-state/hatchAI-codebase-readonly` → now is `djhatch-readonly-mount`
 
 This rename improves clarity about what these directories contain and their role as mount points in the djhatch architecture. The current names create confusion about the separation between state management and readonly codebase access.
 
@@ -29,7 +29,7 @@ This rename improves clarity about what these directories contain and their role
 |---|-----------------|------|--------------|----------------------------|
 | 1 | Mount point `/home/lama/projects/djhatch/djhatch-state-readonly-mount` exists and contains state files | integration | `ls djhatch-state-readonly-mount/_specs/` | Show directory listing with specs |
 | 2 | Mount point `/home/lama/projects/djhatch-state/djhatch-readonly-mount` exists and contains codebase | integration | `ls djhatch-state/djhatch-readonly-mount/` | Show directory listing with codebase files |
-| 3 | All scripts reference new mount point paths correctly | unit | `grep -r "project-state-readonly\|hatchAI-codebase-readonly" _hatch_scripts/` | No matches found |
+| 3 | All scripts reference new mount point paths correctly | unit | `grep -r "project-state-readonly\|hatchAI-codebase-readonly" state-scripts/` | No matches found |
 | 4 | Mount/unmount scripts work with new directory names | e2e | `task mount:state && task unmount:state` | Successful mount/unmount operations |
 
 ## 3  Non-Goals / Anti-Goals
