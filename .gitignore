@@ -5,3 +5,5 @@ _logs/hooks/state_updates/*.trigger
 _logs/hooks/*.stop
 djhatch-readonly-mount/
 _logs/sessions/architect-1755767122.log
+_logs/sessions/
+_scripts/_logs/sessions/
