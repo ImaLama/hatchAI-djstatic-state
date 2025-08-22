@@ -1,0 +1,223 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 036-TS-2025-08-22-TASK-COMMAND-INTEGRATION
+title: Update task commands to initialize featspec state directories            # "Add sharded event dir"
+created: 2025-08-22-21-59                   # creation datetime
+updated: 2025-08-22-21-59                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Integrates featspec state directory creation into existing task creation commands (task featspec-new, task taskspec-new). Ensures that every new FeatSpec automatically gets its state directory and every new TaskSpec gets added to its parent's featstate.json.
+
+## 2  Objectives (acceptance criteria)
+Modify task creation commands to automatically initialize featspec state directories and maintain featstate.json.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | `task featspec-new` creates state directory `_featstate/{featspec-id}/` | e2e | task featspec-new | Show created directory and files |
+| 2 | `task featspec-new` initializes `featstate.json` with empty taskspecs | e2e | cat _featstate/{featspec}/featstate.json | Show initial JSON structure |
+| 3 | `task featspec-new` creates initial `FSTATE` with correct status | e2e | cat _featstate/{featspec}/FSTATE | Show human-readable status |
+| 4 | `task taskspec-new` adds entry to parent `featstate.json` | e2e | task taskspec-new PARENT_FEATSPEC={featspec} | Show updated featstate.json with new taskspec entry |
+| 5 | Modified scripts maintain backward compatibility | unit | test/task_creation_test.sh | All existing functionality works |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT change the fundamental TaskSpec/FeatSpec YAML structure
+- Will NOT modify existing TaskSpec functionality beyond state integration
+- Will NOT break backward compatibility with existing specifications
+
+## CRITICAL BUG FIX REQUIRED
+
+**Current Bug**: TaskSpec creation script incorrectly looks for FeatSpec in `_featstate/` instead of `_specs/featspecs/`
+
+**Location**: `state-scripts/new_taskspec.sh:77-78`
+```bash
+# INCORRECT - looks in wrong directory
+local featspec_file="_featstate/${parent_fs}.yaml"
+if [ ! -f "$featspec_file" ]; then
+    echo "❌ Parent FeatSpec not found: $featspec_file"
+```
+
+**Required Fix**: Update validation to look in correct directory:
+```bash
+# CORRECT - look in specs directory
+local featspec_file="_specs/featspecs/${parent_fs}.yaml"
+if [ ! -f "$featspec_file" ]; then
+    echo "❌ Parent FeatSpec not found: $featspec_file"
+```
+
+## 4  Design Constraints
+• Modify existing bash scripts in `state-scripts/` directory
+• Maintain backward compatibility with current task command API
+• Use atomic file operations to prevent corruption
+• Integrate with existing sequence number management  
+• Must not break existing FeatSpec/TaskSpec creation workflows
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  TDD Implementation Approach (Factory)
+
+### RED Phase - Write Failing Tests First
+
+1. **Test Current Bug Fix**:
+```bash
+# Test: TaskSpec creation fails with correct FeatSpec location
+test_current_bug_exists() {
+  # This test should FAIL initially, proving the bug exists
+  DESCRIPTION="TEST-TASK" TITLE="Test task" PARENT_FEATSPEC="011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT" \
+    ./state-scripts/new_taskspec.sh 2>&1 | grep "Parent FeatSpec not found: _featstate"
+  [ $? -eq 0 ] || fail "Bug doesn't exist - test setup wrong"
+}
+
+# Test: Bug fix allows TaskSpec creation
+test_bug_fixed() {
+  # This test should PASS after fix
+  DESCRIPTION="TEST-TASK" TITLE="Test task" PARENT_FEATSPEC="011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT" \
+    ./state-scripts/new_taskspec.sh >/dev/null
+  [ $? -eq 0 ] || fail "TaskSpec creation still fails after fix"
+}
+```
+
+2. **Test FeatSpec State Directory Creation**:
+```bash
+# Test: task featspec-new creates state directory
+test_featspec_state_directory_creation() {
+  local test_featspec="TEST-FS-2025-08-22-INTEGRATION-TEST"
+  DESCRIPTION="INTEGRATION-TEST" TITLE="Test FeatSpec" ./state-scripts/new_featspec.sh
+  [ -d "_featstate/$test_featspec" ] || fail "State directory not created"
+  [ -f "_featstate/$test_featspec/featstate.json" ] || fail "featstate.json not created"
+  [ -f "_featstate/$test_featspec/FSTATE" ] || fail "FSTATE not created"
+  [ -f "_featstate/$test_featspec/handovers.yaml" ] || fail "handovers.yaml not created"
+}
+```
+
+3. **Test TaskSpec JSON Entry Creation**:
+```bash
+# Test: task taskspec-new adds entry to parent featstate.json
+test_taskspec_json_entry() {
+  local parent_featspec="TEST-FS-2025-08-22-INTEGRATION-TEST"
+  local test_taskspec="TEST-TS-2025-08-22-EXAMPLE"
+  
+  # Create parent first
+  DESCRIPTION="INTEGRATION-TEST" TITLE="Test FeatSpec" ./state-scripts/new_featspec.sh
+  
+  # Create child TaskSpec
+  DESCRIPTION="EXAMPLE" TITLE="Test TaskSpec" PARENT_FEATSPEC="$parent_featspec" \
+    ./state-scripts/new_taskspec.sh
+  
+  # Verify entry exists in parent's featstate.json
+  jq ".taskspecs[\"$test_taskspec\"]" "_featstate/$parent_featspec/featstate.json" | grep -v null
+  [ $? -eq 0 ] || fail "TaskSpec entry not added to featstate.json"
+}
+```
+
+### GREEN Phase - Implement Minimal Code
+
+4. **Fix the critical bug first**:
+   - Update `state-scripts/new_taskspec.sh:77` to look in `_specs/featspecs/`
+   
+5. **Modify `state-scripts/new_featspec.sh`**:
+   - Add call to `init_featspec_state.sh` after FeatSpec creation
+   - Update to create state directory structure
+   
+6. **Modify `state-scripts/new_taskspec.sh`**:
+   - Add TaskSpec entry to parent's `featstate.json`
+   - Update progress counters in featstate.json
+
+### REFACTOR Phase - Optimize and Clean
+
+7. **Extract common functions**: Create `state-scripts/featstate_utils.sh`
+8. **Add comprehensive error handling**
+9. **Optimize JSON manipulation with jq**
+
+## 6  Implementation Checklist (Factory)
+
+### RED Phase:
+- [ ] Write test for current bug (should fail initially)
+- [ ] Write test for bug fix (should fail initially)  
+- [ ] Write test for featspec state directory creation (should fail)
+- [ ] Write test for taskspec JSON entry creation (should fail)
+- [ ] Run tests - all should fail (RED)
+
+### GREEN Phase:
+- [ ] Fix critical bug in new_taskspec.sh:77 (look in _specs/featspecs/)
+- [ ] Modify new_featspec.sh to call init_featspec_state.sh
+- [ ] Modify new_taskspec.sh to update parent featstate.json
+- [ ] Create featstate_utils.sh for JSON manipulation
+- [ ] Run tests - all should pass (GREEN)
+
+### REFACTOR Phase:
+- [ ] Extract common code to shared utilities
+- [ ] Add comprehensive error handling and rollback
+- [ ] Add input validation and sanitization
+- [ ] Optimize file operations for better performance
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## IMPLEMENTATION DETAILS
+
+### Critical Bug Fix (Line 77-78):
+```bash
+# BEFORE (BROKEN):
+local featspec_file="_featstate/${parent_fs}.yaml"
+
+# AFTER (FIXED):  
+local featspec_file="_specs/featspecs/${parent_fs}.yaml"
+```
+
+### Required Script Modifications:
+
+1. **`state-scripts/new_featspec.sh`** - Add state directory initialization:
+```bash
+# After creating FeatSpec, initialize state directory
+if ! ./state-scripts/init_featspec_state.sh "$FEATSPEC_ID"; then
+    echo "❌ Failed to initialize state directory"
+    exit 1
+fi
+```
+
+2. **`state-scripts/new_taskspec.sh`** - Add featstate.json entry:
+```bash
+# After creating TaskSpec, update parent featstate.json
+./state-scripts/featstate_utils.sh add_taskspec "$PARENT_FEATSPEC" "$TASKSPEC_ID" "$TITLE" "$TYPE"
+```
+
+3. **`state-scripts/featstate_utils.sh`** - New utility script:
+```bash
+#!/bin/bash
+# Utility functions for featstate.json manipulation
+
+add_taskspec() {
+    local parent_featspec="$1"
+    local taskspec_id="$2" 
+    local title="$3"
+    local type="$4"
+    
+    local featstate_dir="_featstate/$parent_featspec"
+    local featstate_file="$featstate_dir/featstate.json"
+    
+    # Add taskspec entry and update counters
+    jq ".taskspecs[\"$taskspec_id\"] = {
+        \"status\": \"draft\",
+        \"created\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
+        \"title\": \"$title\",
+        \"type\": \"$type\"
+    } | .feature.progress.total_taskspecs += 1" "$featstate_file" > "$featstate_file.tmp"
+    
+    mv "$featstate_file.tmp" "$featstate_file"
+}
+```
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

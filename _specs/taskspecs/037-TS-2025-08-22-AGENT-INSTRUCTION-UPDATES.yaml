@@ -1,0 +1,269 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 037-TS-2025-08-22-AGENT-INSTRUCTION-UPDATES
+title: Update factory and QA agent instructions for handover summaries            # "Add sharded event dir"
+created: 2025-08-22-21-59                   # creation datetime
+updated: 2025-08-22-21-59                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Updates the taskspec_orchestrator.sh factory and QA agent instruction templates to include mandatory handover summary creation. Implements the specific requirements for agents to document their work in featspec handover history files.
+
+## 2  Objectives (acceptance criteria)
+Modify orchestrator agent instructions to require handover summary creation using structured templates.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | Factory instructions include handover summary requirement at lines 273-305 | unit | grep "Handover Summary" taskspec_orchestrator.sh | Show updated factory instructions |
+| 2 | QA instructions include handover summary requirement at lines 398-428 | unit | grep "Handover Summary" taskspec_orchestrator.sh | Show updated QA instructions |
+| 3 | Factory instructions specify correct handover file path `${STATE_ROOT}/_featstate/${parent_featspec}/handovers.yaml` | manual | cat taskspec_orchestrator.sh | Show correct path in factory instructions |
+| 4 | QA instructions specify correct handover file path `${STATE_ROOT}/_featstate/${parent_featspec}/handovers.yaml` | manual | cat taskspec_orchestrator.sh | Show correct path in QA instructions |
+| 5 | Instructions reference handover templates `_templates/factory_handover.yaml` and `_templates/qa_handover.yaml` | manual | grep "_templates" taskspec_orchestrator.sh | Show template references |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT modify agent behavior beyond adding handover summary requirement
+- Will NOT change existing orchestrator workflow or decision points
+- Will NOT create new agent types or modify tmux session management
+
+## IMPLEMENTATION REQUIREMENTS
+
+### Factory Instructions Update (lines 273-305)
+Add this section BEFORE the EOF in factory instructions:
+
+```markdown
+## Handover Summary (REQUIRED)
+- Copy template from: ${STATE_ROOT}/_templates/factory_handover.yaml
+- Fill in all sections with your implementation details  
+- Save as: ${STATE_ROOT}/_featstate/${parent_featspec}/handovers.yaml (append mode)
+- Include: outcome, technical details, lessons learned, rework guidance
+
+Required handover sections:
+- Implementation summary and key details
+- Technical challenges encountered
+- Lessons learned for future iterations
+- Rework guidance if issues found
+- Patterns identified for template improvement
+```
+
+### QA Instructions Update (lines 398-428)  
+Add this section BEFORE the EOF in QA instructions:
+
+```markdown
+## Handover Summary (REQUIRED)
+- Copy template from: ${STATE_ROOT}/_templates/qa_handover.yaml
+- Fill in all sections with your review findings
+- Save as: ${STATE_ROOT}/_featstate/${parent_featspec}/handovers.yaml (append mode)
+- Include: decision, quality gates, issues details, pattern recognition
+
+Required handover sections:
+- QA decision and summary
+- Quality gates pass/fail status
+- Detailed issues found with severity
+- Rework guidance for factory agents
+- Patterns identified for future QA improvements
+```
+
+## 4  Design Constraints
+• Modify orchestrator script: `/home/lama/projects/djhatch/taskspec_orchestrator.sh`
+• Must not break existing orchestrator workflow or decision points
+• New instructions must be clearly marked as REQUIRED
+• Template file paths must be absolute and correct
+• Handover file paths must be dynamically generated per TaskSpec
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  TDD Implementation Approach (Factory)
+
+### RED Phase - Write Failing Tests First
+
+1. **Test Factory Instructions Missing Handover Section**:
+```bash
+# Test: Current factory instructions lack handover requirement
+test_factory_missing_handover() {
+  grep -n "Handover Summary" /home/lama/projects/djhatch/taskspec_orchestrator.sh
+  [ $? -ne 0 ] || fail "Handover instructions already exist - test invalid"
+}
+
+# Test: Factory instructions contain handover requirement after update
+test_factory_has_handover() {
+  grep -n "Handover Summary (REQUIRED)" /home/lama/projects/djhatch/taskspec_orchestrator.sh
+  [ $? -eq 0 ] || fail "Factory handover instructions not found"
+}
+```
+
+2. **Test QA Instructions Missing Handover Section**:
+```bash
+# Test: Current QA instructions lack handover requirement  
+test_qa_missing_handover() {
+  grep -n "Handover Summary" /home/lama/projects/djhatch/taskspec_orchestrator.sh | grep -v "factory"
+  [ $? -ne 0 ] || fail "QA handover instructions already exist - test invalid"
+}
+
+# Test: QA instructions contain handover requirement after update
+test_qa_has_handover() {
+  grep -n "Handover Summary (REQUIRED)" /home/lama/projects/djhatch/taskspec_orchestrator.sh | grep -A5 "QA"
+  [ $? -eq 0 ] || fail "QA handover instructions not found"
+}
+```
+
+3. **Test Template References**:
+```bash
+# Test: Instructions reference correct template paths
+test_template_references() {
+  grep "_templates/factory_handover.yaml" /home/lama/projects/djhatch/taskspec_orchestrator.sh
+  [ $? -eq 0 ] || fail "Factory template reference missing"
+  
+  grep "_templates/qa_handover.yaml" /home/lama/projects/djhatch/taskspec_orchestrator.sh  
+  [ $? -eq 0 ] || fail "QA template reference missing"
+}
+```
+
+4. **Test Handover File Path Variables**:
+```bash
+# Test: Instructions use correct dynamic handover file paths
+test_handover_paths() {
+  grep "\${STATE_ROOT}/_featstate/\${parent_featspec}/handovers.yaml" /home/lama/projects/djhatch/taskspec_orchestrator.sh
+  [ $? -eq 0 ] || fail "Dynamic handover path not found"
+}
+```
+
+### GREEN Phase - Implement Minimal Code
+
+5. **Update Factory Instructions (lines 273-305)**:
+   - Add handover requirement section before EOF
+   - Include template path and output file path
+   
+6. **Update QA Instructions (lines 398-428)**:
+   - Add handover requirement section before EOF  
+   - Include template path and output file path
+
+7. **Add parent_featspec variable extraction**:
+   - Extract parent FeatSpec ID from TaskSpec file
+   - Make variable available in instruction templates
+
+### REFACTOR Phase - Optimize and Clean
+
+8. **Create backup mechanism** for orchestrator script
+9. **Add validation** to ensure modifications don't break syntax
+10. **Extract template generation** to reusable function
+
+## 6  Implementation Checklist (Factory)
+
+### RED Phase:
+- [ ] Write test for missing factory handover (should pass initially)
+- [ ] Write test for existing factory handover (should fail initially)
+- [ ] Write test for missing QA handover (should pass initially)  
+- [ ] Write test for existing QA handover (should fail initially)
+- [ ] Write test for template references (should fail initially)
+- [ ] Write test for handover paths (should fail initially)
+- [ ] Run tests - appropriate tests should fail (RED)
+
+### GREEN Phase:
+- [ ] Extract parent_featspec variable in orchestrator functions
+- [ ] Update factory instructions with handover requirement (lines 273-305)
+- [ ] Update QA instructions with handover requirement (lines 398-428)
+- [ ] Test instructions contain proper template references
+- [ ] Test instructions contain proper handover file paths
+- [ ] Run tests - all should pass (GREEN)
+
+### REFACTOR Phase:
+- [ ] Create backup copy of original orchestrator script
+- [ ] Add validation for script syntax after modifications
+- [ ] Extract common template generation logic
+- [ ] Add error handling for missing templates or directories
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## IMPLEMENTATION DETAILS
+
+### Extract Parent FeatSpec Variable
+
+Add this function to orchestrator before instruction generation:
+```bash
+# Extract parent FeatSpec ID from TaskSpec file
+get_parent_featspec() {
+    local taskspec_file="$1"
+    grep "^parent_featspec:" "$taskspec_file" | cut -d: -f2- | xargs
+}
+```
+
+### Factory Instructions Update (Insert before EOF at line ~304):
+
+```bash
+## Handover Summary (REQUIRED)
+CRITICAL: You MUST create a handover summary when completing your work.
+
+1. Copy template from: \${STATE_ROOT}/_templates/factory_handover.yaml
+2. Fill in ALL sections with your implementation details:
+   - Implementation summary and key technical details
+   - Technical challenges encountered and solutions
+   - Lessons learned for future factory iterations
+   - Rework guidance if issues discovered during implementation
+   - Patterns identified for template or process improvements
+
+3. Save handover summary to: \${STATE_ROOT}/_featstate/\${parent_featspec}/handovers.yaml
+   - Use APPEND mode - do not overwrite existing handovers
+   - Ensure proper YAML formatting and indentation
+
+4. Required completion criteria:
+   - All template sections completed with specific details
+   - Technical metrics filled in (LOC, coverage, files modified)  
+   - Clear rework guidance provided for QA agent
+   - Handover file successfully created without errors
+
+IMPORTANT: Your work is NOT complete until the handover summary is written.
+The QA agent relies on your handover to understand your implementation approach.
+EOF
+```
+
+### QA Instructions Update (Insert before EOF at line ~427):
+
+```bash
+## Handover Summary (REQUIRED)  
+CRITICAL: You MUST create a handover summary when completing your review.
+
+1. Copy template from: \${STATE_ROOT}/_templates/qa_handover.yaml
+2. Fill in ALL sections with your review findings:
+   - QA decision (approved/rejected/conditional) and detailed summary
+   - Quality gates assessment (pass/fail status for each gate)
+   - Detailed issues found with severity levels and locations
+   - Specific rework guidance for factory agents if rejected
+   - Pattern recognition for future QA process improvements
+
+3. Save handover summary to: \${STATE_ROOT}/_featstate/\${parent_featspec}/handovers.yaml
+   - Use APPEND mode - preserve existing factory handover
+   - Ensure proper YAML formatting and indentation
+
+4. Required completion criteria:
+   - All template sections completed with specific findings
+   - Technical review metrics documented (coverage, security, performance)
+   - Clear rework guidance provided if sending back to factory
+   - Decision rationale clearly documented for future reference
+
+IMPORTANT: Your review is NOT complete until the handover summary is written.
+Future factory iterations and process improvements depend on your detailed findings.
+EOF
+```
+
+### Update Function Calls to Extract Parent FeatSpec:
+
+In both `prepare_factory()` and `prepare_qa()` functions, add:
+```bash
+# Extract parent FeatSpec ID for handover path
+parent_featspec=\$(get_parent_featspec "\$taskspec_file")
+```
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.
