@@ -1,29 +1,29 @@
 ---
-id: 007-FS-2025-08-20-GENERAL-DEVCARD-TEMPLATES
-title: Create atomic DevCard templates for general development tasks
+id: 007-FS-2025-08-20-GENERAL-TASKSPEC-TEMPLATES
+title: Create atomic TaskSpec templates for general development tasks
 created: 2025-08-20-14-44
-updated: 2025-08-20-14-44
+updated: 2025-08-22-20-29
 sprint: S4
 ---
 
-## 1  DevCards
+## 1  TaskSpecs
 
-| DevCard ID | Title | Dependencies | Notes |
-|------------|-------|--------------|-------|
-| 023-TS-2025-08-20-CODE-REVIEW | Perform code review for pull request | - | Review code quality, security, patterns |
-| 024-TS-2025-08-20-BUG-FIX | Fix identified bug or issue | - | Single bug fix, ≤100 LOC |
-| 025-TS-2025-08-20-UNIT-TEST | Add unit test coverage | - | Test specific function/module |
-| 026-TS-2025-08-20-REFACTOR | Refactor code for improved maintainability | - | Code cleanup, no behavior change |
-| 027-TS-2025-08-20-CONFIG-UPDATE | Update configuration or environment setting | - | Config file or env variable change |
-| 028-TS-2025-08-20-DOCS-UPDATE | Update documentation for feature/API | - | Keep docs current with codebase |
-| 029-TS-2025-08-20-DEPENDENCY-UPDATE | Update project dependencies | - | Package updates, security patches |
-| 030-TS-2025-08-20-PERFORMANCE-OPT | Optimize performance bottleneck | - | Single optimization target |
+| TaskSpec ID | Title | Dependencies | Notes |
+|-------------|-------|--------------|-------|
+| 026-TS-2025-08-22-CODE-REVIEW | Perform code review for pull request | - | Review code quality, security, patterns |
+| 027-TS-2025-08-22-BUG-FIX | Fix identified bug or issue | - | Single bug fix, ≤100 LOC |
+| 028-TS-2025-08-22-UNIT-TEST | Add unit test coverage | - | Test specific function/module |
+| 029-TS-2025-08-22-REFACTOR | Refactor code for improved maintainability | - | Code cleanup, no behavior change |
+| 030-TS-2025-08-22-CONFIG-UPDATE | Update configuration or environment setting | - | Config file or env variable change |
+| 032-TS-2025-08-22-DOCS-UPDATE | Update documentation for feature or API | - | Keep docs current with codebase |
+| 033-TS-2025-08-22-DEPENDENCY-UPDATE | Update project dependencies | - | Package updates, security patches |
+| 034-TS-2025-08-22-PERFORMANCE-OPT | Optimize performance bottleneck | - | Single optimization target |
 
 ## 2  User Description
 
 ### Feature Overview
 
-Create a comprehensive set of atomic DevCard templates for common development tasks. These templates provide standardized TaskSpec definitions for routine development activities, ensuring consistency and completeness across projects.
+Create a comprehensive set of atomic TaskSpec templates for common development tasks. These templates provide standardized TaskSpec definitions for routine development activities, ensuring consistency and completeness across projects.
 
 ### User Value  
 
@@ -34,14 +34,14 @@ Create a comprehensive set of atomic DevCard templates for common development ta
 
 ### User Stories
 
-1. **As a developer**, I want standardized DevCard templates so that I can quickly create well-defined tasks
+1. **As a developer**, I want standardized TaskSpec templates so that I can quickly create well-defined tasks
 2. **As a project manager**, I want consistent task formats so that I can better track and estimate work
 3. **As a team lead**, I want quality templates so that junior developers follow best practices
 4. **As an agent**, I want atomic task definitions so that I can break down complex requests efficiently
 
 ### Acceptance Criteria
 
-- [ ] Each DevCard template is atomic and focused on a single responsibility
+- [ ] Each TaskSpec template is atomic and focused on a single responsibility
 - [ ] Templates include clear acceptance criteria and testing requirements
 - [ ] All templates follow established naming and sizing conventions
 - [ ] Templates are reusable across different project contexts
@@ -83,7 +83,7 @@ Templates will be validated through:
 
 ### Rollout Plan
 
-1. Create initial set of 8 core DevCard templates
+1. Create initial set of 8 core TaskSpec templates
 2. Document template usage patterns
 3. Gather feedback from initial usage
 4. Iterate and expand template library as needed
