@@ -88,7 +88,7 @@ start_claude_session() {
   local model=$4
   
   case $role in
-    "architect-opus")
+    "architect")
       # Set environment variables for logical naming compatibility
       tmux send-keys -t "$pane_target" "export AGENT_TYPE=ARCHITECT" Enter
       tmux send-keys -t "$pane_target" "export DEPLOYMENT_ENV=DEV" Enter
@@ -136,7 +136,7 @@ tmux send-keys -t "$ARCHITECT1_SESSION" "echo 'Session: $ARCHITECT1_SESSION (log
 tmux send-keys -t "$ARCHITECT1_SESSION" "echo 'Tools: analysis tools for state management'" Enter
 tmux send-keys -t "$ARCHITECT1_SESSION" "echo 'Readonly Access: djhatch-readonly-mount/'" Enter
 tmux send-keys -t "$ARCHITECT1_SESSION" "echo 'Initializing Claude architect session'" Enter
-start_claude_session "architect-opus" "$ARCHITECT1_SESSION" "$ARCHITECT1_SESSION" "opus"
+start_claude_session "architect" "$ARCHITECT1_SESSION" "$ARCHITECT1_SESSION" "opus"
 
 echo "Starting architect session: $ARCHITECT2_SESSION (Secondary Architect - Opus)"
 tmux new-session -d -s "$ARCHITECT2_SESSION" -c "$PROJECT_ROOT"
@@ -148,7 +148,7 @@ tmux send-keys -t "$ARCHITECT2_SESSION" "echo 'Session: $ARCHITECT2_SESSION (log
 tmux send-keys -t "$ARCHITECT2_SESSION" "echo 'Tools: analysis tools for state management'" Enter
 tmux send-keys -t "$ARCHITECT2_SESSION" "echo 'Readonly Access: djhatch-readonly-mount/'" Enter
 tmux send-keys -t "$ARCHITECT2_SESSION" "echo 'Initializing Claude architect session'" Enter
-start_claude_session "architect-opus" "$ARCHITECT2_SESSION" "$ARCHITECT2_SESSION" "opus"
+start_claude_session "architect" "$ARCHITECT2_SESSION" "$ARCHITECT2_SESSION" "opus"
 
 echo "Starting architect session: $ARCHITECT_SONNET_SESSION (Routine Architect - Sonnet)"
 tmux new-session -d -s "$ARCHITECT_SONNET_SESSION" -c "$PROJECT_ROOT"
@@ -160,7 +160,7 @@ tmux send-keys -t "$ARCHITECT_SONNET_SESSION" "echo 'Session: $ARCHITECT_SONNET_
 tmux send-keys -t "$ARCHITECT_SONNET_SESSION" "echo 'Tools: analysis tools for state management'" Enter
 tmux send-keys -t "$ARCHITECT_SONNET_SESSION" "echo 'Readonly Access: djhatch-readonly-mount/'" Enter
 tmux send-keys -t "$ARCHITECT_SONNET_SESSION" "echo 'Initializing Claude architect session'" Enter
-start_claude_session "architect-opus" "$ARCHITECT_SONNET_SESSION" "$ARCHITECT_SONNET_SESSION" "sonnet"
+start_claude_session "architect" "$ARCHITECT_SONNET_SESSION" "$ARCHITECT_SONNET_SESSION" "sonnet"
 
 # Start featplanner sessions with logical names
 echo "Starting featplanner session: $FEATPLANNER_OPUS_SESSION (Feature Planner - Opus)"
