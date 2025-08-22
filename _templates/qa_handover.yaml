@@ -1,0 +1,71 @@
+# QA Agent Handover Summary Template  
+# Based on: ~/projects/hatchAI-devcards/_templates/qa_summary.md
+# Usage: QA agents should copy this template and fill in all sections
+
+taskspec_id: "{{TASKSPEC_ID}}"
+featspec_id: "{{FEATSPEC_ID}}"
+agent_type: qa
+iteration: "{{ITERATION}}"
+timestamp: "{{TIMESTAMP}}"
+decision: "{{DECISION}}"  # approved, rejected, conditional
+final_status: "{{FINAL_STATUS}}"  # ready_for_merge, needs_rework, blocked
+
+summary: |
+  **QA {{DECISION}} Summary - Iteration {{ITERATION}}**
+  
+  {{QA_SUMMARY}}
+  
+  **Critical Issues Found:**
+  {{CRITICAL_ISSUES}}
+  
+  **Positive Aspects:**
+  - {{POSITIVE_1}}
+  - {{POSITIVE_2}}
+  - {{POSITIVE_3}}
+  
+  **Rework Guidance for Factory:**
+  - {{REWORK_GUIDANCE_1}}
+  - {{REWORK_GUIDANCE_2}}
+  - {{REWORK_GUIDANCE_3}}
+  
+  **Pattern Recognition:**
+  {{PATTERN_RECOGNITION}}
+
+quality_gates:
+  implementation_complete: "{{IMPL_COMPLETE}}"  # true/false
+  test_coverage_met: "{{COVERAGE_MET}}"  # true/false
+  loc_cap_compliant: "{{LOC_COMPLIANT}}"  # true/false
+  security_reviewed: "{{SECURITY_OK}}"  # true/false
+  performance_acceptable: "{{PERF_OK}}"  # true/false
+
+technical_review:
+  security_issues: "{{SECURITY_ISSUES_COUNT}}"
+  performance_issues: "{{PERFORMANCE_ISSUES_COUNT}}"
+  maintainability_score: "{{MAINTAINABILITY}}"  # poor, fair, good, excellent
+  test_coverage: "{{TEST_COVERAGE}}"
+  complexity_assessment: "{{COMPLEXITY_ASSESSMENT}}"  # appropriate, too_complex, too_simple
+  critical_blockers: "{{CRITICAL_BLOCKERS_COUNT}}"
+
+issues_details:
+  - issue: "{{ISSUE_TYPE}}"
+    severity: "{{SEVERITY}}"  # critical, major, minor
+    location: "{{LOCATION}}"
+    description: "{{DESCRIPTION}}"
+    fix_required: "{{FIX_DESCRIPTION}}"
+
+artifacts:
+  worktree: "{{QA_WORKTREE_PATH}}"
+  review_branch: "{{REVIEW_BRANCH}}"
+  log_file: "{{QA_LOG_FILE_PATH}}"
+  review_report: "{{REVIEW_REPORT_PATH}}"
+
+patterns_for_future:
+  common_mistakes:
+    - "{{MISTAKE_1}}"
+    - "{{MISTAKE_2}}"
+  success_indicators:
+    - "{{SUCCESS_1}}"
+    - "{{SUCCESS_2}}"
+  template_improvements:
+    - "{{IMPROVEMENT_1}}"
+    - "{{IMPROVEMENT_2}}"

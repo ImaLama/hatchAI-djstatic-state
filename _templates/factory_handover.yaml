@@ -1,0 +1,52 @@
+# Factory Agent Handover Summary Template
+# Based on: ~/projects/hatchAI-devcards/_templates/factory_summary.md
+# Usage: Factory agents should copy this template and fill in all sections
+
+taskspec_id: "{{TASKSPEC_ID}}"
+featspec_id: "{{FEATSPEC_ID}}"
+agent_type: factory
+iteration: "{{ITERATION}}"
+timestamp: "{{TIMESTAMP}}"
+outcome: "{{OUTCOME}}"  # completed, partial, blocked, failed
+
+summary: |
+  **Factory Implementation Summary - Iteration {{ITERATION}}**
+  
+  {{IMPLEMENTATION_SUMMARY}}
+  
+  **Key Implementation Details:**
+  - {{KEY_DETAIL_1}}
+  - {{KEY_DETAIL_2}}
+  - {{KEY_DETAIL_3}}
+  
+  **Technical Challenges:**
+  - {{CHALLENGE_1}}
+  - {{CHALLENGE_2}}
+  
+  **Lessons Learned:**
+  - {{LESSON_1}}
+  - {{LESSON_2}}
+
+technical_details:
+  loc_added: "{{LOC_ADDED}}"
+  loc_deleted: "{{LOC_DELETED}}"
+  files_modified: "{{FILES_MODIFIED}}"
+  tests_added: "{{TESTS_ADDED}}"
+  coverage: "{{COVERAGE}}"
+  functions_added: "{{FUNCTIONS_ADDED}}"
+  complexity_score: "{{COMPLEXITY}}"  # low, medium, high
+  critical_gaps: ["{{GAP_1}}", "{{GAP_2}}"]
+
+artifacts:
+  worktree: "{{WORKTREE_PATH}}"
+  branch: "{{BRANCH_NAME}}"
+  commit_hash: "{{COMMIT_HASH}}"
+  log_file: "{{LOG_FILE_PATH}}"
+
+rework_guidance:
+  - "{{REWORK_ITEM_1}}"
+  - "{{REWORK_ITEM_2}}"
+
+patterns_identified:
+  - "{{PATTERN_1}}"
+  - "{{PATTERN_2}}"
