@@ -1,0 +1,77 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 042-TS-2025-08-22-WEB-INTEGRATION
+title: Integration tests for complete web interface functionality
+created: 2025-08-22-22-05
+updated: 2025-08-22-22-05
+sprint: S4
+parent_featspec: 007-FS-2025-08-22-AGENT-WEB-INTERFACE
+type: integration
+loc_cap: 350
+coverage_cap: 90
+depends_on: ["043-TS-2025-08-22-WEB-DEPENDENCIES", "038-TS-2025-08-22-WEB-BACKEND", "039-TS-2025-08-22-WEB-FRONTEND", "040-TS-2025-08-22-WEB-TTS"]
+# =============================================================
+---
+
+## 1  Context
+Implementing end-to-end integration tests for the agent monitoring web interface (parent: 007-FS-2025-08-22-AGENT-WEB-INTERFACE).
+This ensures the complete data flow works correctly from file changes through WebSocket updates to frontend display and TTS notifications.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST test full data flow: file change → WebSocket → UI update | e2e | integration test | Show <1s latency for complete flow |
+| 2 | MUST test multiple concurrent WebSocket clients | load | multi-client test | Show 10+ clients receiving same updates |
+| 3 | MUST test agent state changes trigger TTS notifications | audio | TTS integration | Show audio announcement on state change |
+| 4 | MUST test error recovery after temporary file corruption | recovery | error simulation | Show system recovery from bad JSON |
+| 5 | MUST test WebSocket reconnection after network interruption | reconnect | network test | Show automatic reconnection working |
+| 6 | MUST test log file parsing with various session formats | parsing | log format test | Show handling of different log structures |
+| 7 | MUST test FeatCard/TaskSpec YAML parsing edge cases | yaml | YAML edge cases | Show graceful handling of malformed YAML |
+| 8 | MUST test agent_states.json schema validation | schema | invalid JSON test | Show validation catches malformed data |
+| 9 | MUST test missing session log file handling | logs | missing file test | Show graceful fallback for nonexistent logs |
+| 10 | SHOULD test system performance under continuous updates | performance | stress test | Show stable performance with rapid changes |
+
+## 3  Non-Goals / Anti-Goals
+- NOT testing individual unit functions (covered in component TaskSpecs)
+- NOT implementing load testing beyond 50 concurrent clients
+- NOT testing browser compatibility (handled in frontend TaskSpec)
+- NOT implementing automated UI testing with headless browsers
+- NOT testing security aspects (out of scope for POC)
+
+## 4  Design Constraints
+• Integration tests must complete in < 30 seconds total
+• Tests must not modify production agent_states.json file
+• Test data must be isolated in _test/ directory
+• Tests must clean up temporary files after completion
+• Network tests must use localhost only
+• Performance tests must not impact other system components
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Set up test environment with isolated data files
+- [ ] Create agent_states.json modification simulation
+- [ ] Implement WebSocket client testing framework
+- [ ] Add multi-client connection testing
+- [ ] Create TTS notification verification
+- [ ] Add error injection and recovery testing
+- [ ] Implement network interruption simulation
+- [ ] Create log file parsing edge case tests
+- [ ] Add YAML parsing error handling tests
+- [ ] Add performance stress testing
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 042-TS-2025-08-22-WEB-INTEGRATION status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Verify all integration tests pass consistently
+- [ ] Test cleanup procedures don't leave artifacts
+- [ ] Verify tests don't interfere with production system
+- [ ] Test error scenarios don't cause test failures
+- [ ] Verify performance benchmarks are met
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: 042-TS-2025-08-22-WEB-INTEGRATION status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec completion status, document deployment procedures, create production readiness checklist.

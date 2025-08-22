@@ -1,0 +1,75 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 039-TS-2025-08-22-WEB-FRONTEND
+title: React frontend with Tailwind and real-time agent status dashboard
+created: 2025-08-22-22-05
+updated: 2025-08-22-22-05
+sprint: S4
+parent_featspec: 007-FS-2025-08-22-AGENT-WEB-INTERFACE
+type: feature
+loc_cap: 350
+coverage_cap: 70
+depends_on: ["038-TS-2025-08-22-WEB-BACKEND"]
+# =============================================================
+---
+
+## 1  Context
+Implementing the React frontend dashboard for the agent monitoring web interface (parent: 007-FS-2025-08-22-AGENT-WEB-INTERFACE).
+This creates a responsive web dashboard that displays real-time agent status, latest prompts, and FeatCard/TaskSpec progress with live WebSocket updates.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST display agent status grid with real-time updates | ui | browser test | Show agent status changes in < 1 second |
+| 2 | MUST show latest 3 lines of agent session prompts | display | session log display | Show prompt text for each active agent |
+| 3 | MUST display time since agent state change | time | timestamp calculation | Show "2 minutes ago" style timestamps |
+| 4 | MUST connect to WebSocket and handle reconnection | websocket | connection test | Show automatic reconnection after network loss |
+| 5 | MUST display FeatCard status with progress indicators | cards | featcard display | Show feature progress bars and status |
+| 6 | MUST display TaskSpec status and completion tracking | tasks | taskspec display | Show task grid with status indicators |
+| 7 | MUST be mobile responsive across screen sizes | responsive | mobile test | Show proper layout on 320px and 1920px widths |
+| 8 | MUST handle malformed WebSocket data gracefully | error | bad data test | Show error recovery without UI crash |
+| 9 | SHOULD handle WebSocket connection errors gracefully | error | error display | Show connection status indicators |
+
+## 3  Non-Goals / Anti-Goals
+- NOT implementing agent control buttons (monitoring only)
+- NOT implementing authentication/login for POC
+- NOT storing data locally (state lives on server)
+- NOT implementing complex charts (basic progress indicators only)
+- NOT supporting offline functionality
+
+## 4  Design Constraints
+• Use React functional components with hooks only
+• Keep components ≤ 150 lines each
+• Use Tailwind CSS classes (no custom CSS files)
+• WebSocket updates must not cause UI flicker
+• Must work in Chrome, Firefox, Safari, Edge
+• Loading states must appear within 100ms
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Set up React app with Tailwind CSS
+- [ ] Implement WebSocket client connection
+- [ ] Create AgentStatusGrid component
+- [ ] Add real-time timestamp calculation
+- [ ] Implement FeatCard status display
+- [ ] Add TaskSpec progress tracking
+- [ ] Add mobile responsive layout
+- [ ] Implement error handling and connection status
+- [ ] Add loading states and UI feedback
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 039-TS-2025-08-22-WEB-FRONTEND status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Test WebSocket reconnection scenarios
+- [ ] Verify mobile responsiveness on multiple devices
+- [ ] Test with multiple agents changing states simultaneously
+- [ ] Verify data updates don't cause memory leaks
+- [ ] Test accessibility with keyboard navigation
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: 039-TS-2025-08-22-WEB-FRONTEND status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, document component API, prepare for TTS integration.

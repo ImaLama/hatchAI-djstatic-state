@@ -1,0 +1,74 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 040-TS-2025-08-22-WEB-TTS
+title: TTS integration for audio notifications on agent events
+created: 2025-08-22-22-05
+updated: 2025-08-22-22-05
+sprint: S4
+parent_featspec: 007-FS-2025-08-22-AGENT-WEB-INTERFACE
+type: feature
+loc_cap: 250
+coverage_cap: 80
+depends_on: ["039-TS-2025-08-22-WEB-FRONTEND"]
+# =============================================================
+---
+
+## 1  Context
+Implementing TTS (Text-to-Speech) audio notifications for the agent monitoring web interface (parent: 007-FS-2025-08-22-AGENT-WEB-INTERFACE).
+This adds voice announcements for agent state changes, task completions, and system events using Web Speech API with priority-based queuing.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST announce agent state changes via TTS | tts | agent state change | Audio: "Agent Aurora is now busy" |
+| 2 | MUST support priority-based message queuing | queue | priority test | Critical messages interrupt normal ones |
+| 3 | MUST detect and use best available system voice | voice | voice selection | Show preferred voice selected from available |
+| 4 | MUST allow TTS volume and rate configuration | config | settings test | Show volume/rate controls working |
+| 5 | MUST handle browser TTS permission gracefully | permission | permission test | Show fallback when TTS not available |
+| 6 | MUST provide mute/unmute toggle functionality | control | mute test | Show TTS can be enabled/disabled by user |
+| 7 | SHOULD announce task completion events | events | task completion | Audio: "Task completed by Agent Plato" |
+| 8 | SHOULD limit queue size to prevent audio spam | limit | queue overflow | Show queue limited to 5 pending messages |
+
+## 3  Non-Goals / Anti-Goals
+- NOT implementing server-side TTS (client-side only)
+- NOT storing TTS preferences persistently
+- NOT implementing custom voice synthesis
+- NOT supporting SSML markup for POC
+- NOT implementing multi-language support
+
+## 4  Design Constraints
+• Use Web Speech API (no external TTS libraries)
+• TTS functions must be non-blocking
+• Message queue must not exceed 5 items
+• Voice selection must fallback gracefully
+• Must handle speechSynthesis browser differences
+• Settings must be accessible via UI controls
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement Web Speech API wrapper
+- [ ] Create priority-based message queue
+- [ ] Add voice detection and selection
+- [ ] Implement volume/rate/pitch controls
+- [ ] Add mute/unmute functionality
+- [ ] Create TTS settings panel
+- [ ] Add agent event listeners for TTS triggers
+- [ ] Implement queue overflow protection
+- [ ] Add browser compatibility checks
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 040-TS-2025-08-22-WEB-TTS status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Test TTS across different browsers
+- [ ] Verify priority queue interruption works
+- [ ] Test behavior when TTS not supported
+- [ ] Verify no audio spam during rapid state changes
+- [ ] Test voice selection fallback scenarios
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: 040-TS-2025-08-22-WEB-TTS status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, document TTS configuration options, prepare for logging integration.

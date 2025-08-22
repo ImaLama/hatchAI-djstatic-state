@@ -1,0 +1,127 @@
+---
+id: 007-FS-2025-08-22-AGENT-WEB-INTERFACE
+title: Agent monitoring web interface with real-time updates and TTS
+created: 2025-08-22-22-05
+updated: 2025-08-22-22-05
+sprint: S4
+---
+
+## 1  DevCards
+
+| DevCard ID | Title | Dependencies | Notes |
+|------------|-------|--------------|-------|
+| 043-TS-2025-08-22-WEB-DEPENDENCIES | Node.js project setup and dependency management | - | Foundation: package.json, npm scripts, deps |
+| 038-TS-2025-08-22-WEB-BACKEND | Node.js backend with WebSocket and file monitoring | 043-TS-...-WEB-DEPENDENCIES | Real-time agent state tracking |
+| 039-TS-2025-08-22-WEB-FRONTEND | React frontend with Tailwind and real-time updates | 038-TS-...-WEB-BACKEND | Agent status dashboard |
+| 040-TS-2025-08-22-WEB-TTS | TTS integration for audio notifications | 039-TS-...-WEB-FRONTEND | Voice alerts for agent events |
+| 041-TS-2025-08-22-WEB-LOGGING | Error handling and debug logging framework | 038-TS-...-WEB-BACKEND | Comprehensive debugging support |
+| 042-TS-2025-08-22-WEB-INTEGRATION | Integration tests for web interface | 038-TS-...-WEB-BACKEND, 039-TS-...-WEB-FRONTEND, 040-TS-...-WEB-TTS | **Required** - End-to-end web interface testing |
+
+## 2  User Description
+
+### Feature Overview
+
+A real-time web interface that displays current agent status, latest prompts, FeatCard/TaskSpec progress, and provides audio notifications via TTS for agent events.
+
+### User Value  
+
+- **Real-time monitoring**: See agent states change instantly without manual refresh
+- **Prompt visibility**: View latest 3 lines from agent sessions to understand current work
+- **Audio notifications**: Get vocal alerts for task completions, errors, and state changes
+- **Task tracking**: Monitor FeatCard and TaskSpec progress in a unified dashboard
+- **Remote access**: Monitor agent system from any device via web browser
+
+### User Stories
+
+1. **As a team lead**, I want to see real-time agent status so that I can monitor system health without constantly checking logs
+2. **As a developer**, I want to hear audio notifications when agents complete tasks so that I can respond quickly to finished work
+3. **As a project manager**, I want to view FeatCard and TaskSpec progress so that I can track development velocity
+4. **As a system operator**, I want to see latest agent prompts so that I can understand what each agent is currently working on
+
+### Acceptance Criteria
+
+- [ ] Web interface updates agent status in real-time (< 1 second latency)
+- [ ] Latest 3 lines from agent session logs displayed for each active agent
+- [ ] TTS announcements for agent state changes (idle→busy, busy→idle, errors)
+- [ ] FeatCard and TaskSpec status displayed with progress indicators
+- [ ] Error logging and debugging information accessible via web interface
+- [ ] Mobile-responsive design for monitoring from any device
+
+## 3  Planner Breakdown
+
+### Technical Approach
+
+- **Backend**: Node.js + Express + Socket.io for real-time WebSocket communication
+- **File Monitoring**: chokidar to watch agent_states.json and log files for changes
+- **Frontend**: React + Tailwind CSS for responsive, modern UI
+- **State Management**: React Query for server state + WebSocket for real-time updates
+- **TTS**: Web Speech API for client-side audio notifications with priority queuing
+
+### Architecture Impact
+
+- Adds new web server component alongside existing agent infrastructure
+- No changes to existing agent state management or logging systems
+- Read-only access to existing files (agent_states.json, logs, specs)
+- New port allocation for web server (default: 3000)
+- Taskfile.yml integration for web interface lifecycle (web-start, web-stop, web-status)
+
+### Data Contracts
+
+**agent_states.json Structure:**
+```json
+{
+  "last_updated": "ISO-8601 timestamp",
+  "sessions": {
+    "AGENT-ID": {
+      "state": "idle|busy",
+      "timestamp": "ISO-8601 timestamp", 
+      "origin": "source identifier"
+    }
+  }
+}
+```
+
+**Session Log Format:** Latest 3 lines from `_logs/sessions/{AGENT-ID}.log`
+**FeatSpec/TaskSpec YAML:** Standard YAML parsing with error handling for malformed files
+
+### Dependencies
+
+- Node.js 18+ runtime environment
+- npm package manager for dependency installation
+- Access to _featstate/agent_states.json file (validated structure)
+- Read access to _logs/ directory structure (session logs format)
+- Read access to _specs/ directories for FeatCard/TaskSpec YAML parsing
+- Integration with existing Taskfile.yml for lifecycle management
+- Port 3000 available (configurable via PORT environment variable)
+- Network access for WebSocket connections (localhost)
+
+### Risk Assessment  
+
+**Low Risk**:
+- Read-only operations on existing files minimize system impact
+- Web interface failure doesn't affect agent operations
+- Client-side TTS reduces server load
+
+**Mitigation Strategies**:
+- File watching with debouncing to prevent excessive updates
+- WebSocket connection recovery for network interruptions
+- Error boundaries in React to prevent UI crashes
+- Comprehensive logging for debugging connection issues
+
+### Testing Strategy
+
+- Unit tests for file monitoring and data parsing logic
+- WebSocket connection testing with simulated agent state changes
+- TTS functionality testing across different browsers
+- Integration tests for full data flow (file change → WebSocket → UI update)
+- Mobile responsiveness testing on various screen sizes
+
+### Rollout Plan
+
+1. **Foundation**: Set up Node.js dependencies and Taskfile.yml integration (`task web-start`, `task web-stop`)
+2. **Backend**: Implement file monitoring and WebSocket server with robust error handling
+3. **Frontend**: Build responsive dashboard with real-time updates
+4. **Enhancement**: Add TTS notifications and comprehensive logging
+5. **Validation**: End-to-end integration testing with agent state simulation
+6. **Deployment**: Launch web interface alongside existing agent infrastructure
+7. **Post-deployment**: Monitor performance impact and gather user feedback

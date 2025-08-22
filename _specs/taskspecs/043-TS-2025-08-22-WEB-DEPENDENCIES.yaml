@@ -1,0 +1,73 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 043-TS-2025-08-22-WEB-DEPENDENCIES
+title: Node.js project setup and dependency management for web interface
+created: 2025-08-22-22-19
+updated: 2025-08-22-22-19
+sprint: S4
+parent_featspec: 007-FS-2025-08-22-AGENT-WEB-INTERFACE
+type: feature
+loc_cap: 200
+coverage_cap: 85
+depends_on: []
+# =============================================================
+---
+
+## 1  Context
+Setting up Node.js project structure and dependency management for the agent monitoring web interface (parent: 007-FS-2025-08-22-AGENT-WEB-INTERFACE).
+This creates package.json, installs required dependencies, and establishes project structure for backend and frontend components.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST create package.json with project metadata | setup | `cat package.json` | Show valid package.json with name, version, scripts |
+| 2 | MUST install Express.js and Socket.io dependencies | deps | `npm list express socket.io` | Show installed versions |
+| 3 | MUST install chokidar for file monitoring | deps | `npm list chokidar` | Show chokidar package installed |
+| 4 | MUST install React and Tailwind CSS dependencies | deps | `npm list react tailwindcss` | Show frontend dependencies |
+| 5 | MUST create npm scripts for start/dev/build | scripts | `npm run start`, `npm run dev` | Show scripts execute without error |
+| 6 | MUST configure port environment variable support | config | `PORT=4000 npm start` | Show server starts on custom port |
+| 7 | MUST add Taskfile.yml integration for web interface | taskfile | `task web-start`, `task web-stop` | Show task commands work |
+| 8 | SHOULD include development dependencies for testing | devdeps | `npm list --dev` | Show jest or similar testing framework |
+
+## 3  Non-Goals / Anti-Goals
+- NOT installing global dependencies (project-local only)
+- NOT modifying existing agent infrastructure
+- NOT setting up CI/CD pipelines
+- NOT implementing Docker containerization
+- NOT adding database dependencies
+
+## 4  Design Constraints
+• Use npm (not yarn or pnpm) for consistency
+• Package.json must specify Node.js 18+ requirement
+• Dependencies must use stable versions (no beta/rc)
+• Web server must support configurable port (default 3000)
+• Must not conflict with existing project structure
+• Integration scripts must follow existing naming patterns
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Initialize npm project with package.json
+- [ ] Install backend dependencies (express, socket.io, chokidar)
+- [ ] Install frontend dependencies (react, tailwindcss, etc.)
+- [ ] Create npm scripts for start/dev/build/test
+- [ ] Add port configuration with environment variable
+- [ ] Create Taskfile.yml tasks for web interface lifecycle (web-start, web-stop, web-status, web-dev)
+- [ ] Add .gitignore entries for node_modules
+- [ ] Document dependency versions and rationale
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 043-TS-2025-08-22-WEB-DEPENDENCIES status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Verify all dependencies install successfully
+- [ ] Test npm scripts work in clean environment
+- [ ] Verify port configuration works with various values
+- [ ] Test Taskfile.yml integration commands
+- [ ] Verify no conflicts with existing project files
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: 043-TS-2025-08-22-WEB-DEPENDENCIES status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec dependencies list, document package.json structure, prepare for backend implementation.

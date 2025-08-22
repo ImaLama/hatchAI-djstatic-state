@@ -1,0 +1,74 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 038-TS-2025-08-22-WEB-BACKEND
+title: Node.js backend with WebSocket and file monitoring for agent interface
+created: 2025-08-22-22-05
+updated: 2025-08-22-22-05
+sprint: S4
+parent_featspec: 007-FS-2025-08-22-AGENT-WEB-INTERFACE
+type: feature
+loc_cap: 500
+coverage_cap: 75
+depends_on: ["043-TS-2025-08-22-WEB-DEPENDENCIES"]
+# =============================================================
+---
+
+## 1  Context
+Implementing the backend service for the agent monitoring web interface (parent: 007-FS-2025-08-22-AGENT-WEB-INTERFACE).
+This creates a Node.js server that monitors agent_states.json changes and provides real-time updates via WebSocket to the frontend dashboard.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST start Express server on configurable port | server | `npm start` | Show server listening on port 3000 |
+| 2 | MUST watch agent_states.json for file changes | monitoring | file modification test | Show WebSocket event when file changes |
+| 3 | MUST parse agent_states.json and emit WebSocket events | websocket | WebSocket client test | Show parsed agent data via WebSocket |
+| 4 | MUST serve static files for React frontend | static | `curl http://localhost:3000/` | Show HTML response served |
+| 5 | MUST handle WebSocket connections and disconnections | websocket | connection test | Show client connect/disconnect logging |
+| 6 | MUST parse latest 3 lines from session logs | logs | session log test | Show last 3 lines extracted for each agent |
+| 7 | MUST parse FeatCard and TaskSpec YAML files | yaml | YAML parsing test | Show parsed featspec/taskspec data |
+| 8 | MUST validate agent_states.json structure | validation | malformed JSON test | Show schema validation with error recovery |
+| 9 | MUST handle missing agent log files gracefully | error | missing log test | Show fallback when session logs don't exist |
+| 10 | SHOULD handle file reading errors gracefully | error | invalid file test | Show error handling without crash |
+
+## 3  Non-Goals / Anti-Goals
+- NOT implementing agent control (read-only monitoring)
+- NOT modifying existing agent files or state
+- NOT implementing authentication/authorization for POC
+- NOT supporting multiple concurrent projects
+- NOT implementing database persistence
+
+## 4  Design Constraints
+• Keep route handlers ≤ 40 lines
+• Use existing file paths (no filesystem restructuring)
+• WebSocket events must complete in < 100ms
+• File watching must use debouncing (500ms) to prevent excessive updates
+• Must not block main thread during file operations
+• Error logging must include timestamps and context
+• Validate agent_states.json matches schema: {last_updated, sessions: {AGENT-ID: {state, timestamp, origin}}}
+• Handle missing session log files with empty/placeholder data
+• YAML parsing must use try/catch with detailed error reporting
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Implement Express server with WebSocket support
+- [ ] Add file monitoring with chokidar
+- [ ] Implement agent_states.json parser
+- [ ] Add session log parsing (last 3 lines)
+- [ ] Add YAML parsing for FeatCard/TaskSpec files
+- [ ] Add error handling and logging
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 038-TS-2025-08-22-WEB-BACKEND status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Test WebSocket connection handling under load
+- [ ] Verify file watching doesn't cause memory leaks
+- [ ] Test error handling with corrupted/missing files
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: 038-TS-2025-08-22-WEB-BACKEND status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, document API endpoints, prepare for frontend integration.

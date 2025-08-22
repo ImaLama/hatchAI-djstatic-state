@@ -1,0 +1,74 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 041-TS-2025-08-22-WEB-LOGGING
+title: Error handling and debug logging framework for web interface
+created: 2025-08-22-22-05
+updated: 2025-08-22-22-05
+sprint: S4
+parent_featspec: 007-FS-2025-08-22-AGENT-WEB-INTERFACE
+type: feature
+loc_cap: 200
+coverage_cap: 85
+depends_on: ["038-TS-2025-08-22-WEB-BACKEND"]
+# =============================================================
+---
+
+## 1  Context
+Implementing comprehensive error handling and debug logging for the agent monitoring web interface (parent: 007-FS-2025-08-22-AGENT-WEB-INTERFACE).
+This creates a robust logging framework for debugging WebSocket connections, file monitoring, and frontend issues with structured log output.
+
+## 2  Objectives (acceptance criteria)
+List **observable, testable** outcomes. Use MUST/SHOULD/MUST NOT keywords.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | MUST log all WebSocket connection events with timestamps | logging | WebSocket test | Show connect/disconnect/error logs |
+| 2 | MUST log file monitoring events and errors | monitoring | file watch test | Show file change detection logs |
+| 3 | MUST handle and log JSON parsing errors gracefully | error | malformed JSON test | Show error handled without crash |
+| 4 | MUST implement structured logging with log levels | structure | log level test | Show DEBUG/INFO/WARN/ERROR levels |
+| 5 | MUST create rotating log files in _logs/web-interface/ | files | log rotation | Show daily log rotation working |
+| 6 | MUST log frontend errors via WebSocket to backend | frontend | frontend error | Show client errors logged on server |
+| 7 | SHOULD provide debug endpoint for real-time log viewing | endpoint | `/debug/logs` endpoint | Show log streaming via HTTP |
+| 8 | SHOULD include request correlation IDs for tracing | tracing | correlation test | Show same ID across related log entries |
+
+## 3  Non-Goals / Anti-Goals
+- NOT implementing log aggregation to external systems
+- NOT storing logs in database (file-based only)
+- NOT implementing log analysis or alerting
+- NOT exposing sensitive data in logs
+- NOT implementing log compression for POC
+
+## 4  Design Constraints
+• Use existing _logs/ directory structure
+• Log files must follow naming: web-interface-YYYY-MM-DD.log
+• Error handling must not throw uncaught exceptions
+• Log rotation must not lose data during transition
+• Debug logs must be disabled in production by default
+• Correlation IDs must be 8-character alphanumeric
+
+## 5  Implementation Checklist (Factory)
+- [ ] Add failing tests for each acceptance criterion
+- [ ] Set up structured logging library (winston or similar)
+- [ ] Implement log levels (DEBUG/INFO/WARN/ERROR)
+- [ ] Create log rotation with daily files
+- [ ] Add WebSocket event logging
+- [ ] Implement file monitoring error handling
+- [ ] Add JSON parsing error recovery
+- [ ] Create frontend error reporting via WebSocket
+- [ ] Add correlation ID generation and tracking
+- [ ] Implement debug endpoint for log streaming
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: 041-TS-2025-08-22-WEB-LOGGING status=qa`
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Test log rotation at midnight boundary
+- [ ] Verify error handling doesn't crash server
+- [ ] Test correlation ID propagation across components
+- [ ] Verify debug endpoint security (no sensitive data)
+- [ ] Test log file permissions and access
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: 041-TS-2025-08-22-WEB-LOGGING status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, document logging configuration, prepare for integration testing.
