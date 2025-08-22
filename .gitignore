@@ -11,3 +11,5 @@ _logs/tmux-monitor/
 _logs/hooks/agent_state_manager.log
 _logs/hooks/start_hook.log
 _logs/hooks/stop_hook.log
+_logs/state-manager/
+_logs/vscode_commands/
