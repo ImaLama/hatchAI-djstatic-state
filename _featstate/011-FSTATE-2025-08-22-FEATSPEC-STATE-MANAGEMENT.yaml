@@ -1,0 +1,292 @@
+---
+# ===== FEATURE STATE TRACKING (Centralized state for 011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT) =====
+featspec_id: 011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT
+featspec_title: FeatSpec-Level State Management with Handover History
+status: draft                               # draft → planning → active → completed → abandoned
+updated: 2025-08-22-21-51                   # last state update datetime
+active_sprint: S4                           # current sprint
+created: 2025-08-22-21-51                   # initial creation datetime
+# ==================================================================================
+---
+
+## Feature-Level State
+
+### Progress Summary
+- **Overall Status**: {{status}}
+- **Last Updated**: {{updated}}
+- **Active Sprint**: {{active_sprint}}
+- **Total TaskSpecs**: 0
+- **Completed TaskSpecs**: 0
+- **Progress**: 0% (0/0)
+
+### Timeline
+- **Created**: {{created}}
+- **Planning Start**: 2025-08-22-21-51
+- **Development Start**: 2025-08-22-21-51
+- **QA Start**: 2025-08-22-21-51
+- **Completed**: 2025-08-22-21-51
+- **Deployed**: 2025-08-22-21-51
+
+### Milestones
+- [ ] Initial planning complete
+- [ ] All TaskSpecs defined
+- [ ] Development started
+- [ ] Core functionality complete
+- [ ] Integration testing complete
+- [ ] QA approved
+- [ ] Production ready
+
+## TaskSpec State Tracking
+
+### Active TaskSpecs
+<!-- This section is automatically updated when TaskSpecs are created/updated -->
+
+### TaskSpec: [Will be populated when TaskSpecs are created]
+```yaml
+task_id: ""
+task_title: ""
+status: draft                    # draft → in-progress → qa → done
+owner: unassigned
+worktree: ""                    # worktrees/card-NNN-TS-2025-08-22-DESCRIPTION
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""                # factories insert via hashstamp
+merged_date: ""                 # datetime (2025-08-22-21-51) implementation was merged
+sprint: S4
+created: 2025-08-22-21-51
+updated: 2025-08-22-21-51
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+## Dependencies & Relationships
+
+### Parent Relationships
+- **Part of Feature**: {{featspec_id}}
+
+### Child Relationships
+- **TaskSpecs**: [Automatically populated]
+
+### External Dependencies
+- **Blocked by**: []
+- **Blocking**: []
+- **Related Features**: []
+
+## Notes & History
+
+### Change Log
+- {{created}}: Initial FeatState created
+- {{updated}}: [Latest change description]
+
+### Notes
+- [Development notes]
+- [Architecture decisions]  
+- [Risk assessments]
+- [Deployment considerations]
+### TaskSpec: 035-TS-2025-08-22-FEATSPEC-STATE-DIRECTORIES
+```yaml
+task_id: "035-TS-2025-08-22-FEATSPEC-STATE-DIRECTORIES"
+task_title: "Create featspec state directory structure and initialization"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-22-21-53
+updated: 2025-08-22-21-53
+parent_featspec: "011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 036-TS-2025-08-22-TASK-COMMAND-INTEGRATION
+```yaml
+task_id: "036-TS-2025-08-22-TASK-COMMAND-INTEGRATION"
+task_title: "Update task commands to initialize featspec state directories"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-22-21-59
+updated: 2025-08-22-21-59
+parent_featspec: "011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 037-TS-2025-08-22-AGENT-INSTRUCTION-UPDATES
+```yaml
+task_id: "037-TS-2025-08-22-AGENT-INSTRUCTION-UPDATES"
+task_title: "Update factory and QA agent instructions for handover summaries"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 200
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-22-21-59
+updated: 2025-08-22-21-59
+parent_featspec: "011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT"
+type: "feature"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 038-TS-2025-08-22-HANDOVER-TEMPLATES
+```yaml
+task_id: "038-TS-2025-08-22-HANDOVER-TEMPLATES"
+task_title: "Create handover summary templates for factory and QA agents"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 400
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-22-22-10
+updated: 2025-08-22-22-10
+parent_featspec: "011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT"
+type: "docs"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```
+
+### TaskSpec: 039-TS-2025-08-22-FEATSPEC-STATE-INTEGRATION
+```yaml
+task_id: "039-TS-2025-08-22-FEATSPEC-STATE-INTEGRATION"
+task_title: "Integration testing for featspec state management system"
+status: draft
+owner: unassigned
+worktree: ""
+loc_cap: 250
+coverage_cap: 80
+purpose_hash: ""
+merged_date: ""
+sprint: S4
+created: 2025-08-22-22-10
+updated: 2025-08-22-22-10
+parent_featspec: "011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT"
+type: "integration"
+
+# Implementation Progress
+implementation_checklist:
+  - [ ] Add failing tests for each acceptance criterion
+  - [ ] Implement code until tests pass & linting clean
+  - [ ] Update parent FeatSpec state tracking
+  - [ ] Commit with trailer TaskSpec status=qa
+
+# QA Progress  
+qa_checklist:
+  - [ ] Review test coverage & LoC cap
+  - [ ] Compare code vs Architecture-Implementation Alignment Matrix
+  - [ ] Verify integration with parent FeatSpec
+  - [ ] If pass, commit trailer TaskSpec status=done
+
+# Test Results
+test_coverage: 0
+test_results: ""
+lint_status: ""
+build_status: ""
+```

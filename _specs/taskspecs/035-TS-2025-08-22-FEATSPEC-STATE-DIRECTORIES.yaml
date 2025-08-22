@@ -1,0 +1,152 @@
+---
+# ==== TaskSpec METADATA (edit only the right-hand values) =====
+id: 035-TS-2025-08-22-FEATSPEC-STATE-DIRECTORIES
+title: Create featspec state directory structure and initialization            # "Add sharded event dir"
+created: 2025-08-22-21-53                   # creation datetime
+updated: 2025-08-22-21-53                   # last update datetime
+sprint: S4                                  # S4, S5, …
+parent_featspec: 011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT  # Required parent feature
+type: feature                               # fix|feature|test|refactor|docs|integration
+loc_cap: 200                                # net LoC (adds-deletes) - auto-set by type
+coverage_cap: 80                            # % required by testing
+depends_on: []                              # ["NNN-TS-...", ...]
+# =============================================================
+---
+
+## 1  Context
+Implements the foundational directory structure for featspec-level state management as defined in 011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT. Creates the directory layout, file schemas, and initialization logic needed for featspec state tracking and handover history.
+
+## 2  Objectives (acceptance criteria)
+Create directory structure and file initialization for featspec state management with handover history.
+
+| # | Acceptance Test | Type | File/Command | Execution Evidence Required |
+|---|-----------------|------|--------------|----------------------------|
+| 1 | Directory structure `_featstate/{featspec-id}/` created for each FeatSpec | manual | ls _featstate/ | Show directory listing with featspec subdirectories |
+| 2 | `featstate.json` schema validates and contains taskspec tracking | unit | test/featstate_schema_test.go | JSON schema validation passes |
+| 3 | `FSTATE` file is human-readable with current feature status | manual | cat _featstate/{featspec}/FSTATE | Show readable status format |
+| 4 | `handovers.yaml` file structure supports factory/QA handover entries | unit | test/handover_schema_test.go | YAML schema validation passes |
+| 5 | Initialization script creates all required files with proper structure | e2e | ./init_featspec_state.sh {featspec-id} | Show created files and validate content |
+
+## 3  Non-Goals / Anti-Goals
+- Will NOT create UI components for state visualization
+- Will NOT implement real-time notifications or webhooks
+- Will NOT modify existing _featstate structure for backward compatibility
+- Will NOT create complex query interfaces beyond basic file operations
+
+## 4  Design Constraints
+• Use bash/shell scripting for initialization logic
+• JSON schema validation using `jq` for featstate.json
+• YAML schema validation using `yq` for handovers.yaml  
+• Human-readable FSTATE format must be parseable by basic shell tools
+• Directory structure must be atomic (all files created or none)
+• Must integrate cleanly with parent FeatSpec: {{parent_featspec}}
+
+## 5  TDD Implementation Approach (Factory)
+
+### RED Phase - Write Failing Tests First
+1. **Directory Structure Tests**:
+```bash
+# Test: _featstate/{featspec-id}/ directory creation
+test_directory_creation() {
+  local featspec="TEST-FS-2025-08-22-EXAMPLE"
+  ./init_featspec_state.sh "$featspec"
+  [ -d "_featstate/$featspec" ] || fail "Directory not created"
+}
+
+# Test: All required files exist
+test_required_files_created() {
+  local featspec="TEST-FS-2025-08-22-EXAMPLE"
+  ./init_featspec_state.sh "$featspec"
+  [ -f "_featstate/$featspec/featstate.json" ] || fail "featstate.json missing"
+  [ -f "_featstate/$featspec/FSTATE" ] || fail "FSTATE missing"
+  [ -f "_featstate/$featspec/handovers.yaml" ] || fail "handovers.yaml missing"
+}
+```
+
+2. **JSON Schema Tests**:
+```bash
+# Test: featstate.json validates against schema
+test_featstate_json_schema() {
+  local featspec="TEST-FS-2025-08-22-EXAMPLE"
+  ./init_featspec_state.sh "$featspec"
+  jq empty "_featstate/$featspec/featstate.json" || fail "Invalid JSON"
+  # Validate required fields exist
+  jq '.feature.id, .taskspecs' "_featstate/$featspec/featstate.json" >/dev/null
+}
+```
+
+3. **FSTATE Format Tests**:
+```bash
+# Test: FSTATE is human-readable with required fields
+test_fstate_format() {
+  local featspec="TEST-FS-2025-08-22-EXAMPLE"
+  ./init_featspec_state.sh "$featspec"
+  grep "FEATURE:" "_featstate/$featspec/FSTATE" || fail "Missing FEATURE field"
+  grep "STATUS:" "_featstate/$featspec/FSTATE" || fail "Missing STATUS field"
+  grep "PROGRESS:" "_featstate/$featspec/FSTATE" || fail "Missing PROGRESS field"
+}
+```
+
+### GREEN Phase - Implement Minimal Code
+4. **Create initialization script**: `./init_featspec_state.sh`
+5. **Create JSON schema template**: `_templates/featstate_schema.json`
+6. **Create YAML schema template**: `_templates/handover_schema.yaml`
+7. **Implement validation functions**
+
+### REFACTOR Phase - Optimize and Clean
+8. **Extract common functions to shared library**
+9. **Add error handling and rollback on failure**
+10. **Optimize file operations for atomic creation**
+
+## 6  Implementation Checklist (Factory)
+- [ ] Write failing tests for directory creation (RED)
+- [ ] Write failing tests for file schema validation (RED)  
+- [ ] Write failing tests for FSTATE format (RED)
+- [ ] Create `init_featspec_state.sh` script (GREEN)
+- [ ] Create JSON/YAML schema templates (GREEN)
+- [ ] Implement validation functions (GREEN)
+- [ ] All tests pass (GREEN)
+- [ ] Refactor common code to shared functions (REFACTOR)
+- [ ] Add error handling and rollback (REFACTOR)
+- [ ] Update parent FeatSpec state tracking
+- [ ] Commit with trailer `TaskSpec: {{id}} status=qa`
+
+## DETAILED IMPLEMENTATION FILES
+
+### Required Scripts:
+1. **`state-scripts/init_featspec_state.sh`** - Main initialization script
+2. **`state-scripts/validate_featstate.sh`** - Schema validation utilities
+3. **`test/test_featstate_directories.sh`** - Test suite
+
+### Required Templates:
+1. **`_templates/featstate_initial.json`** - Initial featstate.json template
+2. **`_templates/fstate_initial.txt`** - Initial FSTATE template  
+3. **`_templates/handovers_initial.yaml`** - Initial handovers.yaml template
+
+### JSON Schema for featstate.json:
+```json
+{
+  "feature": {
+    "id": "string",
+    "title": "string", 
+    "status": "enum[draft,in_progress,completed,blocked]",
+    "created": "ISO8601",
+    "updated": "ISO8601",
+    "progress": {
+      "total_taskspecs": "number",
+      "completed_taskspecs": "number", 
+      "completion_percentage": "number"
+    }
+  },
+  "taskspecs": {}
+}
+```
+
+## 6  QA Checklist
+- [ ] Review test coverage & LoC cap
+- [ ] Compare code vs Architecture-Implementation Alignment Matrix
+- [ ] Verify integration with parent FeatSpec
+- [ ] If pass, commit trailer `TaskSpec: {{id}} status=done`
+
+## 7  Post-Merge Tasks
+Update parent FeatSpec state, close related issues.

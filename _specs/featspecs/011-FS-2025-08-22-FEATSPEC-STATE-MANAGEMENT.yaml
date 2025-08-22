@@ -1,0 +1,168 @@
+---
+id: 011-FS-2025-08-22-FEATSPEC-STATE-MANAGEMENT
+title: FeatSpec-Level State Management with Handover History
+created: 2025-08-22-21-51
+updated: 2025-08-22-21-51
+sprint: S4
+---
+
+## 1  DevCards
+
+| DevCard ID | Title | Dependencies | Notes |
+|------------|-------|--------------|-------|
+| 030-TS-2025-08-22-FEATSPEC-STATE-DIRECTORIES | Create featspec state directory structure and initialization | - | Core directory structure and featstate.json |
+| 031-TS-2025-08-22-TASK-COMMAND-INTEGRATION | Update task commands to initialize featspec state directories | 030-TS-... | Integration with existing task creation workflow |
+| 032-TS-2025-08-22-HANDOVER-TEMPLATES | Create handover summary templates for factory and QA agents | 030-TS-... | YAML templates for agent handover summaries |
+| 033-TS-2025-08-22-AGENT-INSTRUCTION-UPDATES | Update factory and QA agent instructions to include handover summaries | 032-TS-... | Modify orchestrator agent prompts |
+| 034-TS-2025-08-22-FEATSPEC-STATE-INTEGRATION | Integration testing for featspec state management system | All above | **Required** - End-to-end testing of state management |
+
+## 2  User Description
+
+### Feature Overview
+
+Implement a comprehensive featspec-level state management system that creates dedicated directories for each FeatSpec containing state tracking, handover history, and taskspec progression data. This establishes a structured foundation for cross-taskspec learning and improved orchestrator transparency.
+
+### User Value  
+
+- **Structured State Management**: Each FeatSpec gets its own state directory with clear organization
+- **Handover History**: Factory and QA agents document their work for context preservation and learning
+- **Progress Transparency**: Real-time featspec progression tracking with taskspec completion metrics
+- **Cross-TaskSpec Intelligence**: Pattern recognition and learning from agent handovers across TaskSpecs
+- **Automated Initialization**: Task commands automatically create and maintain state directories
+
+### User Stories
+
+1. **As an orchestrator**, I want each FeatSpec to have its own state directory so that I can track feature-level progress independently
+2. **As a factory agent**, I want to document my implementation approach so that QA and future iterations can understand my decisions
+3. **As a QA agent**, I want to document my review findings so that factory rework has clear guidance and future QA can learn from patterns
+4. **As a developer**, I want to see feature progress at a glance so that I can understand what's completed and what's in progress
+5. **As a system architect**, I want handover history preserved so that we can identify patterns and improve TaskSpec templates
+
+### Acceptance Criteria
+
+- [ ] Each FeatSpec has a dedicated state directory: `_featstate/{featspec-id}/`
+- [ ] State directories contain: `featstate.json`, `FSTATE`, and `handovers.yaml`
+- [ ] Task commands automatically create featspec state directories when creating new FeatSpecs
+- [ ] Task commands automatically add taskspec entries to `featstate.json` when creating new TaskSpecs
+- [ ] Factory and QA agents write handover summaries to `handovers.yaml` using structured templates
+- [ ] Handover summaries include: outcome, technical details, lessons learned, and rework guidance
+- [ ] State tracking maintains taskspec completion metrics and cross-taskspec patterns
+- [ ] All state files are human-readable and machine-parseable
+- [ ] Directory creation includes proper error handling for permission/disk space issues
+- [ ] JSON/YAML parsing errors are caught and logged with meaningful messages
+- [ ] Concurrent write access is protected using file locking mechanisms
+- [ ] Handover validation ensures agents complete required summary fields
+- [ ] File system errors gracefully degrade without breaking task creation workflow
+
+## 3  Planner Breakdown
+
+### Technical Approach
+
+**Directory Structure**:
+```
+_featstate/
+├── {featspec-id}/
+│   ├── featstate.json          # Feature progression with taskspec metrics
+│   ├── FSTATE                  # Human-readable current status
+│   └── handovers.yaml          # Factory/QA handover summaries
+└── runtime_state.json          # Global agent runtime state (existing)
+
+**FeatState JSON Schema**:
+```json
+{
+  "featspec_id": "string",
+  "created_date": "ISO-8601",
+  "updated_date": "ISO-8601", 
+  "status": "pending|in_progress|blocked|completed",
+  "taskspecs": {
+    "taskspec_id": {
+      "status": "pending|in_progress|completed|failed",
+      "created_date": "ISO-8601",
+      "completed_date": "ISO-8601|null",
+      "agent_assignments": ["factory", "qa"],
+      "handover_count": "number"
+    }
+  },
+  "metrics": {
+    "total_taskspecs": "number",
+    "completed_taskspecs": "number",
+    "failed_taskspecs": "number",
+    "completion_percentage": "number"
+  }
+}
+```
+
+**Handover YAML Schema**:
+```yaml
+handovers:
+  - id: "handover-uuid"
+    timestamp: "ISO-8601"
+    taskspec_id: "string"
+    agent_type: "factory|qa"
+    outcome: "success|failure|blocked"
+    technical_details: "string (required)"
+    lessons_learned: "string (required)"
+    rework_guidance: "string (if outcome=failure)"
+    next_steps: "string (optional)"
+```
+```
+
+**Implementation Strategy**:
+1. Create directory structure and file initialization logic with error handling
+2. Design featstate.json schema for taskspec tracking and metrics
+3. Create handover templates based on existing hatchAI-devcards patterns
+4. Integrate state initialization into existing task creation commands
+5. Update factory and QA agent instructions to include handover documentation
+6. Implement file locking for concurrent access protection
+7. Add handover validation middleware for agent workflows
+
+### Architecture Impact
+
+- **Extends existing state management**: Builds on current `_featstate/` structure without breaking changes
+- **Enhances task creation workflow**: Automatic state initialization when creating FeatSpecs/TaskSpecs
+- **Improves agent transparency**: Structured handover documentation for better debugging and learning
+- **Enables feature-level analytics**: Data foundation for feature progression tracking and pattern analysis
+
+### Dependencies
+
+- Existing task creation commands (`task featspec-new`, `task taskspec-new`)
+- Current `_featstate/` directory structure
+- Orchestrator agent launch scripts (factory/QA instruction updates)
+- YAML/JSON processing for handover templates and state files
+
+### Risk Assessment  
+
+**Risks:**
+- **File system overhead**: Multiple state files per FeatSpec could impact performance
+- **Template complexity**: Handover templates might be too complex for agents to follow consistently
+- **State consistency**: Manual handover updates could become inconsistent or incomplete
+- **Concurrent access conflicts**: Multiple agents writing simultaneously could corrupt state files
+- **Permission failures**: Directory creation could fail in restricted environments
+- **Schema validation**: Invalid JSON/YAML could break state tracking
+
+**Mitigation:**
+- Keep state files lightweight with essential data only
+- Design simple, clear handover templates with examples
+- Add validation to ensure handover summaries are completed
+- Implement append-only handover history to prevent overwrites
+- Use file locking (flock) for concurrent write protection
+- Implement retry logic with exponential backoff for file operations
+- Add JSON/YAML schema validation before writing state files
+- Graceful degradation: log errors but continue task creation if state writes fail
+- Validate required handover fields before agent workflow completion
+
+### Testing Strategy
+
+1. **Unit Tests**: Directory creation, state file initialization, template rendering
+2. **Integration Tests**: End-to-end task creation → state initialization → agent handover workflow
+3. **Template Tests**: Verify handover templates render correctly with sample data
+4. **State Tests**: Validate featstate.json schema and taskspec tracking accuracy
+5. **Orchestrator Tests**: Confirm factory and QA agents write handover summaries correctly
+
+### Rollout Plan
+
+**Phase 1**: Core state directory structure and featstate.json implementation
+**Phase 2**: Task command integration for automatic state initialization  
+**Phase 3**: Handover templates and agent instruction updates
+**Phase 4**: Integration testing and orchestrator workflow validation
+**Phase 5**: Deploy with existing FeatSpecs and monitor handover completion rates
