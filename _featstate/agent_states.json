@@ -1,9 +1,9 @@
 {
-  "last_updated": "2025-08-22T21:43:41+00:00",
+  "last_updated": "2025-08-22T22:24:44+00:00",
   "sessions": {
     "AR-O-alpha": {
       "state": "idle",
-      "timestamp": "2025-08-22T20:34:57+00:00",
+      "timestamp": "2025-08-22T21:44:48+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "AR-O-beta": {
@@ -13,7 +13,7 @@
     },
     "WE-S-Willow": {
       "state": "idle",
-      "timestamp": "2025-08-22T21:02:49+00:00",
+      "timestamp": "2025-08-22T22:24:44+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "WE-S-Weave": {
@@ -23,12 +23,12 @@
     },
     "AR-S-Aragorn": {
       "state": "idle",
-      "timestamp": "2025-08-22T20:59:37+00:00",
+      "timestamp": "2025-08-22T22:15:05+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "PL-S-Plato": {
       "state": "idle",
-      "timestamp": "2025-08-22T21:03:35+00:00",
+      "timestamp": "2025-08-22T22:22:04+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "AR-S-Archon": {
@@ -43,13 +43,18 @@
     },
     "AR-S-Aurora": {
       "state": "idle",
-      "timestamp": "2025-08-22T21:11:51+00:00",
+      "timestamp": "2025-08-22T22:05:35+00:00",
       "origin": "claude-stop-hook-delay"
     },
     "WE-S-Warden": {
       "state": "busy",
-      "timestamp": "2025-08-22T21:43:33+00:00",
+      "timestamp": "2025-08-22T22:24:36+00:00",
       "origin": "claude-start-hook"
+    },
+    "PL-S-Phoenix": {
+      "state": "idle",
+      "timestamp": "2025-08-22T22:24:28+00:00",
+      "origin": "claude-stop-hook-delay"
     }
   }
 }
