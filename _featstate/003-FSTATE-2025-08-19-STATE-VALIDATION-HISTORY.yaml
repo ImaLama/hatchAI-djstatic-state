@@ -2,8 +2,8 @@
 # ===== FEATURE STATE TRACKING (Centralized state for 003-FS-2025-08-19-STATE-VALIDATION-HISTORY) =====
 featspec_id: 003-FS-2025-08-19-STATE-VALIDATION-HISTORY
 featspec_title: State Management Enhancement: Validation <feature title> History Logging
-status: draft                               # draft → planning → active → completed → abandoned
-updated: 2025-08-19-16-08                   # last state update datetime
+status: retired                             # draft → planning → active → completed → abandoned
+updated: 2025-08-22-21-16                   # last state update datetime
 active_sprint: S4                           # current sprint
 created: 2025-08-19-16-08                   # initial creation datetime
 # ==================================================================================
@@ -97,10 +97,12 @@ build_status: ""
 - {{updated}}: [Latest change description]
 
 ### Notes
-- [Development notes]
-- [Architecture decisions]  
-- [Risk assessments]
-- [Deployment considerations]
+- **2025-08-22**: RETIRED - FeatSpec represents obsolete design from earlier framework version
+- State machine assumptions don't match evolved implementation (missing stopped/unknown states)
+- Rigid validation would break existing asynchronous hook interactions
+- Current logging infrastructure already provides adequate history (3 existing log systems)
+- Performance requirements (<10ms) unrealistic with file-based locking
+- **Recommendation**: Create new FeatSpec focused on observability/monitoring rather than enforcement
 ### TaskSpec: 011-TS-2025-08-19-STATE-TRANSITION-VALIDATION
 ```yaml
 task_id: "011-TS-2025-08-19-STATE-TRANSITION-VALIDATION"
